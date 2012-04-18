@@ -1,23 +1,80 @@
 <html>
     <head>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-        <title>Javascript Best Practices</title>
-        
-        <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
-		<script type="text/javascript" src="site.js"></script>
-        
-        <link rel="stylesheet" href="site.css" type="text/css"/>
+            <title>Javascript Best Practices</title>
+            
+            <link rel="stylesheet" href="css/dark-hive/jquery-ui-1.8.18.custom.css" type="text/css"/>
+            <link rel="stylesheet" href="css/site.css" type="text/css"/>
+            <link rel="stylesheet" href="css/prettify.css" type="text/css"/>
+
+            <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+            <script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+            <script type="text/javascript" src="js/site.js"></script>
+            <script type="text/javascript" src="prettify.js"></script>
     </head>
-    <body>
+    <body onload="prettyPrint()">
+        <div align="center"><h1>Javascript Best Practices Brown Bag</h1></div>
         <div id="navigation">
             <ul>
-                <li>
-                    <a href="www.google.com">A</a>
-                    <a href="www.google.com">B</a>
-                    <a href="www.google.com">C</a>
-                </li>
-            </ul>         
+                <li><a href="#tab-0">Introduction</a></li>
+                <li><a href="#tab-1">Good to Know</a></li>
+                <li><a href="#tab-2">Optimization</a></li>
+                <li><a href="#tab-3">Debugging</a></li>
+                <li><a href="#tab-4">Source Maps</a></li>
+                <li><a href="#tab-5">Testing Libraries</a></li>
+                <li><a href="#tab-6">Miscellaneous</a></li>
+                <li><a href="#tab-7">Closing</a></li>
+                <li><a href="#tab-8">Recommended Reading</a></li>
+            </ul>
+
+            <div id="tab-0">
+            </div>    
+            <div id="tab-1">
+                <div class="content">
+                    <h3>Loops</h3>
+                    <p>When possible use: </p>
+                    <div class="code">                    
+                        <pre class="prettyprint">
+                            for(var i = 0, l = someArray.length; i < l; i++) {
+                                x = someArray[i];
+                            });
+                        </pre>
+                    </div>    
+                    <p>Instead of: </p>
+                    <div class="code">
+                        <pre class="prettyprint">
+                            $.each(someArray, function() {
+                                x = this;
+                            });
+                        </pre>
+                    </div>                  
+                    <a class="demo" href="http://jsperf.com/jquery-each-vs-for-loop/69" target="_blank">Loop Comparison</a>
+                </div>
+                <div class="content">
+                    <h3>this keyword</h3>
+                </div>
+            </div>
+            <div id="tab-2">
+                <p>test2</p>
+            </div>
+            <div id="tab-3">
+                <p>test3</p>
+            </div>
+            <div id="tab-4">
+                <p>test4</p>
+            </div>
+            <div id="tab-5">
+                <p>test5</p>
+            </div>
+            <div id="tab-6">
+                <p>test6</p>
+            </div>
+            <div id="tab-7">
+                <p>test7</p>
+            </div>
+            <div id="tab-8">
+                <p>test8</p>
+            </div>
         </div>
-        
     </body>
 </html>
