@@ -1,80 +1,135 @@
-<html>
+<!doctype html>
+<html lang="en">
     <head>
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-            <title>Javascript Best Practices</title>
-            
-            <link rel="stylesheet" href="css/dark-hive/jquery-ui-1.8.18.custom.css" type="text/css"/>
-            <link rel="stylesheet" href="css/site.css" type="text/css"/>
-            <link rel="stylesheet" href="css/prettify.css" type="text/css"/>
-
-            <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-            <script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
-            <script type="text/javascript" src="js/site.js"></script>
-            <script type="text/javascript" src="prettify.js"></script>
+        <meta charset="utf-8">
+        <title>Javascript Best Practices</title>
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/site.css">	
+        <link rel="stylesheet" href="css/prettify.css" type="text/css"/>        
+        
+        <!-- SCRIPTS -->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="js/site.js"></script>
+        <script type="text/javascript" src="js/prettify.js"></script>
     </head>
-    <body onload="prettyPrint()">
-        <div align="center"><h1>Javascript Best Practices Brown Bag</h1></div>
-        <div id="navigation">
-            <ul>
-                <li><a href="#tab-0">Introduction</a></li>
-                <li><a href="#tab-1">Good to Know</a></li>
-                <li><a href="#tab-2">Optimization</a></li>
-                <li><a href="#tab-3">Debugging</a></li>
-                <li><a href="#tab-4">Source Maps</a></li>
-                <li><a href="#tab-5">Testing Libraries</a></li>
-                <li><a href="#tab-6">Miscellaneous</a></li>
-                <li><a href="#tab-7">Closing</a></li>
-                <li><a href="#tab-8">Recommended Reading</a></li>
-            </ul>
 
-            <div id="tab-0">
+    <body onload="prettyPrint()">
+        <nav>
+            <h1>Javascript Best Practices Brown Bag</h1>	
+            <ul>
+                <li class="usage"><a href="#intro">Intro</a></li>
+                <li class="usage"><a href="#loops">Loops</a></li>
+                <li class="usage"><a href="#kThis">Keyword this</a></li>
+                <li class="usage"><a href="#minification">Minification</a></li>
+                <li class="usage"><a href="#source_maps">Source Maps</a></li>
+                <li class="usage"><a href="#debugging">Debugging</a></li>
+                <li class="usage"><a href="#testing">Testing Libraries</a></li>
+                <li class="usage"><a href="#misc">Miscellaneous</a></li>
+                <li class="usage"><a href="#recommended">Recommended Reading</a></li>
+                <li class="usage"><a href="#git">Git</a></li>				
+            </ul>
+        </nav>
+
+        <div class="panels">
+
+            <div id="intro">
+                <h2>Intro</h2>               
+            </div>
+
+            <div id="loops">
+                <h2>Loops</h2>
+                <p>When possible use: </p>                  
+                <pre class="prettyprint">
+                    for(var i = 0, l = someArray.length; i < l; i++) {
+                        x = someArray[i];
+                    });
+                </pre>   
+                <p>Instead of: </p>
+
+                <pre class="prettyprint">
+                    $.each(someArray, function() {
+                        x = this;
+                    });
+                </pre>
+                <a href="http://jsperf.com/jquery-each-vs-for-loop/69" target="_blank">Reasoning</a>
+
+            </div>
+
+            <div id="kThis">
+                <h2>this</h2>
             </div>    
-            <div id="tab-1">
-                <div class="content">
-                    <h3>Loops</h3>
-                    <p>When possible use: </p>
-                    <div class="code">                    
-                        <pre class="prettyprint">
-                            for(var i = 0, l = someArray.length; i < l; i++) {
-                                x = someArray[i];
-                            });
-                        </pre>
-                    </div>    
-                    <p>Instead of: </p>
-                    <div class="code">
-                        <pre class="prettyprint">
-                            $.each(someArray, function() {
-                                x = this;
-                            });
-                        </pre>
-                    </div>                  
-                    <a class="demo" href="http://jsperf.com/jquery-each-vs-for-loop/69" target="_blank">Loop Comparison</a>
-                </div>
-                <div class="content">
-                    <h3>this keyword</h3>
-                </div>
+            
+            <div id="minification">
+                <h2>Minification</h2>               
+                <p>An easy way to greatly reduce the size of your JS and speed up your app!</p>
+                <p><a href="https://developers.google.com/closure/compiler/" target="_blank">Closure Compiler</a></p>
+                <pre>java -jar compiler.jar --js=original.js --js_output_file=original.min.js</pre>
+                <p><a href="http://developer.yahoo.com/yui/compressor/" target="_blank">YUI Compressor</a></p>                
+                
             </div>
-            <div id="tab-2">
-                <p>test2</p>
+
+            <div id="source_maps">
+                <h2>Source Maps</h2>
+                <p><a href="http://www.thecssninja.com/demo/source_mapping/" target="_blank">How source maps work</a><p>                 
+                <p>How we can create source maps using Closure:</p>
+                <pre>java -jar compiler.jar --js=original.js --create_source_map=original.min.js.map --source_map_format=V3 --js_output_file=original.min.js</pre>                               
+                <p><a href="http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/" target="_blank">More about source maps...</a></p>                
+            </div>            
+            
+            <div id="debugging">
+                <h2>Debugging</h2>
+                
+                <p>Popular tools include <a href="http://getfirebug.com/" target="_blank">Firebug</a> in Firefox, <a href="https://developers.google.com/chrome-developer-tools/docs/overview" target="_blank">Chrome Developer Tools</a> in Chrome, and <a href="http://www.opera.com/dragonfly/" target="_blank">Firefly</a> in Opera.                
+                <iframe width="560" height="315" src="http://www.youtube.com/embed/nOEw9iiopwI" frameborder="0" allowfullscreen></iframe>
             </div>
-            <div id="tab-3">
-                <p>test3</p>
+
+            <div id="testing">
+                <h2>Testing</h2>
+            </div>			
+
+            <div id="misc">
+                <h2>Miscellaneous</h2>
+                <a href="http://www.picozu.com/editor" target="_blank"></a>
+                <a href="" target="_blank"></a>
+                <a href="" target="_blank"></a>
+                <a href="" target="_blank"></a>
+                <a href="" target="_blank"></a>                                                   
+                
+                <h3>Keep Up to Date</h3>
+                <p>Modernizr and a <a href="http://webdesignernotebook.com/css/how-to-use-modernizr/" target="_blank">tutorial</a> on how to use it</p>
+                <p><a href="http://news.ycombinator.com/" target="_blank">Hacker News</a>: Technology News</p>
+                <p><a href="http://www.reddit.com/r/programming" target="_blank">Proggit</a>: Programming Board of Popular Website Reddit</p>
+                
+            </div>		
+
+            <div id="recommended">
+                <h2>Recommended Reading</h2>
+                <table>
+                    <tr>
+                        <td>
+                            <img src="http://akamaicovers.oreilly.com/images/9780596101992/cat.gif"/>
+                        </td>                        
+                        <td>
+                            <img src="http://akamaicovers.oreilly.com/images/9780596517748/cat.gif">
+                        </td>
+                    </tr>
+                </table>
+                <p><a href="http://www.amazon.com/JavaScript-Definitive-Guide-David-Flanagan/dp/0596000480" target="_blank">Javascript: The Definitive Guide</a> by David Flanagan</p>          
+                <p><a href="" target="_blank">Javascript: The Good Parts</a> by Douglas Crockford</p>
+                <p><a href="http://bonsaiden.github.com/JavaScript-Garden/" target="_blank">Javascript Garden</a> by Ivo Wetzel and Zhang Yi Jiang</p>
+                <p><a href="http://developer.yahoo.com/performance/rules.html" target="_blank">Best Practices for Speeding Up Your Web Site</a> by Yahoo</p>
+            </div>			
+
+            <div id="git">
+                <h2>Git</h2>
+                
+                <p>Set up your own <a href="https://github.com/" target="_blank">git repository</a></p>                
+                <p>Stand up a webpage for free with <a href="http://pages.github.com/" target="_blank">github pages</a></p>
+                <a class="download" href="https://github.com/alvinxiao/alvinxiao.github.com">Download this Page!</a>
             </div>
-            <div id="tab-4">
-                <p>test4</p>
-            </div>
-            <div id="tab-5">
-                <p>test5</p>
-            </div>
-            <div id="tab-6">
-                <p>test6</p>
-            </div>
-            <div id="tab-7">
-                <p>test7</p>
-            </div>
-            <div id="tab-8">
-                <p>test8</p>
-            </div>
+
+            <small>by Alvin Xiao</small>
         </div>
     </body>
 </html>

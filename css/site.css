@@ -1,32 +1,237 @@
-body {
-    background-color:black
+/* CSS originally from fooljs.com */
+@import url('http://fonts.googleapis.com/css?family=Lato:400,700,400italic');
+
+* {
+	margin: 0;
+	padding: 0;
+	
+	-webkit-font-smoothing: antialiased;
 }
 
-#navigation{
-    height:100%;
-    margin:10px;
+html, body {
+	height: 100%;
+}
+	body {
+		background: #edf2f3;
+		
+		font: 16px/25px Lato, sans-serif;
+		color: #515a5d;
+		text-shadow: 0 1px 0 rgba(255,255,255,.25);
+		
+		padding-top: 60px;
+		padding-left: 350px;
+	}
+	
+.tweet {
+	position: fixed;
+	bottom: 0;
+	
+	background-color: rgba(237,242,243,.3);
+
+	margin-left: -40px;
+	padding: 10px;
+}
+	
+a {
+	cursor: pointer;
+	
+	-webkit-transition: color .25s;
+	-moz-transition: color .25s;
+	-ms-transition: color .25s;
+	-o-transition: color .25s;
+	transition: color .25s;
+	
+	color: #3d5860;
+}
+	a:hover {
+		color: #21343a;
+	}
+	pre a:hover {
+		opacity: .7;
+	}
+	
+p {
+	clear: both;
+	padding-bottom: 20px;
 }
 
-.content{
-    background-color: #0972a5;
-    padding-left:10px;
-    padding-right:10px;
-    padding-bottom:5px;
-    border-radius: 10px;
+pre, code {
+	background: #e2eaec;
+	padding: 2px 5px;
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+	pre {
+		display: block;
+		margin: 10px 0 20px;
+		padding: 20px 25px;
+		
+		overflow-y: hidden;
+		overflow-x: scroll;
+	}
+
+h1 {
+	color: #fff;
+	font: italic 36px Lato, sans-serif;
+	text-align: center;
+}
+	h1 i {
+		color: #a8b8bd;
+	}
+
+h1 + h2 {
+	color: #66777c;
+	
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;	
+        padding-bottom: 10px;
 }
 
-.code{
-    background-color: #FFF;
+h3{
+    font-style: italic;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-h1{
-    color: #FFF;
+hr{
+    margin-top:10px;
 }
 
-p{
-    font-size: 15px;
+iframe{
+    padding-top:10px;
 }
 
-a{
-    font-size: 15px;
+
+nav {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	
+	width: 228px;
+	padding: 30px;
+	
+	background: #394042  50% 100%;
+	
+	color: #8a999d;
+	text-shadow: 0 1px 1px #212627;
+	
+	-webkit-box-shadow: inset 0 2px 15px rgba(0,0,0,.3), inset 0 -10px 20px rgba(0,0,0,.1);
+	-moz-box-shadow: inset 0 2px 15px rgba(0,0,0,.3), inset 0 -10px 20px rgba(0,0,0,.1);
+	box-shadow: inset 0 2px 15px rgba(0,0,0,.3), inset 0 -10px 20px rgba(0,0,0,.1);
 }
+	nav ul {
+		border-bottom: 1px solid #4c5457;
+
+		margin: 30px -30px;
+
+		list-style: none;
+		text-align: right;
+	}
+		nav ul li {
+			position: relative;
+			border-top: 1px solid #4c5457;
+		}
+		nav ul a {
+			display: block;
+			padding: 10px 30px;
+
+			color: #b6cbd2;
+
+			font-size: 18px;
+			font-weight: bold;
+			text-decoration: none;
+			
+			-webkit-transition: background .5s, color .5s;
+			-moz-transition: background .5s, color .5s;
+			-ms-transition: background .5s, color .5s;
+			-o-transition: background .5s, color .5s;
+			transition: background .5s, color .5s;
+		}
+			nav ul a:hover {
+				color: #e9f5f8;
+			}
+			nav ul .active a {
+				background: rgba(179,197,202,.1);
+				color: #fff;
+			}
+			
+span.comment {
+	color: #97a2a5;
+}
+
+b {
+	display: block;
+	padding-top: 5px;
+}
+
+a.download {
+	display: block;
+	float: left;
+	padding: 30px 50px;
+	margin-bottom: 20px;
+	
+	background: #40a8c6;
+	color: #fff;
+	text-shadow: 0 1px 3px rgba(0,0,0,.3);
+	
+	font-size: 32px;
+	text-decoration: none;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	
+	-webkit-box-shadow: inset 0 -2px 2px rgba(0,0,0,.1), 0 1px 1px rgba(0,0,0,.05);
+	-moz-box-shadow: inset 0 -2px 2px rgba(0,0,0,.1), 0 1px 1px rgba(0,0,0,.05);
+	box-shadow: inset 0 -2px 2px rgba(0,0,0,.1), 0 1px 1px rgba(0,0,0,.05);
+	
+	-webkit-transition: background .25s;
+	-moz-transition: background .25s;
+	-ms-transition: background .25s;
+	-o-transition: background .25s;
+	transition: background .25s;
+}
+	a.download:hover {
+		background: #2f87a1;
+	}
+	a.download:active {
+		-webkit-box-shadow: inset 0 2px 2px rgba(0,0,0,.1), 0 1px 1px rgba(0,0,0,.2);
+		-moz-box-shadow: inset 0 2px 2px rgba(0,0,0,.1), 0 1px 1px rgba(0,0,0,.2);
+		box-shadow: inset 0 2px 2px rgba(0,0,0,.1), 0 1px 1px rgba(0,0,0,.2);
+	}
+
+small {
+	display: block;
+	clear: both;
+	
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	
+	padding: 10px 20px;
+	background: rgba(255,255,255,.6);
+}
+			
+div.panels {
+	height: 300%;
+	margin-right: 60px;
+}
+	div.panels div {
+		height: 33.333%;
+	}
+	
+	div.panels h2 {
+		padding: 0 0 20px;
+
+		font-size: 40px;
+		font-weight: normal;
+
+		color: #4a656d;
+	}
+		div#usage h2 {
+			padding-top: 30px;
+		}
