@@ -18,7 +18,7 @@
         <nav>
             <h1>Javascript Best Practices Brown Bag</h1>	
             <ul>
-                <li class="usage"><a href="#intro">Intro</a></li>
+                <!--<li class="usage"><a href="#intro">Intro</a></li>-->
                 <li class="usage"><a href="#loops">Loops</a></li>
                 <li class="usage"><a href="#namespaces">Namespaces</a></li>                
                 <li class="usage"><a href="#kThis">Keyword this</a></li>
@@ -34,11 +34,11 @@
 
         <div class="panels">
 
+<!--            
             <div id="intro">
                 <h2>Intro</h2>
-                <p>There are many tools on the web. Today, we'll go over a couple of those tools. We're going to go over a couple of good practices and take a close look at the Chrome Developer Tools</p>
             </div>
-
+-->
             <div id="loops">
                 <h2>Loops</h2>
                 <p>When possible use: </p>                  
@@ -76,6 +76,26 @@
             
             <div id="kThis">
                 <h2>this</h2>
+                <pre>
+                    // Case 1
+                    Foo.method = function(){
+                        console.log(this); // refers to Foo
+                        function(){}
+                    }
+                    // Case 2
+                    Foo.method = function(){                        
+                        function(){
+                            console.log(this); // refers to the Global object
+                        }
+                    }
+                    // Case 3
+                    Foo.method = function(){                   
+                        var that = this;
+                        function(){
+                            console.log(that); // refers to Foo
+                        }
+                    }
+                </pre>                
             </div>    
 
             <div id="debugging">
@@ -113,10 +133,6 @@
 
             <div id="misc">
                 <h2>Miscellaneous</h2>                
-                <a href="" target="_blank"></a>
-                <a href="" target="_blank"></a>
-                <a href="" target="_blank"></a>
-                <a href="" target="_blank"></a>
                 <h3>Update your Website</h3>
                 <p><a href="http://modernizr.com/" target="_blank">Modernizr</a> and a <a href="http://webdesignernotebook.com/css/how-to-use-modernizr/" target="_blank">tutorial</a> on how to use it</p>
 
@@ -138,8 +154,8 @@
                         </td>
                     </tr>
                 </table>
-                <p><a href="http://www.amazon.com/JavaScript-Definitive-Guide-David-Flanagan/dp/0596000480" target="_blank">Javascript: The Definitive Guide</a> by David Flanagan</p>          
-                <p><a href="" target="_blank">Javascript: The Good Parts</a> by Douglas Crockford</p>
+                <p><a href="http://www.amazon.com/JavaScript-Definitive-Guide-Activate-Guides/dp/0596805527/ref=sr_1_1?s=books&ie=UTF8&qid=1334906152&sr=1-1" target="_blank">Javascript: The Definitive Guide</a> by David Flanagan</p>          
+                <p><a href="http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742/ref=sr_1_1?s=books&ie=UTF8&qid=1334906231&sr=1-1" target="_blank">Javascript: The Good Parts</a> by Douglas Crockford</p>
                 <p><a href="http://bonsaiden.github.com/JavaScript-Garden/" target="_blank">Javascript Garden</a> by Ivo Wetzel and Zhang Yi Jiang</p>
                 <p><a href="http://developer.yahoo.com/performance/rules.html" target="_blank">Best Practices for Speeding Up Your Web Site</a> by Yahoo</p>
             </div>			
@@ -152,7 +168,7 @@
                 <a class="download" href="https://github.com/alvinxiao/alvinxiao.github.com">Download this Page!</a>
             </div>
 
-            <small>by Alvin Xiao</small>
+            <small>contact via <a href="mailto:xiao.alvin@gmail.com">Alvin Xiao</a></small>
         </div>
     </body>
 </html>
