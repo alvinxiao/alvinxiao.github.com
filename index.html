@@ -10,7 +10,7 @@
         
         <!-- SCRIPTS -->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="js/site.js"></script>
+        <script src="js/site.min.js"></script>
         <script type="text/javascript" src="js/prettify.js"></script>
     </head>
 
@@ -20,10 +20,11 @@
             <ul>
                 <li class="usage"><a href="#intro">Intro</a></li>
                 <li class="usage"><a href="#loops">Loops</a></li>
+                <li class="usage"><a href="#namespaces">Namespaces</a></li>                
                 <li class="usage"><a href="#kThis">Keyword this</a></li>
+                <li class="usage"><a href="#debugging">Debugging</a></li>                
                 <li class="usage"><a href="#minification">Minification</a></li>
                 <li class="usage"><a href="#source_maps">Source Maps</a></li>
-                <li class="usage"><a href="#debugging">Debugging</a></li>
                 <li class="usage"><a href="#new_tools">Integrating New Libraries</a></li>
                 <li class="usage"><a href="#misc">Miscellaneous</a></li>
                 <li class="usage"><a href="#recommended">Recommended Reading</a></li>
@@ -34,7 +35,8 @@
         <div class="panels">
 
             <div id="intro">
-                <h2>Intro</h2>               
+                <h2>Intro</h2>
+                <p>There are many tools on the web. Today, we'll go over a couple of those tools. We're going to go over a couple of good practices and take a close look at the Chrome Developer Tools</p>
             </div>
 
             <div id="loops">
@@ -55,18 +57,44 @@
                 <a href="http://jsperf.com/jquery-each-vs-for-loop/69" target="_blank">Reasoning</a>
 
             </div>
+            
+            <div id="namespaces">
+                <h2>Namespaces</h2>
+                <p>By default everything in Javascript is declared in a globally shared namespace</p>
+                <p>The Problem:</p>
+                <pre>
+                    foo = 1; // A.js global scope
 
+                    foo = 2; // B.js global scope has now overriden foo in A.js
+                </pre>
+                <p>The Solution:</p>
+                <pre>
+                    var nameSpaceA = { foo: 1 }; // in A.js
+                    var nameSpaceB = { foo: 2 }; // in B.js
+                </pre>
+            </div>
+            
             <div id="kThis">
                 <h2>this</h2>
             </div>    
+
+            <div id="debugging">
+                <h2>Debugging</h2>                
+                <p>Popular tools include <a href="http://getfirebug.com/" target="_blank">Firebug</a> in Firefox, <a href="https://developers.google.com/chrome-developer-tools/docs/overview" target="_blank">Chrome Developer Tools</a> in Chrome, and <a href="http://www.opera.com/dragonfly/" target="_blank">Firefly</a> in Opera.                
+                <p><iframe width="560" height="315" src="http://www.youtube.com/embed/nOEw9iiopwI" frameborder="0" allowfullscreen></iframe></p>
+                <h3>In Chrome F12 to open Developer Tools:</h3>
+                <p>Ctrl+O: Open file</p>
+                <p>Ctrl+Shift+O: Find function</p>
+                <p>Ctrl+Shift+F: Find variable</p>
+            </div>            
             
             <div id="minification">
                 <h2>Minification</h2>               
                 <p>An easy way to greatly reduce the size of your JS and speed up your app!</p>
                 <p><a href="https://developers.google.com/closure/compiler/" target="_blank">Closure Compiler</a></p>
                 <pre>java -jar compiler.jar --js=original.js --js_output_file=original.min.js</pre>
-                <p><a href="http://developer.yahoo.com/yui/compressor/" target="_blank">YUI Compressor</a></p>                
-                
+                <p><a href="http://developer.yahoo.com/yui/compressor/" target="_blank">YUI Compressor</a></p>
+                <pre>java -jar yuicompressor-x.y.z.jar original.js -o original.min.js</pre>                
             </div>
 
             <div id="source_maps">
@@ -75,22 +103,18 @@
                 <p>How we can create source maps using Closure:</p>
                 <pre>java -jar compiler.jar --js=original.js --create_source_map=original.min.js.map --source_map_format=V3 --js_output_file=original.min.js</pre>                               
                 <p><a href="http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/" target="_blank">More about source maps...</a></p>                
-            </div>            
-            
-            <div id="debugging">
-                <h2>Debugging</h2>
-                
-                <p>Popular tools include <a href="http://getfirebug.com/" target="_blank">Firebug</a> in Firefox, <a href="https://developers.google.com/chrome-developer-tools/docs/overview" target="_blank">Chrome Developer Tools</a> in Chrome, and <a href="http://www.opera.com/dragonfly/" target="_blank">Firefly</a> in Opera.                
-                <iframe width="560" height="315" src="http://www.youtube.com/embed/nOEw9iiopwI" frameborder="0" allowfullscreen></iframe>
-            </div>
+            </div>                        
 
             <div id="new_tools">
                 <h2>Integrating New Libraries</h2>
-                <a href="http://jsfiddle.net/" target="_blank">JSFIDDLE</a>              
+                <p><a href="http://jsfiddle.net/" target="_blank">JSFIDDLE</a> which includes <a href="http://jslint.com/" target="_blank">JSLINT</a></p>
+                <p>Example for: <a href="http://jsfiddle.net/marcofucci/rRtAq/" target="_blank">ElementStacks</a></p>
             </div>			
 
             <div id="misc">
-                <h2>Miscellaneous</h2>
+                <h2>Miscellaneous</h2>                
+                <a href="" target="_blank"></a>
+                <a href="" target="_blank"></a>
                 <a href="" target="_blank"></a>
                 <a href="" target="_blank"></a>
                 <h3>Update your Website</h3>

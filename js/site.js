@@ -31,16 +31,6 @@ $(function() {
 			el = panels.children('div').eq(Math.round(me.scrollTop() / me.height()));
 				
 		list.find('a[href=#' + el.attr('id') + ']').parent().addClass('active').siblings().removeClass('active');
-	});
+	});	
 	
-	$('pre a').click(function() {
-		var me = $(this),
-			action = me.text().split(':')[0];
-		
-		me.toggleClass('toggled');
-		
-		$.fool(action);
-		
-		return false;
-	});
 });
