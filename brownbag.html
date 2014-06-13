@@ -85,7 +85,51 @@
                         <p><a href="https://developers.google.com/chrome-developer-tools/docs/console-api">Chrome Console API</a></p>
                         <p><a href="https://developers.google.com/chrome-developer-tools/docs/commandline-api#selector">Chrome Command Line API</a></p>
                     </section>                    
-                </section>      
+                </section> 
+                <section class="stack">
+                    <section>
+                        <h1>Brown Bag Part 2</h1>
+                    </section>
+                    <section>
+                        <h2>TL;DR</h2>
+                        <p>Basic Use of Source Tab (JS Debugging)</p>
+                        <p>Turning Experiments On</p>
+                        <p>Enabling Frameworks Debugging</p>
+                        <p>Canvas Inspection</p>
+                        <p>Stringify JSON command</p>
+                        <p>Conditional Breakpoints</p>
+                        <p>Prettify</p>
+                        <p>Turning on cache clear and hard refresh</p>
+                        <p>Source Maps</p>
+                        <p><a href="http://json-generator.com">JSON generation</a></p>
+                        <p>3D Debugging in Firefox (BONUS)</p>
+                    </section>
+                    <section>
+                        <h2>Turning Experiments On</h2>
+                        <p>Type chrome://flags into Chrome's URL bar</p>
+                        <p>Search for "Enable Developer Tools experiments"</p>
+                        <p>Click "Enable"</p>
+                        <p>Restart Chrome</p>
+                    </section>
+                    <section>
+                        <h2>Enabling Frameworks Debugging (aka skip third parties)</h2>
+                        <p>Make sure experimental dev tools are on</p>
+                        <p>Open Developer Tools (F12 or right click and inspect element)</p>
+                        <p>Go to "General" tab</p>
+                        <p>Under "Sources" toggle "Skip stepping through sources with particular names"</p>
+                        <p>Add third party library names separated by "|" (example: "jquery|yui|event-base")</p>
+                        <p>WARNING sometimes you want to go in the libraries so remember to turn this off if so</p>
+                    </section>
+                    <section>
+                        <h2>Stringify Command</h2>
+                        <p>JSON.stringify(x, null, 4)</p>
+                        <p>x: JSON object you want to format</p>
+                        <p>null: filter you want to use (I never use so not familiar with this)</p>
+                        <p>4: the amount of spacing you want</p>
+                        <p>This will still be hard to read in the browser so wrap with copy() command to use in your favorite editor</p>
+                        <p>copy(JSON.stringify(x, null, 4))</p>
+                    </section>
+                </section>                  
                 <section class="stack">
                     <section>
                         <h1>Questions?</h1>
