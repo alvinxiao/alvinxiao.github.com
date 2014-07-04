@@ -32,6 +32,14 @@
             var weight = $('#weight').val();
             calculatePlates(barWeight, weight);    
         }); 
+
+        $('input').focus( function() {
+          $('.navbar-top-fixed').hide();
+        });
+
+        $('input').blur( function() {
+          $('.navbar-top-fixed').show();
+        });
       });   
     </script>
     <style>
