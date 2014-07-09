@@ -16,6 +16,12 @@
 	<script type="text/javascript" src="js/ww.js"></script>
 
 	<style>
+		@media screen and (-webkit-min-device-pixel-ratio:0) { 
+       		select:focus, textarea:focus, input:focus {
+   			font-size: 16px;
+       		background:#eee;
+        	}
+       	}
 		.checkedIn{
 			background-color: #000099;
 		}
@@ -51,7 +57,7 @@
 	<div ng-controller="WagerController">
 		<ul class="list-group">
 		    <li class="list-group-item" ng-repeat="player in players" ng-class="{checkedIn : player.checkedInToday == true}">
-		        <h4><a href="#" ng-click="showDetails = ! showDetails">{{player.name}}</a></h4>
+		        <h4><a href="" ng-click="showDetails = ! showDetails">{{player.name}}</a></h4>
 		        	<ul class="list-group" ng-show="showDetails">
 		        		<li class="list-group-item" ng-repeat="checkin in player.checkins">
 		        			<div>{{checkin.time | date:'medium'}}</div>
