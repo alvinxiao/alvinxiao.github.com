@@ -1,0 +1,80 @@
+var players = {
+	'0523': {
+		'name' : 'Amir',
+		'checkins': {},
+		'availableDice': {},
+		'selectedDice': 6		
+	},
+	'8345': {
+		'name' : 'Sedine',
+		'checkins': {},
+		'availableDice': {},
+		'selectedDice': 6		
+	},
+	'5094': {
+		'name' : 'Rosand',
+		'checkins': {},
+		'availableDice': {},
+		'selectedDice': 6		
+	},
+	'5935': {
+		'name' : 'Roger',
+		'checkins': {},
+		'availableDice': {},
+		'selectedDice': 6		
+	},
+	'4321': {
+		'name' : 'Chris',
+		'checkins': {},
+		'availableDice': {},
+		'selectedDice': 6		
+	},
+	'8904': {
+		'name' : 'Kevin',
+		'checkins': {},
+		'availableDice': {},
+		'selectedDice': 6		
+	},
+	'5439': {
+		'name' : 'Kyle',
+		'checkins': {},
+		'availableDice': {},
+		'selectedDice': 6		
+	},
+	'0928': {
+		'name' : 'Diana',
+		'checkins': {},
+		'availableDice': {},
+		'selectedDice': 6		
+	},
+	'3547': {
+		'name' : 'Isaac',
+		'checkins': {},
+		'availableDice': {},
+		'selectedDice': 6		
+	},
+	'5777': {
+		'name' : 'Francis',
+		'checkins': {},
+		'availableDice': {},
+		'selectedDice': 6		
+	},
+	'3457': {
+		'name' : 'Maddie',
+		'checkins': {},
+		'availableDice': {},
+		'selectedDice': 6		
+	},
+	'1238': {
+		'name' : 'Matt',
+		'checkins': {},
+		'availableDice': {},
+		'selectedDice': 6		
+	},
+	'9843': {
+		'name' : 'Alvin',
+		'checkins': {},
+		'availableDice': {},
+		'selectedDice': 6		
+	},
+}

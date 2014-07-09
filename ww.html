@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Workout Wager</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- Firebase -->
+	<script src="https://cdn.firebase.com/js/client/1.0.17/firebase.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<!-- AngularFire Library -->
+	<script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+	<script type="text/javascript" src="js/ww.js"></script>
+
+	<style>
+		.checkedIn{
+			background-color: #000099;
+		}
+
+		.notCheckedIn{
+		
+		}
+	</style>
+</head>
+<body ng-app="myApp">
+	<div ng-controller="CheckinController">
+		<div class="panel panel-default">
+		    <div class="panel-heading text-center">Have You Worked Out Today?</div>
+		    <div class="panel-body">
+		      <div class="input-group">
+		        <span class="input-group-addon">Code:</span>
+		        <input type="tel" class="form-control" name="input" ng-model="code" minLength="4" maxLength="4" pattern='[0-9]*' placeholder="####">		    		      
+		      </div>
+		      <div>&nbsp</div>
+		      <div class="input-group">
+		        <span class="input-group-addon">Message</span>
+		        <textarea class="form-control" ng-model="checkinMessage" placeholder="optional"></textarea>		        
+		      </div> 
+		      <div>&nbsp</div>
+		      <button id="calculatePlates" type="button" ng-click="checkin()" class="btn btn-default">
+		        <span class="glyphicon glyphicon-check"></span> Check In!
+		      </button>
+		      <div>&nbsp</div>
+		      <ul id="results" class="list-group"></ul> 
+		    </div>
+		  </div> 				
+	</div>
+	<div ng-controller="WagerController">
+		<ul class="list-group">
+		    <li class="list-group-item" ng-repeat="player in players" ng-class="{checkedIn : player.checkedInToday == true}">
+		        <h4><a href="#" ng-click="showDetails = ! showDetails">{{player.name}}</a></h4>
+		        	<ul class="list-group" ng-show="showDetails">
+		        		<li class="list-group-item" ng-repeat="checkin in player.checkins">
+		        			<div>{{checkin.time | date:'medium'}}</div>
+		        			<div ng-show="checkin.message">{{checkin.message}}</div>
+		        		</li>
+		        	</ul> 
+		    </li>
+		</ul>
+	</div>	
+	<!--
+	<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+	<div class="container">
+    	<div class="col-xs-6">
+			<button id="" type="button" class="btn btn-default">
+		        <span class="glyphicon glyphicon-check"></span> Check In!
+		  	</button>		  	
+      	</div>
+      	<div class="col-xs-6">
+			
+		        <span class="glyphicon glyphicon-check center-block"></span>
+		  	
+      	</div>
+  	</div>-->
+</nav>
+</body>
+</html>
