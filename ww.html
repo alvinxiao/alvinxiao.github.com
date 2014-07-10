@@ -30,6 +30,10 @@
 			margin-bottom: 1px;
 		
 		}
+
+		.full-width{
+			width: 100%;
+		}
 	</style>
 </head>
 <body ng-app="myApp">
@@ -38,16 +42,16 @@
 		    <div class="panel-heading text-center">Have You Worked Out Today?</div>
 		    <div class="panel-body">
 		      <div class="input-group">
-		        <span class="input-group-addon">Code:</span>
+		        <span class="input-group-addon">Code</span>
 		        <input type="tel" class="form-control" name="input" ng-model="code" minLength="4" maxLength="4" pattern='[0-9]*' placeholder="####">		    		      
 		      </div>
 		      <div>&nbsp</div>
 		      <div class="input-group">
 		        <span class="input-group-addon">Message</span>
-		        <textarea class="form-control" ng-model="checkinMessage" placeholder="optional"></textarea>		        
+		        <input type="text" class="form-control" ng-model="checkinMessage" placeholder="optional"></input>		        
 		      </div> 
 		      <div>&nbsp</div>
-		      <button id="calculatePlates" type="button" ng-click="checkin()" class="btn btn-default">
+		      <button type="button" ng-click="checkin()" class="btn btn-default full-width">
 		        <span class="glyphicon glyphicon-check"></span> Check In!
 		      </button>
 		      <div>&nbsp</div>
@@ -62,7 +66,7 @@
 		        	<span class="glyphicon pull-right" ng-class="{'glyphicon-ok' : player.checkedInDay == currentDay, 'glyphicon-remove' : player.checkedInDay != currentDay}"></span>
 		        </h4>
 		        	<ul class="list-group" ng-show="showDetails">
-		        		<li class="list-group-item" ng-repeat="checkin in player.checkins">
+		        		<li class="list-group-item" ng-repeat="checkin in player.checkins | orderObjectBy:'time':true ">
 		        			<div>{{checkin.time | date:'medium'}}</div>
 		        			<div ng-show="checkin.message">{{checkin.message}}</div>
 		        		</li>

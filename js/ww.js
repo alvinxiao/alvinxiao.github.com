@@ -73,13 +73,28 @@ app.controller('CheckinController', ['$scope', '$firebase', function($scope,$fir
 
 app.controller('WagerController', ['$scope', '$firebase', function($scope, $firebase){
 	$scope.currentDay = new Date().getDay();
+	// $scope.timeSort = function(checkin){
+	// 	return checkin.time;
+	// };
 	// var playersRef = new Firebase("https://workoutWager.firebaseio.com/players");
 	// var codesRef = new Firebase("https://workoutWager.firebaseio.com/codes");
 	// $scope.players = $firebase(playersRef);
 	// $scope.codes = $firebase(codesRef);
-
-
 }]);
+
+app.filter('orderObjectBy', function() {
+  return function(items, field, reverse) {
+    var filtered = [];
+    angular.forEach(items, function(item) {
+      filtered.push(item);
+    });
+    filtered.sort(function (a, b) {
+      return (a[field] > b[field] ? 1 : -1);
+    });
+    if(reverse) filtered.reverse();
+    return filtered;
+  };
+});
 
 
 
