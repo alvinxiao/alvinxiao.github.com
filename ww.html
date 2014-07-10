@@ -23,10 +23,11 @@
         	}
        	}
 		.checkedIn{
-			border:3px solid green;
+			border-left:10px solid green;
 		}
 
-		.notCheckedIn{
+		.list-group-item{
+			margin-bottom: 1px;
 		
 		}
 	</style>
@@ -57,13 +58,15 @@
 	<div ng-controller="WagerController">
 		<ul class="list-group">
 		    <li class="list-group-item" ng-repeat="player in players" ng-class="{checkedIn : player.checkedInDay == currentDay}" ng-click="showDetails = ! showDetails"> 
-		        <h4><a href="">{{player.name}}</a></h4>
+		        <h4><a href="">{{player.name}}</a>
+		        	<span class="glyphicon pull-right" ng-class="{'glyphicon-ok' : player.checkedInDay == currentDay, 'glyphicon-remove' : player.checkedInDay != currentDay}"></span>
+		        </h4>
 		        	<ul class="list-group" ng-show="showDetails">
 		        		<li class="list-group-item" ng-repeat="checkin in player.checkins">
 		        			<div>{{checkin.time | date:'medium'}}</div>
 		        			<div ng-show="checkin.message">{{checkin.message}}</div>
 		        		</li>
-		        	</ul> 
+		        	</ul>		         
 		    </li>
 		</ul>
 	</div>	

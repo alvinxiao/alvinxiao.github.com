@@ -65,7 +65,7 @@ app.controller('CheckinController', ['$scope', '$firebase', function($scope,$fir
 			}
 			else{
 				$scope.checkedIn = true;
-				alert("You've already checked in today! Good Job!");
+				alert("You've already checked in today "+$scope.user.name+"! Good Job!");
 			}			
 		}
 	}
