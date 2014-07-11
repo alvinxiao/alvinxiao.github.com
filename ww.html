@@ -61,7 +61,7 @@
 	</div>
 	<div ng-controller="WagerController">
 		<ul class="list-group">
-		    <li class="list-group-item" ng-repeat="player in players" ng-class="{checkedIn : player.checkedInDay == currentDay}" ng-click="showDetails = ! showDetails"> 
+		    <li class="list-group-item" ng-repeat="player in players | orderObjectBy:'name'" ng-show="player.selectedDice"ng-class="{checkedIn : player.checkedInDay == currentDay}" ng-click="showDetails = ! showDetails"> 
 		        <h4><a href="">{{player.name}}</a>
 		        	<span class="glyphicon pull-right" ng-class="{'glyphicon-ok' : player.checkedInDay == currentDay, 'glyphicon-remove' : player.checkedInDay != currentDay}"></span>
 		        </h4>
