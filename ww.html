@@ -51,10 +51,21 @@
 		        <input type="text" class="form-control" ng-model="checkinMessage" placeholder="optional"></input>		        
 		      </div> 
 		      <div>&nbsp</div>
-		      <button type="button" ng-click="checkin()" class="btn btn-default full-width">
+		      <button type="button" ng-click="checkin()" class="btn btn-primary full-width">
 		        <span class="glyphicon glyphicon-check"></span> Check In!
 		      </button>
 		      <div>&nbsp</div>
+		      <button type="button" ng-click="adjustDice()" class="btn btn-default full-width disabled">
+		        <span class="glyphicon glyphicon-refresh"></span> Adjust Dice
+		      </button>
+		      <div>&nbsp</div>
+		      <button type="button" ng-click="findWinner()" class="btn btn-default full-width disabled">
+		        <span class="glyphicon glyphicon-list-alt"></span> Find Winner
+		      </button>
+		      <div>&nbsp</div>
+		      <button class="btn btn-default full-width" data-toggle="modal" data-target="#myModal">
+	  				Results
+			  </button>
 		      <ul id="results" class="list-group"></ul> 
 		    </div>
 		  </div> 				
@@ -73,7 +84,47 @@
 		        	</ul>		         
 		    </li>
 		</ul>
-	</div>	
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Results for 7/7 - 7/13</h4>
+	      </div>
+	      <div class="modal-body">
+	      	<!-- Temporary Hardcode -->
+	        <ul class="list-group">
+        		<li class="list-group-item">Chris selects a d8</li>
+        		<li class="list-group-item">Rosand selects a d6</li>
+        		<li class="list-group-item">Amir selects a d6</li>
+        		<li class="list-group-item">Francis selects a d6</li>
+        		<li class="list-group-item">Isaac selects a d8</li>
+        		<li class="list-group-item">Roger selects a d8</li>
+        		<li class="list-group-item">Alvin selects a d6</li>
+        		<li class="list-group-item">Maddie selects a d6</li>
+        		<li class="list-group-item">Matt selects a d8</li>
+        		<li class="list-group-item">Chris rolls a 7</li>
+        		<li class="list-group-item">Rosand rolls a 5</li>
+        		<li class="list-group-item">Amir rolls a 6</li>
+        		<li class="list-group-item">Francis rolls a 4</li>
+        		<li class="list-group-item">Isaac rolls a 2</li>
+        		<li class="list-group-item">Roger rolls a 3</li>
+        		<li class="list-group-item">Alvin rolls a 3</li>
+        		<li class="list-group-item">Maddie rolls a 6</li>
+        		<li class="list-group-item">Matt rolls a 1</li>
+        		<li class="list-group-item bg-success">Chris is the winner! Payed out by Matt</li>
+
+        	</ul>	    
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
 	<!--
 	<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
 	<div class="container">

@@ -69,6 +69,30 @@ app.controller('CheckinController', ['$scope', '$firebase', function($scope,$fir
 			}			
 		}
 	}
+
+	$scope.adjustDice = function(){
+		var wagerAmount = 3;
+		var defaultDice = 6;
+
+		for(var i in $scope.players){
+			var player = $scope.players[i];
+
+			// Skip over angular junk -> TODO how to cleanly skip $$
+			if(player.name !== undefined){
+				var totalCheckins = _.size(player.checkins);
+				var adjustment = totalCheckins - wagerAmount;			
+				if(adjustment > 2) {
+					adjustment = 2;
+				}
+				player.selectedDice = defaultDice + adjustment;
+			}			
+		}
+		$scope.players.$set($scope.players);
+	}
+
+	$scope.findWinner = function(){
+
+	}
 }]);
 
 app.controller('WagerController', ['$scope', '$firebase', function($scope, $firebase){
@@ -95,8 +119,6 @@ app.filter('orderObjectBy', function() {
     return filtered;
   };
 });
-
-
 
 
 
