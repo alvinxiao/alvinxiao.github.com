@@ -106,6 +106,7 @@ app.controller('CheckinController', ['$scope', '$firebase', '$location', functio
 
 app.controller('WagerController', ['$scope', '$firebase', function($scope, $firebase){
 	$scope.currentDay = new Date().getDay();
+	$scope.fullDay = new Date();
 	// $scope.timeSort = function(checkin){
 	// 	return checkin.time;
 	// };
