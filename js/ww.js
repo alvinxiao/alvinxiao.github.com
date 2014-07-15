@@ -7,27 +7,34 @@ weekday[4] = "Thursday";
 weekday[5] = "Friday";
 weekday[6] = "Saturday";
 
-var app = angular.module('myApp', ['firebase']).run(function($rootScope,$firebase){
+var app = angular.module('myApp', ['firebase','ngRoute']).run(function($rootScope,$firebase){
 	var playersRef = new Firebase("https://workoutWager.firebaseio.com/players");
 	var codesRef = new Firebase("https://workoutWager.firebaseio.com/codes");
 	$rootScope.players = $firebase(playersRef);
 	$rootScope.codes = $firebase(codesRef);
 	$rootScope.checkedIn = false;
-	// var today = new Date().getDay();
-
-	// for(currentCode in $scope.codes){
-	// 	var code = $scope.codes[currentCode]);
-	// 	$scope.user = $scope.players[code];
-	// 	if($scope.user.checkins){
-	// 		if($scope.user.checkins[today]){
-	// 			$scope.checkedInToday = true;
-	// 		}
-	// 	}
-	// }
 });
 
+app.config(['$routeProvider',
+  function($routeProvider) {
+    $routeProvider.
+      when('/Checkin', {
+        templateUrl: 'checkin.html',
+        controller: 'CheckinController'
+    }).
+      when('/Wager', {
+        templateUrl: 'wager.html',
+        controller: 'WagerController'
+      }).
+      otherwise({
+        redirectTo: '/Checkin'
+      });
+}]);
+
+
+
 // Controllers 
-app.controller('CheckinController', ['$scope', '$firebase', function($scope,$firebase){
+app.controller('CheckinController', ['$scope', '$firebase', '$location', function($scope,$firebase,$location){
 
 
 	$scope.checkin = function(){
@@ -44,7 +51,7 @@ app.controller('CheckinController', ['$scope', '$firebase', function($scope,$fir
 		}
 
 		if(!validCode){
-			alert('User Code is Invalid.');
+			alert('User Code is Invalid.');		
 			return;
 		}
 		else{
@@ -66,7 +73,9 @@ app.controller('CheckinController', ['$scope', '$firebase', function($scope,$fir
 			else{
 				$scope.checkedIn = true;
 				alert("You've already checked in today "+$scope.user.name+"! Good Job!");
-			}			
+			}	
+
+  			$location.path('/Wager');
 		}
 	}
 

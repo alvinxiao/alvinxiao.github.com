@@ -10,6 +10,7 @@
     <!-- Firebase -->
 	<script src="https://cdn.firebase.com/js/client/1.0.17/firebase.js"></script>
 	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular-route.js"></script>
 	<!-- AngularFire Library -->
 	<script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
@@ -37,10 +38,33 @@
 	</style>
 </head>
 <body ng-app="myApp">
-	<div ng-controller="CheckinController">
+	<nav class="navbar navbar-default" role="navigation">
+	     <div class="container-fluid" id="navfluid">
+	       <div class="navbar-header">
+	       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationbar">
+	       <span class="sr-only">Toggle navigation</span>
+	       <span class="icon-bar"></span>
+	       <span class="icon-bar"></span>
+	       <span class="icon-bar"></span>
+	      </button>
+	     <a class="navbar-brand" href="./ww.html">Have You Worked Out Today?</a>
+	    </div>
+	<div class="collapse navbar-collapse" id="navigationbar">
+	<ul class="nav navbar-nav">
+	   <li><a href="#Checkin">Checkin</a></li>
+	    <li><a href="#Wager">Wager</a></li>    
+	</ul>
+	</div><!-- /.navbar-collapse -->
+	</div><!-- /.container-fluid -->
+	</nav>
+
+	<div ng-view></div>
+
+	<!-- Temporary Templates until webserver is up -->
+	<script type="text/ng-template" id="checkin.html">
 		<div class="panel panel-default">
-		    <div class="panel-heading text-center">Have You Worked Out Today?</div>
-		    <div class="panel-body">
+		    <!--<div class="panel-heading text-center">Have You Worked Out Today?</div>-->
+		    <!--<div class="panel-body">-->
 		      <div class="input-group">
 		        <span class="input-group-addon">Code</span>
 		        <input type="tel" class="form-control" name="input" ng-model="code" minLength="4" maxLength="4" pattern='[0-9]*' placeholder="####">		    		      
@@ -55,22 +79,23 @@
 		        <span class="glyphicon glyphicon-check"></span> Check In!
 		      </button>
 		      <div>&nbsp</div>
-		      <button type="button" ng-click="adjustDice()" class="btn btn-default full-width disabled">
-		        <span class="glyphicon glyphicon-refresh"></span> Adjust Dice
-		      </button>
-		      <div>&nbsp</div>
-		      <button type="button" ng-click="findWinner()" class="btn btn-default full-width disabled">
-		        <span class="glyphicon glyphicon-list-alt"></span> Find Winner
-		      </button>
-		      <div>&nbsp</div>
 		      <button class="btn btn-default full-width" data-toggle="modal" data-target="#myModal">
 	  				Results
 			  </button>
+		      <div>&nbsp</div>
+		      <button type="button" ng-click="adjustDice()" class="btn btn-default full-width disabled hidden">
+		        <span class="glyphicon glyphicon-refresh"></span> Adjust Dice
+		      </button>
+		      <div>&nbsp</div>
+		      <button type="button" ng-click="findWinner()" class="btn btn-default full-width disabled hidden">
+		        <span class="glyphicon glyphicon-list-alt"></span> Find Winner
+		      </button>		      
 		      <ul id="results" class="list-group"></ul> 
-		    </div>
+		    <!--</div>-->
 		  </div> 				
-	</div>
-	<div ng-controller="WagerController">
+	</script>
+	
+	<script type="text/ng-template" id="wager.html">
 		<ul class="list-group">
 		    <li class="list-group-item" ng-repeat="player in players | orderObjectBy:'name'" ng-show="player.selectedDice"ng-class="{checkedIn : player.checkedInDay == currentDay}" ng-click="showDetails = ! showDetails"> 
 		        <h4><a href="">{{player.name}}</a>
@@ -84,7 +109,8 @@
 		        	</ul>		         
 		    </li>
 		</ul>
-	</div>
+	</script>
+	
 
 	<!-- Modal -->
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -115,7 +141,7 @@
         		<li class="list-group-item">Alvin rolls a 3</li>
         		<li class="list-group-item">Maddie rolls a 6</li>
         		<li class="list-group-item">Matt rolls a 1</li>
-        		<li class="list-group-item bg-success">Chris is the winner! Payed out by Matt</li>
+        		<li class="list-group-item bg-success">Chris is the winner! Paid out by Matt</li>
 
         	</ul>	    
 	      <div class="modal-footer">
