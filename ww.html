@@ -93,7 +93,7 @@
 	</script>
 	
 	<script type="text/ng-template" id="wager.html">
-		<h1 class="text-center">{{fullDay|date:'fullDate'}}</h1>
+		<h3 class="text-center">{{fullDay|date:'fullDate'}}</h3>
 		<ul class="list-group">
 		    <li class="list-group-item" ng-repeat="player in players | orderObjectBy:'name'" ng-show="player.selectedDice"ng-class="{checkedIn : player.checkedInDay == currentDay}" ng-click="showDetails = ! showDetails"> 
 		        <h4><a href="">{{player.name}}</a>
