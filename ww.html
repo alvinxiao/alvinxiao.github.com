@@ -35,36 +35,33 @@
 		.full-width{
 			width: 100%;
 		}
+
+		body{
+			margin-bottom:50px;
+		}
+
+		.home{
+			margin-top: 3px;
+    		border-right: solid 1px grey;
+		}
 	</style>
 </head>
 <body ng-app="myApp">
-	<nav class="navbar navbar-default" role="navigation">
-	     <div class="container-fluid" id="navfluid">
-	       <div class="navbar-header">
-	       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationbar">
-	       <span class="sr-only">Toggle navigation</span>
-	       <span class="icon-bar"></span>
-	       <span class="icon-bar"></span>
-	       <span class="icon-bar"></span>
-	      </button>
-	     <a class="navbar-brand" href="./ww.html">Have You Worked Out Today?</a>
-	    </div>
-	<div class="collapse navbar-collapse" id="navigationbar">
-	<ul class="nav navbar-nav">
-	   <li><a href="#Checkin">Checkin</a></li>
-	    <li><a href="#Wager">Wager</a></li>    
-	</ul>
-	</div><!-- /.navbar-collapse -->
-	</div><!-- /.container-fluid -->
-	</nav>
-
+	<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+	<div class="col-xs-6 text-center home">		
+	        <a href="#Checkin"><span class="glyphicon glyphicon-home btn-lg"></span></a>	  	
+  	</div>
+	<div class="col-xs-6 text-center">		
+	        <a href="#Wager"><span class="glyphicon glyphicon-list btn-lg"></span></a>	  	
+  	</div>
+  	</nav>
 	<div ng-view></div>
 
 	<!-- Temporary Templates until webserver is up -->
 	<script type="text/ng-template" id="checkin.html">
 		<div class="panel panel-default">
-		    <!--<div class="panel-heading text-center">Have You Worked Out Today?</div>-->
-		    <!--<div class="panel-body">-->
+		    <div class="panel-heading text-center">Have You Worked Out Today?</div>
+		    <div class="panel-body">
 		      <div class="input-group">
 		        <span class="input-group-addon">Code</span>
 		        <input type="tel" class="form-control" name="input" ng-model="code" minLength="4" maxLength="4" pattern='[0-9]*' placeholder="####">		    		      
@@ -91,7 +88,7 @@
 		        <span class="glyphicon glyphicon-list-alt"></span> Find Winner
 		      </button>		      
 		      <ul id="results" class="list-group"></ul> 
-		    <!--</div>-->
+		    </div>
 		  </div> 				
 	</script>
 	
