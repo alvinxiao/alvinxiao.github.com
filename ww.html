@@ -101,8 +101,9 @@
 		        </h4>
 		        	<ul class="list-group" ng-show="showDetails">
 		        		<li class="list-group-item" ng-repeat="checkin in player.checkins | orderObjectBy:'time':true ">
-		        			<div>{{checkin.time | date:'medium'}}</div>
-		        			<div ng-show="checkin.message">{{checkin.message}}</div>
+		        			<div>{{checkin.time | date:'fullDate'}}</div>
+		        			<div>{{checkin.time | date:'mediumTime'}}</div>
+		        			<div ng-show="checkin.message"><strong>{{checkin.message}}</strong></div>
 		        		</li>
 		        	</ul>		         
 		    </li>
