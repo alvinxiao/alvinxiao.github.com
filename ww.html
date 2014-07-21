@@ -14,6 +14,7 @@
 	<!-- AngularFire Library -->
 	<script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+	<script type='text/javascript' src='https://cdn.firebase.com/js/simple-login/1.6.1/firebase-simple-login.js'></script>
 	<script type="text/javascript" src="js/ww.js"></script>
 
 	<style>
@@ -58,6 +59,30 @@
 	<div ng-view></div>
 
 	<!-- Temporary Templates until webserver is up -->
+	<script type="text/ng-template" id='login.html'>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="input-group">
+					<span class="input-group-addon">Email</span>
+					<input type="email" class="form-control" ng-model='email' placeholder='login@email.com'>
+				</div>
+				<div>&nbsp</div>
+				<div class="input-group">
+					<span class="input-group-addon">Password</span>
+					<input type="password" class="form-control" ng-model='password'>
+				</div>
+				<div>&nbsp</div>
+				<button type="button" ng-click="login()" class="btn btn-primary full-width">
+		        	<span class=""></span>Login
+		      	</button>
+		      	<div>&nbsp</div>
+				<button type="button" ng-click="logout()" class="btn btn-primary full-width">
+		        	<span class=""></span>Logout
+		      	</button>
+			</div>
+		</div>
+	</script>		
+
 	<script type="text/ng-template" id="checkin.html">
 		<div class="panel panel-default">
 		    <div class="panel-heading text-center">Have You Worked Out Today?</div>
@@ -117,31 +142,35 @@
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-	        <h4 class="modal-title" id="myModalLabel">Results for 7/7 - 7/13</h4>
+	        <h4 class="modal-title" id="myModalLabel">Results for 7/14 - 7/20</h4>
 	      </div>
 	      <div class="modal-body">
 	      	<!-- Temporary Hardcode -->
 	        <ul class="list-group">
         		<li class="list-group-item">Chris selects a d8</li>
         		<li class="list-group-item">Rosand selects a d6</li>
-        		<li class="list-group-item">Amir selects a d6</li>
-        		<li class="list-group-item">Francis selects a d6</li>
-        		<li class="list-group-item">Isaac selects a d8</li>
-        		<li class="list-group-item">Roger selects a d8</li>
-        		<li class="list-group-item">Alvin selects a d6</li>
-        		<li class="list-group-item">Maddie selects a d6</li>
-        		<li class="list-group-item">Matt selects a d8</li>
-        		<li class="list-group-item">Chris rolls a 7</li>
+        		<li class="list-group-item">Amir selects a d8</li>
+        		<li class="list-group-item">Francis selects a d5</li>
+        		<li class="list-group-item">Isaac selects a d7</li>
+        		<li class="list-group-item">Roger selects a d7</li>
+        		<li class="list-group-item">Alvin selects a d8</li>
+        		<li class="list-group-item">Maddie selects a d4</li>
+        		<li class="list-group-item">Matt selects a d7</li>
+        		<li class="list-group-item">Sedine selects a d7</li>
+        		<li class="list-group-item">Chris rolls a 2</li>
         		<li class="list-group-item">Rosand rolls a 5</li>
-        		<li class="list-group-item">Amir rolls a 6</li>
-        		<li class="list-group-item">Francis rolls a 4</li>
-        		<li class="list-group-item">Isaac rolls a 2</li>
-        		<li class="list-group-item">Roger rolls a 3</li>
-        		<li class="list-group-item">Alvin rolls a 3</li>
-        		<li class="list-group-item">Maddie rolls a 6</li>
-        		<li class="list-group-item">Matt rolls a 1</li>
-        		<li class="list-group-item bg-success">Chris is the winner! Paid out by Matt</li>
-
+        		<li class="list-group-item">Amir rolls a 7</li>
+        		<li class="list-group-item">Francis rolls a 3</li>
+        		<li class="list-group-item">Isaac rolls a 5</li>
+        		<li class="list-group-item">Roger rolls a 2</li>
+        		<li class="list-group-item">Alvin rolls a 8</li>
+        		<li class="list-group-item">Maddie rolls a 4</li>
+        		<li class="list-group-item">Matt rolls a 3</li>
+        		<li class="list-group-item">Sedine rolls a 6</li>
+        		<li class="list-group-item">Roger vs Chris for loss tiebreaker</li>
+        		<li class="list-group-item">Roger rolls a 86 out of 100</li>
+        		<li class="list-group-item">Chris rolls a 98 out of 100</li>
+        		<li class="list-group-item bg-success"><strong>Alvin is the winner! Paid out by Roger</strong></li>
         	</ul>	    
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
