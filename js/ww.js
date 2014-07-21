@@ -21,11 +21,15 @@ app.config(['$routeProvider',
       when('/Checkin', {
         templateUrl: 'checkin.html',
         controller: 'CheckinController'
-    }).
+	}).
       when('/Wager', {
         templateUrl: 'wager.html',
         controller: 'WagerController'
-      }).
+  	}).
+      when('/Login', {
+        templateUrl: 'login.html',
+        controller: 'LoginController'
+  	}).
       otherwise({
         redirectTo: '/Checkin'
       });
@@ -34,9 +38,7 @@ app.config(['$routeProvider',
 
 
 // Controllers 
-app.controller('CheckinController', ['$scope', '$firebase', '$location', function($scope,$firebase,$location){
-
-
+app.controller('CheckinController', ['$scope', '$firebase', '$location', '$firebaseSimpleLogin', function($scope,$firebase,$location,$firebaseSimpleLogin){	
 	$scope.checkin = function(){
 		var code = this.code;
 		var message = this.checkinMessage;
@@ -102,6 +104,27 @@ app.controller('CheckinController', ['$scope', '$firebase', '$location', functio
 	$scope.findWinner = function(){
 
 	}
+}]);
+
+app.controller('LoginController', ['$scope', '$firebase', '$firebaseSimpleLogin', function($scope, $firebase, $firebaseSimpleLogin){
+	var dataRef = new Firebase("https://workoutwager.firebaseio.com");
+    $scope.loginObj = $firebaseSimpleLogin(dataRef);
+
+    $scope.login = function(){
+		$scope.loginObj.$login('password', {
+		   email: this.email,
+		   password: this.password
+		}).then(function(user) {
+		   console.log('Logged in as: ', user.uid);
+		}, function(error) {
+		   console.error('Login failed: ', error);
+		});
+	}
+
+	$scope.logout = function(){
+		$scope.loginObj.$logout();
+	}
+
 }]);
 
 app.controller('WagerController', ['$scope', '$firebase', function($scope, $firebase){
