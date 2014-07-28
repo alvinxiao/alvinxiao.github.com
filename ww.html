@@ -124,13 +124,13 @@
 		        <h4><a href="">{{player.name}}</a>
 		        	<span class="glyphicon pull-right" ng-class="{'glyphicon-ok' : player.checkedInDay == currentDay, 'glyphicon-remove' : player.checkedInDay != currentDay}"></span>
 		        </h4>
-		        	<ul class="list-group" ng-show="showDetails">
-		        		<li class="list-group-item" ng-repeat="checkin in player.checkins | orderObjectBy:'time':true ">
-		        			<div>{{checkin.time | date:'fullDate'}}</div>
-		        			<div>{{checkin.time | date:'mediumTime'}}</div>
-		        			<div ng-show="checkin.message"><strong>{{checkin.message}}</strong></div>
-		        		</li>
-		        	</ul>		         
+	        	<ul class="list-group" ng-show="showDetails">
+	        		<li class="list-group-item" ng-repeat="checkin in player.checkins | orderObjectBy:'time':true ">
+	        			<div>{{checkin.time | date:'fullDate'}}</div>
+	        			<div>{{checkin.time | date:'mediumTime'}}</div>
+	        			<div ng-show="checkin.message"><strong>{{checkin.message}}</strong></div>
+	        		</li>
+	        	</ul>		         
 		    </li>
 		</ul>
 	</script>
@@ -142,35 +142,26 @@
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-	        <h4 class="modal-title" id="myModalLabel">Results for 7/14 - 7/20</h4>
+	        <h4 class="modal-title" id="myModalLabel">Results for 7/21 - 7/27</h4>
 	      </div>
 	      <div class="modal-body">
 	      	<!-- Temporary Hardcode -->
 	        <ul class="list-group">
-        		<li class="list-group-item">Chris selects a d8</li>
-        		<li class="list-group-item">Rosand selects a d6</li>
-        		<li class="list-group-item">Amir selects a d8</li>
-        		<li class="list-group-item">Francis selects a d5</li>
-        		<li class="list-group-item">Isaac selects a d7</li>
-        		<li class="list-group-item">Roger selects a d7</li>
-        		<li class="list-group-item">Alvin selects a d8</li>
-        		<li class="list-group-item">Maddie selects a d4</li>
-        		<li class="list-group-item">Matt selects a d7</li>
-        		<li class="list-group-item">Sedine selects a d7</li>
-        		<li class="list-group-item">Chris rolls a 2</li>
-        		<li class="list-group-item">Rosand rolls a 5</li>
-        		<li class="list-group-item">Amir rolls a 7</li>
-        		<li class="list-group-item">Francis rolls a 3</li>
-        		<li class="list-group-item">Isaac rolls a 5</li>
-        		<li class="list-group-item">Roger rolls a 2</li>
-        		<li class="list-group-item">Alvin rolls a 8</li>
-        		<li class="list-group-item">Maddie rolls a 4</li>
-        		<li class="list-group-item">Matt rolls a 3</li>
-        		<li class="list-group-item">Sedine rolls a 6</li>
-        		<li class="list-group-item"><strong>Roger vs Chris for loss tiebreaker</strong></li>
-        		<li class="list-group-item">Roger rolls a 86 out of 100</li>
-        		<li class="list-group-item">Chris rolls a 98 out of 100</li>
-        		<li class="list-group-item bg-success"><strong>Alvin is the winner! Paid out by Roger</strong></li>
+        		<li class="list-group-item">Amir rolls a 4 out of 6</li>
+        		<li class="list-group-item">Alvin rolls a 3 out of 8</li>
+        		<li class="list-group-item">Chris rolls a 8 out of 8</li>
+        		<li class="list-group-item">Cindy rolls a 1 out of 8</li>
+        		<li class="list-group-item">Francis rolls a 4 out of 5</li>
+        		<li class="list-group-item">Henry rolls a 4 out of 5</li>
+        		<li class="list-group-item">Issac rolls a 1 out of 7</li>
+        		<li class="list-group-item">Matt rolls a 1 out of 6</li>
+        		<li class="list-group-item">Rosand rolls a 5 out of 7</li>
+        		<li class="list-group-item">Sedine rolls a 5 out of 5</li>        		
+        		<li class="list-group-item"><strong>Cindy vs Issac vs Matt for loss tiebreaker</strong></li>
+        		<li class="list-group-item">Cindy rolls a 93 out of 100</li>
+        		<li class="list-group-item">Issac rolls a 63 out of 100</li>
+        		<li class="list-group-item">Matt rolls a 62 out of 100</li>
+        		<li class="list-group-item bg-success"><strong>Chris is the winner! Paid out by Matt</strong></li>
         	</ul>	    
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
