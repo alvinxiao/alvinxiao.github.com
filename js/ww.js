@@ -130,6 +130,18 @@ app.controller('LoginController', ['$scope', '$firebase', '$firebaseSimpleLogin'
 app.controller('WagerController', ['$scope', '$firebase', function($scope, $firebase){
 	$scope.currentDay = new Date().getDay();
 	$scope.fullDay = new Date();
+
+	$scope.getPercentage = function(player){
+		var totalCheckins = 3; // default
+		var checkins = _.size(player.checkins);
+		var percentage = checkins / totalCheckins * 100;
+
+		return percentage+"%";
+	};
+
+	$scope.getCheckinCount = function(player){
+		return _.size(player.checkins);
+	}
 	// $scope.timeSort = function(checkin){
 	// 	return checkin.time;
 	// };

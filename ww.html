@@ -5,6 +5,7 @@
 	<title>Workout Wager</title>
 	<meta name='viewport' content='width=device-width, initial-scale=1' />
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/ww.css" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <!-- Firebase -->
@@ -16,36 +17,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
 	<script type='text/javascript' src='https://cdn.firebase.com/js/simple-login/1.6.1/firebase-simple-login.js'></script>
 	<script type="text/javascript" src="js/ww.js"></script>
-
-	<style>
-		@media screen and (-webkit-min-device-pixel-ratio:0) { 
-       		select:focus, textarea:focus, input:focus {
-   			font-size: 16px;
-       		background:#eee;
-        	}
-       	}
-		.checkedIn{
-			border-left:10px solid green;
-		}
-
-		.list-group-item{
-			margin-bottom: 1px;
-		
-		}
-
-		.full-width{
-			width: 100%;
-		}
-
-		body{
-			margin-bottom:50px;
-		}
-
-		.home{
-			margin-top: 3px;
-    		border-right: solid 1px grey;
-		}
-	</style>
 </head>
 <body ng-app="myApp">
 	<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
@@ -124,6 +95,11 @@
 		        <h4><a href="">{{player.name}}</a>
 		        	<span class="glyphicon pull-right" ng-class="{'glyphicon-ok' : player.checkedInDay == currentDay, 'glyphicon-remove' : player.checkedInDay != currentDay}"></span>
 		        </h4>
+		        <div class="progress">
+				  <div class="progress-bar" role="progressbar" aria-valuenow="{{getPercentage(player)}}" aria-valuemin="0" aria-valuemax="100" ng-style="{width : ( getPercentage(player) + '%' ) }">				  		
+				  </div>
+				  <span class="checkinValue text-center">{{getCheckinCount(player)}} / 3</span>
+				</div>
 	        	<ul class="list-group" ng-show="showDetails">
 	        		<li class="list-group-item" ng-repeat="checkin in player.checkins | orderObjectBy:'time':true ">
 	        			<div>{{checkin.time | date:'fullDate'}}</div>

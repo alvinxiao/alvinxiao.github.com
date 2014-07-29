@@ -1,0 +1,43 @@
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+	select:focus, textarea:focus, input:focus {
+	font-size: 16px;
+	background:#eee;
+	}
+}
+
+.checkedIn{
+	border-left:10px solid green;
+}
+
+.list-group-item{
+	margin-bottom: 1px;
+
+}
+
+.full-width{
+	width: 100%;
+}
+
+body{
+	margin-bottom:50px;
+}
+
+.home{
+	margin-top: 3px;
+	border-right: solid 1px grey;
+}
+
+a:hover{
+	text-decoration:none;
+}
+
+.progress {
+    position: relative;
+}
+
+.progress span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    color: black;
+ }
