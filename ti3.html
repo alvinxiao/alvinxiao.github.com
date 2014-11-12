@@ -1,0 +1,290 @@
+<html>
+  <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+
+      });   
+    </script>
+    <style>
+      @media screen and (-webkit-min-device-pixel-ratio:0) { 
+       select:focus, textarea:focus, input:focus {
+       font-size: 16px;
+       background:#eee;
+        }
+       }
+      .row {
+        padding: 3px;
+       }
+      .row:nth-of-type(even) {
+        background: #0B60AD !important;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+  <nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Resource Manager</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>-->
+      <a class="navbar-brand" href="#">TI3 Resource Manager</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+      </ul>
+
+    </div> /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-3">
+      <div class="input-group">
+        <label for="">TYPE</label>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <label for="">COST</label>
+    </div>
+    <div class="col-xs-3">
+      <label for="">BATTLE</label>
+    </div>
+    <div class="col-xs-3">
+      <label for="">MVMT</label>
+    </div>  
+  </div>    
+  <div class="row">
+    <div class="col-xs-3">
+      <div class="input-group">
+        <label for="">Dreadnaught</label>
+      </div>
+    </div>
+      <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='5' pattern='[0-9]*'></input>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='5' pattern='[0-9]*'></input>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='1' pattern='[0-9]*'></input>
+      </div>
+    </div>  
+  </div>
+  <div class="row">
+    <div class="col-xs-3">
+      <div class="input-group">
+        <label for="">Carrier</label>
+      </div>
+    </div>
+      <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='3' pattern='[0-9]*'></input>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='9' pattern='[0-9]*'></input>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='1' pattern='[0-9]*'></input>
+      </div>
+    </div>  
+  </div>
+  <div class="row">
+    <div class="col-xs-3">
+      <div class="input-group">
+        <label for="">Cruiser</label>
+      </div>
+    </div>
+      <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='2' pattern='[0-9]*'></input>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='7' pattern='[0-9]*'></input>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='2' pattern='[0-9]*'></input>
+      </div>
+    </div>  
+  </div>
+  <div class="row">
+    <div class="col-xs-3">
+      <div class="input-group">
+        <label for="">Destroyer</label>
+      </div>
+    </div>
+      <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='1' pattern='[0-9]*'></input>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='9' pattern='[0-9]*'></input>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='2' pattern='[0-9]*'></input>
+      </div>
+    </div>  
+  </div>
+  <div class="row">
+    <div class="col-xs-3">
+      <div class="input-group">
+        <label for="">Fighter (x2)</label>
+      </div>
+    </div>
+      <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='1' pattern='[0-9]*'></input>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='9' pattern='[0-9]*'></input>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='0' pattern='[0-9]*'></input>
+      </div>
+    </div>  
+  </div>
+  <div class="row">
+    <div class="col-xs-3">
+      <div class="input-group">
+        <label for="">War Sun</label>
+      </div>
+    </div>
+      <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='12' pattern='[0-9]*'></input>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='3' pattern='[0-9]*'></input>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='2' pattern='[0-9]*'></input>
+      </div>
+    </div>  
+  </div>
+  <div class="row">
+    <div class="col-xs-3">
+      <div class="input-group">
+        <label for="">GF (x2)</label>
+      </div>
+    </div>
+      <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='1' pattern='[0-9]*'></input>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='8' pattern='[0-9]*'></input>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='0' pattern='[0-9]*'></input>
+      </div>
+    </div>  
+  </div>
+  <div class="row">
+    <div class="col-xs-3">
+      <div class="input-group">
+        <label for="">PDS</label>
+      </div>
+    </div>
+      <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='1' pattern='[0-9]*'></input>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='6' pattern='[0-9]*'></input>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='0' pattern='[0-9]*'></input>
+      </div>
+    </div>  
+  </div>
+  <div class="row">
+    <div class="col-xs-3">
+      <div class="input-group">
+        <label for="">Space Dock</label>
+      </div>
+    </div>
+      <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='4' pattern='[0-9]*'></input>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='0' pattern='[0-9]*'></input>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='0' pattern='[0-9]*'></input>
+      </div>
+    </div>  
+  </div>
+  <div class="row">
+    <div class="col-xs-3">
+      <div class="input-group">
+        <label for="">Mech Unit</label>
+      </div>
+    </div>
+      <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='0' pattern='[0-9]*'></input>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='0' pattern='[0-9]*'></input>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="input-group">
+        <input type='number' class="form-control" min='0' value='0' pattern='[0-9]*'></input>
+      </div>
+    </div>  
+  </div>    
+</div>      
+  </body>
+</html>
