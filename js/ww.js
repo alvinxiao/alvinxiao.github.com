@@ -10,8 +10,10 @@ weekday[6] = "Saturday";
 var app = angular.module('myApp', ['firebase','ngRoute']).run(function($rootScope,$firebase){
 	var playersRef = new Firebase("https://workoutWager.firebaseio.com/players");
 	var codesRef = new Firebase("https://workoutWager.firebaseio.com/codes");
+	var checkinsRef = new Firebase("https://workoutWager.firebaseio.com/checkins");
 	$rootScope.players = $firebase(playersRef);
 	$rootScope.codes = $firebase(codesRef);
+	$rootScope.checkins = $firebase(checkinsRef);
 	$rootScope.checkedIn = false;
 });
 
@@ -64,10 +66,11 @@ app.controller('CheckinController', ['$scope', '$firebase', '$location', '$fireb
 			var today = new Date();
 			var day = weekday[today.getDay()];
 			if(!$scope.user.checkins[day]){
-				$scope.user.checkins[day] = {'time': today, 'message': message};
+				$scope.user.checkins[day] = {'time': today, 'message': message, 'name': $scope.user.name};
 				
 				$scope.user.checkedInDay = today.getDay();
 				$scope.players.$set($scope.players);
+				$scope.checkins.$add($scope.user.checkins[day]);
 				$scope.code = "";
 				$scope.checkinMessage = "";
 				alert("You've successfully checked in!")
