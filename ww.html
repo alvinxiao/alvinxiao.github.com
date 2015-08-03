@@ -70,7 +70,11 @@
 		      <div>&nbsp</div>
 		      <button type="button" ng-click="checkin()" class="btn btn-primary full-width">
 		        <span class="glyphicon glyphicon-check"></span> Check In!
-		      </button>		     		       
+		      </button>		     
+			  <div>&nbsp</div>
+		      <button class="btn btn-default full-width" data-toggle="modal" data-target="#myModal">
+	  				<span class="glyphicon glyphicon-list-alt"></span> Current Standings
+			  </button>		      		       
 		    </div>
 		  </div> 
 	</script>
@@ -105,29 +109,16 @@
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-	        <h4 class="modal-title" id="myModalLabel">Results for 10/6 - 10/12</h4>
+	        <h4 class="modal-title" id="myModalLabel">Current Standings</h4>
 	      </div>
 	      <div class="modal-body">
 	      	<!-- Temporary Hardcode -->
 	        <ul class="list-group">
-	        	<li class="list-group-item"><strong>Alex rolls a 2 out of 3</strong></li>
-        		<li class="list-group-item">Alvin rolls a 6 out of 6</li>
-        		<li class="list-group-item">Amir rolls a 3 out of 6</li>
-        		<li class="list-group-item">Chris rolls a 5 out of 7</li>
-        		<li class="list-group-item"><strong>Maddie rolls a 8 out of 8</strong></li>
-        		<li class="list-group-item">Matt rolls a 5 out of 5</li>
-        		<li class="list-group-item">Roger rolls a 7 out of 8</li>
-        		<li class="list-group-item">Rosand rolls a 5 out of 5</li>
-        		<li class="list-group-item bg-success"><strong>Maddie is the winner! Paid out by Alex</strong></li>
+	        	<li class="list-group-item">Total Pot is <strong>$4.00</strong></li>
+        		<li class="list-group-item">Chris is contributing $2.00</li>
+        		<li class="list-group-item">Michelle is contributing $2.00</li>
         	</ul>
-        	<ul class="list-group">
-        		<li class="list-group-item"><strong>9/29-10/5: Maddie paid out by Chris</strong></li>
-        		<li class="list-group-item"><strong>9/22-9/28: Roger paid out by Henry</strong></li>
-        		<li class="list-group-item"><strong>9/15-9/21: Chris paid out by Issac</strong></li>
-        		<li class="list-group-item"><strong>9/8-9/14: Alex paid out by Matt</strong></li>
-        		<li class="list-group-item"><strong>9/1-9/7: Amir paid by Alvin</strong></li>
-        		<li class="list-group-item"><strong>8/24-8/31: Issac paid by Francis</strong></li>
-        	</ul>
+        	<p>Please ask Game Master Amir if you have any clarifying questions while the rules are being finalized.</p>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 	      </div>
