@@ -10,13 +10,13 @@ export const launchChecklist = [
   {
     title: 'Personal introduction and contact details',
     description:
-      'Confirm the public name, professional descriptor, biography, public email, and private notification destination. Publish only reviewed facts.',
+      'The public name, descriptor, and owner-supplied biography are recorded. Supply the public contact email and private notification destination before activating inquiries.',
     ready: identityReady,
   },
   {
     title: 'Services, prices, and working policies',
     description:
-      'Review each service scope, inclusions, exclusions, session length, price, preparation, cancellation terms, and follow-up policy. No booking or payment is available.',
+      'The service outlines and omission of public prices are accepted. Finalize preparation, scheduling, cancellation, and follow-up terms before paid work. No booking or payment is available.',
     ready: approval.approvals.services && approval.approvals.pricing,
   },
   {

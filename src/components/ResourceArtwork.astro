@@ -1,0 +1,12 @@
+---
+import { Image } from 'astro:assets';
+import artwork from '../assets/resource-illustrations.png';
+interface Props {
+  position: 'left' | 'center' | 'right';
+}
+const { position } = Astro.props;
+---
+
+<div class="resource-artwork" style={`--art-position: ${position}`}>
+  <Image src={artwork} width={1800} alt="" loading="lazy" />
+</div>

@@ -9,6 +9,8 @@ Contact screenshots show disabled inquiries without a contact address or provide
 | Home | [Desktop Home](home-desktop.png) | [Mobile Home](home-mobile.png) |
 | Services | [Desktop Services](services-desktop.png) | [Mobile Services](services-mobile.png) |
 | Contact | [Desktop Contact](contact-desktop.png) | [Mobile Contact](contact-mobile.png) |
+| About | [Desktop About](about-desktop.png) | [Mobile About](about-mobile.png) |
+| Resources | [Desktop Resources](resources-desktop.png) | [Mobile Resources](resources-mobile.png) |
 
 The [320px Home screenshot](home-320.png) records the narrowest tested layout. Home, Services, and Contact also passed overflow checks at 768px.
 
@@ -21,3 +23,11 @@ Owner visual approval remains required for typography, spacing, illustration sty
 The owner requested a 15px minimum text size and smoother movement. Captions and labels now use a shared 0.9375rem token, body text scales from 16px to 18px, and introductory text scales from 18px to 22px. Browser font preferences and zoom remain supported. The mobile illustration is resized through its geometry rather than shrinking its text.
 
 Buttons, cards, arrows, and fields use coordinated easing. Page introductions and illustration notes enter with short staggered movements. Supporting browsers crossfade between pages. Reduced-motion mode disables these effects, and navigation remains functional without JavaScript.
+
+## Identity, resources, and service update
+
+The owner retained Practical AI temporarily, selected a plain wordmark and PA favicon, approved the concrete customer-question workflow, and supplied Alvin Xiao's biography. All service disclosures now start open and remain collapsible. Prices are omitted. Unanswered service policies and operational requirements remain deferred.
+
+The three resource guides now include a fictional reminder-email exercise, an explanation of AI limitations, and a comparison of workflow options. Their coordinated artwork was generated for this site. The original three-panel PNG is in `src/assets/resource-illustrations.png`; Astro serves an optimized WebP, with each article showing its corresponding panel. The illustrations are decorative, with their meaning supplied by the adjacent article text. Final editorial review remains pending.
+
+The [mobile article screenshot](article-mobile.png) records the illustrated first-experiment guide.

@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import ResourceArtwork from '../../components/ResourceArtwork.astro';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import Arrow from '../../components/Arrow.astro';
 import { site } from '../../content/site';
@@ -14,26 +15,23 @@ const articles = await getCollection('resources');
     <section class="page-hero">
       <p class="eyebrow">A little understanding goes a long way</p>
       <h1>
-        Good places
+        Understand AI.
         <br />
-        to begin.
+        Try one useful task.
       </h1>
-      <p>
-        Short, practical reading for the questions before the tools. Start small. Keep your
-        judgment. Find what helps.
-      </p>
+      <p>Learn what AI can do, try a small task, and decide whether it fits your work.</p>
     </section>
     {site.preview && !site.approvals.resources && (
       <aside class="review-notice">
         <p>
-          Editorial drafts for owner review. These guides require factual and content approval
-          before publication.
+          These guides are available for prelaunch review. Final editorial review remains pending.
         </p>
       </aside>
     )}
     <div class="resource-grid">
       {articles.map((article) => (
         <a href={`/resources/${article.id}/`} class="resource-card">
+          <ResourceArtwork position={article.data.imagePosition} />
           <span class="eyebrow">{article.data.category}</span>
           <h2>{article.data.title}</h2>
           <p>{article.data.description}</p>

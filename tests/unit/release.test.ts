@@ -33,7 +33,7 @@ function approvedFixture() {
 test('the actual unapproved project cannot produce a production release', () => {
   const issues = releaseIssues(readReleaseConfig());
   assert.ok(issues.length > 0);
-  assert.ok(issues.some((issue: string) => issue.includes('identity')));
+  assert.ok(issues.some((issue: string) => issue.includes('privacy')));
   assert.ok(issues.some((issue: string) => issue.includes('release')));
 });
 

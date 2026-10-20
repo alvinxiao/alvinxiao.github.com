@@ -6,11 +6,12 @@ The public version of this checklist is `/launch-checklist/`. Do not mark an own
 
 ## Identity and content
 
-- [ ] Supply and approve the exact public name and professional descriptor.
-- [ ] Approve a real biography and every qualification or experience claim.
+- [x] Retain Practical AI temporarily, with AI consulting & automation as the descriptor.
+- [x] Publish Alvin Xiao's owner-supplied biography and experience.
 - [ ] Supply the public contact address and configure the private notification inbox only in Formspree.
 - [ ] Approve service scope, inclusions, exclusions, session lengths, and deliverables.
-- [ ] Approve prices or explicitly approve their omission, and settle service and clarification policies.
+- [x] Omit public prices and agree cost and scope before paid work.
+- [ ] Finalize preparation, cancellation, scheduling, and clarification policies.
 - [ ] Approve Home, Services, About, Contact, and the completed Markdown resource articles.
 - [ ] Confirm that no placeholders, provisional prices, invented results, or unapproved claims enter the full launch output.
 
@@ -62,3 +63,7 @@ The public version of this checklist is `/launch-checklist/`. Do not mark an own
 - [x] Responsive overflow fixed and checked at 320, 390, 768, and 1440 pixels.
 
 Current-run results, screenshots, and remaining limitations are recorded in `docs/REVIEW.md` and the generated test reports. Public prelaunch publication is not evidence that the full launch checklist is complete.
+
+## Latest owner decisions
+
+Keep the Practical AI name for now, replace the asterisk with a text wordmark and PA favicon, and use a concrete reviewed-response workflow in the hero. Keep the current palette and readable type scale. Service disclosures open by default. The owner authorized expanded resource articles and generated artwork; final editorial and visual review remain open. Contact details, provider configuration, privacy terms, and other unanswered launch items are deferred.

@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
+import ResourceArtwork from '../../components/ResourceArtwork.astro';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import { site } from '../../content/site';
 export async function getStaticPaths() {
@@ -22,14 +23,15 @@ const { Content } = await render(article);
         {article.data.category}
       </p>
       <h1>{article.data.title}</h1>
-      <p class="article-meta">A practical introduction</p>
+      <p class="article-meta">By Alvin Xiao</p>
     </header>
     {site.preview && !site.approvals.resources && (
       <aside class="review-notice">
-        <p>Editorial draft for owner review. Not approved for publication.</p>
+        <p>Prelaunch guide. Final editorial review remains pending.</p>
       </aside>
     )}
     <article class="prose article-body">
+      <ResourceArtwork position={article.data.imagePosition} />
       <Content />
     </article>
   </div>

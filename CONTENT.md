@@ -69,3 +69,7 @@ Target starter set: one AI fundamentals guide, one practical getting-started gui
 
 ## Content governance
 Keep business facts in typed central configuration, articles in Markdown, layout copy in controlled content files where practical. Agent edits must produce a PR with content diff. Changes to offers, prices, biography, factual background, privacy terms, and guarantees require explicit owner approval. Run production checks for placeholder tokens and unapproved flags.
+
+## Current owner decisions
+
+These decisions supersede the earlier blocked introduction and provisional pricing sections for the public prelaunch. Retain Practical AI temporarily with the descriptor AI consulting & automation. Publish the owner-supplied Alvin Xiao biography from `src/content/approval.json`. Omit prices. Agree scope, cost, timing, and terms before paid work. The four proposed service outlines are accepted, while specific working policies remain deferred. Open all service disclosures by default. Expand the three guides and illustrate them with generated artwork. Final resource editorial review and all unanswered operational items remain pending.

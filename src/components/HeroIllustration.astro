@@ -1,43 +1,27 @@
-<div
-  class="hero-illustration"
-  role="img"
-  aria-label="A path from a question, through exploring possibilities, to a practical next step."
->
-  <div class="illustration-grid" aria-hidden="true"></div>
-  <span class="orbit orbit-one" aria-hidden="true"></span>
-  <span class="orbit orbit-two" aria-hidden="true"></span>
-  <div class="note note-question">
-    <span class="note-caption">A question worth asking</span>
-    <span class="note-symbol" aria-hidden="true">
-      ?
-    </span>
-    <span>
-      Could this
-      <br />
-      be easier?
-    </span>
-  </div>
-  <div class="note note-explore">
-    <span class="note-caption">Room to explore</span>
-    <div class="idea-nodes" aria-hidden="true">
-      <i></i>
-      <i></i>
-      <i></i>
-    </div>
-    <span>A few possibilities.</span>
-  </div>
-  <div class="note note-step">
-    <span class="note-caption">A practical next step</span>
-    <span class="step-check" aria-hidden="true">
-      ✓
-    </span>
-    <span>
-      Something you
-      <br />
-      can work with.
-    </span>
-  </div>
-  <span class="illustration-footnote" aria-hidden="true">
-    Less overwhelm. More possibility.
-  </span>
-</div>
+---
+import Arrow from './Arrow.astro';
+---
+
+<figure class="workflow-illustration" aria-labelledby="workflow-caption">
+  <figcaption id="workflow-caption">An example: answering a customer question</figcaption>
+  <ol class="workflow-steps">
+    <li>
+      <span class="workflow-number">01 · The question</span>
+      <h2>Customer question</h2>
+      <p>“Can I collect my order on Saturday?”</p>
+      <Arrow />
+    </li>
+    <li>
+      <span class="workflow-number">02 · AI helps draft</span>
+      <h2>Draft response</h2>
+      <p>Use your pickup policy to prepare a reply.</p>
+      <Arrow />
+    </li>
+    <li>
+      <span class="workflow-number">03 · You decide</span>
+      <h2>Review and send</h2>
+      <p>Check the details. Make it sound like you.</p>
+    </li>
+  </ol>
+  <p class="workflow-footnote">AI prepares a draft. You keep the final say.</p>
+</figure>

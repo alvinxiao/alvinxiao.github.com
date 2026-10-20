@@ -25,11 +25,15 @@ import { site } from '../content/site';
     {site.preview && !site.approvals.services && (
       <aside class="review-notice">
         <p>
-          Service details are a proposal for owner review. Scope, session lengths, prices, and
-          policies require approval before launch. No booking or payment is available.
+          The service outlines are agreed. Preparation, scheduling, cancellation, and follow-up
+          terms remain to be finalized before paid work begins. No booking or payment is available.
         </p>
       </aside>
     )}
+    <p class="service-terms">
+      Scope, cost, timing, and terms are agreed before paid work begins. Custom automation is quoted
+      separately. There is no booking or payment on this site.
+    </p>
     <nav class="service-jumps" aria-label="Service sections">
       {services.map((service) => (
         <a href={`#${service.id}`}>{service.name}</a>
@@ -48,7 +52,7 @@ import { site } from '../content/site';
         </div>
         <div>
           <p>{service.details}</p>
-          <details>
+          <details open>
             <summary>What's included</summary>
             <ul>
               {service.includes.map((item) => (
@@ -56,7 +60,7 @@ import { site } from '../content/site';
               ))}
             </ul>
           </details>
-          <details>
+          <details open>
             <summary>Where the scope stops</summary>
             <p style="margin-top:15px">{service.excludes}</p>
           </details>

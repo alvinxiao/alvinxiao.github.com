@@ -6,6 +6,9 @@ const routes = [
   '/services/',
   '/about/',
   '/resources/',
+  '/resources/ai-basics/',
+  '/resources/getting-started/',
+  '/resources/workflow/',
   '/contact/',
   '/thank-you/',
   '/privacy/',
@@ -197,4 +200,45 @@ test('missing routes return a useful 404', async ({ page }) => {
   await page.goto('/404.html');
   await expect(page.getByRole('heading', { level: 1 })).toContainText(/page|found|404/i);
   await expect(page.getByRole('link', { name: /home/i }).first()).toBeVisible();
+});
+
+test('approved identity, concrete workflow, and open service disclosures are published', async ({
+  page,
+}) => {
+  await page.goto('/');
+  await expect(page.locator('.wordmark').first()).toContainText('Practical AI');
+  await expect(page.locator('.brand-icon, .small-star, .note')).toHaveCount(0);
+  await expect(page.locator('.workflow-steps li')).toHaveCount(3);
+  await expect(page.locator('.workflow-steps')).toContainText('Review and send');
+  await page.goto('/about/');
+  await expect(page.locator('main')).toContainText('Alvin Xiao');
+  await expect(page.locator('main')).toContainText('over 10 years');
+  await expect(page.locator('main')).toContainText('NASA');
+  await page.goto('/services/');
+  await expect(page.locator('details')).toHaveCount(8);
+  await expect(page.locator('details:not([open])')).toHaveCount(0);
+  await page.locator('details').first().locator('summary').click();
+  await expect(page.locator('details').first()).not.toHaveAttribute('open');
+});
+
+test('resource illustrations load on the listing and article pages', async ({ page }) => {
+  await page.goto('/resources/');
+  const links = await page
+    .locator('.resource-card')
+    .evaluateAll((cards) => cards.map((card) => card.getAttribute('href')));
+  await expect(page.locator('.resource-artwork img')).toHaveCount(3);
+  for (const href of links) {
+    expect(href).toBeTruthy();
+    await page.goto(href || '/resources/');
+    const artwork = page.locator('article img');
+    await artwork.scrollIntoViewIfNeeded();
+    await expect(artwork).toBeVisible();
+    await expect
+      .poll(() =>
+        artwork.evaluate(
+          (image) => image instanceof HTMLImageElement && image.complete && image.naturalWidth > 0,
+        ),
+      )
+      .toBe(true);
+  }
 });

@@ -1,7 +1,6 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 import Arrow from '../components/Arrow.astro';
-import Asterisk from '../components/Asterisk.astro';
 import HeroIllustration from '../components/HeroIllustration.astro';
 import ClosingCTA from '../components/ClosingCTA.astro';
 import { hero, paths, examples, processSteps, site } from '../content/site';
@@ -11,12 +10,7 @@ import { services } from '../content/services';
 <SiteLayout title="Practical AI help for small businesses" description={hero.description}>
   <section class="hero container" aria-labelledby="hero-heading">
     <div class="hero-copy">
-      <p class="eyebrow">
-        <span class="small-star" aria-hidden="true">
-          <Asterisk />
-        </span>
-        {hero.eyebrow}
-      </p>
+      <p class="eyebrow">{hero.eyebrow}</p>
       <h1 id="hero-heading">
         Let's figure out <br />
         how <span class="highlight">AI can help</span> <br />
@@ -59,7 +53,7 @@ import { services } from '../content/services';
           <div class="path-top">
             <span class="number">{path.number}</span>
             <span class="path-icon" aria-hidden="true">
-              {path.number === '01' ? <Asterisk /> : <Arrow />}
+              <Arrow />
             </span>
           </div>
           <h3>{path.title}</h3>
@@ -75,7 +69,7 @@ import { services } from '../content/services';
     <div class="container section">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">A little help, in the right shape</p>
+          <p class="eyebrow">Education, advice, and implementation</p>
           <h2>
             Practical support.
             <br />
@@ -103,8 +97,9 @@ import { services } from '../content/services';
       <div>
         <p class="eyebrow">What this could look like</p>
         <h2>
-          Everyday work.
-          <br />A different way through.
+          Less repetitive work.
+          <br />
+          More time for your business.
         </h2>
       </div>
       <p class="section-aside">
@@ -131,9 +126,9 @@ import { services } from '../content/services';
     <div class="section container">
       <p class="eyebrow">Working together</p>
       <h2>
-        A conversation.
+        From your question
         <br />
-        Some clarity. A next step.
+        to a plan you can use.
       </h2>
       <div class="process-grid">
         {processSteps.map((step, i) => (
@@ -147,9 +142,9 @@ import { services } from '../content/services';
     </div>
   </section>
   {site.biography && site.approvals.identity && (
-    <section class="section container">
+    <section class="section container personal-intro">
       <p class="eyebrow">A personal approach</p>
-      <h2>{site.publicName}</h2>
+      <h2>Hi, I'm Alvin.</h2>
       <p>{site.biography}</p>
       <a class="text-link" href="/about/">
         A little about me <Arrow />
