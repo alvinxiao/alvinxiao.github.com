@@ -115,6 +115,19 @@ for (const width of [320, 390, 768, 1440]) {
     test(`${route} fits a ${width}px viewport`, async ({ page }, testInfo) => {
       await page.setViewportSize({ width, height: 900 });
       await page.goto(route);
+      const undersizedText = await page.locator('body *').evaluateAll((elements) =>
+        elements.flatMap((element) => {
+          const hasText = [...element.childNodes].some(
+            (node) => node.nodeType === Node.TEXT_NODE && node.textContent?.trim(),
+          );
+          const style = getComputedStyle(element);
+          const visible = element.getClientRects().length > 0 && style.visibility !== 'hidden';
+          return hasText && visible && Number.parseFloat(style.fontSize) < 15
+            ? [`${element.tagName}.${element.className}: ${style.fontSize}`]
+            : [];
+        }),
+      );
+      expect(undersizedText, 'Visible text must be at least 15px').toEqual([]);
       const dimensions = await page.evaluate(() => ({
         width: window.innerWidth,
         content: document.documentElement.scrollWidth,
@@ -143,6 +156,12 @@ test('navigation works at mobile size with reduced motion', async ({ page }) => 
   await page.setViewportSize({ width: 320, height: 640 });
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/');
+  const motion = await page.locator('.hero-copy h1').evaluate((heading) => {
+    const style = getComputedStyle(heading);
+    return { animation: style.animationName, transition: style.transitionDuration };
+  });
+  expect(motion.animation).toBe('none');
+  expect(motion.transition).toBe('0s');
   const menu = page.getByRole('button', { name: /menu|navigation/i });
   if (await menu.count()) {
     await menu.click();

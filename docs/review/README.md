@@ -15,3 +15,9 @@ The [320px Home screenshot](home-320.png) records the narrowest tested layout. H
 The [public checklist screenshot](checklist-mobile.png) records the deferred full-launch reviews.
 
 Owner visual approval remains required for typography, spacing, illustration style, colors, navigation, and responsive layout. See [the implementation review](../REVIEW.md) for the remaining content and release gates.
+
+## Readability and motion update
+
+The owner requested a 15px minimum text size and smoother movement. Captions and labels now use a shared 0.9375rem token, body text scales from 16px to 18px, and introductory text scales from 18px to 22px. Browser font preferences and zoom remain supported. The mobile illustration is resized through its geometry rather than shrinking its text.
+
+Buttons, cards, arrows, and fields use coordinated easing. Page introductions and illustration notes enter with short staggered movements. Supporting browsers crossfade between pages. Reduced-motion mode disables these effects, and navigation remains functional without JavaScript.
