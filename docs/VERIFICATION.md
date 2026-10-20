@@ -45,6 +45,6 @@ The distinct-model review used `gpt-6-astra`. It was an independent GPT-family r
 
 ## Deployment evidence
 
-The cloud GitHub connection can push source but cannot directly update Pages settings. Its Pages settings request returned HTTP 403, `Resource not accessible by integration`. The publication workflow requests a repository-scoped Actions token with Pages permission and configures the existing selected Pages host through that supported route.
+The cloud GitHub connection can push source but cannot directly update Pages settings. Its Pages settings request returned HTTP 403, `Resource not accessible by integration`. The owner changed the Pages source to GitHub Actions. The setting was confirmed through the Pages API. The publication workflow uploads the checked prelaunch artifact and deploys it with Pages and OIDC permissions; it no longer attempts to change repository settings.
 
 Check the actual GitHub Actions deployment result and Pages status before claiming publication. A workflow file or successful local build alone does not prove deployment. Outstanding full-launch requirements remain checklist items and do not block the owner-authorized public prelaunch.

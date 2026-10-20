@@ -32,16 +32,7 @@ jobs:
       - run: npm test
       - run: npm run test:release
       - run: npm run build:prelaunch
-      - name: Configure authorized Pages publication
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh api --method PUT "repos/${GITHUB_REPOSITORY}/pages" -f build_type=workflow
       - uses: actions/configure-pages@v5
-      - name: Request HTTPS enforcement
-        continue-on-error: true
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh api --method PUT "repos/${GITHUB_REPOSITORY}/pages" -F https_enforced=true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
