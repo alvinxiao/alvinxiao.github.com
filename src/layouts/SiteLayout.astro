@@ -1,0 +1,145 @@
+---
+import '../styles/global.css';
+import { site } from '../content/site';
+import Arrow from '../components/Arrow.astro';
+import Asterisk from '../components/Asterisk.astro';
+interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+const path = Astro.url.pathname;
+const navigation = [
+  ['Services', '/services/'],
+  ['About', '/about/'],
+  ['Resources', '/resources/'],
+];
+const canonical = new URL(path, site.siteUrl);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} | {site.publicName || 'Practical AI help'}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta
+      name="robots"
+      content={
+        site.preview || path === '/thank-you/' || path === '/launch-checklist/'
+          ? 'noindex, nofollow'
+          : 'index, follow'
+      }
+    />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta name="theme-color" content="#f8f7f3" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">
+      Skip to content
+    </a>
+    {site.preview && (
+      <div class="preview-banner">
+        {site.prelaunch ? (
+          <>
+            Prelaunch preview. Inquiries are not live.{' '}
+            <a href="/launch-checklist/">Review the launch checklist</a>
+          </>
+        ) : (
+          <>
+            Owner review preview <span aria-hidden="true">·</span> Not published. Inquiries are not
+            live.
+          </>
+        )}
+      </div>
+    )}
+    <header class="site-header container">
+      <a href="/" class="wordmark" aria-label="Practical AI help home">
+        <span class="brand-icon" aria-hidden="true">
+          <Asterisk />
+        </span>
+        <span>
+          {site.publicName || 'Practical AI'}
+          <small>{site.descriptor || 'A little clarity. A practical next step.'}</small>
+        </span>
+      </a>
+      <button
+        type="button"
+        class="menu-toggle"
+        aria-controls="site-navigation"
+        aria-expanded="false"
+      >
+        Menu <span aria-hidden="true">+</span>
+      </button>
+      <nav id="site-navigation" aria-label="Main navigation">
+        {navigation.map(([label, href]) => (
+          <a href={href} aria-current={path.startsWith(href || '#') ? 'page' : undefined}>
+            {label}
+          </a>
+        ))}
+        <a
+          class="nav-contact"
+          href="/contact/"
+          aria-current={path === '/contact/' ? 'page' : undefined}
+        >
+          Let's talk <Arrow />
+        </a>
+      </nav>
+    </header>
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <footer class="site-footer container">
+      <div class="footer-top">
+        <a class="wordmark" href="/">
+          <span class="brand-icon" aria-hidden="true">
+            <Asterisk />
+          </span>
+          <span>
+            {site.publicName || 'Practical AI'}
+            <small>Practical help. Human perspective.</small>
+          </span>
+        </a>
+        <a class="text-link" href="/contact/">
+          Get in touch <Arrow />
+        </a>
+      </div>
+      <div class="footer-bottom">
+        <p>Thoughtful about technology. Grounded in your work.</p>
+        <div>
+          <a href="/privacy/">Privacy</a>
+          <span>© {new Date().getFullYear()}</span>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const toggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('#site-navigation');
+      if (toggle instanceof HTMLButtonElement && nav instanceof HTMLElement) {
+        toggle.closest('header')?.setAttribute('data-navigation-ready', 'true');
+        const close = () => {
+          toggle.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('is-open');
+        };
+        toggle.addEventListener('click', () => {
+          const open = toggle.getAttribute('aria-expanded') !== 'true';
+          toggle.setAttribute('aria-expanded', String(open));
+          nav.classList.toggle('is-open', open);
+        });
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+            close();
+            toggle.focus();
+          }
+        });
+        nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', close));
+      }
+    </script>
+  </body>
+</html>

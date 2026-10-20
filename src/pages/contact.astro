@@ -1,0 +1,206 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Arrow from '../components/Arrow.astro';
+import { site } from '../content/site';
+import { interests, fieldLimits } from '../lib/inquiry/model';
+---
+
+<SiteLayout
+  title="Contact"
+  description="Tell me what you want to learn or what is taking too much of your time. Start with a short inquiry."
+>
+  <div class="container">
+    <section class="page-hero">
+      <p class="eyebrow">A conversation starts here</p>
+      <h1>
+        What are you
+        <br />
+        working on?
+      </h1>
+      <p>
+        You don't need to have it all figured out. A little about your business, a question, or a
+        challenge is a good place to start.
+      </p>
+    </section>
+    <div class="contact-grid">
+      <aside class="contact-aside">
+        <div class="contact-note">
+          <h2>A question is enough.</h2>
+          <p>
+            Share what you want to learn or where you're getting stuck. This is an inquiry, not a
+            booking or payment.
+          </p>
+        </div>
+        <div class="contact-note">
+          <h2>Keep it simple. Keep it safe.</h2>
+          <p>
+            Don't include passwords, client records, payment details, or other sensitive
+            information. No attachments are needed.
+          </p>
+        </div>
+        <div class="contact-note">
+          <h2>Prefer email?</h2>
+          {site.contactEmail ? (
+            <a class="text-link" href={`mailto:${site.contactEmail}`}>
+              {site.contactEmail} <Arrow />
+            </a>
+          ) : (
+            <p>A direct email address will be added before launch. Inquiries are not live yet.</p>
+          )}
+        </div>
+      </aside>
+      <div class="form-panel">
+        {site.preview && (
+          <aside class="review-notice">
+            <p>
+              {site.prelaunch
+                ? 'Inquiries are not live. You can look through the form, but sending will be available after the launch review.'
+                : site.formEndpoint
+                  ? 'Review form. Test inquiries only. Provider delivery and owner notification still require verification.'
+                  : 'Inquiries are not live. You can review the form, but sending is unavailable until an approved endpoint is configured.'}
+            </p>
+          </aside>
+        )}
+        <form
+          id="inquiry-form"
+          method="post"
+          action={site.formEndpoint || '/contact/'}
+          novalidate
+          data-endpoint={site.formEndpoint}
+          data-contact-email={site.contactEmail}
+          data-prelaunch={site.prelaunch ? 'true' : undefined}
+        >
+          <div id="error-summary" class="error-summary" tabindex="-1" hidden>
+            <h2>Please check the form</h2>
+            <ul></ul>
+          </div>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              required
+              maxlength={fieldLimits.name}
+              aria-describedby="name-error"
+            />
+            <p id="name-error" class="field-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="email">Your email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+              maxlength={fieldLimits.email}
+              aria-describedby="email-hint email-error"
+            />
+            <p id="email-hint" class="field-hint">
+              An address where I can reply to your inquiry.
+            </p>
+            <p id="email-error" class="field-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="interest">What would you like help with?</label>
+            <select id="interest" name="interest" required aria-describedby="interest-error">
+              <option value="">Choose a starting point</option>
+              {Object.entries(interests).map(([value, interest]) => (
+                <option value={value}>{interest.label}</option>
+              ))}
+            </select>
+            <p id="interest-error" class="field-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="description">Tell me a little about it</label>
+            <textarea
+              id="description"
+              name="description"
+              rows="5"
+              required
+              maxlength={fieldLimits.description}
+              aria-describedby="description-hint description-error"
+            ></textarea>
+            <p id="description-hint" class="field-hint">
+              A short description is plenty. Up to 3,000 characters. No sensitive details.
+            </p>
+            <p id="description-error" class="field-error" hidden></p>
+          </div>
+          <div id="context-field" class="field" hidden>
+            <label for="optional_context">
+              <span id="context-label">A little more context</span> <span>Optional</span>
+            </label>
+            <textarea
+              id="optional_context"
+              name="optional_context"
+              rows="3"
+              maxlength={fieldLimits.optional_context}
+              disabled
+              aria-describedby="optional_context-error"
+            ></textarea>
+            <p id="optional_context-error" class="field-error" hidden></p>
+          </div>
+          <div class="honeypot" aria-hidden="true">
+            <label for="company-website">Leave this field empty</label>
+            <input
+              id="company-website"
+              name="_gotcha"
+              type="text"
+              tabindex="-1"
+              autocomplete="off"
+            />
+          </div>
+          <p class="form-fineprint">
+            {site.prelaunch ? (
+              <>
+                Inquiry submission is turned off during prelaunch. Review the{' '}
+                <a href="/launch-checklist/">launch checklist</a> for the remaining steps.
+              </>
+            ) : (
+              <>
+                This form uses Formspree to process inquiries. Read the{' '}
+                <a href="/privacy/">privacy notice</a> before sending. There is no automatic
+                acknowledgment email promised.
+              </>
+            )}
+          </p>
+          <button class="button" type="submit" disabled>
+            <span>{site.prelaunch ? 'Inquiries open after review' : 'Send inquiry'}</span>
+            <Arrow />
+          </button>
+          <div
+            id="form-status"
+            class="form-status"
+            role="status"
+            aria-live="polite"
+            tabindex="-1"
+          ></div>
+          <noscript>
+            <p class="form-status">
+              {site.prelaunch ? (
+                <>
+                  Inquiries are not live yet. See the{' '}
+                  <a href="/launch-checklist/">launch checklist</a>.
+                </>
+              ) : (
+                <>
+                  This form needs JavaScript for validation and safe submission.{' '}
+                  {site.contactEmail ? (
+                    <a href={`mailto:${site.contactEmail}`}>Email your inquiry instead.</a>
+                  ) : (
+                    'Email contact is awaiting owner approval.'
+                  )}
+                </>
+              )}
+            </p>
+          </noscript>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    import '../scripts/contact';
+  </script>
+</SiteLayout>

@@ -1,0 +1,47 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { launchChecklist } from '../content/launch-checklist';
+import { site } from '../content/site';
+const completed = launchChecklist.filter((item) => item.ready).length;
+---
+
+<SiteLayout
+  title="Launch checklist"
+  description="The remaining reviews before the full consulting website launch and live inquiries."
+>
+  <div class="container">
+    <section class="page-hero">
+      <p class="eyebrow">A work in progress</p>
+      <h1>Before the full launch.</h1>
+      {site.preview ? (
+        <p>
+          This public prelaunch is being published while the items below are reviewed. Inquiry
+          submission is turned off in the public prelaunch. The checklist records what still needs
+          attention.
+        </p>
+      ) : (
+        <p>Review the website's launch approvals and the checks that still need attention.</p>
+      )}
+    </section>
+    <div class="prose">
+      <p>
+        {completed} of {launchChecklist.length} review areas approved. Pending items are not a claim
+        that the final checks have passed.
+      </p>
+    </div>
+    <ol class="launch-checklist">
+      {launchChecklist.map((item, index) => (
+        <li>
+          <span class="number">{String(index + 1).padStart(2, '0')}</span>
+          <div>
+            <h2>{item.title}</h2>
+            <p>{item.description}</p>
+          </div>
+          <span class:list={['checklist-status', { 'is-approved': item.ready }]}>
+            {item.ready ? 'Approved' : 'Pending review'}
+          </span>
+        </li>
+      ))}
+    </ol>
+  </div>
+</SiteLayout>

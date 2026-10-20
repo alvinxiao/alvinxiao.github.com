@@ -5,7 +5,7 @@
 - Tailwind CSS plus CSS custom properties for design tokens.
 - Markdown for resource articles; typed service/site configuration for approved business facts.
 - Minimal browser JavaScript for adaptive form, validation, submit state, and success handling; no React runtime unless a documented need emerges and is approved.
-- GitHub Pages root repository `alvinxiao.github.io`, canonical base path `/` (verify repository and owner settings before implementation).
+- GitHub Pages repository `alvinxiao/alvinxiao.github.com`, public host `alvinxiao.github.io`, canonical base path `/` (verify repository and owner settings before implementation).
 - GitHub Actions builds/tests and deploys after owner-approved PR merge into the production branch.
 - Formspree Free selected initial inquiry backend. No self-hosted API, database, authentication, or payment service.
 
@@ -32,3 +32,7 @@ Centralize public site URL, public form endpoint, approved business identity, se
 
 ## Zero-cost constraint
 Target $0 recurring platform spend using GitHub Pages and Formspree Free within verified limits. Do not create paid accounts, upgrade plans, or introduce paid APIs without approval. Third-party plan terms and quotas can change; verify at implementation and document date/source. No analytics at launch.
+
+## Incremental prelaunch publication
+
+The owner has authorized public progress updates before the full production checklist is complete. Publish the explicitly labelled `build:prelaunch` output through the prelaunch Pages workflow, keep inquiries disabled, and expose pending gates at `/launch-checklist/`. The normal `build` command continues to enforce the full commercial-launch approvals. See `PRODUCTION_CHECKLIST.md` and the current directive in `AGENTS.md`.

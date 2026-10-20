@@ -1,0 +1,160 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Arrow from '../components/Arrow.astro';
+import Asterisk from '../components/Asterisk.astro';
+import HeroIllustration from '../components/HeroIllustration.astro';
+import ClosingCTA from '../components/ClosingCTA.astro';
+import { hero, paths, examples, processSteps, site } from '../content/site';
+import { services } from '../content/services';
+---
+
+<SiteLayout title="Practical AI help for small businesses" description={hero.description}>
+  <section class="hero container" aria-labelledby="hero-heading">
+    <div class="hero-copy">
+      <p class="eyebrow">
+        <span class="small-star" aria-hidden="true">
+          <Asterisk />
+        </span>
+        {hero.eyebrow}
+      </p>
+      <h1 id="hero-heading">
+        Let's figure out <br />
+        how <span class="highlight">AI can help</span> <br />
+        your business.
+      </h1>
+      <p class="hero-description">{hero.description}</p>
+      <div class="hero-actions">
+        <a class="button" href="/contact/">
+          Tell me what you're working on <Arrow />
+        </a>
+        <a class="text-link" href="/services/">
+          Explore services <Arrow />
+        </a>
+      </div>
+    </div>
+    <HeroIllustration />
+  </section>
+  <div class="hero-caption container">
+    <span>Start with your work. Find what helps.</span>
+    <span class="caption-line"></span>
+    <span>Human first. Technology second.</span>
+  </div>
+  <section class="section container" aria-labelledby="paths-heading">
+    <div class="section-intro">
+      <p class="eyebrow">Two ways in</p>
+      <h2 id="paths-heading">
+        Where are you
+        <br />
+        starting from?
+      </h2>
+      <p>
+        You don't need a perfect brief.
+        <br />
+        Just a little curiosity or a challenge in mind.
+      </p>
+    </div>
+    <div class="path-grid">
+      {paths.map((path) => (
+        <a class="path-card" href={path.href}>
+          <div class="path-top">
+            <span class="number">{path.number}</span>
+            <span class="path-icon" aria-hidden="true">
+              {path.number === '01' ? <Asterisk /> : <Arrow />}
+            </span>
+          </div>
+          <h3>{path.title}</h3>
+          <p>{path.description}</p>
+          <span class="text-link">
+            {path.cta} <Arrow />
+          </span>
+        </a>
+      ))}
+    </div>
+  </section>
+  <section class="services-band">
+    <div class="container section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">A little help, in the right shape</p>
+          <h2>
+            Practical support.
+            <br />
+            At your starting point.
+          </h2>
+        </div>
+        <a class="text-link" href="/services/">
+          Explore all services <Arrow />
+        </a>
+      </div>
+      <div class="service-preview-grid">
+        {services.map((service, i) => (
+          <a href={`/services/#${service.id}`} class="service-preview">
+            <span class="service-number">0{i + 1}</span>
+            <h3>{service.name}</h3>
+            <p>{service.summary}</p>
+            <Arrow />
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="section container" aria-labelledby="examples-heading">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">What this could look like</p>
+        <h2>
+          Everyday work.
+          <br />A different way through.
+        </h2>
+      </div>
+      <p class="section-aside">
+        AI isn't always the answer.
+        <br />
+        The right approach starts with the problem.
+      </p>
+    </div>
+    <p class="small-text">Illustrative scenarios, not client case studies.</p>
+    <div class="examples">
+      {examples.map((example, i) => (
+        <div class="example-row">
+          <span class="number">0{i + 1}</span>
+          <h3>{example.title}</h3>
+          <div>
+            <p>{example.solution}</p>
+            <span class="example-label">{example.label}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+  <section class="process-band">
+    <div class="section container">
+      <p class="eyebrow">Working together</p>
+      <h2>
+        A conversation.
+        <br />
+        Some clarity. A next step.
+      </h2>
+      <div class="process-grid">
+        {processSteps.map((step, i) => (
+          <div>
+            <span class="process-number">0{i + 1}</span>
+            <h3>{step.title}</h3>
+            <p>{step.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  {site.biography && site.approvals.identity && (
+    <section class="section container">
+      <p class="eyebrow">A personal approach</p>
+      <h2>{site.publicName}</h2>
+      <p>{site.biography}</p>
+      <a class="text-link" href="/about/">
+        A little about me <Arrow />
+      </a>
+    </section>
+  )}
+  <ClosingCTA />
+</SiteLayout>

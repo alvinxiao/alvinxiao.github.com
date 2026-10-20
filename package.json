@@ -1,0 +1,42 @@
+{
+  "name": "solo-ai-consulting",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.22.0"
+  },
+  "scripts": {
+    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build && node scripts/check-output.mjs",
+    "build:preview": "ASTRO_TELEMETRY_DISABLED=1 astro build --mode preview",
+    "build:prelaunch": "ASTRO_TELEMETRY_DISABLED=1 astro build --mode prelaunch && node scripts/check-prelaunch.mjs",
+    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
+    "typecheck": "ASTRO_TELEMETRY_DISABLED=1 astro check",
+    "lint": "eslint .",
+    "format:check": "prettier --check 'src/**/*.{astro,ts,css,json,md}' 'scripts/*.mjs' 'tests/**/*.ts' '*.mjs' playwright.config.ts tsconfig.json package.json '.github/workflows/*.yml' .prettierrc.json",
+    "test": "node --import tsx --test tests/unit/*.test.ts",
+    "test:e2e": "playwright test",
+    "check:release": "node scripts/check-release.mjs",
+    "test:release": "node scripts/test-release-build.mjs"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "4.3.3",
+    "astro": "7.4.1",
+    "tailwindcss": "4.3.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.11",
+    "@axe-core/playwright": "4.14.0",
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.64.1",
+    "@types/node": "24.10.1",
+    "eslint": "10.13.0",
+    "eslint-plugin-astro": "3.2.1",
+    "prettier": "3.9.10",
+    "prettier-plugin-astro": "1.1.1",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.72.0"
+  }
+}

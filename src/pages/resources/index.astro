@@ -1,0 +1,47 @@
+---
+import { getCollection } from 'astro:content';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Arrow from '../../components/Arrow.astro';
+import { site } from '../../content/site';
+const articles = await getCollection('resources');
+---
+
+<SiteLayout
+  title="Resources"
+  description="Plain-language guides to understanding AI, trying a small task, and choosing an approach that fits your work."
+>
+  <div class="container">
+    <section class="page-hero">
+      <p class="eyebrow">A little understanding goes a long way</p>
+      <h1>
+        Good places
+        <br />
+        to begin.
+      </h1>
+      <p>
+        Short, practical reading for the questions before the tools. Start small. Keep your
+        judgment. Find what helps.
+      </p>
+    </section>
+    {site.preview && !site.approvals.resources && (
+      <aside class="review-notice">
+        <p>
+          Editorial drafts for owner review. These guides require factual and content approval
+          before publication.
+        </p>
+      </aside>
+    )}
+    <div class="resource-grid">
+      {articles.map((article) => (
+        <a href={`/resources/${article.id}/`} class="resource-card">
+          <span class="eyebrow">{article.data.category}</span>
+          <h2>{article.data.title}</h2>
+          <p>{article.data.description}</p>
+          <span class="text-link">
+            Read the guide <Arrow />
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+</SiteLayout>

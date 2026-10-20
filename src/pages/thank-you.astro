@@ -1,0 +1,40 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Arrow from '../components/Arrow.astro';
+---
+
+<SiteLayout
+  title="Your inquiry"
+  description="Check the status of your inquiry or return to the contact form."
+>
+  <div class="container">
+    <section class="thank-you-panel">
+      <p class="eyebrow">A practical next step</p>
+      <h1 id="confirmation-heading">Let's start a conversation.</h1>
+      <p id="confirmation-message">
+        If you haven't sent an inquiry yet, the contact form is a good place to begin. Opening this
+        page alone does not mean a message has been sent.
+      </p>
+      <a class="text-link" href="/contact/">
+        Back to contact <Arrow />
+      </a>
+    </section>
+  </div>
+  <script>
+    import { confirmationKey } from '../lib/inquiry/model';
+    try {
+      const timestamp = Number(sessionStorage.getItem(confirmationKey));
+      sessionStorage.removeItem(confirmationKey);
+      if (timestamp > 0 && Date.now() - timestamp >= 0 && Date.now() - timestamp < 300000) {
+        const heading = document.querySelector('#confirmation-heading');
+        const message = document.querySelector('#confirmation-message');
+        if (heading) heading.textContent = 'Thanks for reaching out.';
+        if (message)
+          message.textContent =
+            'Your inquiry was accepted by the form service. This confirms submission, not email delivery. There is no automatic acknowledgment email promised.';
+      }
+    } catch {
+      /* Direct visits and unavailable session storage keep neutral messaging. */
+    }
+  </script>
+</SiteLayout>
