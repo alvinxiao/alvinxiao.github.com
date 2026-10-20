@@ -1,0 +1,23 @@
+{
+  "publicName": "",
+  "descriptor": "",
+  "biography": "",
+  "contactEmail": "",
+  "siteUrl": "https://alvinxiao.github.io",
+  "formEndpoint": "",
+  "privacyText": "",
+  "approvals": {
+    "identity": false,
+    "services": false,
+    "pricing": false,
+    "privacy": false,
+    "design": false,
+    "resources": false,
+    "providerVerified": false,
+    "ownerNotificationVerified": false,
+    "retentionVerified": false,
+    "qualityVerified": false,
+    "hostingVerified": false,
+    "release": false
+  }
+}

@@ -1,0 +1,54 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { site } from '../content/site';
+---
+
+<SiteLayout
+  title="Privacy"
+  description="Information about the inquiry form, the data it asks for, and the privacy details required before launch."
+>
+  <div class="container">
+    <section class="page-hero">
+      <p class="eyebrow">A thoughtful approach to your information</p>
+      <h1>Privacy, in plain language.</h1>
+    </section>
+    <div class="prose">
+      {site.approvals.privacy && site.privacyText ? (
+        <p>{site.privacyText}</p>
+      ) : (
+        <>
+          <aside class="review-notice">
+            <p>
+              Prelaunch note. Inquiry submission is turned off while the privacy policy is
+              finalized. The final notice requires verified provider settings, retention limits, a
+              deletion process, and a public contact address. See the{' '}
+              <a href="/launch-checklist/">launch checklist</a>.
+            </p>
+          </aside>
+          <h2>Only what helps with your inquiry.</h2>
+          <p>
+            The proposed form asks for your name, email, interest, and a short description. A
+            category-specific follow-up is optional. Do not send sensitive business information,
+            passwords, payment details, or client records.
+          </p>
+          <h2>How inquiries would be handled.</h2>
+          <p>
+            Formspree is the selected form provider. Before launch, the owner must verify provider
+            storage, notification delivery, free-plan limits, and deletion procedures for both the
+            provider dashboard and email inbox.
+          </p>
+          <h2>Retention and deletion.</h2>
+          <p>
+            The retention period and deletion contact are not yet approved. No permanent archive,
+            automatic acknowledgment, or durable CRM is promised.
+          </p>
+          <h2>No analytics at launch.</h2>
+          <p>
+            The site does not include analytics, advertising trackers, or an AI chat widget. The
+            proposed form keeps inquiry contents out of URLs, browser storage, and application logs.
+          </p>
+        </>
+      )}
+    </div>
+  </div>
+</SiteLayout>

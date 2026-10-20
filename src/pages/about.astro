@@ -1,0 +1,49 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import ClosingCTA from '../components/ClosingCTA.astro';
+import { site } from '../content/site';
+---
+
+<SiteLayout
+  title="About"
+  description="A personal, practical approach to understanding AI and improving everyday work."
+>
+  <div class="container">
+    <section class="page-hero">
+      <p class="eyebrow">The human side of technology</p>
+      <h1>
+        Good questions.
+        <br />
+        Thoughtful next steps.
+      </h1>
+    </section>
+    <div class="prose">
+      {site.approvals.identity && site.biography ? (
+        <>
+          <h2>{site.publicName}</h2>
+          <p>{site.biography}</p>
+        </>
+      ) : (
+        <aside class="review-notice">
+          <p>
+            The personal introduction is being finalized. Biography and professional background
+            details will be added after review. See the{' '}
+            <a href="/launch-checklist/">launch checklist</a>
+            for the remaining steps.
+          </p>
+        </aside>
+      )}
+      <h2>Start with the work.</h2>
+      <p>
+        A tool is only useful when it helps with something that matters. The starting point is what
+        you want to understand or improve, including whether AI is needed at all.
+      </p>
+      <h2>Make room for understanding.</h2>
+      <p>
+        Practical education and advice come first. Custom implementation is a separate step when it
+        makes sense for the problem.
+      </p>
+    </div>
+  </div>
+  <ClosingCTA />
+</SiteLayout>

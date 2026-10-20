@@ -1,0 +1,36 @@
+---
+import { getCollection, render } from 'astro:content';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { site } from '../../content/site';
+export async function getStaticPaths() {
+  return (await getCollection('resources')).map((article) => ({
+    params: { id: article.id },
+    props: { article },
+  }));
+}
+const { article } = Astro.props;
+const { Content } = await render(article);
+---
+
+<SiteLayout title={article.data.title} description={article.data.description}>
+  <div class="container">
+    <header class="article-header">
+      <a class="text-link" href="/resources/">
+        ← All resources
+      </a>
+      <p class="eyebrow" style="margin-top:35px">
+        {article.data.category}
+      </p>
+      <h1>{article.data.title}</h1>
+      <p class="article-meta">A practical introduction</p>
+    </header>
+    {site.preview && !site.approvals.resources && (
+      <aside class="review-notice">
+        <p>Editorial draft for owner review. Not approved for publication.</p>
+      </aside>
+    )}
+    <article class="prose article-body">
+      <Content />
+    </article>
+  </div>
+</SiteLayout>

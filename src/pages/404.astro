@@ -1,0 +1,23 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Arrow from '../components/Arrow.astro';
+---
+
+<SiteLayout
+  title="Page not found"
+  description="This page could not be found. Find your way back to practical AI help."
+>
+  <div class="container">
+    <section class="thank-you-panel">
+      <p class="eyebrow">404 · A small detour</p>
+      <h1>This page took a detour.</h1>
+      <p>
+        This page isn't here. The homepage is a good place to start, or you can explore the
+        services.
+      </p>
+      <a class="button" href="/">
+        Back to the homepage <Arrow />
+      </a>
+    </section>
+  </div>
+</SiteLayout>

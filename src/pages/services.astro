@@ -1,0 +1,68 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Arrow from '../components/Arrow.astro';
+import ClosingCTA from '../components/ClosingCTA.astro';
+import { services, serviceHref } from '../content/services';
+import { site } from '../content/site';
+---
+
+<SiteLayout
+  title="Services"
+  description="Practical AI education, problem-solving, workflow review, and separately scoped automation support."
+>
+  <div class="container">
+    <section class="page-hero">
+      <p class="eyebrow">Find your starting point</p>
+      <h1>
+        A little clarity.
+        <br />A practical way forward.
+      </h1>
+      <p>
+        Learn something new, work through a challenge, or take a closer look at how things get done.
+        Start with the support that fits your question.
+      </p>
+    </section>
+    {site.preview && !site.approvals.services && (
+      <aside class="review-notice">
+        <p>
+          Service details are a proposal for owner review. Scope, session lengths, prices, and
+          policies require approval before launch. No booking or payment is available.
+        </p>
+      </aside>
+    )}
+    <nav class="service-jumps" aria-label="Service sections">
+      {services.map((service) => (
+        <a href={`#${service.id}`}>{service.name}</a>
+      ))}
+    </nav>
+    {services.map((service, i) => (
+      <section id={service.id} class="service-detail" aria-labelledby={`${service.id}-heading`}>
+        <span class="number">0{i + 1}</span>
+        <div>
+          <p class="eyebrow">{service.label}</p>
+          <h2 id={`${service.id}-heading`}>{service.name}</h2>
+          <p>{service.summary}</p>
+          <a class="button" href={serviceHref(service.id)}>
+            Ask about this service <Arrow />
+          </a>
+        </div>
+        <div>
+          <p>{service.details}</p>
+          <details>
+            <summary>What's included</summary>
+            <ul>
+              {service.includes.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </details>
+          <details>
+            <summary>Where the scope stops</summary>
+            <p style="margin-top:15px">{service.excludes}</p>
+          </details>
+        </div>
+      </section>
+    ))}
+  </div>
+  <ClosingCTA />
+</SiteLayout>
