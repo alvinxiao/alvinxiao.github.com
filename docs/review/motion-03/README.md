@@ -67,6 +67,7 @@ The capture helper requires Playwright video support and host `ffmpeg`/`ffprobe`
 
 ## Verification
 
+- The static Axe scan waits for finite entrance animations to finish, including cancellation, while skipping infinite workflow loops. CI exposed an intermediate-opacity contrast sample on the existing launch-checklist entrance. Its targeted accessibility/link check passed locally after this test-only change; contrast assertions remain intact.
 - All six new browser scenarios passed on the final run. They exercise native input/focus, rendered expansion/collapse at production timing, rapid reversals, initial and runtime reduced motion, enlarged text at 320px, touch, and no JavaScript.
 - Fresh independent review of the final CSS and tests found no material issues. Parent inspected actual desktop and mobile comparison frames.
 - ESLint, formatting, and all 44 unit tests passed.

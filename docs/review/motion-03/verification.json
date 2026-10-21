@@ -70,5 +70,10 @@
   "unit_tests": {
     "passed": 44,
     "failed": 0
+  },
+  "targeted_settled_accessibility": {
+    "route": "/launch-checklist/",
+    "passed": 1,
+    "failed": 0
   }
 }
