@@ -1381,6 +1381,41 @@ h3 {
 .resource-card .eyebrow {
   margin-bottom: 8px;
 }
+.resource-card:hover .text-link > svg {
+  transform: none;
+}
+.resource-card:focus-visible .resource-artwork {
+  box-shadow: 0 8px 22px #24313b14;
+  outline: 1px solid #247e7860;
+}
+@media (hover: hover) and (pointer: fine) {
+  .resource-card:hover .resource-artwork {
+    box-shadow: 0 8px 22px #24313b14;
+    outline: 1px solid #247e7860;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .resource-card .resource-artwork {
+    transition: box-shadow 420ms var(--ease-out);
+  }
+  .resource-card .resource-artwork img {
+    transition: transform 420ms var(--ease-out);
+  }
+  .resource-card:focus-visible .resource-artwork img {
+    transform: scale(1.025);
+  }
+  .resource-card:focus-visible .text-link > svg {
+    transform: translateX(4px);
+  }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .resource-card:hover .resource-artwork img {
+    transform: scale(1.025);
+  }
+  .resource-card:hover .text-link > svg {
+    transform: translateX(4px);
+  }
+}
 @media (max-width: 900px) {
   .workflow-illustration {
     padding: 22px;
