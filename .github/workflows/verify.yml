@@ -29,6 +29,29 @@ jobs:
       - run: npm run test:release
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e
+      - name: Report browser failures in check annotations
+        if: failure()
+        run: |
+          node --input-type=module <<'NODE'
+          import { existsSync, readFileSync } from 'node:fs';
+          const reportPath = 'test-results/report.json';
+          if (existsSync(reportPath)) {
+            const report = JSON.parse(readFileSync(reportPath, 'utf8'));
+            const encode = (value) => value.replaceAll('%', '%25').replaceAll('\r', '%0D').replaceAll('\n', '%0A');
+            const visit = (suite) => {
+              for (const spec of suite.specs || []) {
+                for (const test of spec.tests || []) {
+                  if (test.status !== 'unexpected') continue;
+                  const failure = test.results.findLast((result) => result.status !== 'passed' && result.errors?.length);
+                  const message = failure?.errors?.map((error) => error.message).join('\n') || 'Browser test failed.';
+                  console.log(`::error file=${spec.file},line=${spec.line}::${encode(`${spec.title}: ${message}`)}`);
+                }
+              }
+              for (const child of suite.suites || []) visit(child);
+            };
+            for (const suite of report.suites || []) visit(suite);
+          }
+          NODE
       - uses: actions/upload-artifact@v4
         if: always()
         with:
