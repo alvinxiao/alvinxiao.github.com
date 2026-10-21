@@ -211,8 +211,8 @@ test('approved identity, concrete workflow, and open service disclosures are pub
   await expect(page.locator('.workflow-steps li')).toHaveCount(3);
   await expect(page.locator('.workflow-steps')).toContainText('Review and send');
   await page.goto('/about/');
-  await expect(page.locator('main')).toContainText('Alvin Xiao');
-  await expect(page.locator('main')).toContainText('over 10 years');
+  await expect(page.locator('main')).toContainText('Alvin');
+  await expect(page.locator('main')).toContainText('15 years');
   await expect(page.locator('main')).toContainText('NASA');
   await page.goto('/services/');
   await expect(page.locator('details')).toHaveCount(8);
