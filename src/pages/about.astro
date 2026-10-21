@@ -6,7 +6,7 @@ import { site } from '../content/site';
 
 <SiteLayout
   title="About"
-  description="A personal, practical approach to understanding AI and improving everyday work."
+  description="Meet Alvin Xiao, a software engineer and program manager helping small businesses understand AI and find useful ways to improve everyday work."
 >
   <div class="container">
     <section class="page-hero">
@@ -17,7 +17,9 @@ import { site } from '../content/site';
       {site.approvals.identity && site.biography ? (
         <>
           <h2>Software engineer. Program manager. Teacher at heart.</h2>
-          <p>{site.biography}</p>
+          {site.biography.split('\n\n').map((paragraph) => (
+            <p>{paragraph}</p>
+          ))}
         </>
       ) : (
         <aside class="review-notice">
@@ -29,16 +31,6 @@ import { site } from '../content/site';
           </p>
         </aside>
       )}
-      <h2>Start with the work.</h2>
-      <p>
-        A tool is only useful when it helps with something that matters. The starting point is what
-        you want to understand or improve, including whether AI is needed at all.
-      </p>
-      <h2>Make room for understanding.</h2>
-      <p>
-        Practical education and advice come first. Custom implementation is a separate step when it
-        makes sense for the problem.
-      </p>
     </div>
   </div>
   <ClosingCTA />
