@@ -35,4 +35,4 @@ Target $0 recurring platform spend using GitHub Pages and Formspree Free within 
 
 ## Incremental prelaunch publication
 
-The owner has authorized public progress updates before the full production checklist is complete. Publish the explicitly labelled `build:prelaunch` output through the prelaunch Pages workflow, keep inquiries disabled, and expose pending gates at `/launch-checklist/`. The normal `build` command continues to enforce the full commercial-launch approvals. See `PRODUCTION_CHECKLIST.md` and the current directive in `AGENTS.md`.
+The owner has authorized public progress updates before the full production checklist is complete. Publish the explicitly labelled `build:prelaunch` output through the prelaunch Pages workflow, keep inquiries disabled, and expose pending gates at `/launch-checklist/`. The normal `build` command continues to enforce the full commercial-launch approvals. See `PRODUCTION_CHECKLIST.md` and the current directive in [AGENTS.md](../AGENTS.md).

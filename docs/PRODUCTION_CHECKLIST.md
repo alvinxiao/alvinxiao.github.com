@@ -62,7 +62,7 @@ The public version of this checklist is `/launch-checklist/`. Do not mark an own
 - [x] Production guard tested through actual rejected and synthetic approved builds.
 - [x] Responsive overflow fixed and checked at 320, 390, 768, and 1440 pixels.
 
-Current-run results, screenshots, and remaining limitations are recorded in `docs/REVIEW.md` and the generated test reports. Public prelaunch publication is not evidence that the full launch checklist is complete.
+Current-run results, screenshots, and remaining limitations are recorded in [REVIEW.md](REVIEW.md) and the generated test reports. Public prelaunch publication is not evidence that the full launch checklist is complete.
 
 ## Latest owner decisions
 

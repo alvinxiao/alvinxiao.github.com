@@ -114,27 +114,7 @@ const canonical = new URL(path, site.siteUrl);
     <script>
       import '../scripts/reveal';
 
-      const toggle = document.querySelector('.menu-toggle');
-      const nav = document.querySelector('#site-navigation');
-      if (toggle instanceof HTMLButtonElement && nav instanceof HTMLElement) {
-        toggle.closest('header')?.setAttribute('data-navigation-ready', 'true');
-        const close = () => {
-          toggle.setAttribute('aria-expanded', 'false');
-          nav.classList.remove('is-open');
-        };
-        toggle.addEventListener('click', () => {
-          const open = toggle.getAttribute('aria-expanded') !== 'true';
-          toggle.setAttribute('aria-expanded', String(open));
-          nav.classList.toggle('is-open', open);
-        });
-        document.addEventListener('keydown', (event) => {
-          if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
-            close();
-            toggle.focus();
-          }
-        });
-        nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', close));
-      }
+      import '../scripts/navigation';
     </script>
   </body>
 </html>

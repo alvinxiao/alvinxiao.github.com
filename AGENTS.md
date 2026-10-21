@@ -2,7 +2,7 @@
 
 ## Current owner publication directive
 
-The owner has explicitly authorized full implementation and incremental public prelaunch publication, including while the full production approval gates remain open. Publish progress as a clearly labelled prelaunch site and record outstanding gates in `PRODUCTION_CHECKLIST.md` and `/launch-checklist/`. This standing authorization covers the merges and GitHub Pages deployments needed for those prelaunch updates. Keep inquiries inactive in prelaunch builds and do not invent business facts, prices, qualifications, or provider verification. Full commercial launch remains a separate checklist decision. This directive overrides the earlier publication pauses below for prelaunch updates only.
+The owner has explicitly authorized full implementation and incremental public prelaunch publication, including while the full production approval gates remain open. Publish progress as a clearly labelled prelaunch site and record outstanding gates in `docs/PRODUCTION_CHECKLIST.md` and `/launch-checklist/`. This standing authorization covers the merges and GitHub Pages deployments needed for those prelaunch updates. Keep inquiries inactive in prelaunch builds and do not invent business facts, prices, qualifications, or provider verification. Full commercial launch remains a separate checklist decision. This directive overrides the earlier publication pauses below for prelaunch updates only.
 
 ## Pull request workflow
 
@@ -14,7 +14,7 @@ Link the relevant backlog issue, describe the scope and verification, and includ
 Implement only the approved solo AI consulting pre-launch website described in this package. This document does **not** authorize coding, repo modification, external account creation, or deployment until the owner explicitly starts implementation. The user's approval is required before any production publication.
 
 ## Work protocol
-1. Read README, SPEC, CONTENT, DESIGN, ARCHITECTURE, TESTING, TASKS in order.
+1. Read `README.md`, `docs/SPEC.md`, `docs/CONTENT.md`, `docs/DESIGN.md`, `docs/ARCHITECTURE.md`, `docs/TESTING.md`, and `docs/TASKS.md` in order.
 2. Inspect repo before changes; report current state and risks; do not delete existing material blindly.
 3. Propose milestone plan, files to change, tests, and open questions before each milestone.
 4. Implement one bounded milestone per feature branch/PR, unless owner approves a different split.

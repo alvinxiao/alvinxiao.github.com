@@ -44,7 +44,7 @@ There is no promise of automatic visitor acknowledgment or a durable CRM. The cu
 
 ## Publish incremental prelaunch updates
 
-The owner has authorized publishing progress even while commercial production gates remain open. The standing directive is recorded in `AGENTS.md`. Track remaining decisions in `PRODUCTION_CHECKLIST.md` and the public `/launch-checklist/` page.
+The owner has authorized publishing progress even while commercial production gates remain open. The standing directive is recorded in [AGENTS.md](../AGENTS.md). Track remaining decisions in `PRODUCTION_CHECKLIST.md` and the public `/launch-checklist/` page.
 
 `.github/workflows/publish-prelaunch.yml` builds and publishes a labelled prelaunch from `master` using GitHub Pages Actions. It runs quality checks and the actual build-gate integration tests before uploading `npm run build:prelaunch` output. It does not run the fully approved commercial-launch build.
 

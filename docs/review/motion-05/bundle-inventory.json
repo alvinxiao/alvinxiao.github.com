@@ -1,0 +1,82 @@
+{
+  "baselineCommit": "59edab522f1a3232b482907f4eab242ab9f3b185",
+  "before": {
+    "assets": [
+      {
+        "name": "SiteLayout.seE7zmVl.css",
+        "bytes": 32850,
+        "gzip": 7673,
+        "sha256": "81a46746e2ee959f1a42cc4b0a579433c90d04097a4bc1f7e4dda8c64ab27a4d"
+      },
+      {
+        "name": "contact.astro_astro_type_script_index_0_lang.BatgoHET.js",
+        "bytes": 6769,
+        "gzip": 2741,
+        "sha256": "ea8946fc732de0033af5c6bfa1ea4304c5c39871bc750679e0d7b5f133ca795d"
+      },
+      {
+        "name": "model.DfGLSz-I.js",
+        "bytes": 1275,
+        "gzip": 630,
+        "sha256": "9fbfd826933a945dc44b0bd33a47ae035037c80fb4c3dc84696e0e7a36a5ea0b"
+      },
+      {
+        "name": "thank-you.astro_astro_type_script_index_0_lang.CQibBX_G.js",
+        "bytes": 481,
+        "gzip": 319,
+        "sha256": "59766c9c851aab0027d46bcfc124a7f38cbe35e7bdf75dfb745eddffc4d948ec"
+      }
+    ],
+    "home": {
+      "bytes": 20555,
+      "gzip": 5003,
+      "inlineScripts": [
+        {
+          "type": " type=\"module\"",
+          "bytes": 2221,
+          "gzip": 1037
+        }
+      ]
+    }
+  },
+  "after": {
+    "assets": [
+      {
+        "name": "SiteLayout.jCKW53S2.css",
+        "bytes": 32945,
+        "gzip": 7693,
+        "sha256": "02ff1e90aad2ae76b52e1c25baa2a71d2aecb02a30bbec6481ec0265cf480e43"
+      },
+      {
+        "name": "contact.astro_astro_type_script_index_0_lang.BatgoHET.js",
+        "bytes": 6769,
+        "gzip": 2741,
+        "sha256": "ea8946fc732de0033af5c6bfa1ea4304c5c39871bc750679e0d7b5f133ca795d"
+      },
+      {
+        "name": "model.DfGLSz-I.js",
+        "bytes": 1275,
+        "gzip": 630,
+        "sha256": "9fbfd826933a945dc44b0bd33a47ae035037c80fb4c3dc84696e0e7a36a5ea0b"
+      },
+      {
+        "name": "thank-you.astro_astro_type_script_index_0_lang.CQibBX_G.js",
+        "bytes": 481,
+        "gzip": 319,
+        "sha256": "59766c9c851aab0027d46bcfc124a7f38cbe35e7bdf75dfb745eddffc4d948ec"
+      }
+    ],
+    "home": {
+      "bytes": 22382,
+      "gzip": 5574,
+      "inlineScripts": [
+        {
+          "type": " type=\"module\"",
+          "bytes": 4048,
+          "gzip": 1581
+        }
+      ]
+    }
+  },
+  "note": "Raw and gzip byte inventory of equivalent prelaunch builds; not a runtime performance benchmark."
+}
