@@ -4,6 +4,13 @@ This is the first implementation from [MOTION-01, issue #2](https://github.com/a
 
 ## What to review
 
+Start with the synchronized video diffs. Before is on the left, After on the right, with matching viewport sizes and scroll positions. Each clip visits six content groups. The half-speed versions slow the recording only; the website still uses the original 650ms animation.
+
+| Comparison | Actual speed | Half-speed replay |
+| --- | --- | --- |
+| Desktop | [Watch comparison](videos/diff-1000.mp4) | [Watch slower comparison](videos/diff-1000-slow.mp4) |
+| Mobile | [Watch comparison](videos/diff-390.mp4) | [Watch slower comparison](videos/diff-390-slow.mp4) |
+
 Open the [comparison gallery](index.html) locally for side-by-side pages and recordings. GitHub can display the linked PNGs directly; the MP4 links open or download the recordings.
 
 | View              | Before                                             | After                                                 |
@@ -51,6 +58,8 @@ Install the Playwright browser and FFmpeg support or configure the supplied loca
 ```sh
 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium node scripts/capture-reveal-review.mjs
 ```
+
+Run `node scripts/capture-reveal-diff.mjs` with the same browser configuration to regenerate the synchronized comparisons and half-speed replays. Both views are recorded inside a single browser page; the helper asserts matching section positions.
 
 `BEFORE_URL` and `AFTER_URL` override the capture origins. The host `ffmpeg` command must be available for MP4 conversion. The helper generates screenshots, recordings, and the local comparison gallery.
 
