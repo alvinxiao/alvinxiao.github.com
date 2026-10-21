@@ -35,3 +35,9 @@ The [mobile article screenshot](article-mobile.png) records the illustrated firs
 ## Homepage visual polish
 
 Every main-page section now includes an illustration or a meaningful line icon. A shared SVG component keeps the line weight and colors consistent across learning, conversation, workflow, implementation, and review symbols. The personal introduction reuses the generated magnifying-glass artwork, with no invented portrait or client logos. Icons are decorative and hidden from assistive technology; all meaning remains in visible text. Hover movement respects reduced-motion preferences.
+
+## Workflow progression
+
+The homepage workflow repeats a 10.8-second sequence, with 3.6 seconds per step. Card borders, progress lines, icons, and arrow handoffs advance together while the copy stays visible. A labelled checkbox pauses the full sequence without JavaScript. Reduced-motion preferences disable the animation and hide the unnecessary control. Browser checks cover the three phases, pause/resume, and reduced motion.
+
+Review frames: [question](workflow-step-1.png), [draft](workflow-step-2.png), and [human review](workflow-step-3.png). These show an illustrative process, not an actual inquiry or message being sent.

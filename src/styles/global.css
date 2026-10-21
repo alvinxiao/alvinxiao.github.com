@@ -1390,17 +1390,6 @@ h3 {
     padding: 18px;
   }
 }
-@media (prefers-reduced-motion: no-preference) {
-  .workflow-steps li {
-    animation: settle-in 700ms var(--ease-out) backwards;
-  }
-  .workflow-steps li:nth-child(2) {
-    animation-delay: 100ms;
-  }
-  .workflow-steps li:nth-child(3) {
-    animation-delay: 200ms;
-  }
-}
 
 .personal-intro p {
   max-width: 760px;
@@ -1546,5 +1535,125 @@ h3 {
   .example-visual .section-icon {
     width: 24px;
     height: 24px;
+  }
+}
+
+.workflow-motion-control {
+  display: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .workflow-motion-control {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+    font-size: var(--text-caption);
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .workflow-motion-control input {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: var(--teal-dark);
+  }
+  .workflow-steps li {
+    --step-delay: 0s;
+    animation: workflow-focus 10.8s ease-in-out infinite;
+    animation-delay: var(--step-delay);
+  }
+  .workflow-steps li:nth-child(2) {
+    --step-delay: 3.6s;
+  }
+  .workflow-steps li:nth-child(3) {
+    --step-delay: 7.2s;
+  }
+  .workflow-steps li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 12px;
+    right: 12px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--teal-dark);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: workflow-progress 10.8s linear infinite;
+    animation-delay: var(--step-delay);
+  }
+  .workflow-number .section-icon {
+    animation: workflow-icon 10.8s var(--ease-out) infinite;
+    animation-delay: var(--step-delay);
+  }
+  .workflow-steps > li > svg {
+    animation: workflow-handoff 10.8s var(--ease-out) infinite;
+    animation-delay: var(--step-delay);
+  }
+  .workflow-illustration:has(.workflow-motion-control input:checked) .workflow-steps *,
+  .workflow-illustration:has(.workflow-motion-control input:checked) .workflow-steps *::after {
+    animation-play-state: paused;
+  }
+}
+@keyframes workflow-focus {
+  0%,
+  33%,
+  100% {
+    border-color: #c7d4cc;
+    box-shadow: 0 0 0 0 #247e7800;
+  }
+  5%,
+  27% {
+    border-color: var(--teal);
+    box-shadow:
+      0 0 0 3px #247e7814,
+      0 6px 20px #24313b08;
+  }
+}
+@keyframes workflow-progress {
+  0% {
+    transform: scaleX(0);
+    opacity: 1;
+  }
+  27% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  32% {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+  33%,
+  100% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+}
+@keyframes workflow-icon {
+  0%,
+  33%,
+  100% {
+    transform: scale(1);
+  }
+  7%,
+  23% {
+    transform: scale(1.12);
+  }
+}
+@keyframes workflow-handoff {
+  0%,
+  23%,
+  33%,
+  100% {
+    translate: 0 0;
+    opacity: 0.55;
+  }
+  27% {
+    translate: 0 5px;
+    opacity: 1;
+  }
+  31% {
+    translate: 0 0;
+    opacity: 1;
   }
 }
