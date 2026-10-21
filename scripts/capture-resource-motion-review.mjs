@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, renameSync, writeFileSync } from 'node:fs';
 import { chromium } from '@playwright/test';
 
 const output = 'docs/review/motion-02';
@@ -11,6 +11,85 @@ const origins = [
 const modes = ['before', 'after'];
 mkdirSync(`${output}/videos`, { recursive: true });
 for (const mode of modes) mkdirSync(`${output}/${mode}`, { recursive: true });
+function alignStages(file) {
+  const width = 1000;
+  const frameBytes = width * 44;
+  const sides = [0, width].map((left) => {
+    const pixels = execFileSync(
+      'ffmpeg',
+      [
+        '-loglevel',
+        'error',
+        '-threads',
+        '2',
+        '-i',
+        file,
+        '-vf',
+        `crop=${width}:44:${left}:50,format=gray`,
+        '-f',
+        'rawvideo',
+        '-',
+      ],
+      { maxBuffer: 64 * 1024 * 1024 },
+    );
+    const boundaries = [0];
+    // Stationary label pixels identify stages independently of page animation.
+    for (let offset = frameBytes; offset < pixels.length; offset += frameBytes) {
+      let difference = 0;
+      for (let pixel = 0; pixel < frameBytes; pixel += 1)
+        difference += Math.abs(pixels[offset + pixel] - pixels[offset - frameBytes + pixel]);
+      const mean = difference / frameBytes;
+      if (mean > 1.5 && mean < 10) boundaries.push(offset / frameBytes / 25);
+    }
+    assert.equal(boundaries.length, 5, 'Expected idle plus four interaction label stages');
+    boundaries.push(pixels.length / frameBytes / 25);
+    return boundaries;
+  });
+  const filters = [];
+  for (let stage = 0; stage < 5; stage += 1) {
+    for (let side = 0; side < 2; side += 1) {
+      const start = sides[side][stage] + (stage ? 0.04 : 0.3);
+      const end = sides[side][stage + 1];
+      filters.push(
+        `[0:v]crop=1000:950:${side * 1000}:0,trim=start=${start}:end=${end},setpts=PTS-STARTPTS,tpad=stop_mode=clone:stop_duration=2,trim=duration=2[s${stage}${side}]`,
+      );
+    }
+    filters.push(`[s${stage}0][s${stage}1]hstack[p${stage}]`);
+  }
+  filters.push('[p0][p1][p2][p3][p4]concat=n=5:v=1:a=0[out]');
+  const aligned = `${file}.aligned.mp4`;
+  execFileSync('ffmpeg', [
+    '-loglevel',
+    'error',
+    '-y',
+    '-i',
+    file,
+    '-filter_complex',
+    filters.join(';'),
+    '-map',
+    '[out]',
+    '-an',
+    '-c:v',
+    'libx264',
+    '-threads',
+    '2',
+    '-preset',
+    'fast',
+    '-crf',
+    '24',
+    '-pix_fmt',
+    'yuv420p',
+    '-movflags',
+    '+faststart',
+    aligned,
+  ]);
+  renameSync(aligned, file);
+}
+if (process.env.ALIGN_ONLY) {
+  for (const name of ['desktop', 'reduced-motion'])
+    alignStages(`${output}/videos/${name}-diff.mp4`);
+  process.exit(0);
+}
 const browser = await chromium.launch({
   executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH,
 });
@@ -171,6 +250,7 @@ try {
       '+faststart',
       `${output}/videos/${scenario}-diff.mp4`,
     ]);
+    if (!touch) alignStages(`${output}/videos/${scenario}-diff.mp4`);
     console.log(`Captured ${scenario} comparison with synchronized interactions.`);
   }
   writeFileSync(
@@ -181,7 +261,7 @@ try {
         widths: [320, 390, 768, 1440],
         recordings: ['desktop', 'reduced-motion', 'touch'],
         synchronization:
-          'Parallel interactions on separate pages; trim preparation from both recordings using common interaction duration.',
+          'Parallel interactions on separate pages. Desktop and reduced-motion stages aligned by stationary interaction-label changes and shown in two-second segments at recorded speed, holding settled frames when needed.',
       },
       null,
       2,

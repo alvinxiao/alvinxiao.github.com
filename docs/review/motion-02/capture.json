@@ -11,5 +11,5 @@
     "reduced-motion",
     "touch"
   ],
-  "synchronization": "Parallel interactions on separate pages; trim preparation from both recordings using common interaction duration."
+  "synchronization": "Parallel interactions on separate pages. Desktop and reduced-motion stages aligned by stationary interaction-label changes and shown in two-second segments at recorded speed, holding settled frames when needed."
 }
