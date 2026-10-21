@@ -1,0 +1,15 @@
+{
+  "baseline": "8332413696eed532359d9d33b6959aaa83fc2e99",
+  "widths": [
+    320,
+    390,
+    768,
+    1440
+  ],
+  "recordings": [
+    "desktop",
+    "reduced-motion",
+    "touch"
+  ],
+  "synchronization": "Parallel interactions on separate pages. Desktop and reduced-motion stages aligned by stationary interaction-label changes and shown in two-second segments at recorded speed, holding settled frames when needed."
+}
