@@ -1606,7 +1606,8 @@ h3 {
   27% {
     border-color: var(--teal);
     box-shadow:
-      0 0 0 3px #247e7814,
+      0 0 0 3px var(--teal),
+      0 0 0 7px #247e7814,
       0 6px 20px #24313b08;
   }
 }
