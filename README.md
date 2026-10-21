@@ -30,7 +30,7 @@ The [Resources section](https://alvinxiao.github.io/resources/) includes guides 
 
 The website is a public **prelaunch preview**. Visitors can explore the pages and articles, but inquiry submission is disabled and search indexing is blocked. Contact details, provider setup, privacy terms, working policies, and final launch reviews remain pending.
 
-Incremental prelaunch updates are authorized. The [full launch checklist](PRODUCTION_CHECKLIST.md), also available [on the website](https://alvinxiao.github.io/launch-checklist/), records the work required before enabling inquiries and completing the commercial launch.
+Incremental prelaunch updates are authorized. The [full launch checklist](docs/PRODUCTION_CHECKLIST.md), also available [on the website](https://alvinxiao.github.io/launch-checklist/), records the work required before enabling inquiries and completing the commercial launch.
 
 ## Develop locally
 
@@ -68,6 +68,7 @@ npm run lint
 npm run format:check
 npm test
 npm run test:release
+npm run check:docs
 npx playwright install chromium
 npm run test:e2e
 ```
@@ -82,16 +83,18 @@ The [motion backlog](docs/MOTION_BACKLOG.md) records the current animation audit
 
 ## Project specifications
 
+Project specifications and plans live in `docs/`. `README.md` and `AGENTS.md` remain at the repository root for discovery.
+
 These documents define the project requirements. Apply subsequent owner-approved decisions recorded in the repository and conversation when they supersede an earlier proposal.
 
-| Document                           | Contents                                             |
-| ---------------------------------- | ---------------------------------------------------- |
-| [SPEC.md](SPEC.md)                 | Audience, goals, scope, and product requirements     |
-| [CONTENT.md](CONTENT.md)           | Messaging, service outlines, and content decisions   |
-| [DESIGN.md](DESIGN.md)             | Visual direction and component requirements          |
-| [ARCHITECTURE.md](ARCHITECTURE.md) | Static architecture, forms, security, and deployment |
-| [TESTING.md](TESTING.md)           | Acceptance criteria and verification requirements    |
-| [AGENTS.md](AGENTS.md)             | Contributor instructions and approval rules          |
-| [TASKS.md](TASKS.md)               | Implementation milestones                            |
+| Document                                | Contents                                             |
+| --------------------------------------- | ---------------------------------------------------- |
+| [SPEC.md](docs/SPEC.md)                 | Audience, goals, scope, and product requirements     |
+| [CONTENT.md](docs/CONTENT.md)           | Messaging, service outlines, and content decisions   |
+| [DESIGN.md](docs/DESIGN.md)             | Visual direction and component requirements          |
+| [ARCHITECTURE.md](docs/ARCHITECTURE.md) | Static architecture, forms, security, and deployment |
+| [TESTING.md](docs/TESTING.md)           | Acceptance criteria and verification requirements    |
+| [AGENTS.md](AGENTS.md)                  | Contributor instructions and approval rules          |
+| [TASKS.md](docs/TASKS.md)               | Implementation milestones                            |
 
 Unapproved prices, invented credentials, and unresolved business details must not be presented as approved launch content. Publishing a prelaunch update does not authorize activating the inquiry form or completing the full launch.

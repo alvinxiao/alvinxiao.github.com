@@ -1,0 +1,116 @@
+{
+  "baselineCommit": "59edab522f1a3232b482907f4eab242ab9f3b185",
+  "targetedBrowserTests": {
+    "startTime": "2026-10-21T19:51:33.277Z",
+    "duration": 52508.872,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "prelaunchBuild": {
+    "pages": 12,
+    "disabledInquiries": true,
+    "labelledPrelaunch": true
+  },
+  "media": {
+    "phone-diff.mp4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 800,
+          "height": 960
+        }
+      ],
+      "format": {
+        "duration": "12.960000",
+        "size": "520097"
+      }
+    },
+    "phone-slow.mp4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 800,
+          "height": 960
+        }
+      ],
+      "format": {
+        "duration": "25.840000",
+        "size": "564919"
+      }
+    },
+    "reduced-motion-diff.mp4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 800,
+          "height": 960
+        }
+      ],
+      "format": {
+        "duration": "8.600000",
+        "size": "407599"
+      }
+    },
+    "tablet-diff.mp4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1556,
+          "height": 960
+        }
+      ],
+      "format": {
+        "duration": "8.560000",
+        "size": "597452"
+      }
+    }
+  },
+  "screenshots": {
+    "widths": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "horizontalOverflow": false,
+    "settledReducedMotion": true
+  },
+  "limits": [
+    "Chromium on Linux only; Firefox and Safari not run.",
+    "Missing APIs simulated in Chromium.",
+    "Recordings demonstrate appearance, not navigation latency.",
+    "Full commercial launch remains unapproved."
+  ],
+  "localChecks": {
+    "typecheck": {
+      "errors": 0,
+      "warnings": 0,
+      "hints": 0
+    },
+    "lint": "pass",
+    "format": "pass",
+    "unitTests": {
+      "passed": 44,
+      "failed": 0
+    },
+    "documentationLinks": {
+      "passed": 117,
+      "files": 19
+    },
+    "diffCheck": "pass"
+  },
+  "independentSourceReview": {
+    "findings": 0,
+    "scope": "Final controller, focus-boundary memory, CSS, integration, and six browser scenarios. Source only; runtime verified separately."
+  }
+}

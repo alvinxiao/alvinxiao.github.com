@@ -58,4 +58,4 @@ See `TESTING.md` for the final release acceptance criteria. A green local run do
 
 ## Release restrictions
 
-The owner has authorized incremental public prelaunch merges and deployments while the commercial launch gates remain open. Use `npm run build:prelaunch` and publish its launch checklist. Full commercial launch still requires `PRODUCTION_CHECKLIST.md`; never mark unknown business facts or provider checks approved merely to satisfy `npm run build`. Follow `docs/OPERATIONS.md` for the separate publication modes and rollback.
+The owner has authorized incremental public prelaunch merges and deployments while the commercial launch gates remain open. Use `npm run build:prelaunch` and publish its launch checklist. Full commercial launch still requires `PRODUCTION_CHECKLIST.md`; never mark unknown business facts or provider checks approved merely to satisfy `npm run build`. Follow [OPERATIONS.md](OPERATIONS.md) for the separate publication modes and rollback.

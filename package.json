@@ -18,7 +18,8 @@
     "test": "node --import tsx --test tests/unit/*.test.ts",
     "test:e2e": "playwright test",
     "check:release": "node scripts/check-release.mjs",
-    "test:release": "node scripts/test-release-build.mjs"
+    "test:release": "node scripts/test-release-build.mjs",
+    "check:docs": "node scripts/check-doc-links.mjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "4.3.3",

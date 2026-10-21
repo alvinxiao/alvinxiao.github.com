@@ -196,11 +196,16 @@ h3 {
 }
 .site-header nav a {
   padding: 10px 0;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 6px;
+}
+.site-header nav a:is(:hover, :focus-visible) {
+  text-decoration-color: currentColor;
 }
 .site-header nav a[aria-current='page'] {
   color: var(--teal-dark);
-  text-decoration: underline;
-  text-underline-offset: 6px;
+  text-decoration-color: currentColor;
 }
 .site-header nav .nav-contact {
   border: 1px solid var(--ink);
@@ -996,7 +1001,7 @@ h3 {
   .site-header[data-navigation-ready] nav {
     display: none;
   }
-  .site-header[data-navigation-ready] nav.is-open {
+  .site-header[data-navigation-ready] nav:is(.is-open, .is-closing) {
     display: flex;
   }
   .site-header nav a {
@@ -1247,7 +1252,8 @@ h3 {
     color 240ms ease,
     background-color 240ms ease,
     border-color 240ms ease,
-    box-shadow 320ms var(--ease-out);
+    box-shadow 320ms var(--ease-out),
+    text-decoration-color 240ms ease;
 }
 .site-header nav a:hover {
   color: var(--teal-dark);
@@ -1327,10 +1333,6 @@ h3 {
   }
   .hero-copy > :nth-child(4) {
     animation-delay: 210ms;
-  }
-
-  .site-header nav.is-open {
-    animation: settle-in 360ms var(--ease-out) backwards;
   }
 }
 @keyframes settle-in {
