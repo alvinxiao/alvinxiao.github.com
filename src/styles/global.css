@@ -591,8 +591,37 @@ h3 {
   scroll-margin-top: 30px;
 }
 .service-detail h2 {
+  position: relative;
   font-size: 32px;
   margin-bottom: 18px;
+}
+.service-detail:target h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: min(120px, 100%);
+  height: 2px;
+  background: var(--teal);
+  transform: none;
+  transform-origin: left;
+  opacity: 1;
+  animation: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .service-detail:target h2::after {
+    animation: service-target-confirm 900ms var(--ease-out) both;
+  }
+}
+@keyframes service-target-confirm {
+  from {
+    transform: scaleX(0.25);
+    opacity: 0.5;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
 }
 .service-detail p {
   color: var(--muted);
