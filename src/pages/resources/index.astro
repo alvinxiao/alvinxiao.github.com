@@ -28,9 +28,9 @@ const articles = await getCollection('resources');
         </p>
       </aside>
     )}
-    <div class="resource-grid">
+    <div class="resource-grid" data-reveal-group>
       {articles.map((article) => (
-        <a href={`/resources/${article.id}/`} class="resource-card">
+        <a href={`/resources/${article.id}/`} class="resource-card" data-reveal>
           <ResourceArtwork position={article.data.imagePosition} />
           <span class="eyebrow">{article.data.category}</span>
           <h2>{article.data.title}</h2>

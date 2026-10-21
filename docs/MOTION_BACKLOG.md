@@ -50,7 +50,7 @@ These are references, not a proposal to replace the current theme or copy third-
 
 Start with MOTION-01 and compare two restrained group-reveal treatments before selecting one. Use its motion and fallback conventions for later work. MOTION-02, MOTION-03, and MOTION-04 can then ship independently. Follow with navigation and About refinements. MOTION-07 is a lifecycle improvement to an already working animation, not a prerequisite for the visual work. MOTION-08 stays deferred until inquiry activation and provider verification are ready.
 
-Use one focused PR per issue by default. Each PR links its issue, describes visible behavior, and includes normal-motion and reduced-motion evidence. Separate documentation or prerequisites are also PRs. Auto-merge is allowed after checks pass and findings are resolved under the existing prelaunch authorization. No direct commits or pushes to `master`.
+Use one focused PR per issue by default. Each PR links its issue, describes visible behavior, and includes normal-motion and reduced-motion evidence. Separate documentation or prerequisites are also PRs. Each implementation PR now requires explicit owner approval after before-and-after screenshots and a motion recording. Do not merge or arm auto-merge before that approval, even when CI passes. No direct commits or pushes to `master`.
 
 ## Acceptance criteria for every implementation
 

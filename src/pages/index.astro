@@ -36,7 +36,7 @@ import { services } from '../content/services';
     <span>Human first. Technology second.</span>
   </div>
   <section class="section container" aria-labelledby="paths-heading">
-    <div class="section-intro">
+    <div class="section-intro" data-reveal>
       <p class="eyebrow">Two ways in</p>
       <h2 id="paths-heading">
         Where are you
@@ -49,9 +49,9 @@ import { services } from '../content/services';
         Just a little curiosity or a challenge in mind.
       </p>
     </div>
-    <div class="path-grid">
+    <div class="path-grid" data-reveal-group>
       {paths.map((path) => (
-        <a class="path-card" href={path.href}>
+        <a class="path-card" href={path.href} data-reveal>
           <div class="path-top">
             <span class="number">{path.number}</span>
             <span class="icon-tile">
@@ -69,7 +69,7 @@ import { services } from '../content/services';
   </section>
   <section class="services-band">
     <div class="container section">
-      <div class="section-heading">
+      <div class="section-heading" data-reveal>
         <div>
           <p class="eyebrow">Education, advice, and implementation</p>
           <h2>
@@ -82,9 +82,9 @@ import { services } from '../content/services';
           Explore all services <Arrow />
         </a>
       </div>
-      <div class="service-preview-grid">
+      <div class="service-preview-grid" data-reveal-group>
         {services.map((service, i) => (
-          <a href={`/services/#${service.id}`} class="service-preview">
+          <a href={`/services/#${service.id}`} class="service-preview" data-reveal>
             <div class="service-visual">
               <span class="service-number">0{i + 1}</span>
               <span class="icon-tile">
@@ -110,7 +110,7 @@ import { services } from '../content/services';
     </div>
   </section>
   <section class="section container" aria-labelledby="examples-heading">
-    <div class="section-heading">
+    <div class="section-heading" data-reveal>
       <div>
         <p class="eyebrow">What this could look like</p>
         <h2>
@@ -126,9 +126,9 @@ import { services } from '../content/services';
       </p>
     </div>
     <p class="small-text">Illustrative scenarios, not client case studies.</p>
-    <div class="examples">
+    <div class="examples" data-reveal-group>
       {examples.map((example, i) => (
-        <div class="example-row">
+        <div class="example-row" data-reveal>
           <span class="example-visual">
             <span class="number">0{i + 1}</span>
             <SectionIcon name={i === 0 ? 'chat' : i === 1 ? 'layers' : 'document'} />
@@ -150,9 +150,9 @@ import { services } from '../content/services';
         <br />
         to a plan you can use.
       </h2>
-      <div class="process-grid">
+      <div class="process-grid" data-reveal-group>
         {processSteps.map((step, i) => (
-          <div>
+          <div data-reveal>
             <div class="process-visual">
               <span class="process-number">0{i + 1}</span>
               <span class="icon-tile">
@@ -167,7 +167,7 @@ import { services } from '../content/services';
     </div>
   </section>
   {site.biography && site.approvals.identity && (
-    <section class="section container personal-intro">
+    <section class="section container personal-intro" data-reveal>
       <div class="personal-copy">
         <p class="eyebrow">A personal approach</p>
         <h2>Hi, I'm Alvin.</h2>
