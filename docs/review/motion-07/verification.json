@@ -1,0 +1,105 @@
+{
+  "baselineCommit": "d42080c341c3cfb4e588a4d69e9a2a6cfd80a259",
+  "targetedBrowserTests": {
+    "startTime": "2026-10-21T20:51:49.819Z",
+    "duration": 34617.04,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "prelaunchBuild": {
+    "pages": 12,
+    "disabledInquiries": true,
+    "labelledPrelaunch": true
+  },
+  "media": {
+    "desktop-diff.mp4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 2900,
+          "height": 1050
+        }
+      ],
+      "format": {
+        "duration": "14.480000",
+        "size": "1015511"
+      }
+    },
+    "phone-diff.mp4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 800,
+          "height": 1050
+        }
+      ],
+      "format": {
+        "duration": "15.000000",
+        "size": "573139"
+      }
+    },
+    "reduced-motion-diff.mp4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 800,
+          "height": 1050
+        }
+      ],
+      "format": {
+        "duration": "11.920000",
+        "size": "282718"
+      }
+    }
+  },
+  "captureAssertions": {
+    "widths": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "horizontalOverflow": false,
+    "workflowWordingMatchesBaseline": true,
+    "beforeAdvancesOffscreen": true,
+    "afterFreezesOffscreen": true,
+    "manualPauseSurvivesReturn": true
+  },
+  "independentSourceReview": {
+    "findings": 0,
+    "scope": "Final controller, CSS, integration, workflow tests, and capture script. Source review only."
+  },
+  "limits": [
+    "Chromium on Linux only; Firefox and Safari not run.",
+    "Document visibility, persisted pageshow, and missing/throwing observers simulated in browser tests.",
+    "Animation time checks do not establish resource savings.",
+    "Returning from reduced motion recreates existing CSS effects.",
+    "Full commercial launch remains unapproved."
+  ],
+  "localChecks": {
+    "typecheck": {
+      "errors": 0,
+      "warnings": 0,
+      "hints": 0
+    },
+    "lint": "pass",
+    "format": "pass",
+    "unitTests": {
+      "passed": 44,
+      "failed": 0
+    },
+    "documentationLinks": {
+      "passed": 148,
+      "files": 21
+    },
+    "diffCheck": "pass"
+  }
+}
