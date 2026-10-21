@@ -1,5 +1,9 @@
 # Milestones, dependencies, and launch gates
 
+## Current motion backlog
+
+See [the motion audit and prioritized backlog](docs/MOTION_BACKLOG.md) for the next proposed polish work and its GitHub issues. Implement each item through a linked PR, including when auto-merge is used. This review adds planning items, not new animation behavior. The milestones below retain the original project plan; current full-launch status is tracked in [PRODUCTION_CHECKLIST.md](PRODUCTION_CHECKLIST.md).
+
 ## M0 — Approval and repository reconnaissance (no publication)
 - [ ] Confirm exact GitHub owner/repository and inspect existing site, DNS, workflows, and files.
 - [ ] Document preservation/rollback approach and obtain approval to replace published site.
