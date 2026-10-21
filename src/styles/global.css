@@ -1701,8 +1701,12 @@ h3 {
     animation: workflow-handoff 10.8s var(--ease-out) infinite;
     animation-delay: var(--step-delay);
   }
-  .workflow-illustration:has(.workflow-motion-control input:checked) .workflow-steps *,
-  .workflow-illustration:has(.workflow-motion-control input:checked) .workflow-steps *::after {
+  .workflow-illustration:is([data-workflow-paused], :has(.workflow-motion-control input:checked))
+    .workflow-steps
+    *,
+  .workflow-illustration:is([data-workflow-paused], :has(.workflow-motion-control input:checked))
+    .workflow-steps
+    *::after {
     animation-play-state: paused;
   }
 }
