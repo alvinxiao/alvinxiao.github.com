@@ -1,0 +1,16 @@
+{
+  "browser": {
+    "startTime": "2026-10-21T14:13:30.829Z",
+    "duration": 283526.456,
+    "expected": 64,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "baseline_commit": "70e6580",
+  "screenshots_and_prototype_frames": 20,
+  "recordings": 5,
+  "source_review": "No material findings from independent review",
+  "prelaunch_output_guard": "Passed for 12 HTML pages; inquiries remain inactive"
+}

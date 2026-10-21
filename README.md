@@ -76,7 +76,7 @@ If the cloud environment supplies Chromium, set `PLAYWRIGHT_CHROMIUM_EXECUTABLE_
 
 ## Contributions and planned improvements
 
-All changes, including documentation and reverts, go through a feature branch and pull request. PRs may auto-merge after checks pass under the existing prelaunch authorization. Link the relevant issue and include verification evidence so the change remains traceable.
+All changes, including documentation and reverts, go through a feature branch and pull request. Each PR requires owner approval before merge or auto-merge. UI changes include before-and-after screenshots and a motion recording for review. Link the relevant issue and include verification evidence so the change remains traceable.
 
 The [motion backlog](docs/MOTION_BACKLOG.md) records the current animation audit, Astro theme references, priorities, and linked GitHub issues. These are proposed improvements for future PRs.
 

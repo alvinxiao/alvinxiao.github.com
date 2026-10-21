@@ -8,7 +8,7 @@ The owner has explicitly authorized full implementation and incremental public p
 
 Every future change must go through a feature branch and a pull request targeting `master`. This includes documentation, fixes, and reverts. Each commit must belong to a PR before it reaches `master`; do not commit or push changes directly to `master`.
 
-Link the relevant backlog issue, describe the scope and verification, and include screenshots or recordings for UI changes. A PR may auto-merge under the owner's standing prelaunch authorization after its checks pass and review findings are resolved. Auto-merge does not replace the PR record or authorize the full commercial launch. Keep unrelated work in separate PRs.
+Link the relevant backlog issue, describe the scope and verification, and include screenshots or recordings for UI changes. The owner must explicitly approve each PR before merge or auto-merge is armed. Implementation PRs require before-and-after screenshots and a short motion recording before approval is requested. Documentation and CI-only changes can be reviewed through their diff and check results. The earlier standing prelaunch authorization does not override this per-PR review gate or authorize the full commercial launch. Keep unrelated work in separate PRs.
 
 ## Mission and authority
 Implement only the approved solo AI consulting pre-launch website described in this package. This document does **not** authorize coding, repo modification, external account creation, or deployment until the owner explicitly starts implementation. The user's approval is required before any production publication.

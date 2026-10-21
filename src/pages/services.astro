@@ -40,7 +40,12 @@ import { site } from '../content/site';
       ))}
     </nav>
     {services.map((service, i) => (
-      <section id={service.id} class="service-detail" aria-labelledby={`${service.id}-heading`}>
+      <section
+        id={service.id}
+        class="service-detail"
+        data-reveal
+        aria-labelledby={`${service.id}-heading`}
+      >
         <span class="number">0{i + 1}</span>
         <div>
           <p class="eyebrow">{service.label}</p>
