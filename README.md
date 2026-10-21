@@ -74,6 +74,12 @@ npm run test:e2e
 
 If the cloud environment supplies Chromium, set `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium` for browser tests. See [development and release operations](docs/OPERATIONS.md) for provider verification, preservation, publishing, and rollback procedures.
 
+## Contributions and planned improvements
+
+All changes, including documentation and reverts, go through a feature branch and pull request. PRs may auto-merge after checks pass under the existing prelaunch authorization. Link the relevant issue and include verification evidence so the change remains traceable.
+
+The [motion backlog](docs/MOTION_BACKLOG.md) records the current animation audit, Astro theme references, priorities, and linked GitHub issues. These are proposed improvements for future PRs.
+
 ## Project specifications
 
 These documents define the project requirements. Apply subsequent owner-approved decisions recorded in the repository and conversation when they supersede an earlier proposal.
