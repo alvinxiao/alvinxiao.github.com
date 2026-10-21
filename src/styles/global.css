@@ -608,6 +608,51 @@ h3 {
 }
 .service-detail summary {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+}
+.service-detail summary::-webkit-details-marker {
+  display: none;
+}
+.service-detail summary::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(-45deg);
+}
+.service-detail details[open] > summary::before {
+  transform: rotate(45deg);
+}
+@supports (interpolate-size: allow-keywords) and (transition-behavior: allow-discrete) and
+  selector(details::details-content) {
+  .service-detail details::details-content {
+    block-size: 0;
+    content-visibility: hidden;
+    overflow: hidden;
+    transition: none;
+  }
+  .service-detail details[open]::details-content {
+    block-size: auto;
+    content-visibility: visible;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .service-detail details {
+      interpolate-size: allow-keywords;
+    }
+    .service-detail details::details-content {
+      transition:
+        block-size 300ms var(--ease-out),
+        content-visibility 300ms allow-discrete;
+    }
+    .service-detail summary::before {
+      transition: transform 300ms var(--ease-out);
+    }
+  }
 }
 .service-detail ul {
   line-height: 1.8;

@@ -1,0 +1,74 @@
+{
+  "browser": {
+    "startTime": "2026-10-21T15:23:48.385Z",
+    "duration": 61351.454999999994,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "typecheck": "0 errors, 0 warnings, 0 hints",
+  "prelaunch_output_guard": "passed 12 pages, inactive inquiries",
+  "independent_final_source_review": "No material findings",
+  "baseline_commit": "a7eb2dff8845c37918b1d8ccc47862a1661f48f2",
+  "media": {
+    "desktop-slow.mp4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 2020,
+          "height": 960
+        }
+      ],
+      "format": {
+        "duration": "31.280000"
+      }
+    },
+    "desktop-diff.mp4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 2020,
+          "height": 960
+        }
+      ],
+      "format": {
+        "duration": "15.680000"
+      }
+    },
+    "mobile-diff.mp4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 800,
+          "height": 960
+        }
+      ],
+      "format": {
+        "duration": "13.200000"
+      }
+    },
+    "reduced-motion-diff.mp4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 2020,
+          "height": 960
+        }
+      ],
+      "format": {
+        "duration": "9.360000"
+      }
+    }
+  },
+  "lint": "passed",
+  "format": "passed",
+  "unit_tests": {
+    "passed": 44,
+    "failed": 0
+  }
+}

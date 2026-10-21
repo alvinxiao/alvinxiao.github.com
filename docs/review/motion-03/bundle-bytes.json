@@ -1,0 +1,36 @@
+{
+  "before": {
+    "css": {
+      "files": 1,
+      "bytes": 31366,
+      "gzip_bytes": 7342
+    },
+    "js": {
+      "files": 3,
+      "bytes": 8525,
+      "gzip_bytes": 3703
+    },
+    "js_sha256": [
+      "59766c9c851aab0027d46bcfc124a7f38cbe35e7bdf75dfb745eddffc4d948ec",
+      "9fbfd826933a945dc44b0bd33a47ae035037c80fb4c3dc84696e0e7a36a5ea0b",
+      "ea8946fc732de0033af5c6bfa1ea4304c5c39871bc750679e0d7b5f133ca795d"
+    ]
+  },
+  "after": {
+    "css": {
+      "files": 1,
+      "bytes": 32359,
+      "gzip_bytes": 7560
+    },
+    "js": {
+      "files": 3,
+      "bytes": 8525,
+      "gzip_bytes": 3703
+    },
+    "js_sha256": [
+      "59766c9c851aab0027d46bcfc124a7f38cbe35e7bdf75dfb745eddffc4d948ec",
+      "9fbfd826933a945dc44b0bd33a47ae035037c80fb4c3dc84696e0e7a36a5ea0b",
+      "ea8946fc732de0033af5c6bfa1ea4304c5c39871bc750679e0d7b5f133ca795d"
+    ]
+  }
+}
