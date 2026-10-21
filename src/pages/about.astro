@@ -11,9 +11,11 @@ import { site } from '../content/site';
   <div class="container">
     <section class="page-hero">
       <p class="eyebrow">The human side of technology</p>
-      <h1>Hi, I'm Alvin.</h1>
+      <h1 class="about-heading">
+        Hi, I'm Alvin.<span class="about-heading-accent" aria-hidden="true"></span>
+      </h1>
     </section>
-    <div class="prose" data-reveal>
+    <div class="prose">
       {site.approvals.identity && site.biography ? (
         <>
           <h2>Software engineer. Program manager. Teacher at heart.</h2>
@@ -35,3 +37,36 @@ import { site } from '../content/site';
   </div>
   <ClosingCTA />
 </SiteLayout>
+
+<style>
+  .about-heading {
+    position: relative;
+  }
+  .about-heading-accent {
+    position: absolute;
+    left: 0;
+    bottom: -18px;
+    width: 96px;
+    height: 4px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--teal) 0 78%, var(--peach) 78%);
+    transform-origin: left;
+  }
+</style>
+
+<script>
+  const accent = document.querySelector('.about-heading-accent');
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (accent instanceof HTMLElement && !motion.matches && typeof accent.animate === 'function') {
+    const animation = accent.animate([{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }], {
+      duration: 650,
+      delay: 200,
+      easing: 'cubic-bezier(.22, 1, .36, 1)',
+      fill: 'backwards',
+    });
+    animation.onfinish = () => animation.cancel();
+    motion.addEventListener('change', (event) => {
+      if (event.matches) animation.cancel();
+    });
+  }
+</script>
