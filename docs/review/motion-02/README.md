@@ -27,7 +27,7 @@ The approved section-reveal PR is separate. This resource-card PR stays unmerged
 
 - [Desktop video diff](videos/desktop-diff.mp4). Pointer entry, pointer exit, and keyboard focus. Before is left, After is right.
 - [Reduced-motion video diff](videos/reduced-motion-diff.mp4). Static emphasis with no zoom or arrow travel.
-- [Touch video diff](videos/touch-diff.mp4). Scroll and ordinary article navigation without hover enlargement.
+- [Touch video diff](videos/touch-diff.mp4). Touch scrolling without hover enlargement. Article navigation is covered separately by the browser checks.
 
 The recordings use separate browser pages so both versions receive real hover and keyboard focus. They run through a shared interaction schedule. Preparation is trimmed from each recording using the common interaction duration. This is a visual comparison, not a frame-accurate latency benchmark.
 

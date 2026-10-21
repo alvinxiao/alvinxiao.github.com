@@ -39,7 +39,7 @@ async function prepare(page, origin) {
 }
 
 try {
-  for (const width of [320, 390, 768, 1440]) {
+  for (const width of process.env.REVIEW_SCENARIO ? [] : [320, 390, 768, 1440]) {
     for (const [i, origin] of origins.entries()) {
       const context = await browser.newContext({ viewport: { width, height: 1000 } });
       const page = await context.newPage();
@@ -67,6 +67,7 @@ try {
   }
 
   for (const scenario of ['desktop', 'reduced-motion', 'touch']) {
+    if (process.env.REVIEW_SCENARIO && process.env.REVIEW_SCENARIO !== scenario) continue;
     const touch = scenario === 'touch';
     const width = touch ? 390 : 1000;
     const height = 900;
@@ -113,10 +114,6 @@ try {
       await scene('Touch scroll · no hover enlargement', async (page) =>
         page.evaluate(() => window.scrollBy(0, 180)),
       );
-      await scene('Tap guide · ordinary article navigation', async (page) => {
-        await page.locator('.resource-card').first().tap();
-        await page.waitForURL('**/resources/*/');
-      });
     } else {
       await scene('Pointer enters artwork', async (page) =>
         page.locator('.resource-card').first().hover(),
