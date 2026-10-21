@@ -31,3 +31,7 @@ The owner retained Practical AI temporarily, selected a plain wordmark and PA fa
 The three resource guides now include a fictional reminder-email exercise, an explanation of AI limitations, and a comparison of workflow options. Their coordinated artwork was generated for this site. The original three-panel PNG is in `src/assets/resource-illustrations.png`; Astro serves an optimized WebP, with each article showing its corresponding panel. The illustrations are decorative, with their meaning supplied by the adjacent article text. Final editorial review remains pending.
 
 The [mobile article screenshot](article-mobile.png) records the illustrated first-experiment guide.
+
+## Homepage visual polish
+
+Every main-page section now includes an illustration or a meaningful line icon. A shared SVG component keeps the line weight and colors consistent across learning, conversation, workflow, implementation, and review symbols. The personal introduction reuses the generated magnifying-glass artwork, with no invented portrait or client logos. Icons are decorative and hidden from assistive technology; all meaning remains in visible text. Hover movement respects reduced-motion preferences.

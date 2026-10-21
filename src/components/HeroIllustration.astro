@@ -1,24 +1,34 @@
 ---
 import Arrow from './Arrow.astro';
+import SectionIcon from './SectionIcon.astro';
 ---
 
 <figure class="workflow-illustration" aria-labelledby="workflow-caption">
   <figcaption id="workflow-caption">An example: answering a customer question</figcaption>
   <ol class="workflow-steps">
     <li>
-      <span class="workflow-number">01 · The question</span>
+      <span class="workflow-number">
+        <SectionIcon name="chat" />
+        01 · The question
+      </span>
       <h2>Customer question</h2>
       <p>“Can I collect my order on Saturday?”</p>
       <Arrow />
     </li>
     <li>
-      <span class="workflow-number">02 · AI helps draft</span>
+      <span class="workflow-number">
+        <SectionIcon name="document" />
+        02 · AI helps draft
+      </span>
       <h2>Draft response</h2>
       <p>Use your pickup policy to prepare a reply.</p>
       <Arrow />
     </li>
     <li>
-      <span class="workflow-number">03 · You decide</span>
+      <span class="workflow-number">
+        <SectionIcon name="check" />
+        03 · You decide
+      </span>
       <h2>Review and send</h2>
       <p>Check the details. Make it sound like you.</p>
     </li>

@@ -1,15 +1,28 @@
 ---
 import Arrow from './Arrow.astro';
+import SectionIcon from './SectionIcon.astro';
+interface Props {
+  illustrated?: boolean;
+}
+const { illustrated = false } = Astro.props;
 ---
 
 <section class="closing container" aria-labelledby="closing-heading">
   <span class="eyebrow">A good place to begin</span>
   <div class="closing-grid">
-    <h2 id="closing-heading">
-      Not sure where
-      <br />
-      to start?
-    </h2>
+    <div>
+      {illustrated && (
+        <span class="closing-icon">
+          <SectionIcon name="chat" />
+          <SectionIcon name="mail" />
+        </span>
+      )}
+      <h2 id="closing-heading">
+        Not sure where
+        <br />
+        to start?
+      </h2>
+    </div>
     <div>
       <p>
         Tell me a little about your business, what you're curious about, or what's taking up too

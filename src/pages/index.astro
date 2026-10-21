@@ -1,6 +1,8 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 import Arrow from '../components/Arrow.astro';
+import SectionIcon from '../components/SectionIcon.astro';
+import ResourceArtwork from '../components/ResourceArtwork.astro';
 import HeroIllustration from '../components/HeroIllustration.astro';
 import ClosingCTA from '../components/ClosingCTA.astro';
 import { hero, paths, examples, processSteps, site } from '../content/site';
@@ -52,8 +54,8 @@ import { services } from '../content/services';
         <a class="path-card" href={path.href}>
           <div class="path-top">
             <span class="number">{path.number}</span>
-            <span class="path-icon" aria-hidden="true">
-              <Arrow />
+            <span class="icon-tile">
+              <SectionIcon name={path.number === '01' ? 'book' : 'chat'} />
             </span>
           </div>
           <h3>{path.title}</h3>
@@ -83,7 +85,22 @@ import { services } from '../content/services';
       <div class="service-preview-grid">
         {services.map((service, i) => (
           <a href={`/services/#${service.id}`} class="service-preview">
-            <span class="service-number">0{i + 1}</span>
+            <div class="service-visual">
+              <span class="service-number">0{i + 1}</span>
+              <span class="icon-tile">
+                <SectionIcon
+                  name={
+                    service.id === 'getting-started'
+                      ? 'book'
+                      : service.id === 'problem-solving'
+                        ? 'chat'
+                        : service.id === 'workflow-audit'
+                          ? 'workflow'
+                          : 'tools'
+                  }
+                />
+              </span>
+            </div>
             <h3>{service.name}</h3>
             <p>{service.summary}</p>
             <Arrow />
@@ -112,7 +129,10 @@ import { services } from '../content/services';
     <div class="examples">
       {examples.map((example, i) => (
         <div class="example-row">
-          <span class="number">0{i + 1}</span>
+          <span class="example-visual">
+            <span class="number">0{i + 1}</span>
+            <SectionIcon name={i === 0 ? 'chat' : i === 1 ? 'layers' : 'document'} />
+          </span>
           <h3>{example.title}</h3>
           <div>
             <p>{example.solution}</p>
@@ -133,7 +153,12 @@ import { services } from '../content/services';
       <div class="process-grid">
         {processSteps.map((step, i) => (
           <div>
-            <span class="process-number">0{i + 1}</span>
+            <div class="process-visual">
+              <span class="process-number">0{i + 1}</span>
+              <span class="icon-tile">
+                <SectionIcon name={i === 0 ? 'chat' : i === 1 ? 'workflow' : 'check'} />
+              </span>
+            </div>
             <h3>{step.title}</h3>
             <p>{step.text}</p>
           </div>
@@ -143,13 +168,18 @@ import { services } from '../content/services';
   </section>
   {site.biography && site.approvals.identity && (
     <section class="section container personal-intro">
-      <p class="eyebrow">A personal approach</p>
-      <h2>Hi, I'm Alvin.</h2>
-      <p>{site.biographySummary}</p>
-      <a class="text-link" href="/about/">
-        A little about me <Arrow />
-      </a>
+      <div class="personal-copy">
+        <p class="eyebrow">A personal approach</p>
+        <h2>Hi, I'm Alvin.</h2>
+        <p>{site.biographySummary}</p>
+        <a class="text-link" href="/about/">
+          A little about me <Arrow />
+        </a>
+      </div>
+      <div class="personal-artwork">
+        <ResourceArtwork position="left" />
+      </div>
     </section>
   )}
-  <ClosingCTA />
+  <ClosingCTA illustrated />
 </SiteLayout>
