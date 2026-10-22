@@ -10,7 +10,7 @@ import { interests, fieldLimits } from '../lib/inquiry/model';
   description="Tell me what you want to learn or what is taking too much of your time. Start with a short inquiry."
 >
   <div class="container">
-    <section class="page-hero">
+    <section class="page-hero contact-hero">
       <p class="eyebrow">A conversation starts here</p>
       <h1>
         What are you
@@ -204,3 +204,22 @@ import { interests, fieldLimits } from '../lib/inquiry/model';
     import '../scripts/contact';
   </script>
 </SiteLayout>
+
+<style>
+  .contact-hero > * {
+    animation: none;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .contact-hero {
+      animation: contact-intro-in 500ms ease-out;
+    }
+  }
+  @keyframes contact-intro-in {
+    from {
+      opacity: 0.65;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+</style>
