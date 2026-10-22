@@ -1,0 +1,41 @@
+{
+  "note": "Actual Chromium CSS samples at effect time200ms. This verifies staggered text motion, not dropped frames on the user device.",
+  "samples": [
+    {
+      "text": "A conversation starts here",
+      "effects": [
+        {
+          "name": "settle-in",
+          "delay": 0,
+          "duration": 700
+        }
+      ],
+      "opacity": "0.815028",
+      "translate": "0px 2.21966px"
+    },
+    {
+      "text": "What are youworking on?",
+      "effects": [
+        {
+          "name": "settle-in",
+          "delay": 70,
+          "duration": 700
+        }
+      ],
+      "opacity": "0.642888",
+      "translate": "0px 4.28535px"
+    },
+    {
+      "text": "You don't need to have it all figured out. A little about your business, a question, or a challenge is a good place to start.",
+      "effects": [
+        {
+          "name": "settle-in",
+          "delay": 140,
+          "duration": 700
+        }
+      ],
+      "opacity": "0.351213",
+      "translate": "0px 7.78544px"
+    }
+  ]
+}
