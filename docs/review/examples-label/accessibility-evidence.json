@@ -1,0 +1,1274 @@
+[
+  {
+    "keyboardNext": {
+      "tag": "A",
+      "href": "/about/",
+      "text": "A little about me"
+    },
+    "width": 320,
+    "side": "before",
+    "role": "generic",
+    "name": "",
+    "ignored": false,
+    "text": "WHAT THIS COULD LOOK LIKE\n\nLess repetitive work.\nMore time for your business.\n\nAI isn't always the answer.\nThe right approach starts with the problem.\n\nIllustrative scenarios, not client case studies.\n\n01\nThe same questions. Again.\n\nAI-assisted drafting, an FAQ, or reusable email templates may be appropriate.\n\nMake room for the human part\n02\nLess copying. More doing.\n\nFormulas, scripts, or basic automation may work without AI.\n\nSometimes simpler is better\n03\nFind the useful bits.\n\nAI-assisted summaries, templates, or a better process may help.\n\nStart with what you need",
+    "focusOrder": [
+      {
+        "tag": "A",
+        "text": "Skip to content",
+        "href": "#main",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Review the launch checklist",
+        "href": "/launch-checklist/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Practical AIMaking AI make sense.",
+        "href": "/",
+        "tabindex": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Menu +",
+        "href": null,
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Services",
+        "href": "/services/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "About",
+        "href": "/about/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Resources",
+        "href": "/resources/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Let's talk",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "MAIN",
+        "text": "Practical AI help for small businessesLet's figure out how AI can help your business.You don't need to be a tech expert to get started. I help small business owners understand AI, work through everyday challenges, and find practical solutions that make their work easier.Tell me what you're working on Explore services An example: answering a customer question01 · The questionCustomer question“Can I collect my order on Saturday?”02 · AI helps draftDraft responseUse your pickup policy to prepare a reply.03 · You decideReview and sendCheck the details. Make it sound like you.AI prepares a draft. You keep the final say.Pause workflow animationfunction e(e,t){if(typeof window.IntersectionObserver!=`function`)return;let n=window.matchMedia(`(prefers-reduced-motion: reduce)`),r=()=>{let t=e.getBoundingClientRect();return t.bottom>0&&t.top<window.innerHeight&&t.right>0&&t.left<window.innerWidth},i={viewportVisible:r(),documentVisible:document.visibilityState===`visible`,reducedMotion:n.matches,userPaused:t.checked},a=()=>{let t=i.viewportVisible&&i.documentVisible&&!i.reducedMotion&&!i.userPaused;e.toggleAttribute(`data-workflow-paused`,!t)},o;try{o=new window.IntersectionObserver(t=>{for(let n of t)n.target===e&&(i.viewportVisible=n.isIntersecting,a())}),o.observe(e)}catch{o?.disconnect();return}let s=()=>{i.viewportVisible=r(),i.documentVisible=document.visibilityState===`visible`,i.reducedMotion=n.matches,i.userPaused=t.checked,a()};t.addEventListener(`change`,()=>{i.userPaused=t.checked,a()}),document.addEventListener(`visibilitychange`,s),n.addEventListener(`change`,()=>{i.reducedMotion=n.matches,a()}),window.addEventListener(`pageshow`,s),a()}for(let t of document.querySelectorAll(`.workflow-illustration`)){let n=t.querySelector(`.workflow-motion-control input`);t instanceof HTMLElement&&n instanceof HTMLInputElement&&e(t,n)}Start with your work. Find what helps.Human first. Technology second.Two ways inWhere are youstarting from?You don't need a perfect brief.Just a little curiosity or a challenge in mind.01I'm new to AICurious about AI but not sure where to begin? I'll help you understand the tools, explore examples relevant to your work, and get comfortable trying them yourself.Explore AI Getting Started 02I have a problem to solveSpending too much time on repetitive work or wondering whether a process could be easier? Let's look at what's happening and explore practical ways to improve it.Explore Problem-Solving Education, advice, and implementationPractical support.At your starting point.Explore all services 01AI Getting StartedLearn the basics of AI through practical examples and a personalized, hands-on session.02AI Problem-SolvingBring a specific challenge and work through possible tools, approaches, and next steps.03AI Workflow AuditTake a closer look at one business process to identify opportunities for improvement.04Custom AutomationGet help implementing a solution when the right next step involves connecting tools or automating tasks.What this could look likeLess repetitive work.More time for your business.AI isn't always the answer.The right approach starts with the problem.Illustrative scenarios, not client case studies.01The same questions. Again.AI-assisted drafting, an FAQ, or reusable email templates may be appropriate.Make room for the human part02Less copying. More doing.Formulas, scripts, or basic automation may work without AI.Sometimes simpler is better03Find the useful bits.AI-assisted summaries, templates, or a better process may help.Start with what you needWorking togetherFrom your questionto a plan you can use.01Tell me what you're working on.Share what you want to learn or what isn't working well.02We'll explore your options.I'll help you understand what tools or approaches make sense.03Leave with practical next steps.Depending on the service, you'll receive guidance, recommendations, or a written assessment.A personal approachHi, I'm Alvin.I'm Alvin, a software engineer and program manager with 15 years of experience working with organizations ranging from NASA and the U.S. military to small businesses. I've built software, taught web development, and helped people make sense of technology.\n\nI started Practical AI because I believe you shouldn't need a technical background to benefit from AI. I help small businesses understand what's possible, find practical ways to use AI and automation, and avoid solutions that are more complicated than they need to be.A little about me A good place to beginNot sure whereto start?Tell me a little about your business, what you're curious about, or what's taking up too much of your time. I'll help you figure out the next step.Tell me what you're working on",
+        "href": null,
+        "tabindex": "-1"
+      },
+      {
+        "tag": "A",
+        "text": "Tell me what you're working on",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Explore services",
+        "href": "/services/",
+        "tabindex": null
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "href": null,
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "01I'm new to AICurious about AI but not sure where to begin? I'll help you understand the tools, explore examples relevant to your work, and get comfortable trying them yourself.Explore AI Getting Started",
+        "href": "/services/#getting-started",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "02I have a problem to solveSpending too much time on repetitive work or wondering whether a process could be easier? Let's look at what's happening and explore practical ways to improve it.Explore Problem-Solving",
+        "href": "/services/#problem-solving",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Explore all services",
+        "href": "/services/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "01AI Getting StartedLearn the basics of AI through practical examples and a personalized, hands-on session.",
+        "href": "/services/#getting-started",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "02AI Problem-SolvingBring a specific challenge and work through possible tools, approaches, and next steps.",
+        "href": "/services/#problem-solving",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "03AI Workflow AuditTake a closer look at one business process to identify opportunities for improvement.",
+        "href": "/services/#workflow-audit",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "04Custom AutomationGet help implementing a solution when the right next step involves connecting tools or automating tasks.",
+        "href": "/services/#custom-automation",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "A little about me",
+        "href": "/about/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Tell me what you're working on",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Practical AIMaking AI make sense.",
+        "href": "/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Get in touch",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Privacy",
+        "href": "/privacy/",
+        "tabindex": null
+      }
+    ]
+  },
+  {
+    "keyboardNext": {
+      "tag": "A",
+      "href": "/about/",
+      "text": "A little about me"
+    },
+    "width": 320,
+    "side": "after",
+    "role": "region",
+    "name": "Less repetitive work. More time for your business.",
+    "ignored": false,
+    "text": "WHAT THIS COULD LOOK LIKE\n\nLess repetitive work.\nMore time for your business.\n\nAI isn't always the answer.\nThe right approach starts with the problem.\n\nIllustrative scenarios, not client case studies.\n\n01\nThe same questions. Again.\n\nAI-assisted drafting, an FAQ, or reusable email templates may be appropriate.\n\nMake room for the human part\n02\nLess copying. More doing.\n\nFormulas, scripts, or basic automation may work without AI.\n\nSometimes simpler is better\n03\nFind the useful bits.\n\nAI-assisted summaries, templates, or a better process may help.\n\nStart with what you need",
+    "focusOrder": [
+      {
+        "tag": "A",
+        "text": "Skip to content",
+        "href": "#main",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Review the launch checklist",
+        "href": "/launch-checklist/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Practical AIMaking AI make sense.",
+        "href": "/",
+        "tabindex": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Menu +",
+        "href": null,
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Services",
+        "href": "/services/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "About",
+        "href": "/about/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Resources",
+        "href": "/resources/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Let's talk",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "MAIN",
+        "text": "Practical AI help for small businessesLet's figure out how AI can help your business.You don't need to be a tech expert to get started. I help small business owners understand AI, work through everyday challenges, and find practical solutions that make their work easier.Tell me what you're working on Explore services An example: answering a customer question01 · The questionCustomer question“Can I collect my order on Saturday?”02 · AI helps draftDraft responseUse your pickup policy to prepare a reply.03 · You decideReview and sendCheck the details. Make it sound like you.AI prepares a draft. You keep the final say.Pause workflow animationfunction e(e,t){if(typeof window.IntersectionObserver!=`function`)return;let n=window.matchMedia(`(prefers-reduced-motion: reduce)`),r=()=>{let t=e.getBoundingClientRect();return t.bottom>0&&t.top<window.innerHeight&&t.right>0&&t.left<window.innerWidth},i={viewportVisible:r(),documentVisible:document.visibilityState===`visible`,reducedMotion:n.matches,userPaused:t.checked},a=()=>{let t=i.viewportVisible&&i.documentVisible&&!i.reducedMotion&&!i.userPaused;e.toggleAttribute(`data-workflow-paused`,!t)},o;try{o=new window.IntersectionObserver(t=>{for(let n of t)n.target===e&&(i.viewportVisible=n.isIntersecting,a())}),o.observe(e)}catch{o?.disconnect();return}let s=()=>{i.viewportVisible=r(),i.documentVisible=document.visibilityState===`visible`,i.reducedMotion=n.matches,i.userPaused=t.checked,a()};t.addEventListener(`change`,()=>{i.userPaused=t.checked,a()}),document.addEventListener(`visibilitychange`,s),n.addEventListener(`change`,()=>{i.reducedMotion=n.matches,a()}),window.addEventListener(`pageshow`,s),a()}for(let t of document.querySelectorAll(`.workflow-illustration`)){let n=t.querySelector(`.workflow-motion-control input`);t instanceof HTMLElement&&n instanceof HTMLInputElement&&e(t,n)}Start with your work. Find what helps.Human first. Technology second.Two ways inWhere are youstarting from?You don't need a perfect brief.Just a little curiosity or a challenge in mind.01I'm new to AICurious about AI but not sure where to begin? I'll help you understand the tools, explore examples relevant to your work, and get comfortable trying them yourself.Explore AI Getting Started 02I have a problem to solveSpending too much time on repetitive work or wondering whether a process could be easier? Let's look at what's happening and explore practical ways to improve it.Explore Problem-Solving Education, advice, and implementationPractical support.At your starting point.Explore all services 01AI Getting StartedLearn the basics of AI through practical examples and a personalized, hands-on session.02AI Problem-SolvingBring a specific challenge and work through possible tools, approaches, and next steps.03AI Workflow AuditTake a closer look at one business process to identify opportunities for improvement.04Custom AutomationGet help implementing a solution when the right next step involves connecting tools or automating tasks.What this could look likeLess repetitive work.More time for your business.AI isn't always the answer.The right approach starts with the problem.Illustrative scenarios, not client case studies.01The same questions. Again.AI-assisted drafting, an FAQ, or reusable email templates may be appropriate.Make room for the human part02Less copying. More doing.Formulas, scripts, or basic automation may work without AI.Sometimes simpler is better03Find the useful bits.AI-assisted summaries, templates, or a better process may help.Start with what you needWorking togetherFrom your questionto a plan you can use.01Tell me what you're working on.Share what you want to learn or what isn't working well.02We'll explore your options.I'll help you understand what tools or approaches make sense.03Leave with practical next steps.Depending on the service, you'll receive guidance, recommendations, or a written assessment.A personal approachHi, I'm Alvin.I'm Alvin, a software engineer and program manager with 15 years of experience working with organizations ranging from NASA and the U.S. military to small businesses. I've built software, taught web development, and helped people make sense of technology.\n\nI started Practical AI because I believe you shouldn't need a technical background to benefit from AI. I help small businesses understand what's possible, find practical ways to use AI and automation, and avoid solutions that are more complicated than they need to be.A little about me A good place to beginNot sure whereto start?Tell me a little about your business, what you're curious about, or what's taking up too much of your time. I'll help you figure out the next step.Tell me what you're working on",
+        "href": null,
+        "tabindex": "-1"
+      },
+      {
+        "tag": "A",
+        "text": "Tell me what you're working on",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Explore services",
+        "href": "/services/",
+        "tabindex": null
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "href": null,
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "01I'm new to AICurious about AI but not sure where to begin? I'll help you understand the tools, explore examples relevant to your work, and get comfortable trying them yourself.Explore AI Getting Started",
+        "href": "/services/#getting-started",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "02I have a problem to solveSpending too much time on repetitive work or wondering whether a process could be easier? Let's look at what's happening and explore practical ways to improve it.Explore Problem-Solving",
+        "href": "/services/#problem-solving",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Explore all services",
+        "href": "/services/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "01AI Getting StartedLearn the basics of AI through practical examples and a personalized, hands-on session.",
+        "href": "/services/#getting-started",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "02AI Problem-SolvingBring a specific challenge and work through possible tools, approaches, and next steps.",
+        "href": "/services/#problem-solving",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "03AI Workflow AuditTake a closer look at one business process to identify opportunities for improvement.",
+        "href": "/services/#workflow-audit",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "04Custom AutomationGet help implementing a solution when the right next step involves connecting tools or automating tasks.",
+        "href": "/services/#custom-automation",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "A little about me",
+        "href": "/about/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Tell me what you're working on",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Practical AIMaking AI make sense.",
+        "href": "/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Get in touch",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Privacy",
+        "href": "/privacy/",
+        "tabindex": null
+      }
+    ]
+  },
+  {
+    "keyboardNext": {
+      "tag": "A",
+      "href": "/about/",
+      "text": "A little about me"
+    },
+    "width": 390,
+    "side": "before",
+    "role": "generic",
+    "name": "",
+    "ignored": false,
+    "text": "WHAT THIS COULD LOOK LIKE\n\nLess repetitive work.\nMore time for your business.\n\nAI isn't always the answer.\nThe right approach starts with the problem.\n\nIllustrative scenarios, not client case studies.\n\n01\nThe same questions. Again.\n\nAI-assisted drafting, an FAQ, or reusable email templates may be appropriate.\n\nMake room for the human part\n02\nLess copying. More doing.\n\nFormulas, scripts, or basic automation may work without AI.\n\nSometimes simpler is better\n03\nFind the useful bits.\n\nAI-assisted summaries, templates, or a better process may help.\n\nStart with what you need",
+    "focusOrder": [
+      {
+        "tag": "A",
+        "text": "Skip to content",
+        "href": "#main",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Review the launch checklist",
+        "href": "/launch-checklist/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Practical AIMaking AI make sense.",
+        "href": "/",
+        "tabindex": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Menu +",
+        "href": null,
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Services",
+        "href": "/services/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "About",
+        "href": "/about/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Resources",
+        "href": "/resources/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Let's talk",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "MAIN",
+        "text": "Practical AI help for small businessesLet's figure out how AI can help your business.You don't need to be a tech expert to get started. I help small business owners understand AI, work through everyday challenges, and find practical solutions that make their work easier.Tell me what you're working on Explore services An example: answering a customer question01 · The questionCustomer question“Can I collect my order on Saturday?”02 · AI helps draftDraft responseUse your pickup policy to prepare a reply.03 · You decideReview and sendCheck the details. Make it sound like you.AI prepares a draft. You keep the final say.Pause workflow animationfunction e(e,t){if(typeof window.IntersectionObserver!=`function`)return;let n=window.matchMedia(`(prefers-reduced-motion: reduce)`),r=()=>{let t=e.getBoundingClientRect();return t.bottom>0&&t.top<window.innerHeight&&t.right>0&&t.left<window.innerWidth},i={viewportVisible:r(),documentVisible:document.visibilityState===`visible`,reducedMotion:n.matches,userPaused:t.checked},a=()=>{let t=i.viewportVisible&&i.documentVisible&&!i.reducedMotion&&!i.userPaused;e.toggleAttribute(`data-workflow-paused`,!t)},o;try{o=new window.IntersectionObserver(t=>{for(let n of t)n.target===e&&(i.viewportVisible=n.isIntersecting,a())}),o.observe(e)}catch{o?.disconnect();return}let s=()=>{i.viewportVisible=r(),i.documentVisible=document.visibilityState===`visible`,i.reducedMotion=n.matches,i.userPaused=t.checked,a()};t.addEventListener(`change`,()=>{i.userPaused=t.checked,a()}),document.addEventListener(`visibilitychange`,s),n.addEventListener(`change`,()=>{i.reducedMotion=n.matches,a()}),window.addEventListener(`pageshow`,s),a()}for(let t of document.querySelectorAll(`.workflow-illustration`)){let n=t.querySelector(`.workflow-motion-control input`);t instanceof HTMLElement&&n instanceof HTMLInputElement&&e(t,n)}Start with your work. Find what helps.Human first. Technology second.Two ways inWhere are youstarting from?You don't need a perfect brief.Just a little curiosity or a challenge in mind.01I'm new to AICurious about AI but not sure where to begin? I'll help you understand the tools, explore examples relevant to your work, and get comfortable trying them yourself.Explore AI Getting Started 02I have a problem to solveSpending too much time on repetitive work or wondering whether a process could be easier? Let's look at what's happening and explore practical ways to improve it.Explore Problem-Solving Education, advice, and implementationPractical support.At your starting point.Explore all services 01AI Getting StartedLearn the basics of AI through practical examples and a personalized, hands-on session.02AI Problem-SolvingBring a specific challenge and work through possible tools, approaches, and next steps.03AI Workflow AuditTake a closer look at one business process to identify opportunities for improvement.04Custom AutomationGet help implementing a solution when the right next step involves connecting tools or automating tasks.What this could look likeLess repetitive work.More time for your business.AI isn't always the answer.The right approach starts with the problem.Illustrative scenarios, not client case studies.01The same questions. Again.AI-assisted drafting, an FAQ, or reusable email templates may be appropriate.Make room for the human part02Less copying. More doing.Formulas, scripts, or basic automation may work without AI.Sometimes simpler is better03Find the useful bits.AI-assisted summaries, templates, or a better process may help.Start with what you needWorking togetherFrom your questionto a plan you can use.01Tell me what you're working on.Share what you want to learn or what isn't working well.02We'll explore your options.I'll help you understand what tools or approaches make sense.03Leave with practical next steps.Depending on the service, you'll receive guidance, recommendations, or a written assessment.A personal approachHi, I'm Alvin.I'm Alvin, a software engineer and program manager with 15 years of experience working with organizations ranging from NASA and the U.S. military to small businesses. I've built software, taught web development, and helped people make sense of technology.\n\nI started Practical AI because I believe you shouldn't need a technical background to benefit from AI. I help small businesses understand what's possible, find practical ways to use AI and automation, and avoid solutions that are more complicated than they need to be.A little about me A good place to beginNot sure whereto start?Tell me a little about your business, what you're curious about, or what's taking up too much of your time. I'll help you figure out the next step.Tell me what you're working on",
+        "href": null,
+        "tabindex": "-1"
+      },
+      {
+        "tag": "A",
+        "text": "Tell me what you're working on",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Explore services",
+        "href": "/services/",
+        "tabindex": null
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "href": null,
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "01I'm new to AICurious about AI but not sure where to begin? I'll help you understand the tools, explore examples relevant to your work, and get comfortable trying them yourself.Explore AI Getting Started",
+        "href": "/services/#getting-started",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "02I have a problem to solveSpending too much time on repetitive work or wondering whether a process could be easier? Let's look at what's happening and explore practical ways to improve it.Explore Problem-Solving",
+        "href": "/services/#problem-solving",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Explore all services",
+        "href": "/services/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "01AI Getting StartedLearn the basics of AI through practical examples and a personalized, hands-on session.",
+        "href": "/services/#getting-started",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "02AI Problem-SolvingBring a specific challenge and work through possible tools, approaches, and next steps.",
+        "href": "/services/#problem-solving",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "03AI Workflow AuditTake a closer look at one business process to identify opportunities for improvement.",
+        "href": "/services/#workflow-audit",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "04Custom AutomationGet help implementing a solution when the right next step involves connecting tools or automating tasks.",
+        "href": "/services/#custom-automation",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "A little about me",
+        "href": "/about/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Tell me what you're working on",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Practical AIMaking AI make sense.",
+        "href": "/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Get in touch",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Privacy",
+        "href": "/privacy/",
+        "tabindex": null
+      }
+    ]
+  },
+  {
+    "keyboardNext": {
+      "tag": "A",
+      "href": "/about/",
+      "text": "A little about me"
+    },
+    "width": 390,
+    "side": "after",
+    "role": "region",
+    "name": "Less repetitive work. More time for your business.",
+    "ignored": false,
+    "text": "WHAT THIS COULD LOOK LIKE\n\nLess repetitive work.\nMore time for your business.\n\nAI isn't always the answer.\nThe right approach starts with the problem.\n\nIllustrative scenarios, not client case studies.\n\n01\nThe same questions. Again.\n\nAI-assisted drafting, an FAQ, or reusable email templates may be appropriate.\n\nMake room for the human part\n02\nLess copying. More doing.\n\nFormulas, scripts, or basic automation may work without AI.\n\nSometimes simpler is better\n03\nFind the useful bits.\n\nAI-assisted summaries, templates, or a better process may help.\n\nStart with what you need",
+    "focusOrder": [
+      {
+        "tag": "A",
+        "text": "Skip to content",
+        "href": "#main",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Review the launch checklist",
+        "href": "/launch-checklist/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Practical AIMaking AI make sense.",
+        "href": "/",
+        "tabindex": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Menu +",
+        "href": null,
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Services",
+        "href": "/services/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "About",
+        "href": "/about/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Resources",
+        "href": "/resources/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Let's talk",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "MAIN",
+        "text": "Practical AI help for small businessesLet's figure out how AI can help your business.You don't need to be a tech expert to get started. I help small business owners understand AI, work through everyday challenges, and find practical solutions that make their work easier.Tell me what you're working on Explore services An example: answering a customer question01 · The questionCustomer question“Can I collect my order on Saturday?”02 · AI helps draftDraft responseUse your pickup policy to prepare a reply.03 · You decideReview and sendCheck the details. Make it sound like you.AI prepares a draft. You keep the final say.Pause workflow animationfunction e(e,t){if(typeof window.IntersectionObserver!=`function`)return;let n=window.matchMedia(`(prefers-reduced-motion: reduce)`),r=()=>{let t=e.getBoundingClientRect();return t.bottom>0&&t.top<window.innerHeight&&t.right>0&&t.left<window.innerWidth},i={viewportVisible:r(),documentVisible:document.visibilityState===`visible`,reducedMotion:n.matches,userPaused:t.checked},a=()=>{let t=i.viewportVisible&&i.documentVisible&&!i.reducedMotion&&!i.userPaused;e.toggleAttribute(`data-workflow-paused`,!t)},o;try{o=new window.IntersectionObserver(t=>{for(let n of t)n.target===e&&(i.viewportVisible=n.isIntersecting,a())}),o.observe(e)}catch{o?.disconnect();return}let s=()=>{i.viewportVisible=r(),i.documentVisible=document.visibilityState===`visible`,i.reducedMotion=n.matches,i.userPaused=t.checked,a()};t.addEventListener(`change`,()=>{i.userPaused=t.checked,a()}),document.addEventListener(`visibilitychange`,s),n.addEventListener(`change`,()=>{i.reducedMotion=n.matches,a()}),window.addEventListener(`pageshow`,s),a()}for(let t of document.querySelectorAll(`.workflow-illustration`)){let n=t.querySelector(`.workflow-motion-control input`);t instanceof HTMLElement&&n instanceof HTMLInputElement&&e(t,n)}Start with your work. Find what helps.Human first. Technology second.Two ways inWhere are youstarting from?You don't need a perfect brief.Just a little curiosity or a challenge in mind.01I'm new to AICurious about AI but not sure where to begin? I'll help you understand the tools, explore examples relevant to your work, and get comfortable trying them yourself.Explore AI Getting Started 02I have a problem to solveSpending too much time on repetitive work or wondering whether a process could be easier? Let's look at what's happening and explore practical ways to improve it.Explore Problem-Solving Education, advice, and implementationPractical support.At your starting point.Explore all services 01AI Getting StartedLearn the basics of AI through practical examples and a personalized, hands-on session.02AI Problem-SolvingBring a specific challenge and work through possible tools, approaches, and next steps.03AI Workflow AuditTake a closer look at one business process to identify opportunities for improvement.04Custom AutomationGet help implementing a solution when the right next step involves connecting tools or automating tasks.What this could look likeLess repetitive work.More time for your business.AI isn't always the answer.The right approach starts with the problem.Illustrative scenarios, not client case studies.01The same questions. Again.AI-assisted drafting, an FAQ, or reusable email templates may be appropriate.Make room for the human part02Less copying. More doing.Formulas, scripts, or basic automation may work without AI.Sometimes simpler is better03Find the useful bits.AI-assisted summaries, templates, or a better process may help.Start with what you needWorking togetherFrom your questionto a plan you can use.01Tell me what you're working on.Share what you want to learn or what isn't working well.02We'll explore your options.I'll help you understand what tools or approaches make sense.03Leave with practical next steps.Depending on the service, you'll receive guidance, recommendations, or a written assessment.A personal approachHi, I'm Alvin.I'm Alvin, a software engineer and program manager with 15 years of experience working with organizations ranging from NASA and the U.S. military to small businesses. I've built software, taught web development, and helped people make sense of technology.\n\nI started Practical AI because I believe you shouldn't need a technical background to benefit from AI. I help small businesses understand what's possible, find practical ways to use AI and automation, and avoid solutions that are more complicated than they need to be.A little about me A good place to beginNot sure whereto start?Tell me a little about your business, what you're curious about, or what's taking up too much of your time. I'll help you figure out the next step.Tell me what you're working on",
+        "href": null,
+        "tabindex": "-1"
+      },
+      {
+        "tag": "A",
+        "text": "Tell me what you're working on",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Explore services",
+        "href": "/services/",
+        "tabindex": null
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "href": null,
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "01I'm new to AICurious about AI but not sure where to begin? I'll help you understand the tools, explore examples relevant to your work, and get comfortable trying them yourself.Explore AI Getting Started",
+        "href": "/services/#getting-started",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "02I have a problem to solveSpending too much time on repetitive work or wondering whether a process could be easier? Let's look at what's happening and explore practical ways to improve it.Explore Problem-Solving",
+        "href": "/services/#problem-solving",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Explore all services",
+        "href": "/services/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "01AI Getting StartedLearn the basics of AI through practical examples and a personalized, hands-on session.",
+        "href": "/services/#getting-started",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "02AI Problem-SolvingBring a specific challenge and work through possible tools, approaches, and next steps.",
+        "href": "/services/#problem-solving",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "03AI Workflow AuditTake a closer look at one business process to identify opportunities for improvement.",
+        "href": "/services/#workflow-audit",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "04Custom AutomationGet help implementing a solution when the right next step involves connecting tools or automating tasks.",
+        "href": "/services/#custom-automation",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "A little about me",
+        "href": "/about/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Tell me what you're working on",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Practical AIMaking AI make sense.",
+        "href": "/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Get in touch",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Privacy",
+        "href": "/privacy/",
+        "tabindex": null
+      }
+    ]
+  },
+  {
+    "keyboardNext": {
+      "tag": "A",
+      "href": "/about/",
+      "text": "A little about me"
+    },
+    "width": 768,
+    "side": "before",
+    "role": "generic",
+    "name": "",
+    "ignored": false,
+    "text": "WHAT THIS COULD LOOK LIKE\n\nLess repetitive work.\nMore time for your business.\n\nAI isn't always the answer.\nThe right approach starts with the problem.\n\nIllustrative scenarios, not client case studies.\n\n01\nThe same questions. Again.\n\nAI-assisted drafting, an FAQ, or reusable email templates may be appropriate.\n\nMake room for the human part\n02\nLess copying. More doing.\n\nFormulas, scripts, or basic automation may work without AI.\n\nSometimes simpler is better\n03\nFind the useful bits.\n\nAI-assisted summaries, templates, or a better process may help.\n\nStart with what you need",
+    "focusOrder": [
+      {
+        "tag": "A",
+        "text": "Skip to content",
+        "href": "#main",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Review the launch checklist",
+        "href": "/launch-checklist/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Practical AIMaking AI make sense.",
+        "href": "/",
+        "tabindex": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Menu +",
+        "href": null,
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Services",
+        "href": "/services/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "About",
+        "href": "/about/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Resources",
+        "href": "/resources/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Let's talk",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "MAIN",
+        "text": "Practical AI help for small businessesLet's figure out how AI can help your business.You don't need to be a tech expert to get started. I help small business owners understand AI, work through everyday challenges, and find practical solutions that make their work easier.Tell me what you're working on Explore services An example: answering a customer question01 · The questionCustomer question“Can I collect my order on Saturday?”02 · AI helps draftDraft responseUse your pickup policy to prepare a reply.03 · You decideReview and sendCheck the details. Make it sound like you.AI prepares a draft. You keep the final say.Pause workflow animationfunction e(e,t){if(typeof window.IntersectionObserver!=`function`)return;let n=window.matchMedia(`(prefers-reduced-motion: reduce)`),r=()=>{let t=e.getBoundingClientRect();return t.bottom>0&&t.top<window.innerHeight&&t.right>0&&t.left<window.innerWidth},i={viewportVisible:r(),documentVisible:document.visibilityState===`visible`,reducedMotion:n.matches,userPaused:t.checked},a=()=>{let t=i.viewportVisible&&i.documentVisible&&!i.reducedMotion&&!i.userPaused;e.toggleAttribute(`data-workflow-paused`,!t)},o;try{o=new window.IntersectionObserver(t=>{for(let n of t)n.target===e&&(i.viewportVisible=n.isIntersecting,a())}),o.observe(e)}catch{o?.disconnect();return}let s=()=>{i.viewportVisible=r(),i.documentVisible=document.visibilityState===`visible`,i.reducedMotion=n.matches,i.userPaused=t.checked,a()};t.addEventListener(`change`,()=>{i.userPaused=t.checked,a()}),document.addEventListener(`visibilitychange`,s),n.addEventListener(`change`,()=>{i.reducedMotion=n.matches,a()}),window.addEventListener(`pageshow`,s),a()}for(let t of document.querySelectorAll(`.workflow-illustration`)){let n=t.querySelector(`.workflow-motion-control input`);t instanceof HTMLElement&&n instanceof HTMLInputElement&&e(t,n)}Start with your work. Find what helps.Human first. Technology second.Two ways inWhere are youstarting from?You don't need a perfect brief.Just a little curiosity or a challenge in mind.01I'm new to AICurious about AI but not sure where to begin? I'll help you understand the tools, explore examples relevant to your work, and get comfortable trying them yourself.Explore AI Getting Started 02I have a problem to solveSpending too much time on repetitive work or wondering whether a process could be easier? Let's look at what's happening and explore practical ways to improve it.Explore Problem-Solving Education, advice, and implementationPractical support.At your starting point.Explore all services 01AI Getting StartedLearn the basics of AI through practical examples and a personalized, hands-on session.02AI Problem-SolvingBring a specific challenge and work through possible tools, approaches, and next steps.03AI Workflow AuditTake a closer look at one business process to identify opportunities for improvement.04Custom AutomationGet help implementing a solution when the right next step involves connecting tools or automating tasks.What this could look likeLess repetitive work.More time for your business.AI isn't always the answer.The right approach starts with the problem.Illustrative scenarios, not client case studies.01The same questions. Again.AI-assisted drafting, an FAQ, or reusable email templates may be appropriate.Make room for the human part02Less copying. More doing.Formulas, scripts, or basic automation may work without AI.Sometimes simpler is better03Find the useful bits.AI-assisted summaries, templates, or a better process may help.Start with what you needWorking togetherFrom your questionto a plan you can use.01Tell me what you're working on.Share what you want to learn or what isn't working well.02We'll explore your options.I'll help you understand what tools or approaches make sense.03Leave with practical next steps.Depending on the service, you'll receive guidance, recommendations, or a written assessment.A personal approachHi, I'm Alvin.I'm Alvin, a software engineer and program manager with 15 years of experience working with organizations ranging from NASA and the U.S. military to small businesses. I've built software, taught web development, and helped people make sense of technology.\n\nI started Practical AI because I believe you shouldn't need a technical background to benefit from AI. I help small businesses understand what's possible, find practical ways to use AI and automation, and avoid solutions that are more complicated than they need to be.A little about me A good place to beginNot sure whereto start?Tell me a little about your business, what you're curious about, or what's taking up too much of your time. I'll help you figure out the next step.Tell me what you're working on",
+        "href": null,
+        "tabindex": "-1"
+      },
+      {
+        "tag": "A",
+        "text": "Tell me what you're working on",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Explore services",
+        "href": "/services/",
+        "tabindex": null
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "href": null,
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "01I'm new to AICurious about AI but not sure where to begin? I'll help you understand the tools, explore examples relevant to your work, and get comfortable trying them yourself.Explore AI Getting Started",
+        "href": "/services/#getting-started",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "02I have a problem to solveSpending too much time on repetitive work or wondering whether a process could be easier? Let's look at what's happening and explore practical ways to improve it.Explore Problem-Solving",
+        "href": "/services/#problem-solving",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Explore all services",
+        "href": "/services/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "01AI Getting StartedLearn the basics of AI through practical examples and a personalized, hands-on session.",
+        "href": "/services/#getting-started",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "02AI Problem-SolvingBring a specific challenge and work through possible tools, approaches, and next steps.",
+        "href": "/services/#problem-solving",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "03AI Workflow AuditTake a closer look at one business process to identify opportunities for improvement.",
+        "href": "/services/#workflow-audit",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "04Custom AutomationGet help implementing a solution when the right next step involves connecting tools or automating tasks.",
+        "href": "/services/#custom-automation",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "A little about me",
+        "href": "/about/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Tell me what you're working on",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Practical AIMaking AI make sense.",
+        "href": "/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Get in touch",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Privacy",
+        "href": "/privacy/",
+        "tabindex": null
+      }
+    ]
+  },
+  {
+    "keyboardNext": {
+      "tag": "A",
+      "href": "/about/",
+      "text": "A little about me"
+    },
+    "width": 768,
+    "side": "after",
+    "role": "region",
+    "name": "Less repetitive work. More time for your business.",
+    "ignored": false,
+    "text": "WHAT THIS COULD LOOK LIKE\n\nLess repetitive work.\nMore time for your business.\n\nAI isn't always the answer.\nThe right approach starts with the problem.\n\nIllustrative scenarios, not client case studies.\n\n01\nThe same questions. Again.\n\nAI-assisted drafting, an FAQ, or reusable email templates may be appropriate.\n\nMake room for the human part\n02\nLess copying. More doing.\n\nFormulas, scripts, or basic automation may work without AI.\n\nSometimes simpler is better\n03\nFind the useful bits.\n\nAI-assisted summaries, templates, or a better process may help.\n\nStart with what you need",
+    "focusOrder": [
+      {
+        "tag": "A",
+        "text": "Skip to content",
+        "href": "#main",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Review the launch checklist",
+        "href": "/launch-checklist/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Practical AIMaking AI make sense.",
+        "href": "/",
+        "tabindex": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Menu +",
+        "href": null,
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Services",
+        "href": "/services/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "About",
+        "href": "/about/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Resources",
+        "href": "/resources/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Let's talk",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "MAIN",
+        "text": "Practical AI help for small businessesLet's figure out how AI can help your business.You don't need to be a tech expert to get started. I help small business owners understand AI, work through everyday challenges, and find practical solutions that make their work easier.Tell me what you're working on Explore services An example: answering a customer question01 · The questionCustomer question“Can I collect my order on Saturday?”02 · AI helps draftDraft responseUse your pickup policy to prepare a reply.03 · You decideReview and sendCheck the details. Make it sound like you.AI prepares a draft. You keep the final say.Pause workflow animationfunction e(e,t){if(typeof window.IntersectionObserver!=`function`)return;let n=window.matchMedia(`(prefers-reduced-motion: reduce)`),r=()=>{let t=e.getBoundingClientRect();return t.bottom>0&&t.top<window.innerHeight&&t.right>0&&t.left<window.innerWidth},i={viewportVisible:r(),documentVisible:document.visibilityState===`visible`,reducedMotion:n.matches,userPaused:t.checked},a=()=>{let t=i.viewportVisible&&i.documentVisible&&!i.reducedMotion&&!i.userPaused;e.toggleAttribute(`data-workflow-paused`,!t)},o;try{o=new window.IntersectionObserver(t=>{for(let n of t)n.target===e&&(i.viewportVisible=n.isIntersecting,a())}),o.observe(e)}catch{o?.disconnect();return}let s=()=>{i.viewportVisible=r(),i.documentVisible=document.visibilityState===`visible`,i.reducedMotion=n.matches,i.userPaused=t.checked,a()};t.addEventListener(`change`,()=>{i.userPaused=t.checked,a()}),document.addEventListener(`visibilitychange`,s),n.addEventListener(`change`,()=>{i.reducedMotion=n.matches,a()}),window.addEventListener(`pageshow`,s),a()}for(let t of document.querySelectorAll(`.workflow-illustration`)){let n=t.querySelector(`.workflow-motion-control input`);t instanceof HTMLElement&&n instanceof HTMLInputElement&&e(t,n)}Start with your work. Find what helps.Human first. Technology second.Two ways inWhere are youstarting from?You don't need a perfect brief.Just a little curiosity or a challenge in mind.01I'm new to AICurious about AI but not sure where to begin? I'll help you understand the tools, explore examples relevant to your work, and get comfortable trying them yourself.Explore AI Getting Started 02I have a problem to solveSpending too much time on repetitive work or wondering whether a process could be easier? Let's look at what's happening and explore practical ways to improve it.Explore Problem-Solving Education, advice, and implementationPractical support.At your starting point.Explore all services 01AI Getting StartedLearn the basics of AI through practical examples and a personalized, hands-on session.02AI Problem-SolvingBring a specific challenge and work through possible tools, approaches, and next steps.03AI Workflow AuditTake a closer look at one business process to identify opportunities for improvement.04Custom AutomationGet help implementing a solution when the right next step involves connecting tools or automating tasks.What this could look likeLess repetitive work.More time for your business.AI isn't always the answer.The right approach starts with the problem.Illustrative scenarios, not client case studies.01The same questions. Again.AI-assisted drafting, an FAQ, or reusable email templates may be appropriate.Make room for the human part02Less copying. More doing.Formulas, scripts, or basic automation may work without AI.Sometimes simpler is better03Find the useful bits.AI-assisted summaries, templates, or a better process may help.Start with what you needWorking togetherFrom your questionto a plan you can use.01Tell me what you're working on.Share what you want to learn or what isn't working well.02We'll explore your options.I'll help you understand what tools or approaches make sense.03Leave with practical next steps.Depending on the service, you'll receive guidance, recommendations, or a written assessment.A personal approachHi, I'm Alvin.I'm Alvin, a software engineer and program manager with 15 years of experience working with organizations ranging from NASA and the U.S. military to small businesses. I've built software, taught web development, and helped people make sense of technology.\n\nI started Practical AI because I believe you shouldn't need a technical background to benefit from AI. I help small businesses understand what's possible, find practical ways to use AI and automation, and avoid solutions that are more complicated than they need to be.A little about me A good place to beginNot sure whereto start?Tell me a little about your business, what you're curious about, or what's taking up too much of your time. I'll help you figure out the next step.Tell me what you're working on",
+        "href": null,
+        "tabindex": "-1"
+      },
+      {
+        "tag": "A",
+        "text": "Tell me what you're working on",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Explore services",
+        "href": "/services/",
+        "tabindex": null
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "href": null,
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "01I'm new to AICurious about AI but not sure where to begin? I'll help you understand the tools, explore examples relevant to your work, and get comfortable trying them yourself.Explore AI Getting Started",
+        "href": "/services/#getting-started",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "02I have a problem to solveSpending too much time on repetitive work or wondering whether a process could be easier? Let's look at what's happening and explore practical ways to improve it.Explore Problem-Solving",
+        "href": "/services/#problem-solving",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Explore all services",
+        "href": "/services/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "01AI Getting StartedLearn the basics of AI through practical examples and a personalized, hands-on session.",
+        "href": "/services/#getting-started",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "02AI Problem-SolvingBring a specific challenge and work through possible tools, approaches, and next steps.",
+        "href": "/services/#problem-solving",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "03AI Workflow AuditTake a closer look at one business process to identify opportunities for improvement.",
+        "href": "/services/#workflow-audit",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "04Custom AutomationGet help implementing a solution when the right next step involves connecting tools or automating tasks.",
+        "href": "/services/#custom-automation",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "A little about me",
+        "href": "/about/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Tell me what you're working on",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Practical AIMaking AI make sense.",
+        "href": "/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Get in touch",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Privacy",
+        "href": "/privacy/",
+        "tabindex": null
+      }
+    ]
+  },
+  {
+    "keyboardNext": {
+      "tag": "A",
+      "href": "/about/",
+      "text": "A little about me"
+    },
+    "width": 1440,
+    "side": "before",
+    "role": "generic",
+    "name": "",
+    "ignored": false,
+    "text": "WHAT THIS COULD LOOK LIKE\n\nLess repetitive work.\nMore time for your business.\n\nAI isn't always the answer.\nThe right approach starts with the problem.\n\nIllustrative scenarios, not client case studies.\n\n01\nThe same questions. Again.\n\nAI-assisted drafting, an FAQ, or reusable email templates may be appropriate.\n\nMake room for the human part\n02\nLess copying. More doing.\n\nFormulas, scripts, or basic automation may work without AI.\n\nSometimes simpler is better\n03\nFind the useful bits.\n\nAI-assisted summaries, templates, or a better process may help.\n\nStart with what you need",
+    "focusOrder": [
+      {
+        "tag": "A",
+        "text": "Skip to content",
+        "href": "#main",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Review the launch checklist",
+        "href": "/launch-checklist/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Practical AIMaking AI make sense.",
+        "href": "/",
+        "tabindex": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Menu +",
+        "href": null,
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Services",
+        "href": "/services/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "About",
+        "href": "/about/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Resources",
+        "href": "/resources/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Let's talk",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "MAIN",
+        "text": "Practical AI help for small businessesLet's figure out how AI can help your business.You don't need to be a tech expert to get started. I help small business owners understand AI, work through everyday challenges, and find practical solutions that make their work easier.Tell me what you're working on Explore services An example: answering a customer question01 · The questionCustomer question“Can I collect my order on Saturday?”02 · AI helps draftDraft responseUse your pickup policy to prepare a reply.03 · You decideReview and sendCheck the details. Make it sound like you.AI prepares a draft. You keep the final say.Pause workflow animationfunction e(e,t){if(typeof window.IntersectionObserver!=`function`)return;let n=window.matchMedia(`(prefers-reduced-motion: reduce)`),r=()=>{let t=e.getBoundingClientRect();return t.bottom>0&&t.top<window.innerHeight&&t.right>0&&t.left<window.innerWidth},i={viewportVisible:r(),documentVisible:document.visibilityState===`visible`,reducedMotion:n.matches,userPaused:t.checked},a=()=>{let t=i.viewportVisible&&i.documentVisible&&!i.reducedMotion&&!i.userPaused;e.toggleAttribute(`data-workflow-paused`,!t)},o;try{o=new window.IntersectionObserver(t=>{for(let n of t)n.target===e&&(i.viewportVisible=n.isIntersecting,a())}),o.observe(e)}catch{o?.disconnect();return}let s=()=>{i.viewportVisible=r(),i.documentVisible=document.visibilityState===`visible`,i.reducedMotion=n.matches,i.userPaused=t.checked,a()};t.addEventListener(`change`,()=>{i.userPaused=t.checked,a()}),document.addEventListener(`visibilitychange`,s),n.addEventListener(`change`,()=>{i.reducedMotion=n.matches,a()}),window.addEventListener(`pageshow`,s),a()}for(let t of document.querySelectorAll(`.workflow-illustration`)){let n=t.querySelector(`.workflow-motion-control input`);t instanceof HTMLElement&&n instanceof HTMLInputElement&&e(t,n)}Start with your work. Find what helps.Human first. Technology second.Two ways inWhere are youstarting from?You don't need a perfect brief.Just a little curiosity or a challenge in mind.01I'm new to AICurious about AI but not sure where to begin? I'll help you understand the tools, explore examples relevant to your work, and get comfortable trying them yourself.Explore AI Getting Started 02I have a problem to solveSpending too much time on repetitive work or wondering whether a process could be easier? Let's look at what's happening and explore practical ways to improve it.Explore Problem-Solving Education, advice, and implementationPractical support.At your starting point.Explore all services 01AI Getting StartedLearn the basics of AI through practical examples and a personalized, hands-on session.02AI Problem-SolvingBring a specific challenge and work through possible tools, approaches, and next steps.03AI Workflow AuditTake a closer look at one business process to identify opportunities for improvement.04Custom AutomationGet help implementing a solution when the right next step involves connecting tools or automating tasks.What this could look likeLess repetitive work.More time for your business.AI isn't always the answer.The right approach starts with the problem.Illustrative scenarios, not client case studies.01The same questions. Again.AI-assisted drafting, an FAQ, or reusable email templates may be appropriate.Make room for the human part02Less copying. More doing.Formulas, scripts, or basic automation may work without AI.Sometimes simpler is better03Find the useful bits.AI-assisted summaries, templates, or a better process may help.Start with what you needWorking togetherFrom your questionto a plan you can use.01Tell me what you're working on.Share what you want to learn or what isn't working well.02We'll explore your options.I'll help you understand what tools or approaches make sense.03Leave with practical next steps.Depending on the service, you'll receive guidance, recommendations, or a written assessment.A personal approachHi, I'm Alvin.I'm Alvin, a software engineer and program manager with 15 years of experience working with organizations ranging from NASA and the U.S. military to small businesses. I've built software, taught web development, and helped people make sense of technology.\n\nI started Practical AI because I believe you shouldn't need a technical background to benefit from AI. I help small businesses understand what's possible, find practical ways to use AI and automation, and avoid solutions that are more complicated than they need to be.A little about me A good place to beginNot sure whereto start?Tell me a little about your business, what you're curious about, or what's taking up too much of your time. I'll help you figure out the next step.Tell me what you're working on",
+        "href": null,
+        "tabindex": "-1"
+      },
+      {
+        "tag": "A",
+        "text": "Tell me what you're working on",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Explore services",
+        "href": "/services/",
+        "tabindex": null
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "href": null,
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "01I'm new to AICurious about AI but not sure where to begin? I'll help you understand the tools, explore examples relevant to your work, and get comfortable trying them yourself.Explore AI Getting Started",
+        "href": "/services/#getting-started",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "02I have a problem to solveSpending too much time on repetitive work or wondering whether a process could be easier? Let's look at what's happening and explore practical ways to improve it.Explore Problem-Solving",
+        "href": "/services/#problem-solving",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Explore all services",
+        "href": "/services/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "01AI Getting StartedLearn the basics of AI through practical examples and a personalized, hands-on session.",
+        "href": "/services/#getting-started",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "02AI Problem-SolvingBring a specific challenge and work through possible tools, approaches, and next steps.",
+        "href": "/services/#problem-solving",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "03AI Workflow AuditTake a closer look at one business process to identify opportunities for improvement.",
+        "href": "/services/#workflow-audit",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "04Custom AutomationGet help implementing a solution when the right next step involves connecting tools or automating tasks.",
+        "href": "/services/#custom-automation",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "A little about me",
+        "href": "/about/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Tell me what you're working on",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Practical AIMaking AI make sense.",
+        "href": "/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Get in touch",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Privacy",
+        "href": "/privacy/",
+        "tabindex": null
+      }
+    ]
+  },
+  {
+    "keyboardNext": {
+      "tag": "A",
+      "href": "/about/",
+      "text": "A little about me"
+    },
+    "width": 1440,
+    "side": "after",
+    "role": "region",
+    "name": "Less repetitive work. More time for your business.",
+    "ignored": false,
+    "text": "WHAT THIS COULD LOOK LIKE\n\nLess repetitive work.\nMore time for your business.\n\nAI isn't always the answer.\nThe right approach starts with the problem.\n\nIllustrative scenarios, not client case studies.\n\n01\nThe same questions. Again.\n\nAI-assisted drafting, an FAQ, or reusable email templates may be appropriate.\n\nMake room for the human part\n02\nLess copying. More doing.\n\nFormulas, scripts, or basic automation may work without AI.\n\nSometimes simpler is better\n03\nFind the useful bits.\n\nAI-assisted summaries, templates, or a better process may help.\n\nStart with what you need",
+    "focusOrder": [
+      {
+        "tag": "A",
+        "text": "Skip to content",
+        "href": "#main",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Review the launch checklist",
+        "href": "/launch-checklist/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Practical AIMaking AI make sense.",
+        "href": "/",
+        "tabindex": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Menu +",
+        "href": null,
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Services",
+        "href": "/services/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "About",
+        "href": "/about/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Resources",
+        "href": "/resources/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Let's talk",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "MAIN",
+        "text": "Practical AI help for small businessesLet's figure out how AI can help your business.You don't need to be a tech expert to get started. I help small business owners understand AI, work through everyday challenges, and find practical solutions that make their work easier.Tell me what you're working on Explore services An example: answering a customer question01 · The questionCustomer question“Can I collect my order on Saturday?”02 · AI helps draftDraft responseUse your pickup policy to prepare a reply.03 · You decideReview and sendCheck the details. Make it sound like you.AI prepares a draft. You keep the final say.Pause workflow animationfunction e(e,t){if(typeof window.IntersectionObserver!=`function`)return;let n=window.matchMedia(`(prefers-reduced-motion: reduce)`),r=()=>{let t=e.getBoundingClientRect();return t.bottom>0&&t.top<window.innerHeight&&t.right>0&&t.left<window.innerWidth},i={viewportVisible:r(),documentVisible:document.visibilityState===`visible`,reducedMotion:n.matches,userPaused:t.checked},a=()=>{let t=i.viewportVisible&&i.documentVisible&&!i.reducedMotion&&!i.userPaused;e.toggleAttribute(`data-workflow-paused`,!t)},o;try{o=new window.IntersectionObserver(t=>{for(let n of t)n.target===e&&(i.viewportVisible=n.isIntersecting,a())}),o.observe(e)}catch{o?.disconnect();return}let s=()=>{i.viewportVisible=r(),i.documentVisible=document.visibilityState===`visible`,i.reducedMotion=n.matches,i.userPaused=t.checked,a()};t.addEventListener(`change`,()=>{i.userPaused=t.checked,a()}),document.addEventListener(`visibilitychange`,s),n.addEventListener(`change`,()=>{i.reducedMotion=n.matches,a()}),window.addEventListener(`pageshow`,s),a()}for(let t of document.querySelectorAll(`.workflow-illustration`)){let n=t.querySelector(`.workflow-motion-control input`);t instanceof HTMLElement&&n instanceof HTMLInputElement&&e(t,n)}Start with your work. Find what helps.Human first. Technology second.Two ways inWhere are youstarting from?You don't need a perfect brief.Just a little curiosity or a challenge in mind.01I'm new to AICurious about AI but not sure where to begin? I'll help you understand the tools, explore examples relevant to your work, and get comfortable trying them yourself.Explore AI Getting Started 02I have a problem to solveSpending too much time on repetitive work or wondering whether a process could be easier? Let's look at what's happening and explore practical ways to improve it.Explore Problem-Solving Education, advice, and implementationPractical support.At your starting point.Explore all services 01AI Getting StartedLearn the basics of AI through practical examples and a personalized, hands-on session.02AI Problem-SolvingBring a specific challenge and work through possible tools, approaches, and next steps.03AI Workflow AuditTake a closer look at one business process to identify opportunities for improvement.04Custom AutomationGet help implementing a solution when the right next step involves connecting tools or automating tasks.What this could look likeLess repetitive work.More time for your business.AI isn't always the answer.The right approach starts with the problem.Illustrative scenarios, not client case studies.01The same questions. Again.AI-assisted drafting, an FAQ, or reusable email templates may be appropriate.Make room for the human part02Less copying. More doing.Formulas, scripts, or basic automation may work without AI.Sometimes simpler is better03Find the useful bits.AI-assisted summaries, templates, or a better process may help.Start with what you needWorking togetherFrom your questionto a plan you can use.01Tell me what you're working on.Share what you want to learn or what isn't working well.02We'll explore your options.I'll help you understand what tools or approaches make sense.03Leave with practical next steps.Depending on the service, you'll receive guidance, recommendations, or a written assessment.A personal approachHi, I'm Alvin.I'm Alvin, a software engineer and program manager with 15 years of experience working with organizations ranging from NASA and the U.S. military to small businesses. I've built software, taught web development, and helped people make sense of technology.\n\nI started Practical AI because I believe you shouldn't need a technical background to benefit from AI. I help small businesses understand what's possible, find practical ways to use AI and automation, and avoid solutions that are more complicated than they need to be.A little about me A good place to beginNot sure whereto start?Tell me a little about your business, what you're curious about, or what's taking up too much of your time. I'll help you figure out the next step.Tell me what you're working on",
+        "href": null,
+        "tabindex": "-1"
+      },
+      {
+        "tag": "A",
+        "text": "Tell me what you're working on",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Explore services",
+        "href": "/services/",
+        "tabindex": null
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "href": null,
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "01I'm new to AICurious about AI but not sure where to begin? I'll help you understand the tools, explore examples relevant to your work, and get comfortable trying them yourself.Explore AI Getting Started",
+        "href": "/services/#getting-started",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "02I have a problem to solveSpending too much time on repetitive work or wondering whether a process could be easier? Let's look at what's happening and explore practical ways to improve it.Explore Problem-Solving",
+        "href": "/services/#problem-solving",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Explore all services",
+        "href": "/services/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "01AI Getting StartedLearn the basics of AI through practical examples and a personalized, hands-on session.",
+        "href": "/services/#getting-started",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "02AI Problem-SolvingBring a specific challenge and work through possible tools, approaches, and next steps.",
+        "href": "/services/#problem-solving",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "03AI Workflow AuditTake a closer look at one business process to identify opportunities for improvement.",
+        "href": "/services/#workflow-audit",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "04Custom AutomationGet help implementing a solution when the right next step involves connecting tools or automating tasks.",
+        "href": "/services/#custom-automation",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "A little about me",
+        "href": "/about/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Tell me what you're working on",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Practical AIMaking AI make sense.",
+        "href": "/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Get in touch",
+        "href": "/contact/",
+        "tabindex": null
+      },
+      {
+        "tag": "A",
+        "text": "Privacy",
+        "href": "/privacy/",
+        "tabindex": null
+      }
+    ]
+  }
+]

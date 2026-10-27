@@ -1,0 +1,52 @@
+{
+  "baselineCommit": "208e63a1ba6ef92dec23f49c4375e40c1c5ea561",
+  "targetedBrowserTests": {
+    "startTime": "2026-10-27T07:02:00.498Z",
+    "duration": 61204.519,
+    "expected": 13,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "baselineFailures": {
+    "namedRegionExpected": 1,
+    "namedRegionReceived": 0,
+    "unresolvedReference": {
+      "element": "section",
+      "reference": "examples-heading",
+      "matches": 0
+    }
+  },
+  "prelaunchBuild": {
+    "pages": 12,
+    "disabledInquiries": true,
+    "labelledPrelaunch": true
+  },
+  "independentSourceReview": {
+    "findings": 0,
+    "scope": "Markup ID and rendered-reference integrity checks; source review only."
+  },
+  "limits": [
+    "Chromium on Linux only; other engines and assistive technologies not run.",
+    "DOM focus-candidate comparison and one real Tab boundary check are not a full keyboard audit.",
+    "Full commercial launch remains unapproved."
+  ],
+  "localChecks": {
+    "typecheck": {
+      "errors": 0,
+      "warnings": 0,
+      "hints": 0
+    },
+    "lint": "pass",
+    "format": "pass",
+    "unitTests": {
+      "passed": 44,
+      "failed": 0
+    },
+    "documentationLinks": {
+      "passed": 176,
+      "files": 23
+    },
+    "diffCheck": "pass"
+  }
+}
