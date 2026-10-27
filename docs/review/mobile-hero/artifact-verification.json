@@ -1,0 +1,77 @@
+{
+  "baselineCommit": "e9cf78be16adc0cf5b7116118ff580f720f78696",
+  "desktopScreenshotIdentity": {
+    "opening": "86800e1d946b821ac5e7c64f1f36c4c67a9ed066780a9c7bf9b627ef89980ab3",
+    "middle": "bb4b488c0a487516f892c66d6fbe7b3d655058e0ad6f2e5af9df6ff28923a030",
+    "exit": "adcbccc60d32a93a6ef242f4888f1ee3b32d193003f2f7a13a27574a5f8e2fd6"
+  },
+  "builds": {
+    "before": {
+      "cssBytes": 33028,
+      "cssGzipBytes": 7713,
+      "externalJavaScript": {
+        "model.DfGLSz-I.js": "9fbfd826933a945dc44b0bd33a47ae035037c80fb4c3dc84696e0e7a36a5ea0b",
+        "thank-you.astro_astro_type_script_index_0_lang.CQibBX_G.js": "59766c9c851aab0027d46bcfc124a7f38cbe35e7bdf75dfb745eddffc4d948ec",
+        "contact.astro_astro_type_script_index_0_lang.BatgoHET.js": "ea8946fc732de0033af5c6bfa1ea4304c5c39871bc750679e0d7b5f133ca795d"
+      },
+      "homeInlineScripts": [
+        "82082a594448434f46e3d9c99cf53c4bcbb18aa56bbd794e893d2d1f23da9749",
+        "9127bf7f614da81f1b7f209091a818d47a016726e3fb28f03dafc98617eef5de"
+      ]
+    },
+    "after": {
+      "cssBytes": 33497,
+      "cssGzipBytes": 7825,
+      "externalJavaScript": {
+        "model.DfGLSz-I.js": "9fbfd826933a945dc44b0bd33a47ae035037c80fb4c3dc84696e0e7a36a5ea0b",
+        "thank-you.astro_astro_type_script_index_0_lang.CQibBX_G.js": "59766c9c851aab0027d46bcfc124a7f38cbe35e7bdf75dfb745eddffc4d948ec",
+        "contact.astro_astro_type_script_index_0_lang.BatgoHET.js": "ea8946fc732de0033af5c6bfa1ea4304c5c39871bc750679e0d7b5f133ca795d"
+      },
+      "homeInlineScripts": [
+        "82082a594448434f46e3d9c99cf53c4bcbb18aa56bbd794e893d2d1f23da9749",
+        "9127bf7f614da81f1b7f209091a818d47a016726e3fb28f03dafc98617eef5de"
+      ]
+    }
+  },
+  "videos": {
+    "tablet-diff.mp4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1556,
+          "height": 1140
+        }
+      ],
+      "format": {
+        "duration": "8.200000"
+      }
+    },
+    "phone-diff.mp4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 740,
+          "height": 780
+        }
+      ],
+      "format": {
+        "duration": "9.680000"
+      }
+    },
+    "reduced-motion-diff.mp4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 740,
+          "height": 780
+        }
+      ],
+      "format": {
+        "duration": "7.720000"
+      }
+    }
+  }
+}
