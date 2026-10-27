@@ -35,9 +35,20 @@ import { site } from '../content/site';
       separately. There is no booking or payment on this site.
     </p>
     <nav class="service-jumps" aria-label="Service sections">
-      {services.map((service) => (
-        <a href={`#${service.id}`}>{service.name}</a>
-      ))}
+      <ol>
+        {services.map((service) => (
+          <li>
+            <a href={`#${service.id}`}>
+              <span class="service-jump-identity">
+                <span class="service-jump-label">{service.label}</span>
+                <strong>{service.name}</strong>
+              </span>
+              <span class="service-jump-summary">{service.summary}</span>
+              <Arrow />
+            </a>
+          </li>
+        ))}
+      </ol>
     </nav>
     {services.map((service, i) => (
       <section
