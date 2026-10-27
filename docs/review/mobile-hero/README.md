@@ -52,7 +52,7 @@ Baseline: merged PR #27, `e9cf78be16adc0cf5b7116118ff580f720f78696`. Both snapsh
 
 Recordings: [Phone before/after](videos/phone-diff.mp4), [tablet before/after](videos/tablet-diff.mp4), and [reduced motion](videos/reduced-motion-diff.mp4). These show actual builds at matching viewport sizes, natural scrolling, and the retained pause control. They are visual comparisons, not performance measurements.
 
-At 360×640 the Contact button ends at 631px instead of 673px. The full hero text matches before/after at all five widths. All three 1440px opening/workflow/exit screenshots are byte-identical. See [layout measurements](layout-evidence.json).
+At 360×640 the Contact button ends at 631px instead of 673px. The full hero text matches before/after at all five widths. All three 1440px opening/workflow/exit screenshots are byte-identical. See [layout measurements](layout-evidence.json) and [artifact verification](artifact-verification.json).
 
 The production CSS grows from 33,028 to 33,497 bytes, or 7,713 to 7,825 gzip bytes. All three external JavaScript files have unchanged SHA-256 hashes. No runtime or dependency was added. These byte counts do not establish a performance improvement.
 
@@ -63,6 +63,12 @@ The production CSS grows from 33,028 to 33,497 bytes, or 7,713 to 7,825 gzip byt
 - Five new browser checks cover the compact action, five-width content/reflow, root text enlargement, keyboard/touch links, and no-JavaScript/missing-observer fallback. Existing workflow checks cover playback and pause behavior.
 - [Root 200% opening](after/text-200-390-opening.png), [root 200% workflow](after/text-200-390-workflow.png), and [720px reflow](after/reflow-720.png) were inspected. Changing the root font size exercises rem-based text; it does not enlarge fixed-pixel text or reproduce native browser zoom.
 - Chromium on Linux only. Real-device, Safari, Firefox, native browser zoom, and screen-reader behavior are not established by these checks.
-- Earlier targeted verification encountered a preview startup timeout before any assertions ran. The unchanged rerun passed all 13 targeted checks. Final full-suite results are recorded below.
+- Earlier targeted verification encountered a preview startup timeout before any assertions ran. The unchanged rerun passed all 13 targeted checks. Final full-suite results are reported in the PR checks.
 
 Reproduce with `npm run build:prelaunch`, then serve a baseline build on port 4342 and the candidate build on port 4340. Run `PLAYWRIGHT_BROWSERS_PATH=/tmp/playwright-media PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium node scripts/capture-mobile-hero-review.mjs`. Chromium and Playwright's ffmpeg binary are required. Full checks: `npm run typecheck`, `npm run lint`, `npm run format:check`, `npm test`, `npm run test:e2e`, and `npm run check:docs`.
+
+## Final check results
+
+CI passed on the implementation commit: [verification run](https://github.com/alvinxiao/alvinxiao.github.com/actions/runs/40596744278).
+
+The full local browser run had 104 passes and two failures in existing Services tests: native fragment selection and native disclosure closing. All five new mobile checks and all eight workflow checks passed. An isolated three-repeat run of those two Services tests had four passes and two failures. The fragment failure also reproduced on unchanged baseline `e9cf78b`; baseline disclosure investigation is recorded in the PR. These local failures are not presented as a clean pass or fixed by this CSS change. Services source and desktop rendering are unchanged.
