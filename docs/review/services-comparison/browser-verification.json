@@ -1,0 +1,13 @@
+{
+  "stats": {
+    "startTime": "2026-10-27T22:47:29.973Z",
+    "duration": 58943.257,
+    "expected": 15,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "knownFailure": "Existing native fragment viewport assertion, reproduced on unchanged master; issue29",
+  "newComparisonTests": 4,
+  "newComparisonTestsPassed": 4
+}
