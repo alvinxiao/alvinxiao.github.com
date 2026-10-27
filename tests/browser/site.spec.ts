@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
 const routes = [
@@ -15,12 +15,34 @@ const routes = [
   '/launch-checklist/',
 ];
 
+async function expectValidLabelReferences(page: Page) {
+  const invalid = await page.evaluate(() => {
+    const ids = new Map<string, number>();
+    for (const element of document.querySelectorAll('[id]')) {
+      ids.set(element.id, (ids.get(element.id) ?? 0) + 1);
+    }
+    return [...document.querySelectorAll('[aria-labelledby]')].flatMap((element) =>
+      (element.getAttribute('aria-labelledby') ?? '')
+        .trim()
+        .split(/\s+/)
+        .map((reference) => ({
+          element: element.tagName.toLowerCase(),
+          reference,
+          matches: ids.get(reference) ?? 0,
+        }))
+        .filter((reference) => reference.matches !== 1),
+    );
+  });
+  expect(invalid, `Invalid aria-labelledby references on ${page.url()}`).toEqual([]);
+}
+
 for (const route of routes) {
   test(`${route} is accessible, labelled nonproduction, and has valid local links`, async ({
     page,
   }) => {
     const response = await page.goto(route);
     expect(response?.status()).toBe(200);
+    await expectValidLabelReferences(page);
     await expect(page.locator('main h1')).toHaveCount(1);
     await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/);
     await expect(page.locator('body')).toContainText(/preview|nonproduction|not for publication/i);
@@ -59,6 +81,17 @@ for (const route of routes) {
     }
   });
 }
+
+test('homepage examples have an accessible region named by their visible heading', async ({
+  page,
+}) => {
+  await page.goto('/');
+  await expectValidLabelReferences(page);
+  const name = 'Less repetitive work. More time for your business.';
+  const examples = page.getByRole('region', { name, exact: true });
+  await expect(examples).toHaveCount(1);
+  await expect(examples.getByRole('heading', { level: 2, name, exact: true })).toHaveCount(1);
+});
 
 test('both homepage visitor paths reach the intended service', async ({ page }) => {
   await page.goto('/');
@@ -206,6 +239,7 @@ test('mobile navigation remains available without JavaScript', async ({ browser 
 
 test('missing routes return a useful 404', async ({ page }) => {
   await page.goto('/404.html');
+  await expectValidLabelReferences(page);
   await expect(page.getByRole('heading', { level: 1 })).toContainText(/page|found|404/i);
   await expect(page.getByRole('link', { name: /home/i }).first()).toBeVisible();
 });

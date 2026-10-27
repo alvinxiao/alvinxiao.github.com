@@ -1,0 +1,13 @@
+{
+  "baselineCommit": "208e63a1ba6ef92dec23f49c4375e40c1c5ea561",
+  "changedBuiltFiles": [
+    "index.html"
+  ],
+  "homeOnlyExpectedAttribute": true,
+  "screenshotsByteIdentical": {
+    "320": true,
+    "390": true,
+    "768": true,
+    "1440": true
+  }
+}
