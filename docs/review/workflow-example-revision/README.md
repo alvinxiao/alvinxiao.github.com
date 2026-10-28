@@ -8,7 +8,7 @@ Choose a customer question and see a concrete message, a small information card,
 
 The visible widget text falls from 112–118 words to 45–62 words depending on the selected case. Counts include the heading, caveat, controls, selected content, note, and article link, split on whitespace. These are layout/content observations, not a readability study or performance measurement. At 390px the widget is 833px tall instead of 919px. At 320px it is 912px instead of 1029px. It remains a scrollable part of the page rather than forcing everything above the fold.
 
-The radio group owns selection. Shared natural subgrid tracks keep the question, information card, reply, controls, and article link in place across selections without fixed clipping heights. The connector runs once for 560ms after selection and ends with a complete arrow. Reduced motion shows that arrow immediately. No JavaScript, provider call, stored selection, or data collection is added.
+The radio group owns selection. Shared natural subgrid tracks keep the question, information card, reply, controls, and article link in place across selections without fixed clipping heights. The connector runs once for 560ms after selection and ends with a complete arrow. Reduced motion shows that arrow immediately. No JavaScript, provider call, stored selection, or data collection is added. Network observation starts after focus-scroll and initial lazy assets settle, then covers the actual choice changes.
 
 ## Alternatives
 

@@ -43,13 +43,13 @@ test('native arrow and Space selection changes the reply without requests or tim
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/');
   const worked = page.locator('.workflow-example');
-  await page.waitForLoadState('networkidle');
-  const requests: string[] = [];
-  page.on('request', (request) => requests.push(request.url()));
   const hours = worked.getByRole('radio', { name: 'Saturday pickup?' });
   const status = worked.getByRole('radio', { name: 'Order ready?' });
   const unusual = worked.getByRole('radio', { name: 'Special request' });
   await hours.focus();
+  await page.waitForLoadState('networkidle');
+  const requests: string[] = [];
+  page.on('request', (request) => requests.push(request.url()));
   await page.keyboard.press('ArrowRight');
   await expect(status).toBeChecked();
   await expect(worked.locator('[data-case="status"]')).toBeVisible();
