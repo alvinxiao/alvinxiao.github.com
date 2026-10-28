@@ -1,0 +1,189 @@
+---
+import { workflowExample, workflowExamples } from '../content/workflow-example';
+---
+
+<section class="workflow-example" aria-labelledby="worked-example-heading">
+  <h3 id="worked-example-heading">{workflowExample.question}</h3>
+  <p class="worked-example-caveat">{workflowExample.caveat}</p>
+  <div class="worked-example-surface">
+    <fieldset>
+      <legend>{workflowExample.legend}</legend>
+      <div class="workflow-example-choices">
+        {workflowExamples.map((example, index) => (
+          <label>
+            <input
+              type="radio"
+              name="workflow-example-need"
+              id={`worked-example-${example.id}`}
+              value={example.id}
+              checked={index === 0}
+              aria-controls={`worked-example-panel-${example.id}`}
+            />
+            <span>{example.need}</span>
+          </label>
+        ))}
+      </div>
+      <div class="workflow-example-panels">
+        {workflowExamples.map((example) => (
+          <section
+            class="workflow-example-panel"
+            id={`worked-example-panel-${example.id}`}
+            data-case={example.id}
+            aria-labelledby={`worked-example-heading-${example.id}`}
+          >
+            <h4 id={`worked-example-heading-${example.id}`}>{example.heading}</h4>
+            {example.paragraphs.map((paragraph) => (
+              <p>{paragraph}</p>
+            ))}
+          </section>
+        ))}
+      </div>
+    </fieldset>
+    <a class="workflow-example-guide" href={workflowExample.guideHref}>
+      {workflowExample.guideTitle}
+    </a>
+  </div>
+</section>
+
+<style>
+  .workflow-example {
+    padding: 0 0 32px;
+  }
+  h3 {
+    font-size: 24px;
+    line-height: 1.3;
+    letter-spacing: -0.025em;
+    margin-bottom: 8px;
+  }
+  .worked-example-caveat {
+    font-size: var(--text-caption);
+    color: var(--muted);
+    margin-bottom: 28px;
+  }
+  .worked-example-surface {
+    padding: 32px;
+    background: var(--mist);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+  }
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+  }
+  legend {
+    font-size: 19px;
+    font-weight: 500;
+    padding: 0;
+    margin-bottom: 18px;
+  }
+  .workflow-example-choices {
+    display: none;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  label {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    min-width: 0;
+    min-height: 48px;
+    padding: 13px 16px;
+    font-size: 16px;
+    background: var(--canvas);
+    border: 1px solid #a4b9b1;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  label:has(input:checked) {
+    border: 2px solid var(--teal-dark);
+    padding: 12px 15px;
+    background: white;
+  }
+  input {
+    margin: 0;
+    accent-color: var(--teal-dark);
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+  input:focus-visible {
+    outline: 3px solid var(--teal-dark);
+    outline-offset: 5px;
+  }
+  .workflow-example-panel {
+    min-width: 0;
+  }
+  .workflow-example-panel + .workflow-example-panel {
+    margin-top: 28px;
+  }
+  h4 {
+    margin: 0 0 20px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.025em;
+  }
+  .workflow-example-panel p {
+    margin: 0 0 20px;
+    font-size: var(--text-body);
+    line-height: 1.7;
+    max-width: 70ch;
+  }
+  .workflow-example-panel p:last-child {
+    margin-bottom: 0;
+  }
+  .workflow-example-guide {
+    display: inline-block;
+    color: var(--teal-dark);
+    text-decoration: underline;
+    min-height: 44px;
+    margin-top: 24px;
+    font-size: 16px;
+  }
+  @supports selector(:has(*)) {
+    .workflow-example-choices {
+      display: flex;
+    }
+    .workflow-example-panels {
+      display: grid;
+    }
+    .workflow-example-panel {
+      grid-area: 1 / 1;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .workflow-example-panel + .workflow-example-panel {
+      margin-top: 0;
+    }
+    .workflow-example:has(input[value='hours']:checked) [data-case='hours'],
+    .workflow-example:has(input[value='status']:checked) [data-case='status'],
+    .workflow-example:has(input[value='request']:checked) [data-case='request'] {
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+  @media (max-width: 900px) {
+    .worked-example-surface {
+      padding: 24px 18px;
+    }
+    h3 {
+      font-size: 22px;
+    }
+    h4 {
+      font-size: 23px;
+    }
+    label {
+      width: 100%;
+      font-size: var(--text-caption);
+    }
+    @supports selector(:has(*)) {
+      .workflow-example-choices {
+        display: grid;
+        gap: 10px;
+      }
+    }
+  }
+</style>

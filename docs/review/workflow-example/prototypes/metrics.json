@@ -1,0 +1,38 @@
+[
+  {
+    "kind": "choice",
+    "width": 320,
+    "height": 1309,
+    "overflow": false
+  },
+  {
+    "kind": "choice",
+    "width": 390,
+    "height": 1080,
+    "overflow": false
+  },
+  {
+    "kind": "choice",
+    "width": 1440,
+    "height": 726,
+    "overflow": false
+  },
+  {
+    "kind": "disclosures",
+    "width": 320,
+    "height": 2193,
+    "overflow": false
+  },
+  {
+    "kind": "disclosures",
+    "width": 390,
+    "height": 1812,
+    "overflow": false
+  },
+  {
+    "kind": "disclosures",
+    "width": 1440,
+    "height": 793,
+    "overflow": false
+  }
+]
