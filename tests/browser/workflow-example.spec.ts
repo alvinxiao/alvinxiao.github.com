@@ -1,12 +1,12 @@
 import { expect, test } from '@playwright/test';
 import { workflowExample, workflowExamples } from '../../src/content/workflow-example';
 
-test('the worked example keeps the original examples and shows one illustrative explanation', async ({
+test('the worked example keeps the original examples and shows one fictional reply', async ({
   page,
 }) => {
   await page.goto('/');
   const worked = page.locator('.workflow-example');
-  await expect(worked.getByRole('heading', { level: 3 })).toHaveText(workflowExample.question);
+  await expect(worked.getByRole('heading', { level: 3 })).toHaveText(workflowExample.title);
   await expect(worked).toContainText(workflowExample.caveat);
   await expect(worked.getByRole('radio')).toHaveCount(3);
   for (const [index, example] of workflowExamples.entries()) {
@@ -15,6 +15,12 @@ test('the worked example keeps the original examples and shows one illustrative 
       `worked-example-panel-${example.id}`,
     );
     const panel = worked.locator(`[data-case="${example.id}"]`);
+    await expect(panel.locator('.customer-question')).toHaveText(example.question);
+    await expect(panel.locator('.source-label')).toHaveText(example.sourceLabel);
+    await expect(panel.locator('.source-fact')).toHaveText(example.fact);
+    await expect(panel.locator('h4')).toHaveText(example.approach);
+    await expect(panel.locator('.reply-card p')).toHaveText(example.reply);
+    await expect(panel.locator('.reply-note')).toHaveText(example.note);
     if (index === 0) await expect(panel).toBeVisible();
     else await expect(panel).toBeHidden();
   }
@@ -31,17 +37,18 @@ test('the worked example keeps the original examples and shows one illustrative 
   await expect(page.locator('.hero-actions .text-link')).toHaveAttribute('href', '/services/');
 });
 
-test('native arrow and Space selection changes the explanation without requests or timed cycling', async ({
+test('native arrow and Space selection changes the reply without requests or timed cycling', async ({
   page,
 }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/');
   const worked = page.locator('.workflow-example');
   await page.waitForLoadState('networkidle');
   const requests: string[] = [];
   page.on('request', (request) => requests.push(request.url()));
-  const hours = worked.getByRole('radio', { name: 'Standard collection hours' });
-  const status = worked.getByRole('radio', { name: 'Whether an order is ready' });
-  const unusual = worked.getByRole('radio', { name: 'An unusual request' });
+  const hours = worked.getByRole('radio', { name: 'Saturday pickup?' });
+  const status = worked.getByRole('radio', { name: 'Order ready?' });
+  const unusual = worked.getByRole('radio', { name: 'Special request' });
   await hours.focus();
   await page.keyboard.press('ArrowRight');
   await expect(status).toBeChecked();
@@ -73,6 +80,7 @@ test('all choices keep a stable footprint and readable reflow at phone, tablet, 
       height: number;
       guideTop: number;
       controls: { left: number; top: number; width: number; height: number }[];
+      cards: { top: number; height: number }[];
     }[] = [];
     for (const example of workflowExamples) {
       await worked.getByRole('radio', { name: example.need }).check();
@@ -81,10 +89,19 @@ test('all choices keep a stable footprint and readable reflow at phone, tablet, 
         await worked.evaluate((element) => {
           const panels = element.querySelector('.workflow-example-panels')?.getBoundingClientRect();
           const guide = element.querySelector('.workflow-example-guide')?.getBoundingClientRect();
-          if (!panels || !guide) throw new Error('Expected explanation and guide');
+          if (!panels || !guide) throw new Error('Expected reply panel and guide');
           return {
             height: panels.height,
             guideTop: guide.top + window.scrollY,
+            cards: [...element.querySelectorAll('.workflow-example-panel')]
+              .filter((panel) => getComputedStyle(panel).visibility === 'visible')
+              .flatMap((panel) => [
+                ...panel.querySelectorAll('.customer-question,.source-card,.reply-card'),
+              ])
+              .map((card) => {
+                const rect = card.getBoundingClientRect();
+                return { top: rect.top + window.scrollY, height: rect.height };
+              }),
             controls: [...element.querySelectorAll('label')].map((label) => {
               const rect = label.getBoundingClientRect();
               return {
@@ -98,7 +115,10 @@ test('all choices keep a stable footprint and readable reflow at phone, tablet, 
         }),
       );
     }
-    for (const position of positions) expect(position.controls).toEqual(positions[0]?.controls);
+    for (const position of positions) {
+      expect(position.controls).toEqual(positions[0]?.controls);
+      expect(position.cards).toEqual(positions[0]?.cards);
+    }
     expect(positions.every((position) => position.height === positions[0]?.height)).toBe(true);
     expect(positions.every((position) => position.guideTop === positions[0]?.guideTop)).toBe(true);
     expect(
@@ -139,14 +159,16 @@ test('touch, reduced motion, and no JavaScript retain every native choice and th
       }
       await worked.getByRole('link', { name: workflowExample.guideTitle }).tap();
       await expect(page).toHaveURL(/\/resources\/workflow\/$/);
-      await expect(page.getByRole('heading', { level: 1 })).toHaveText(workflowExample.guideTitle);
+      await expect(page.getByRole('heading', { level: 1 })).toHaveText(
+        'A better workflow may not need AI',
+      );
     } finally {
       await context.close();
     }
   }
 });
 
-test('without styles all explanations remain readable in the document', async ({ page }) => {
+test('without styles all fictional replies remain readable in the document', async ({ page }) => {
   await page.goto('/');
   await page.evaluate(() => {
     for (const sheet of document.styleSheets) sheet.disabled = true;
@@ -155,13 +177,15 @@ test('without styles all explanations remain readable in the document', async ({
   for (const example of workflowExamples) {
     const panel = worked.locator(`[data-case="${example.id}"]`);
     await expect(panel).toBeVisible();
-    for (const paragraph of example.paragraphs) await expect(panel).toContainText(paragraph);
+    await expect(panel).toContainText(example.question);
+    await expect(panel).toContainText(example.fact);
+    await expect(panel).toContainText(example.reply);
   }
   await worked.getByRole('link', { name: workflowExample.guideTitle }).click();
   await expect(page).toHaveURL(/\/resources\/workflow\/$/);
 });
 
-test('simulated unsupported-selector fallback hides choices and exposes every explanation', async ({
+test('simulated unsupported-selector fallback hides choices and exposes every reply', async ({
   page,
 }) => {
   await page.goto('/');
@@ -185,8 +209,62 @@ test('simulated unsupported-selector fallback hides choices and exposes every ex
   const worked = page.locator('.workflow-example');
   await expect(worked.getByRole('radio')).toHaveCount(0);
   for (const example of workflowExamples) {
-    await expect(worked.getByRole('heading', { name: example.heading })).toBeVisible();
-    for (const paragraph of example.paragraphs) await expect(worked).toContainText(paragraph);
+    await expect(worked.getByRole('heading', { name: example.approach })).toBeVisible();
+    await expect(worked).toContainText(example.question);
+    await expect(worked).toContainText(example.reply);
   }
   await expect(worked.getByRole('link', { name: workflowExample.guideTitle })).toBeVisible();
+});
+
+test('the decorative connector progresses once while text stays stationary and reduced motion settles it', async ({
+  page,
+}) => {
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
+  await page.goto('/');
+  const worked = page.locator('.workflow-example');
+  await worked.scrollIntoViewIfNeeded();
+  const samples = await worked.evaluate(async (element) => {
+    const input = element.querySelector('input[value="status"]');
+    const panel = element.querySelector('[data-case="status"]');
+    const trace = panel?.querySelector('.horizontal .connector-trace');
+    const reply = panel?.querySelector('.reply-card p');
+    if (!(input instanceof HTMLInputElement) || !trace || !reply)
+      throw new Error('Expected native choice, connector, and reply');
+    input.checked = true;
+    const values: { offset: number; textTop: number }[] = [];
+    const started = performance.now();
+    await new Promise<void>((resolve) => {
+      const sample = () => {
+        values.push({
+          offset: Number.parseFloat(getComputedStyle(trace).strokeDashoffset),
+          textTop: reply.getBoundingClientRect().top + window.scrollY,
+        });
+        if (performance.now() - started >= 850) resolve();
+        else requestAnimationFrame(sample);
+      };
+      requestAnimationFrame(sample);
+    });
+    return values;
+  });
+  expect(samples.some((sample) => sample.offset > 0 && sample.offset < 100)).toBe(true);
+  expect(samples.at(-1)?.offset).toBeCloseTo(0, 3);
+  expect(samples.every((sample) => sample.textTop === samples[0]?.textTop)).toBe(true);
+  expect(
+    await worked.evaluate(
+      (element) =>
+        element
+          .getAnimations({ subtree: true })
+          .filter((animation) => animation.playState === 'running').length,
+    ),
+  ).toBe(0);
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await worked.getByRole('radio', { name: 'Special request' }).check();
+  await expect(worked.locator('[data-case="request"] .horizontal .connector-trace')).toHaveCSS(
+    'animation-name',
+    'none',
+  );
+  await expect(worked.locator('[data-case="request"] .horizontal .connector-trace')).toHaveCSS(
+    'stroke-dashoffset',
+    '0px',
+  );
 });

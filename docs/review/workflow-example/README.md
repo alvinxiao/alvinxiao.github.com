@@ -1,5 +1,7 @@
 # Hands-on workflow example review
 
+This is the historical first version at `943753c`, superseded by the [shorter visual revision](../workflow-example-revision/README.md). Its copy, screenshots, and verification describe that earlier commit.
+
 Issue #23. This independent branch starts at master `e9cf78be16adc0cf5b7116118ff580f720f78696`. PRs #28 and #30 remain separate and unmerged. Owner approval is required before merge.
 
 ## Choose the customer need
