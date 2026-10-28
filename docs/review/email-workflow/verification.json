@@ -135,5 +135,13 @@
         "duration": "6.000000"
       }
     }
+  },
+  "accessibilityRoutesRun": {
+    "startTime": "2026-10-28T11:17:37.491Z",
+    "duration": 43437.159999999996,
+    "expected": 11,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
   }
 }
