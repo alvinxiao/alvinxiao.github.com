@@ -90,10 +90,21 @@ test('one carrier shows request, two thinking stages, document draft, then email
       expect(position.x).toBeCloseTo(node.x, 0);
       expect(position.y).toBeCloseTo(node.y, 0);
       await expect(marker.locator('svg')).toHaveCount(1);
+      for (const [step, stage] of (await root.locator('.email-stage-marker').all()).entries())
+        await expect(stage).toHaveCSS('opacity', step <= index ? '1' : '0');
       positions.push(position);
+    }
+    for (const [index, arrival] of [0, 1632, 3264, 4896, 6528].entries()) {
+      if (index === 0) continue;
+      const marker = root.locator('.email-stage-marker').nth(index);
+      await seek(root, arrival - 1);
+      await expect(marker).toHaveCSS('opacity', '0');
+      await seek(root, arrival);
+      await expect(marker).toHaveCSS('opacity', '1');
     }
     await seek(root, 1100);
     const between = await centre(carrier);
+    await expect(root.locator('.email-stage-marker').nth(1)).toHaveCSS('opacity', '0');
     const axis = width > 650 ? 'x' : 'y';
     const [start, second] = positions;
     if (!start || !second) throw new Error('Expected request and context positions');
@@ -137,6 +148,7 @@ test('pause survives delivery changes and responsive resize, and replay explicit
   await root.getByRole('button', { name: 'Replay email animation' }).click();
   await expect(root).toHaveAttribute('data-email-state', 'playing');
   await expect.poll(() => currentTime(root)).toBeGreaterThan(300);
+  await expect(root.locator('.email-stage-marker').nth(4)).toHaveCSS('opacity', '0');
 });
 
 test('offscreen and hidden-document pauses retain phase, and the finite journey completes', async ({
@@ -194,6 +206,8 @@ test('reduced motion is static initially and cancels an active journey without a
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await expect(root.locator('.email-carrier')).toBeHidden();
   expect(await root.evaluate((n) => n.getAnimations({ subtree: true }).length)).toBe(0);
+  for (const marker of await root.locator('.email-stage-marker').all())
+    await expect(marker).toHaveCSS('opacity', '1');
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   await expect(root.locator('.email-carrier')).toBeHidden();
 });
@@ -242,6 +256,8 @@ test('delivery choices and readable diagram remain usable without JavaScript or 
       await expect(root.locator('[data-delivery="automatic"]')).toBeVisible();
       await expect(root.locator('.email-preview')).toContainText(workflowExample.email);
       await expect(root.locator('.email-carrier')).toBeHidden();
+      for (const marker of await root.locator('.email-stage-marker').all())
+        await expect(marker).toHaveCSS('opacity', '1');
       await expect(root.getByRole('button')).toHaveCount(0);
     } finally {
       await context.close();

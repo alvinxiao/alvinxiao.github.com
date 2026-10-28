@@ -1,5 +1,7 @@
 # Order-change workflow review
 
+Historical review packet. The [icon-reveal revision](../icon-reveal/README.md) is the current review.
+
 This revision of PR #31 follows the owner’s requested order-change example. It replaces the previous four-stage email-history diagram with five stages:
 
 Request arrives → look up past emails and context → add tone and voice → draft a document → send the email.

@@ -3,8 +3,8 @@ import { execFileSync } from 'node:child_process';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { chromium } from '@playwright/test';
 
-const output = 'docs/review/order-workflow';
-const before = process.env.BEFORE_URL || 'http://127.0.0.1:4349';
+const output = process.env.REVIEW_OUTPUT || 'docs/review/icon-reveal';
+const before = process.env.BEFORE_URL || 'http://127.0.0.1:4350';
 const after = process.env.AFTER_URL || 'http://127.0.0.1:4340';
 for (const folder of ['before', 'after', 'videos'])
   mkdirSync(`${output}/${folder}`, { recursive: true });
@@ -79,10 +79,12 @@ try {
       ['document', 5168],
       ['email', 6800],
     ]) {
-      const sample = await page.locator('.email-carrier').evaluate((carrier, time) => {
-        const animations = carrier.getAnimations({ subtree: true });
-        if (animations.length !== 5)
-          throw new Error('Expected one movement animation and four synchronized glyphs');
+      const sample = await page.locator('.workflow-example').evaluate((root, time) => {
+        const carrier = root.querySelector('.email-carrier');
+        if (!carrier) throw new Error('Missing carrier');
+        const animations = root.getAnimations({ subtree: true });
+        if (animations.length !== 10)
+          throw new Error('Expected one movement animation, four glyphs, and five stage reveals');
         for (const animation of animations) {
           animation.pause();
           animation.currentTime = time;
@@ -91,6 +93,9 @@ try {
         return {
           x: rect.x,
           y: rect.y,
+          markers: [...root.querySelectorAll('.email-stage-marker')].map(
+            (node) => window.getComputedStyle(node).opacity,
+          ),
           shapes: Object.fromEntries(
             [...carrier.querySelectorAll('[data-shape]')].map((node) => [
               node.getAttribute('data-shape'),
@@ -102,6 +107,11 @@ try {
       assert.ok(
         Number(sample.shapes[phase === 'history' || phase === 'voice' ? 'thinking' : phase]) > 0.9,
         `The ${phase} glyph is visible`,
+      );
+      const reached = ['request', 'history', 'voice', 'document', 'email'].indexOf(phase);
+      assert.deepEqual(
+        sample.markers,
+        [0, 1, 2, 3, 4].map((index) => (index <= reached ? '1' : '0')),
       );
       records.push({ width, phase, time, sample });
       await page
@@ -136,7 +146,7 @@ try {
     const page = await context.newPage();
     const video = page.video();
     await page.setContent(
-      `<!doctype html><html lang="en"><title>Email workflow comparison</title><style>*{box-sizing:border-box}body{margin:0;background:#e9eeeb;color:#153532;font:18px Arial}header{height:80px;padding:15px}.columns{display:grid;grid-template-columns:1fr 1fr;gap:20px}.label{height:40px;background:white;padding:10px}iframe{display:block;width:100%;height:${height}px;border:0}</style><header>Previous / Order-change workflow · ${width} × ${height} · ${scenario}</header><div class="columns">${[before, after].map((origin, i) => `<div><div class="label">${i ? 'REVISED · Request to email' : 'PREVIOUS · Email history to delivery'}</div><iframe title="${i ? 'Revised' : 'Previous'}" name="view${i}" src="${origin}/"></iframe></div>`).join('')}</div></html>`,
+      `<!doctype html><html lang="en"><title>Email workflow comparison</title><style>*{box-sizing:border-box}body{margin:0;background:#e9eeeb;color:#153532;font:18px Arial}header{height:80px;padding:15px}.columns{display:grid;grid-template-columns:1fr 1fr;gap:20px}.label{height:40px;background:white;padding:10px}iframe{display:block;width:100%;height:${height}px;border:0}</style><header>Previous / Order-change workflow · ${width} × ${height} · ${scenario}</header><div class="columns">${[before, after].map((origin, i) => `<div><div class="label">${i ? 'REVISED · Icons reveal on arrival' : 'PREVIOUS · All icons visible'}</div><iframe title="${i ? 'Revised' : 'Previous'}" name="view${i}" src="${origin}/"></iframe></div>`).join('')}</div></html>`,
     );
     const frames = [page.frame({ name: 'view0' }), page.frame({ name: 'view1' })];
     for (const frame of frames) {

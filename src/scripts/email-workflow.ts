@@ -146,6 +146,18 @@ function initialiseEmailWorkflow(root: HTMLElement) {
         }
         animations.push(glyph.animate(glyphFrames, options));
       }
+      for (const [index, marker] of markers.entries()) {
+        const arrival = index * 0.24;
+        const revealFrames: Keyframe[] =
+          arrival === 0
+            ? [{ opacity: 1 }]
+            : [
+                { opacity: 0, offset: 0, easing: 'steps(1, end)' },
+                { opacity: 1, offset: arrival },
+                { opacity: 1, offset: 1 },
+              ];
+        animations.push(marker.animate(revealFrames, options));
+      }
       for (const animation of animations) {
         animation.pause();
         animation.currentTime = time;
