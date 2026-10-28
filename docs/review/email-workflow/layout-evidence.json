@@ -1,0 +1,174 @@
+[
+  {
+    "side": "before",
+    "width": 320,
+    "height": 640,
+    "originalExamples": [
+      "01The same questions. Again.AI-assisted drafting, an FAQ, or reusable email templates may be appropriate.Make room for the human part",
+      "02Less copying. More doing.Formulas, scripts, or basic automation may work without AI.Sometimes simpler is better",
+      "03Find the useful bits.AI-assisted summaries, templates, or a better process may help.Start with what you need"
+    ],
+    "words": 52
+  },
+  {
+    "side": "after",
+    "width": 320,
+    "height": 640,
+    "originalExamples": [
+      "01The same questions. Again.AI-assisted drafting, an FAQ, or reusable email templates may be appropriate.Make room for the human part",
+      "02Less copying. More doing.Formulas, scripts, or basic automation may work without AI.Sometimes simpler is better",
+      "03Find the useful bits.AI-assisted summaries, templates, or a better process may help.Start with what you need"
+    ],
+    "words": 66
+  },
+  {
+    "side": "before",
+    "width": 390,
+    "height": 844,
+    "originalExamples": [
+      "01The same questions. Again.AI-assisted drafting, an FAQ, or reusable email templates may be appropriate.Make room for the human part",
+      "02Less copying. More doing.Formulas, scripts, or basic automation may work without AI.Sometimes simpler is better",
+      "03Find the useful bits.AI-assisted summaries, templates, or a better process may help.Start with what you need"
+    ],
+    "words": 52
+  },
+  {
+    "side": "after",
+    "width": 390,
+    "height": 844,
+    "originalExamples": [
+      "01The same questions. Again.AI-assisted drafting, an FAQ, or reusable email templates may be appropriate.Make room for the human part",
+      "02Less copying. More doing.Formulas, scripts, or basic automation may work without AI.Sometimes simpler is better",
+      "03Find the useful bits.AI-assisted summaries, templates, or a better process may help.Start with what you need"
+    ],
+    "words": 66
+  },
+  {
+    "side": "before",
+    "width": 768,
+    "height": 1000,
+    "originalExamples": [
+      "01The same questions. Again.AI-assisted drafting, an FAQ, or reusable email templates may be appropriate.Make room for the human part",
+      "02Less copying. More doing.Formulas, scripts, or basic automation may work without AI.Sometimes simpler is better",
+      "03Find the useful bits.AI-assisted summaries, templates, or a better process may help.Start with what you need"
+    ],
+    "words": 52
+  },
+  {
+    "side": "after",
+    "width": 768,
+    "height": 1000,
+    "originalExamples": [
+      "01The same questions. Again.AI-assisted drafting, an FAQ, or reusable email templates may be appropriate.Make room for the human part",
+      "02Less copying. More doing.Formulas, scripts, or basic automation may work without AI.Sometimes simpler is better",
+      "03Find the useful bits.AI-assisted summaries, templates, or a better process may help.Start with what you need"
+    ],
+    "words": 66
+  },
+  {
+    "side": "before",
+    "width": 1440,
+    "height": 900,
+    "originalExamples": [
+      "01The same questions. Again.AI-assisted drafting, an FAQ, or reusable email templates may be appropriate.Make room for the human part",
+      "02Less copying. More doing.Formulas, scripts, or basic automation may work without AI.Sometimes simpler is better",
+      "03Find the useful bits.AI-assisted summaries, templates, or a better process may help.Start with what you need"
+    ],
+    "words": 52
+  },
+  {
+    "side": "after",
+    "width": 1440,
+    "height": 900,
+    "originalExamples": [
+      "01The same questions. Again.AI-assisted drafting, an FAQ, or reusable email templates may be appropriate.Make room for the human part",
+      "02Less copying. More doing.Formulas, scripts, or basic automation may work without AI.Sometimes simpler is better",
+      "03Find the useful bits.AI-assisted summaries, templates, or a better process may help.Start with what you need"
+    ],
+    "words": 66
+  },
+  {
+    "width": 390,
+    "phase": "blip",
+    "time": 400,
+    "sample": {
+      "x": 39,
+      "y": 359.9375,
+      "shapes": {
+        "blip": "1",
+        "document": "0",
+        "email": "0"
+      }
+    }
+  },
+  {
+    "width": 390,
+    "phase": "document",
+    "time": 2200,
+    "sample": {
+      "x": 39,
+      "y": 439.753173828125,
+      "shapes": {
+        "blip": "0",
+        "document": "1",
+        "email": "0"
+      }
+    }
+  },
+  {
+    "width": 390,
+    "phase": "email",
+    "time": 4400,
+    "sample": {
+      "x": 39,
+      "y": 557.317626953125,
+      "shapes": {
+        "blip": "0",
+        "document": "0",
+        "email": "1"
+      }
+    }
+  },
+  {
+    "width": 1440,
+    "phase": "blip",
+    "time": 400,
+    "sample": {
+      "x": 277.75,
+      "y": 443.109375,
+      "shapes": {
+        "blip": "1",
+        "document": "0",
+        "email": "0"
+      }
+    }
+  },
+  {
+    "width": 1440,
+    "phase": "document",
+    "time": 2200,
+    "sample": {
+      "x": 559.3162841796875,
+      "y": 443.109375,
+      "shapes": {
+        "blip": "0",
+        "document": "1",
+        "email": "0"
+      }
+    }
+  },
+  {
+    "width": 1440,
+    "phase": "email",
+    "time": 4400,
+    "sample": {
+      "x": 974.0492553710938,
+      "y": 443.109375,
+      "shapes": {
+        "blip": "0",
+        "document": "0",
+        "email": "1"
+      }
+    }
+  }
+]

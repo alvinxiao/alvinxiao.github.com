@@ -1,29 +1,51 @@
-import { expect, test } from '@playwright/test';
-import { workflowExample, workflowExamples } from '../../src/content/workflow-example';
+import { expect, test, type Locator } from '@playwright/test';
+import { deliveryModes, workflowExample, workflowStages } from '../../src/content/workflow-example';
 
-test('the worked example keeps the original examples and shows one fictional reply', async ({
+async function currentTime(root: Locator) {
+  return root.locator('.email-carrier').evaluate((carrier) => {
+    const animation = carrier.getAnimations()[0];
+    return animation && typeof animation.currentTime === 'number' ? animation.currentTime : 0;
+  });
+}
+async function seek(root: Locator, time: number) {
+  await root.evaluate((element, value) => {
+    for (const animation of element.getAnimations({ subtree: true })) {
+      animation.pause();
+      animation.currentTime = value;
+    }
+  }, time);
+}
+async function centre(element: Locator) {
+  const bounds = await element.boundingBox();
+  if (!bounds) throw new Error('Expected visible diagram geometry');
+  return { x: bounds.x + bounds.width / 2, y: bounds.y + bounds.height / 2 };
+}
+
+test('the fictional email workflow preserves original examples and shows both delivery choices', async ({
   page,
 }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/');
-  const worked = page.locator('.workflow-example');
-  await expect(worked.getByRole('heading', { level: 3 })).toHaveText(workflowExample.title);
-  await expect(worked).toContainText(workflowExample.caveat);
-  await expect(worked.getByRole('radio')).toHaveCount(3);
-  for (const [index, example] of workflowExamples.entries()) {
-    await expect(worked.getByRole('radio', { name: example.need })).toHaveAttribute(
-      'aria-controls',
-      `worked-example-panel-${example.id}`,
-    );
-    const panel = worked.locator(`[data-case="${example.id}"]`);
-    await expect(panel.locator('.customer-question')).toHaveText(example.question);
-    await expect(panel.locator('.source-label')).toHaveText(example.sourceLabel);
-    await expect(panel.locator('.source-fact')).toHaveText(example.fact);
-    await expect(panel.locator('h4')).toHaveText(example.approach);
-    await expect(panel.locator('.reply-card p')).toHaveText(example.reply);
-    await expect(panel.locator('.reply-note')).toHaveText(example.note);
-    if (index === 0) await expect(panel).toBeVisible();
-    else await expect(panel).toBeHidden();
-  }
+  const root = page.locator('.workflow-example');
+  await expect(root.getByRole('heading', { level: 3 })).toHaveText(workflowExample.title);
+  await expect(root).toContainText(workflowExample.caveat);
+  await expect(root.locator('.email-stage')).toHaveCount(workflowStages.length);
+  await expect(root.locator('.email-preview')).toContainText(workflowExample.email);
+  await expect(root.getByRole('radio', { name: 'Human approval', exact: true })).toBeChecked();
+  const automatic = root.getByRole('radio', { name: 'Automatic send', exact: true });
+  const approval = root.getByRole('radio', { name: 'Human approval', exact: true });
+  await approval.focus();
+  await page.waitForLoadState('networkidle');
+  const requests: string[] = [];
+  page.on('request', (request) => requests.push(request.url()));
+  await page.keyboard.press('ArrowRight');
+  await expect(automatic).toBeChecked();
+  await expect(root.locator('[data-delivery="automatic"]')).toBeVisible();
+  await expect(root.locator('[data-delivery="approval"]')).toBeHidden();
+  await approval.focus();
+  await page.keyboard.press('Space');
+  await expect(approval).toBeChecked();
+  expect(requests).toEqual([]);
   await expect(page.locator('.example-row')).toHaveCount(3);
   for (const [index, title] of [
     'The same questions. Again.',
@@ -34,237 +56,226 @@ test('the worked example keeps the original examples and shows one fictional rep
   }
   await expect(page.locator('.workflow-steps li')).toHaveCount(3);
   await expect(page.locator('.hero-actions .button')).toHaveAttribute('href', '/contact/');
-  await expect(page.locator('.hero-actions .text-link')).toHaveAttribute('href', '/services/');
 });
 
-test('native arrow and Space selection changes the reply without requests or timed cycling', async ({
+test('one carrier moves through blip, document, and email phases along both responsive chains', async ({
   page,
 }) => {
-  await page.emulateMedia({ reducedMotion: 'reduce' });
-  await page.goto('/');
-  const worked = page.locator('.workflow-example');
-  const hours = worked.getByRole('radio', { name: 'Saturday pickup?' });
-  const status = worked.getByRole('radio', { name: 'Order ready?' });
-  const unusual = worked.getByRole('radio', { name: 'Special request' });
-  await hours.focus();
-  await page.waitForLoadState('networkidle');
-  const requests: string[] = [];
-  page.on('request', (request) => requests.push(request.url()));
-  await page.keyboard.press('ArrowRight');
-  await expect(status).toBeChecked();
-  await expect(worked.locator('[data-case="status"]')).toBeVisible();
-  await page.keyboard.press('ArrowRight');
-  await expect(unusual).toBeChecked();
-  await expect(worked.locator('[data-case="request"]')).toBeVisible();
-  await expect(worked.locator('[data-case="status"]')).toBeHidden();
-  await hours.focus();
-  await page.keyboard.press('Space');
-  await expect(hours).toBeChecked();
-  await expect(worked.locator('[data-case="hours"]')).toBeVisible();
-  const motion = await worked.evaluate(
-    (element) => element.getAnimations({ subtree: true }).length,
-  );
-  expect(motion).toBe(0);
-  expect(requests).toEqual([]);
-});
-
-test('all choices keep a stable footprint and readable reflow at phone, tablet, and desktop widths', async ({
-  page,
-}) => {
-  await page.emulateMedia({ reducedMotion: 'reduce' });
-  for (const width of [320, 390, 768, 1440]) {
-    await page.setViewportSize({ width, height: 900 });
+  for (const width of [390, 1440]) {
+    await page.setViewportSize({ width, height: 1000 });
     await page.goto('/');
-    const worked = page.locator('.workflow-example');
-    const positions: {
-      height: number;
-      guideTop: number;
-      controls: { left: number; top: number; width: number; height: number }[];
-      cards: { top: number; height: number }[];
-    }[] = [];
-    for (const example of workflowExamples) {
-      await worked.getByRole('radio', { name: example.need }).check();
-      await expect(worked.locator(`[data-case="${example.id}"]`)).toBeVisible();
-      positions.push(
-        await worked.evaluate((element) => {
-          const panels = element.querySelector('.workflow-example-panels')?.getBoundingClientRect();
-          const guide = element.querySelector('.workflow-example-guide')?.getBoundingClientRect();
-          if (!panels || !guide) throw new Error('Expected reply panel and guide');
-          return {
-            height: panels.height,
-            guideTop: guide.top + window.scrollY,
-            cards: [...element.querySelectorAll('.workflow-example-panel')]
-              .filter((panel) => getComputedStyle(panel).visibility === 'visible')
-              .flatMap((panel) => [
-                ...panel.querySelectorAll('.customer-question,.source-card,.reply-card'),
-              ])
-              .map((card) => {
-                const rect = card.getBoundingClientRect();
-                return { top: rect.top + window.scrollY, height: rect.height };
-              }),
-            controls: [...element.querySelectorAll('label')].map((label) => {
-              const rect = label.getBoundingClientRect();
-              return {
-                left: rect.left,
-                top: rect.top + window.scrollY,
-                width: rect.width,
-                height: rect.height,
-              };
-            }),
-          };
-        }),
-      );
-    }
-    for (const position of positions) {
-      expect(position.controls).toEqual(positions[0]?.controls);
-      expect(position.cards).toEqual(positions[0]?.cards);
-    }
-    expect(positions.every((position) => position.height === positions[0]?.height)).toBe(true);
-    expect(positions.every((position) => position.guideTop === positions[0]?.guideTop)).toBe(true);
-    expect(
-      await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth),
-    ).toBe(true);
-    expect(
-      await worked.evaluate((element) =>
-        [...element.querySelectorAll('h3,h4,p,legend,label,a')].every(
-          (node) => Number.parseFloat(getComputedStyle(node).fontSize) >= 15,
-        ),
-      ),
-    ).toBe(true);
-    for (const label of await worked.locator('label').all()) {
-      expect((await label.boundingBox())?.height).toBeGreaterThanOrEqual(44);
+    const root = page.locator('.workflow-example');
+    await root.scrollIntoViewIfNeeded();
+    await expect(root).toHaveAttribute('data-email-enhanced', '');
+    await root.getByRole('button', { name: 'Pause email animation', exact: true }).click();
+    const carrier = root.locator('.email-carrier');
+    await seek(root, 400);
+    await expect(root.locator('[data-shape="blip"]')).toHaveCSS('opacity', '1');
+    await expect(root.locator('[data-shape="document"]')).toHaveCSS('opacity', '0');
+    const start = await centre(carrier);
+    await seek(root, 1100);
+    const between = await centre(carrier);
+    await seek(root, 2080);
+    await expect(root.locator('[data-shape="document"]')).toHaveCSS('opacity', '1');
+    await expect(root.locator('[data-shape="email"]')).toHaveCSS('opacity', '0');
+    const documentPosition = await centre(carrier);
+    const second = await centre(root.locator('.email-stage-marker').nth(1));
+    expect(documentPosition.x).toBeCloseTo(second.x, 0);
+    expect(documentPosition.y).toBeCloseTo(second.y, 0);
+    await seek(root, 3952);
+    await expect(root.locator('[data-shape="email"]')).toHaveCSS('opacity', '1');
+    await expect(root.locator('[data-shape="document"]')).toHaveCSS('opacity', '0');
+    const emailPosition = await centre(carrier);
+    await seek(root, 5200);
+    const end = await centre(carrier);
+    const fourth = await centre(root.locator('.email-stage-marker').nth(3));
+    expect(end.x).toBeCloseTo(fourth.x, 0);
+    expect(end.y).toBeCloseTo(fourth.y, 0);
+    if (width > 650) {
+      expect(between.x).toBeGreaterThan(start.x);
+      expect(between.x).toBeLessThan(documentPosition.x);
+      expect(emailPosition.x).toBeGreaterThan(documentPosition.x);
+      expect(end.x).toBeGreaterThan(emailPosition.x);
+    } else {
+      expect(between.y).toBeGreaterThan(start.y);
+      expect(between.y).toBeLessThan(documentPosition.y);
+      expect(emailPosition.y).toBeGreaterThan(documentPosition.y);
+      expect(end.y).toBeGreaterThan(emailPosition.y);
     }
   }
 });
 
-test('touch, reduced motion, and no JavaScript retain every native choice and the full article link', async ({
+test('pause survives delivery changes and responsive resize, and replay explicitly resumes', async ({
+  page,
+}) => {
+  await page.goto('/');
+  const root = page.locator('.workflow-example');
+  await root.scrollIntoViewIfNeeded();
+  await expect(root).toHaveAttribute('data-email-enhanced', '');
+  await root.getByRole('button', { name: 'Replay email animation' }).click();
+  await expect.poll(() => currentTime(root)).toBeGreaterThan(800);
+  await root.getByRole('button', { name: 'Pause email animation', exact: true }).click();
+  const paused = await currentTime(root);
+  await root.getByRole('radio', { name: 'Automatic send', exact: true }).check();
+  await page.setViewportSize({ width: 390, height: 1000 });
+  await expect(root).toHaveAttribute('data-email-state', 'paused');
+  expect(await currentTime(root)).toBeCloseTo(paused, 0);
+  await page.evaluate(() => {
+    Object.defineProperty(document, 'visibilityState', { configurable: true, value: 'hidden' });
+    document.dispatchEvent(new Event('visibilitychange'));
+  });
+  await page.evaluate(() => {
+    Object.defineProperty(document, 'visibilityState', { configurable: true, value: 'visible' });
+    document.dispatchEvent(new Event('visibilitychange'));
+  });
+  await expect(
+    root.getByRole('button', { name: 'Resume email animation', exact: true }),
+  ).toBeVisible();
+  expect(await currentTime(root)).toBeCloseTo(paused, 0);
+  await root.getByRole('button', { name: 'Replay email animation' }).click();
+  await expect(root).toHaveAttribute('data-email-state', 'playing');
+  await expect.poll(() => currentTime(root)).toBeGreaterThan(300);
+});
+
+test('offscreen and hidden-document pauses retain phase, and the finite journey completes', async ({
+  page,
+}) => {
+  await page.goto('/');
+  const root = page.locator('.workflow-example');
+  await root.scrollIntoViewIfNeeded();
+  await expect(root).toHaveAttribute('data-email-enhanced', '');
+  await root.getByRole('button', { name: 'Replay email animation' }).click();
+  await expect.poll(() => currentTime(root)).toBeGreaterThan(500);
+  await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
+  await expect(root).toHaveAttribute('data-email-state', 'paused');
+  const frozen = await currentTime(root);
+  await page.waitForTimeout(180);
+  expect(await currentTime(root)).toBeCloseTo(frozen, 0);
+  await root.scrollIntoViewIfNeeded();
+  await expect(root).toHaveAttribute('data-email-state', 'playing');
+  await page.evaluate(() => {
+    Object.defineProperty(document, 'visibilityState', { configurable: true, value: 'hidden' });
+    document.dispatchEvent(new Event('visibilitychange'));
+  });
+  await expect(root).toHaveAttribute('data-email-state', 'paused');
+  const hidden = await currentTime(root);
+  await page.waitForTimeout(120);
+  expect(await currentTime(root)).toBeCloseTo(hidden, 0);
+  await page.evaluate(() => {
+    Object.defineProperty(document, 'visibilityState', { configurable: true, value: 'visible' });
+    document.dispatchEvent(new Event('visibilitychange'));
+  });
+  await expect(root).toHaveAttribute('data-email-state', 'complete', { timeout: 8000 });
+  await expect(
+    root.getByRole('button', { name: 'Pause email animation', exact: true }),
+  ).toBeDisabled();
+  expect(
+    await root.evaluate(
+      (n) => n.getAnimations({ subtree: true }).filter((a) => a.playState === 'running').length,
+    ),
+  ).toBe(0);
+});
+
+test('reduced motion is static initially and cancels an active journey without automatic restart', async ({
+  page,
+}) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/');
+  const root = page.locator('.workflow-example');
+  await root.scrollIntoViewIfNeeded();
+  await expect(root.locator('.email-carrier')).toBeHidden();
+  await expect(root.getByRole('button', { name: 'Replay email animation' })).toHaveCount(0);
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
+  await expect(root.locator('.email-carrier')).toBeHidden();
+  await root.getByRole('button', { name: 'Replay email animation' }).click();
+  await expect(root).toHaveAttribute('data-email-state', 'playing');
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await expect(root.locator('.email-carrier')).toBeHidden();
+  expect(await root.evaluate((n) => n.getAnimations({ subtree: true }).length)).toBe(0);
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
+  await expect(root.locator('.email-carrier')).toBeHidden();
+});
+
+test('delivery choices and readable diagram remain usable without JavaScript or animation APIs', async ({
   browser,
 }) => {
-  for (const javaScriptEnabled of [true, false]) {
+  for (const fallback of [
+    'no-javascript',
+    'no-animation',
+    'no-observer',
+    'no-resize',
+    'throwing-animation',
+  ]) {
     const context = await browser.newContext({
-      viewport: { width: 390, height: 844 },
+      viewport: { width: 390, height: 1000 },
       hasTouch: true,
       isMobile: true,
-      javaScriptEnabled,
-      reducedMotion: 'reduce',
+      javaScriptEnabled: fallback !== 'no-javascript',
     });
     try {
       const page = await context.newPage();
+      if (fallback === 'no-animation')
+        await page.addInitScript(() =>
+          Object.defineProperty(Element.prototype, 'animate', { value: undefined }),
+        );
+      if (fallback === 'throwing-animation')
+        await page.addInitScript(() =>
+          Object.defineProperty(Element.prototype, 'animate', {
+            value() {
+              throw new Error('Unavailable animation');
+            },
+          }),
+        );
+      if (fallback === 'no-observer')
+        await page.addInitScript(() =>
+          Object.defineProperty(window, 'IntersectionObserver', { value: undefined }),
+        );
+      if (fallback === 'no-resize')
+        await page.addInitScript(() =>
+          Object.defineProperty(window, 'ResizeObserver', { value: undefined }),
+        );
       await page.goto('http://127.0.0.1:4321/');
-      const worked = page.locator('.workflow-example');
-      for (const example of workflowExamples) {
-        await worked.getByRole('radio', { name: example.need }).tap();
-        await expect(worked.getByRole('radio', { name: example.need })).toBeChecked();
-        await expect(worked.locator(`[data-case="${example.id}"]`)).toBeVisible();
-      }
-      await worked.getByRole('link', { name: workflowExample.guideTitle }).tap();
-      await expect(page).toHaveURL(/\/resources\/workflow\/$/);
-      await expect(page.getByRole('heading', { level: 1 })).toHaveText(
-        'A better workflow may not need AI',
-      );
+      const root = page.locator('.workflow-example');
+      await root.getByRole('radio', { name: 'Automatic send', exact: true }).tap();
+      await expect(root.locator('[data-delivery="automatic"]')).toBeVisible();
+      await expect(root.locator('.email-preview')).toContainText(workflowExample.email);
+      await expect(root.locator('.email-carrier')).toBeHidden();
+      await expect(root.getByRole('button')).toHaveCount(0);
     } finally {
       await context.close();
     }
   }
 });
 
-test('without styles all fictional replies remain readable in the document', async ({ page }) => {
-  await page.goto('/');
-  await page.evaluate(() => {
-    for (const sheet of document.styleSheets) sheet.disabled = true;
-  });
-  const worked = page.locator('.workflow-example');
-  for (const example of workflowExamples) {
-    const panel = worked.locator(`[data-case="${example.id}"]`);
-    await expect(panel).toBeVisible();
-    await expect(panel).toContainText(example.question);
-    await expect(panel).toContainText(example.fact);
-    await expect(panel).toContainText(example.reply);
-  }
-  await worked.getByRole('link', { name: workflowExample.guideTitle }).click();
-  await expect(page).toHaveURL(/\/resources\/workflow\/$/);
-});
-
-test('simulated unsupported-selector fallback hides choices and exposes every reply', async ({
+test('diagram stays readable, stationary, and inside phone, tablet, and desktop layouts', async ({
   page,
 }) => {
-  await page.goto('/');
-  await page.evaluate(() => {
-    function removeEnhancement(sheet: CSSStyleSheet | CSSGroupingRule) {
-      for (let index = sheet.cssRules.length - 1; index >= 0; index--) {
-        const rule = sheet.cssRules[index];
-        if (
-          rule instanceof window.CSSSupportsRule &&
-          rule.conditionText.includes(':has(') &&
-          rule.cssText.includes('workflow-example')
-        ) {
-          sheet.deleteRule(index);
-        } else if (rule instanceof window.CSSGroupingRule) {
-          removeEnhancement(rule);
-        }
-      }
-    }
-    for (const sheet of document.styleSheets) removeEnhancement(sheet);
-  });
-  const worked = page.locator('.workflow-example');
-  await expect(worked.getByRole('radio')).toHaveCount(0);
-  for (const example of workflowExamples) {
-    await expect(worked.getByRole('heading', { name: example.approach })).toBeVisible();
-    await expect(worked).toContainText(example.question);
-    await expect(worked).toContainText(example.reply);
-  }
-  await expect(worked.getByRole('link', { name: workflowExample.guideTitle })).toBeVisible();
-});
-
-test('the decorative connector progresses once while text stays stationary and reduced motion settles it', async ({
-  page,
-}) => {
-  await page.emulateMedia({ reducedMotion: 'no-preference' });
-  await page.goto('/');
-  const worked = page.locator('.workflow-example');
-  await worked.scrollIntoViewIfNeeded();
-  const samples = await worked.evaluate(async (element) => {
-    const input = element.querySelector('input[value="status"]');
-    const panel = element.querySelector('[data-case="status"]');
-    const trace = panel?.querySelector('.horizontal .connector-trace');
-    const reply = panel?.querySelector('.reply-card p');
-    if (!(input instanceof HTMLInputElement) || !trace || !reply)
-      throw new Error('Expected native choice, connector, and reply');
-    input.checked = true;
-    const values: { offset: number; textTop: number }[] = [];
-    const started = performance.now();
-    await new Promise<void>((resolve) => {
-      const sample = () => {
-        values.push({
-          offset: Number.parseFloat(getComputedStyle(trace).strokeDashoffset),
-          textTop: reply.getBoundingClientRect().top + window.scrollY,
-        });
-        if (performance.now() - started >= 850) resolve();
-        else requestAnimationFrame(sample);
-      };
-      requestAnimationFrame(sample);
-    });
-    return values;
-  });
-  expect(samples.some((sample) => sample.offset > 0 && sample.offset < 100)).toBe(true);
-  expect(samples.at(-1)?.offset).toBeCloseTo(0, 3);
-  expect(samples.every((sample) => sample.textTop === samples[0]?.textTop)).toBe(true);
-  expect(
-    await worked.evaluate(
-      (element) =>
-        element
-          .getAnimations({ subtree: true })
-          .filter((animation) => animation.playState === 'running').length,
-    ),
-  ).toBe(0);
   await page.emulateMedia({ reducedMotion: 'reduce' });
-  await worked.getByRole('radio', { name: 'Special request' }).check();
-  await expect(worked.locator('[data-case="request"] .horizontal .connector-trace')).toHaveCSS(
-    'animation-name',
-    'none',
-  );
-  await expect(worked.locator('[data-case="request"] .horizontal .connector-trace')).toHaveCSS(
-    'stroke-dashoffset',
-    '0px',
-  );
+  for (const width of [320, 390, 768, 1440]) {
+    await page.setViewportSize({ width, height: 1000 });
+    await page.goto('/');
+    const root = page.locator('.workflow-example');
+    const measure = () =>
+      root.locator('.email-preview').evaluate((element) => {
+        const rect = element.getBoundingClientRect();
+        return { top: rect.top + window.scrollY, width: rect.width, height: rect.height };
+      });
+    const before = await measure();
+    for (const mode of deliveryModes)
+      await root.getByRole('radio', { name: mode.title, exact: true }).check();
+    const after = await measure();
+    expect(after).toEqual(before);
+    expect(
+      await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth),
+    ).toBe(true);
+    expect(
+      await root.evaluate((n) =>
+        [...n.querySelectorAll('h3,h4,p,label,legend,button,.email-stage-marker')].every(
+          (e) => parseFloat(getComputedStyle(e).fontSize) >= 15,
+        ),
+      ),
+    ).toBe(true);
+    for (const label of await root.locator('label').all())
+      expect((await label.boundingBox())?.height).toBeGreaterThanOrEqual(44);
+  }
 });

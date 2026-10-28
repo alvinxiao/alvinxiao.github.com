@@ -1,49 +1,25 @@
+export type DeliveryMode = 'approval' | 'automatic';
+
 export const workflowExample = {
-  title: 'Behind the reply',
-  caveat: 'Fictional shop example. No live AI.',
-  legend: 'Choose a question',
-  guideTitle: 'Explore the approaches',
-  guideHref: '/resources/workflow/',
+  title: 'From conversation to email',
+  caveat: 'Illustrative workflow. No real emails are sent.',
+  legend: 'Delivery',
+  emailTitle: 'Example email to Sam',
+  email: "Hi Sam, I've noted the matte finish you requested. I'll send your next update on Friday.",
 };
 
-export const workflowExamples: readonly {
-  id: 'hours' | 'status' | 'request';
-  need: string;
-  question: string;
-  sourceLabel: string;
-  fact: string;
-  approach: string;
-  reply: string;
-  note: string;
+export const workflowStages = [
+  { id: 'history', title: 'Past customer emails', text: 'Matte finish. Friday updates.' },
+  { id: 'voice', title: 'Tone & voice', text: 'Friendly, brief, familiar.' },
+  { id: 'draft', title: 'Draft email', text: 'A reply using that context.' },
+  { id: 'delivery', title: 'Delivery', text: '' },
+];
+
+export const deliveryModes: readonly {
+  id: DeliveryMode;
+  title: string;
+  text: string;
 }[] = [
-  {
-    id: 'hours',
-    need: 'Saturday pickup?',
-    question: 'Can I collect my order on Saturday?',
-    sourceLabel: 'Shop hours',
-    fact: 'Saturday · 10am–2pm',
-    approach: 'Saved reply',
-    reply: 'Yes, you can collect on Saturday between 10am and 2pm.',
-    note: 'Keep the hours up to date.',
-  },
-  {
-    id: 'status',
-    need: 'Order ready?',
-    question: 'Is my order ready?',
-    sourceLabel: 'Order #1042',
-    fact: 'Ready for collection',
-    approach: 'Status notification',
-    reply: 'Your order is ready to collect.',
-    note: 'Send when the recorded status changes.',
-  },
-  {
-    id: 'request',
-    need: 'Special request',
-    question: 'Could someone bring my order outside? The steps are difficult for me.',
-    sourceLabel: 'Collection policy',
-    fact: 'Check which arrangements are possible.',
-    approach: 'AI-assisted draft',
-    reply: 'Thanks for letting us know. Let me check how we can help with collection.',
-    note: 'A person checks before sending.',
-  },
+  { id: 'approval', title: 'Human approval', text: 'Review before sending.' },
+  { id: 'automatic', title: 'Automatic send', text: 'Send using agreed rules.' },
 ];

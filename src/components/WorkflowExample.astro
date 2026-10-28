@@ -1,80 +1,93 @@
 ---
 import SectionIcon from './SectionIcon.astro';
-import { workflowExample, workflowExamples } from '../content/workflow-example';
+import { deliveryModes, workflowExample, workflowStages } from '../content/workflow-example';
 ---
 
 <section class="workflow-example" aria-labelledby="worked-example-heading">
   <h3 id="worked-example-heading">{workflowExample.title}</h3>
-  <p class="worked-example-caveat">{workflowExample.caveat}</p>
+  <p class="email-caveat">{workflowExample.caveat}</p>
   <fieldset>
     <legend>{workflowExample.legend}</legend>
-    <div class="workflow-example-choices">
-      {workflowExamples.map((example, index) => (
+    <div class="email-delivery-choices">
+      {deliveryModes.map((mode, index) => (
         <label>
-          <input
-            type="radio"
-            name="workflow-example-need"
-            id={`worked-example-${example.id}`}
-            value={example.id}
-            checked={index === 0}
-            aria-controls={`worked-example-panel-${example.id}`}
-          />
-          <span>{example.need}</span>
+          <input type="radio" name="email-delivery" value={mode.id} checked={index === 0} />
+          <span>{mode.title}</span>
         </label>
       ))}
     </div>
-    <div class="workflow-example-panels">
-      {workflowExamples.map((example) => (
-        <section
-          class="workflow-example-panel"
-          id={`worked-example-panel-${example.id}`}
-          data-case={example.id}
-          aria-labelledby={`worked-example-heading-${example.id}`}
-        >
-          <div class="customer-question">
-            <SectionIcon name="chat" />
-            <p>{example.question}</p>
-          </div>
-          <div class="reply-flow">
-            <div class="source-card">
-              <p class="source-label">
-                <SectionIcon name="document" />
-                {example.sourceLabel}
-              </p>
-              <p class="source-fact">{example.fact}</p>
-            </div>
-            <div class="reply-connector" aria-hidden="true">
-              <svg class="horizontal" viewBox="0 0 40 24" fill="none">
-                <path class="connector-track" d="M1 12h35" />
-                <path class="connector-trace" pathLength="100" d="M1 12h35" />
-                <path d="m29 6 7 6-7 6" />
-              </svg>
-              <svg class="vertical" viewBox="0 0 24 28" fill="none">
-                <path class="connector-track" d="M12 1v23" />
-                <path class="connector-trace" pathLength="100" d="M12 1v23" />
-                <path d="m6 18 6 6 6-6" />
-              </svg>
-            </div>
-            <div class="reply-card">
-              <h4 id={`worked-example-heading-${example.id}`}>
-                <SectionIcon name="chat" />
-                <span>{example.approach}</span>
-              </h4>
-              <p>{example.reply}</p>
-            </div>
-          </div>
-          <p class="reply-note">
-            <SectionIcon name="check" />
-            <span>{example.note}</span>
-          </p>
-        </section>
-      ))}
-    </div>
   </fieldset>
-  <a class="workflow-example-guide" href={workflowExample.guideHref}>
-    {workflowExample.guideTitle} <span aria-hidden="true">→</span>
-  </a>
+  <div class="email-chain" id="email-flow-chain">
+    <svg class="email-track" aria-hidden="true" focusable="false">
+      <path />
+    </svg>
+    <ol>
+      {workflowStages.map((stage, index) => (
+        <li class="email-stage" data-email-stage={stage.id}>
+          <span class="email-stage-marker" aria-hidden="true">
+            {index + 1}
+          </span>
+          <div class="email-stage-copy">
+            {stage.id === 'delivery' ? (
+              <div class="email-endpoints">
+                {deliveryModes.map((mode) => (
+                  <div data-delivery={mode.id}>
+                    <h4>{mode.title}</h4>
+                    <p>{mode.text}</p>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <>
+                <h4>{stage.title}</h4>
+                <p>{stage.text}</p>
+              </>
+            )}
+          </div>
+        </li>
+      ))}
+    </ol>
+    <div class="email-carrier" aria-hidden="true">
+      <span class="email-glyph" data-shape="blip">
+        <span class="email-blip"></span>
+      </span>
+      <span class="email-glyph" data-shape="document">
+        <SectionIcon name="document" />
+      </span>
+      <span class="email-glyph" data-shape="email">
+        <SectionIcon name="mail" />
+      </span>
+    </div>
+  </div>
+  <div class="email-preview">
+    <p class="email-preview-title">
+      <SectionIcon name="mail" /> {workflowExample.emailTitle}
+    </p>
+    <p>{workflowExample.email}</p>
+  </div>
+  <div class="email-animation-controls" hidden>
+    <button
+      type="button"
+      data-email-pause
+      aria-label="Pause email animation"
+      aria-controls="email-flow-chain"
+    >
+      Pause
+    </button>
+    <button
+      type="button"
+      data-email-replay
+      aria-label="Replay email animation"
+      aria-controls="email-flow-chain"
+    >
+      Replay
+    </button>
+  </div>
 </section>
+
+<script>
+  import '../scripts/email-workflow';
+</script>
 
 <style>
   .workflow-example {
@@ -85,240 +98,245 @@ import { workflowExample, workflowExamples } from '../content/workflow-example';
     background: #fffdf8;
   }
   h3 {
-    font-size: 28px;
-    line-height: 1.15;
-    letter-spacing: -0.035em;
-    font-weight: 500;
     margin: 0 0 8px;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.035em;
   }
-  .worked-example-caveat {
+  .email-caveat {
+    margin: 0 0 24px;
     font-size: 15px;
     color: var(--muted);
-    margin: 0 0 24px;
   }
   fieldset {
-    margin: 0;
     padding: 0;
+    margin: 0;
     border: 0;
     min-width: 0;
   }
   legend {
-    font-size: 17px;
-    margin: 0 0 14px;
     padding: 0;
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: var(--muted);
   }
-  .workflow-example-choices {
-    display: none;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .email-delivery-choices {
+    display: flex;
     gap: 10px;
-    margin-bottom: 24px;
+    flex-wrap: wrap;
   }
   label {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 8px;
-    min-width: 0;
-    min-height: 48px;
-    padding: 12px 10px;
+    min-height: 44px;
+    padding: 11px 14px;
     border: 1px solid #a4b9b1;
-    background: var(--canvas);
-    border-radius: 10px;
+    border-radius: 8px;
     font-size: 15px;
-    font-weight: 400;
     cursor: pointer;
     transition:
       background-color 200ms ease,
-      border-color 200ms ease,
       box-shadow 200ms ease;
   }
-  label:hover {
-    background: var(--mist);
-  }
   label:has(input:checked) {
-    box-shadow: inset 0 0 0 1px var(--teal-dark);
-    border-color: var(--teal-dark);
     background: var(--mist);
+    border-color: var(--teal-dark);
+    box-shadow: inset 0 0 0 1px var(--teal-dark);
   }
   input {
     width: 16px;
     height: 16px;
-    flex-shrink: 0;
     margin: 0;
     accent-color: var(--teal-dark);
+    flex-shrink: 0;
   }
   input:focus-visible {
     outline: 3px solid var(--teal-dark);
     outline-offset: 4px;
   }
-  .workflow-example-panel {
-    min-width: 0;
+  .email-chain {
+    position: relative;
+    margin: 30px 0;
   }
-  .workflow-example-panel + .workflow-example-panel {
-    margin-top: 28px;
+  .email-chain::before {
+    content: '';
+    position: absolute;
+    top: 22px;
+    left: 12.5%;
+    right: 12.5%;
+    height: 1px;
+    background: #bad0c8;
   }
-  .customer-question {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-    margin: 0 0 18px;
-    padding: 0 0 18px;
-    border-bottom: 1px solid var(--line);
-  }
-  .customer-question :global(svg) {
-    color: var(--teal);
-    margin-top: 2px;
-  }
-  .customer-question p {
-    font-size: 19px;
-    line-height: 1.4;
-    max-width: 50ch;
-    margin: 0;
-  }
-  .reply-flow {
+  ol {
     display: grid;
-    grid-template-columns: minmax(0, 0.9fr) 40px minmax(0, 1.3fr);
-    gap: 12px;
-    align-items: stretch;
-  }
-  .source-card {
-    padding: 18px;
-    background: #f0f4f0;
-    border-radius: 10px;
-    border: 1px solid var(--line);
-    min-width: 0;
-  }
-  .source-label {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 15px;
-    color: var(--muted);
-    margin: 0 0 8px;
-  }
-  .source-fact {
-    font-size: 18px;
-    line-height: 1.4;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     margin: 0;
+    padding: 0;
+    list-style: none;
   }
-  .reply-card {
-    background: var(--teal-dark);
-    border-radius: 12px;
-    padding: 20px;
-    color: #fffdf8;
+  .email-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 0 12px;
+    text-align: center;
     min-width: 0;
+  }
+  .email-stage-marker {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid #a4b9b1;
+    border-radius: 50%;
+    background: #fffdf8;
+    color: var(--teal-dark);
+    font-size: 15px;
+    flex-shrink: 0;
+    position: relative;
   }
   h4 {
-    font-size: 15px;
-    color: var(--mist);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin: 0 0 12px;
-    font-weight: 400;
-    line-height: 1.3;
+    margin: 0 0 8px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.4;
   }
-  .reply-card p {
-    font-size: 19px;
-    line-height: 1.45;
+  .email-stage-copy {
+    min-width: 0;
+  }
+  .email-stage-copy p {
     margin: 0;
-  }
-  .reply-card :global(.section-icon) {
-    color: inherit;
-  }
-  .reply-note {
-    display: flex;
-    align-items: center;
-    gap: 8px;
     font-size: 15px;
+    line-height: 1.6;
     color: var(--muted);
-    margin: 16px 0 0;
   }
-  .reply-note :global(svg) {
-    width: 20px;
-    height: 20px;
-    color: var(--teal);
+  .email-endpoints > div + div {
+    margin-top: 12px;
+  }
+  @supports selector(:has(*)) {
+    .email-endpoints {
+      display: grid;
+    }
+    .email-endpoints > div {
+      grid-area: 1/1;
+      visibility: hidden;
+    }
+    .email-endpoints > div + div {
+      margin-top: 0;
+    }
+    .workflow-example:has(input[value='approval']:checked) [data-delivery='approval'],
+    .workflow-example:has(input[value='automatic']:checked) [data-delivery='automatic'] {
+      visibility: visible;
+    }
+  }
+  .email-track {
+    display: none;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    fill: none;
+    stroke: #bad0c8;
+    stroke-width: 1.5;
+    pointer-events: none;
+  }
+  .email-carrier {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    margin-left: -20px;
+    margin-top: -20px;
+    border-radius: 50%;
+    background: #fffdf8;
+    color: var(--teal-dark);
+    box-shadow: 0 0 0 5px #e5efecbb;
+    pointer-events: none;
+  }
+  .email-glyph {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    transform-origin: center;
+  }
+  .email-glyph[data-shape='document'],
+  .email-glyph[data-shape='email'] {
+    opacity: 0;
+  }
+  .email-blip {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--teal-dark);
   }
   .workflow-example :global(.section-icon) {
     width: 24px;
     height: 24px;
+    color: inherit;
     flex-shrink: 0;
   }
-  .reply-connector {
-    color: var(--teal);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .workflow-example[data-email-enhanced] .email-track,
+  .workflow-example[data-email-enhanced] .email-carrier {
+    display: block;
   }
-  .reply-connector svg {
-    width: 40px;
-    height: 24px;
-    stroke: currentColor;
-    stroke-width: 1.6;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-  .reply-connector .vertical {
+  .workflow-example[data-email-enhanced] .email-chain::before {
     display: none;
   }
-  .connector-track {
-    opacity: 0.22;
+  .email-preview {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 20px;
+    background: var(--mist);
+    border: 1px solid var(--line);
+    border-radius: 12px;
   }
-  .connector-trace {
-    stroke-dasharray: 100;
-    stroke-dashoffset: 0;
-  }
-  .workflow-example-guide {
-    display: inline-flex;
-    gap: 5px;
+  .email-preview-title {
+    display: flex;
     align-items: center;
-    min-height: 44px;
-    margin-top: 24px;
-    font-size: 15px;
+    gap: 8px;
+    margin: 0 0 10px;
     color: var(--teal-dark);
-    text-decoration: underline;
-    text-underline-offset: 4px;
+    font-size: 15px;
   }
-  @supports selector(:has(*)) and (grid-template-rows: subgrid) {
-    .workflow-example-choices {
-      display: grid;
-    }
-    .workflow-example-panels {
-      display: grid;
-      grid-template-rows: repeat(3, auto);
-    }
-    .workflow-example-panel {
-      display: grid;
-      grid-template-rows: subgrid;
-      grid-column: 1;
-      grid-row: 1 / span 3;
-      visibility: hidden;
-      pointer-events: none;
-    }
-    .workflow-example-panel + .workflow-example-panel {
-      margin-top: 0;
-    }
-    .workflow-example:has(input[value='hours']:checked) [data-case='hours'],
-    .workflow-example:has(input[value='status']:checked) [data-case='status'],
-    .workflow-example:has(input[value='request']:checked) [data-case='request'] {
-      visibility: visible;
-      pointer-events: auto;
-    }
-    @media (prefers-reduced-motion: no-preference) {
-      .workflow-example:has(input[value='hours']:checked) [data-case='hours'] .connector-trace,
-      .workflow-example:has(input[value='status']:checked) [data-case='status'] .connector-trace,
-      .workflow-example:has(input[value='request']:checked) [data-case='request'] .connector-trace {
-        animation: reply-connection 560ms cubic-bezier(0.22, 1, 0.36, 1) both;
-      }
-    }
+  .email-preview > p:last-child {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.7;
   }
-  @keyframes reply-connection {
-    from {
-      stroke-dashoffset: 100;
-    }
-    to {
-      stroke-dashoffset: 0;
-    }
+  .email-animation-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+  }
+  .email-animation-controls[hidden] {
+    display: none;
+  }
+  button {
+    min-height: 44px;
+    padding: 10px 14px;
+    background: #fffdf8;
+    border: 1px solid #a4b9b1;
+    border-radius: 8px;
+    color: var(--teal-dark);
+    font: inherit;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  button:disabled {
+    opacity: 0.55;
+    cursor: default;
+  }
+  button:hover:not(:disabled) {
+    background: var(--mist);
   }
   @media (max-width: 650px) {
     .workflow-example {
@@ -327,56 +345,36 @@ import { workflowExample, workflowExamples } from '../content/workflow-example';
     h3 {
       font-size: 26px;
     }
-    .workflow-example-choices {
+    .email-delivery-choices {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 8px;
     }
     label {
-      flex-direction: column;
-      padding: 10px 5px;
-      gap: 6px;
-      text-align: center;
-      line-height: 1.2;
+      padding: 10px 8px;
     }
-    .reply-flow {
-      grid-template-columns: minmax(0, 1fr);
-      gap: 12px;
+    ol {
+      grid-template-columns: 1fr;
+      grid-auto-rows: 1fr;
     }
-    .reply-connector .horizontal {
-      display: none;
+    .email-stage {
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr);
+      align-items: center;
+      gap: 18px;
+      padding: 12px 0;
+      text-align: left;
     }
-    .reply-connector .vertical {
-      display: block;
-      width: 24px;
-      height: 28px;
+    .email-chain::before {
+      left: 22px;
+      right: auto;
+      top: 12.5%;
+      bottom: 12.5%;
+      width: 1px;
+      height: auto;
     }
-    @supports selector(:has(*)) and (grid-template-rows: subgrid) {
-      .workflow-example-panels {
-        grid-template-rows: repeat(5, auto);
-        row-gap: 12px;
-      }
-      .workflow-example-panel {
-        grid-row: 1 / span 5;
-      }
-      .customer-question {
-        grid-row: 1;
-        margin-bottom: 6px;
-      }
-      .reply-flow {
-        display: contents;
-      }
-      .source-card {
-        grid-row: 2;
-      }
-      .reply-connector {
-        grid-row: 3;
-      }
-      .reply-card {
-        grid-row: 4;
-      }
-      .reply-note {
-        grid-row: 5;
-        margin-top: 4px;
-      }
+    .email-animation-controls {
+      justify-content: flex-start;
     }
   }
   @media (prefers-reduced-motion: reduce) {
