@@ -58,49 +58,51 @@ test('the fictional email workflow preserves original examples and shows both de
   await expect(page.locator('.hero-actions .button')).toHaveAttribute('href', '/contact/');
 });
 
-test('one carrier moves through blip, document, and email phases along both responsive chains', async ({
+test('one carrier shows request, two thinking stages, document draft, then email delivery', async ({
   page,
 }) => {
   for (const width of [390, 1440]) {
-    await page.setViewportSize({ width, height: 1000 });
+    await page.setViewportSize({ width, height: 1100 });
     await page.goto('/');
     const root = page.locator('.workflow-example');
     await root.scrollIntoViewIfNeeded();
     await expect(root).toHaveAttribute('data-email-enhanced', '');
     await root.getByRole('button', { name: 'Pause email animation', exact: true }).click();
     const carrier = root.locator('.email-carrier');
-    await seek(root, 400);
-    await expect(root.locator('[data-shape="blip"]')).toHaveCSS('opacity', '1');
-    await expect(root.locator('[data-shape="document"]')).toHaveCSS('opacity', '0');
-    const start = await centre(carrier);
+    const positions = [];
+    for (const [index, phase] of [
+      { time: 400, shape: 'request' },
+      { time: 1904, shape: 'thinking' },
+      { time: 3536, shape: 'thinking' },
+      { time: 5168, shape: 'document' },
+      { time: 6800, shape: 'email' },
+    ].entries()) {
+      await seek(root, phase.time);
+      for (const shape of ['request', 'thinking', 'document', 'email']) {
+        await expect(root.locator(`[data-shape="${shape}"]`)).toHaveCSS(
+          'opacity',
+          shape === phase.shape ? '1' : '0',
+        );
+      }
+      const position = await centre(carrier);
+      const marker = root.locator('.email-stage-marker').nth(index);
+      const node = await centre(marker);
+      expect(position.x).toBeCloseTo(node.x, 0);
+      expect(position.y).toBeCloseTo(node.y, 0);
+      await expect(marker.locator('svg')).toHaveCount(1);
+      positions.push(position);
+    }
     await seek(root, 1100);
     const between = await centre(carrier);
-    await seek(root, 2080);
-    await expect(root.locator('[data-shape="document"]')).toHaveCSS('opacity', '1');
-    await expect(root.locator('[data-shape="email"]')).toHaveCSS('opacity', '0');
-    const documentPosition = await centre(carrier);
-    const second = await centre(root.locator('.email-stage-marker').nth(1));
-    expect(documentPosition.x).toBeCloseTo(second.x, 0);
-    expect(documentPosition.y).toBeCloseTo(second.y, 0);
-    await seek(root, 3952);
-    await expect(root.locator('[data-shape="email"]')).toHaveCSS('opacity', '1');
-    await expect(root.locator('[data-shape="document"]')).toHaveCSS('opacity', '0');
-    const emailPosition = await centre(carrier);
-    await seek(root, 5200);
-    const end = await centre(carrier);
-    const fourth = await centre(root.locator('.email-stage-marker').nth(3));
-    expect(end.x).toBeCloseTo(fourth.x, 0);
-    expect(end.y).toBeCloseTo(fourth.y, 0);
-    if (width > 650) {
-      expect(between.x).toBeGreaterThan(start.x);
-      expect(between.x).toBeLessThan(documentPosition.x);
-      expect(emailPosition.x).toBeGreaterThan(documentPosition.x);
-      expect(end.x).toBeGreaterThan(emailPosition.x);
-    } else {
-      expect(between.y).toBeGreaterThan(start.y);
-      expect(between.y).toBeLessThan(documentPosition.y);
-      expect(emailPosition.y).toBeGreaterThan(documentPosition.y);
-      expect(end.y).toBeGreaterThan(emailPosition.y);
+    const axis = width > 650 ? 'x' : 'y';
+    const [start, second] = positions;
+    if (!start || !second) throw new Error('Expected request and context positions');
+    expect(between[axis]).toBeGreaterThan(start[axis]);
+    expect(between[axis]).toBeLessThan(second[axis]);
+    let previous = start;
+    for (const position of positions.slice(1)) {
+      expect(position[axis]).toBeGreaterThan(previous[axis]);
+      previous = position;
     }
   }
 });

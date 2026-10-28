@@ -1,4 +1,4 @@
-const duration = 5200;
+const duration = 6800;
 type PauseCause = 'user' | 'viewport' | 'document';
 type Run = 'inactive' | 'active' | 'complete' | 'unavailable';
 
@@ -7,7 +7,8 @@ function initialiseEmailWorkflow(root: HTMLElement) {
   const carrier = root.querySelector('.email-carrier');
   const track = root.querySelector('.email-track');
   const path = track?.querySelector('path');
-  const blip = root.querySelector('[data-shape="blip"]');
+  const request = root.querySelector('[data-shape="request"]');
+  const thinking = root.querySelector('[data-shape="thinking"]');
   const documentGlyph = root.querySelector('[data-shape="document"]');
   const email = root.querySelector('[data-shape="email"]');
   const controls = root.querySelector('.email-animation-controls');
@@ -21,13 +22,14 @@ function initialiseEmailWorkflow(root: HTMLElement) {
     !(carrier instanceof HTMLElement) ||
     !(track instanceof SVGElement) ||
     !(path instanceof SVGPathElement) ||
-    !(blip instanceof HTMLElement) ||
+    !(request instanceof HTMLElement) ||
+    !(thinking instanceof HTMLElement) ||
     !(documentGlyph instanceof HTMLElement) ||
     !(email instanceof HTMLElement) ||
     !(controls instanceof HTMLElement) ||
     !(pause instanceof HTMLButtonElement) ||
     !(replay instanceof HTMLButtonElement) ||
-    markers.length !== 4 ||
+    markers.length !== 5 ||
     typeof carrier.animate !== 'function' ||
     typeof window.IntersectionObserver !== 'function' ||
     typeof window.ResizeObserver !== 'function'
@@ -106,7 +108,13 @@ function initialiseEmailWorkflow(root: HTMLElement) {
       render();
       return;
     }
-    const offsets = [[0, 0.1], [0.34, 0.42], [0.68, 0.76], [1]];
+    const offsets = [
+      [0, 0.08],
+      [0.24, 0.32],
+      [0.48, 0.56],
+      [0.72, 0.8],
+      [0.96, 1],
+    ];
     const frames: Keyframe[] = points.flatMap((point, index) =>
       (offsets[index] || []).map((offset) => ({
         transform: `translate(${point.x}px, ${point.y}px)`,
@@ -117,41 +125,27 @@ function initialiseEmailWorkflow(root: HTMLElement) {
     const options: KeyframeAnimationOptions = { duration, fill: 'both', easing: 'linear' };
     try {
       animations.push(carrier.animate(frames, options));
-      animations.push(
-        blip.animate(
-          [
-            { opacity: 1, transform: 'scale(1)', offset: 0 },
-            { opacity: 1, transform: 'scale(1)', offset: 0.22 },
-            { opacity: 0, transform: 'scale(.4)', offset: 0.34 },
-            { opacity: 0, offset: 1 },
-          ],
-          options,
-        ),
-      );
-      animations.push(
-        documentGlyph.animate(
-          [
-            { opacity: 0, transform: 'scale(.7)', offset: 0 },
-            { opacity: 0, transform: 'scale(.7)', offset: 0.22 },
-            { opacity: 1, transform: 'scale(1)', offset: 0.34 },
-            { opacity: 1, transform: 'scale(1)', offset: 0.56 },
-            { opacity: 0, transform: 'scale(.7)', offset: 0.68 },
-            { opacity: 0, offset: 1 },
-          ],
-          options,
-        ),
-      );
-      animations.push(
-        email.animate(
-          [
-            { opacity: 0, transform: 'scale(.7)', offset: 0 },
-            { opacity: 0, transform: 'scale(.7)', offset: 0.56 },
-            { opacity: 1, transform: 'scale(1)', offset: 0.68 },
-            { opacity: 1, transform: 'scale(1)', offset: 1 },
-          ],
-          options,
-        ),
-      );
+      const glyphWindows = [
+        { glyph: request, start: 0, visible: 0, fade: 0.16, end: 0.24 },
+        { glyph: thinking, start: 0.16, visible: 0.24, fade: 0.6, end: 0.72 },
+        { glyph: documentGlyph, start: 0.6, visible: 0.72, fade: 0.84, end: 0.96 },
+        { glyph: email, start: 0.84, visible: 0.96, fade: 1, end: 1 },
+      ];
+      for (const { glyph, start, visible, fade, end } of glyphWindows) {
+        const glyphFrames: Keyframe[] = [
+          { opacity: start === 0 ? 1 : 0, transform: 'scale(.7)', offset: 0 },
+        ];
+        if (start > 0) glyphFrames.push({ opacity: 0, transform: 'scale(.7)', offset: start });
+        glyphFrames.push(
+          { opacity: 1, transform: 'scale(1)', offset: visible },
+          { opacity: 1, transform: 'scale(1)', offset: fade },
+        );
+        if (end < 1) {
+          glyphFrames.push({ opacity: 0, transform: 'scale(.7)', offset: end });
+          glyphFrames.push({ opacity: 0, offset: 1 });
+        }
+        animations.push(glyph.animate(glyphFrames, options));
+      }
       for (const animation of animations) {
         animation.pause();
         animation.currentTime = time;

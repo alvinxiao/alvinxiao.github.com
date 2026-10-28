@@ -1,0 +1,28 @@
+{
+  "baseline": "5343b13",
+  "targetedBrowser": {
+    "passed": 15,
+    "failed": 0
+  },
+  "broaderBrowser": {
+    "passed": 45,
+    "failed": 1,
+    "failure": "Known Services disclosure click tracked in issue29, tests/browser/site.spec.ts:267. All11 accessibility route checks passed."
+  },
+  "unitTests": {
+    "passed": 44,
+    "failed": 0
+  },
+  "typecheck": "pass",
+  "lint": "pass",
+  "format": "pass",
+  "prelaunchBuild": "pass,12pages,inquiriesinactive",
+  "heroSectionPixelIdenticalAt": [
+    320,
+    390,
+    651,
+    768,
+    1440
+  ],
+  "review": "Independent source review found no substantive issues. Parent inspected actual390px and651px screenshots. Chromium Linux only."
+}

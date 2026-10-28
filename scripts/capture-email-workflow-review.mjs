@@ -1,54 +1,22 @@
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { chromium } from '@playwright/test';
 
-const output = 'docs/review/email-workflow';
-const before = process.env.BEFORE_URL || 'http://127.0.0.1:4348';
+const output = 'docs/review/order-workflow';
+const before = process.env.BEFORE_URL || 'http://127.0.0.1:4349';
 const after = process.env.AFTER_URL || 'http://127.0.0.1:4340';
-for (const folder of ['before', 'after', 'videos', 'prototypes'])
+for (const folder of ['before', 'after', 'videos'])
   mkdirSync(`${output}/${folder}`, { recursive: true });
 const browser = await chromium.launch({
   executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH,
 });
 const records = [];
 try {
-  for (const kind of ['a', 'b'])
-    for (const width of [320, 390, 1440]) {
-      const page = await browser.newPage({
-        viewport: { width, height: 1000 },
-        reducedMotion: 'no-preference',
-      });
-      await page.setContent(readFileSync(`${output}/prototypes/${kind}.html`, 'utf8'));
-      await page.evaluate(
-        () =>
-          new Promise((resolve) =>
-            window.requestAnimationFrame(() => window.requestAnimationFrame(resolve)),
-          ),
-      );
-      for (const [phase, time] of [
-        ['blip', 400],
-        ['document', 2200],
-        ['email', 4400],
-      ]) {
-        await page.evaluate(
-          (time) =>
-            document.getAnimations().forEach((animation) => {
-              animation.pause();
-              animation.currentTime = time;
-            }),
-          time,
-        );
-        await page.screenshot({
-          path: `${output}/prototypes/${kind}-${width}-${phase}.png`,
-          fullPage: true,
-        });
-      }
-      await page.close();
-    }
   for (const [width, height] of [
     [320, 640],
     [390, 844],
+    [651, 1000],
     [768, 1000],
     [1440, 900],
   ]) {
@@ -105,14 +73,16 @@ try {
     await page.locator('.email-chain').scrollIntoViewIfNeeded();
     await page.getByRole('button', { name: 'Pause email animation', exact: true }).click();
     for (const [phase, time] of [
-      ['blip', 400],
-      ['document', 2200],
-      ['email', 4400],
+      ['request', 400],
+      ['history', 1904],
+      ['voice', 3536],
+      ['document', 5168],
+      ['email', 6800],
     ]) {
       const sample = await page.locator('.email-carrier').evaluate((carrier, time) => {
         const animations = carrier.getAnimations({ subtree: true });
-        if (animations.length !== 4)
-          throw new Error('Expected one movement animation and three synchronized glyphs');
+        if (animations.length !== 5)
+          throw new Error('Expected one movement animation and four synchronized glyphs');
         for (const animation of animations) {
           animation.pause();
           animation.currentTime = time;
@@ -129,7 +99,10 @@ try {
           ),
         };
       }, time);
-      assert.ok(Number(sample.shapes[phase]) > 0.9, `The ${phase} glyph is visible`);
+      assert.ok(
+        Number(sample.shapes[phase === 'history' || phase === 'voice' ? 'thinking' : phase]) > 0.9,
+        `The ${phase} glyph is visible`,
+      );
       records.push({ width, phase, time, sample });
       await page
         .locator('.workflow-example')
@@ -163,7 +136,7 @@ try {
     const page = await context.newPage();
     const video = page.video();
     await page.setContent(
-      `<!doctype html><html lang="en"><title>Email workflow comparison</title><style>*{box-sizing:border-box}body{margin:0;background:#e9eeeb;color:#153532;font:18px Arial}header{height:80px;padding:15px}.columns{display:grid;grid-template-columns:1fr 1fr;gap:20px}.label{height:40px;background:white;padding:10px}iframe{display:block;width:100%;height:${height}px;border:0}</style><header>Previous / Email workflow · ${width} × ${height} · ${scenario}</header><div class="columns">${[before, after].map((origin, i) => `<div><div class="label">${i ? 'REVISED · Email history to delivery' : 'PREVIOUS · Shop questions'}</div><iframe title="${i ? 'Revised' : 'Previous'}" name="view${i}" src="${origin}/"></iframe></div>`).join('')}</div></html>`,
+      `<!doctype html><html lang="en"><title>Email workflow comparison</title><style>*{box-sizing:border-box}body{margin:0;background:#e9eeeb;color:#153532;font:18px Arial}header{height:80px;padding:15px}.columns{display:grid;grid-template-columns:1fr 1fr;gap:20px}.label{height:40px;background:white;padding:10px}iframe{display:block;width:100%;height:${height}px;border:0}</style><header>Previous / Order-change workflow · ${width} × ${height} · ${scenario}</header><div class="columns">${[before, after].map((origin, i) => `<div><div class="label">${i ? 'REVISED · Request to email' : 'PREVIOUS · Email history to delivery'}</div><iframe title="${i ? 'Revised' : 'Previous'}" name="view${i}" src="${origin}/"></iframe></div>`).join('')}</div></html>`,
     );
     const frames = [page.frame({ name: 'view0' }), page.frame({ name: 'view1' })];
     for (const frame of frames) {
@@ -176,10 +149,10 @@ try {
     const animated = scenario === 'phone' || scenario === 'desktop';
     if (animated) {
       await frames[1].getByRole('button', { name: 'Replay email animation', exact: true }).click();
-      await page.waitForTimeout(5900);
+      await page.waitForTimeout(7500);
     } else await page.waitForTimeout(1800);
     await frames[1].getByRole('radio', { name: 'Automatic send', exact: true }).check();
-    await page.waitForTimeout(animated ? 5900 : 1800);
+    await page.waitForTimeout(animated ? 7500 : 1800);
     await context.close();
     execFileSync('ffmpeg', [
       '-loglevel',

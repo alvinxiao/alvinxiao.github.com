@@ -1,5 +1,7 @@
 # Email-history workflow review
 
+Historical review packet. The [current five-stage order-change review](../order-workflow/README.md) supersedes this version.
+
 PR #31 now follows the owner's requested example: use historical customer emails and tone/voice to create an email for human approval or automatic sending. This supersedes the earlier shop-question comparison. The previous/revised evidence uses the prior PR version at `498304c` as its baseline; neither version is the published site.
 
 ## The chain
