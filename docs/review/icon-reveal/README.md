@@ -1,5 +1,7 @@
 # Reveal workflow icons on arrival
 
+Historical packet. The [step-description revision](../workflow-descriptions/README.md) is the current review.
+
 PR #31 revision: keep future step icons hidden until the moving carrier reaches them. Reached icons stay visible. Replay resets the sequence. The first request icon appears at the start.
 
 The existing 6.8-second timeline now owns five marker reveals alongside carrier movement and glyph changes. Each icon switches on at its exact arrival time: 0, 1632, 3264, 4896, and 6528ms. All text and layout remain stationary. No copy or business facts change.

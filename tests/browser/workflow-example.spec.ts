@@ -1,5 +1,11 @@
 import { expect, test, type Locator } from '@playwright/test';
-import { deliveryModes, workflowExample, workflowStages } from '../../src/content/workflow-example';
+import {
+  deliveryModes,
+  workflowExample,
+  workflowStages,
+  workflowDuration,
+  workflowTiming,
+} from '../../src/content/workflow-example';
 
 async function currentTime(root: Locator) {
   return root.locator('.email-carrier').evaluate((carrier) => {
@@ -40,8 +46,8 @@ test('the fictional email workflow preserves original examples and shows both de
   page.on('request', (request) => requests.push(request.url()));
   await page.keyboard.press('ArrowRight');
   await expect(automatic).toBeChecked();
-  await expect(root.locator('[data-delivery="automatic"]')).toBeVisible();
-  await expect(root.locator('[data-delivery="approval"]')).toBeHidden();
+  await expect(root.locator('.email-chain [data-delivery="automatic"]')).toBeVisible();
+  await expect(root.locator('.email-chain [data-delivery="approval"]')).toBeHidden();
   await approval.focus();
   await page.keyboard.press('Space');
   await expect(approval).toBeChecked();
@@ -72,10 +78,10 @@ test('one carrier shows request, two thinking stages, document draft, then email
     const positions = [];
     for (const [index, phase] of [
       { time: 400, shape: 'request' },
-      { time: 1904, shape: 'thinking' },
-      { time: 3536, shape: 'thinking' },
-      { time: 5168, shape: 'document' },
-      { time: 6800, shape: 'email' },
+      { time: workflowDuration * 0.25, shape: 'thinking' },
+      { time: workflowDuration * 0.45, shape: 'thinking' },
+      { time: workflowDuration * 0.65, shape: 'document' },
+      { time: workflowDuration, shape: 'email' },
     ].entries()) {
       await seek(root, phase.time);
       for (const shape of ['request', 'thinking', 'document', 'email']) {
@@ -94,7 +100,9 @@ test('one carrier shows request, two thinking stages, document draft, then email
         await expect(stage).toHaveCSS('opacity', step <= index ? '1' : '0');
       positions.push(position);
     }
-    for (const [index, arrival] of [0, 1632, 3264, 4896, 6528].entries()) {
+    for (const [index, arrival] of workflowTiming
+      .map((phase) => phase.arrival * workflowDuration)
+      .entries()) {
       if (index === 0) continue;
       const marker = root.locator('.email-stage-marker').nth(index);
       await seek(root, arrival - 1);
@@ -102,7 +110,7 @@ test('one carrier shows request, two thinking stages, document draft, then email
       await seek(root, arrival);
       await expect(marker).toHaveCSS('opacity', '1');
     }
-    await seek(root, 1100);
+    await seek(root, workflowDuration * 0.18);
     const between = await centre(carrier);
     await expect(root.locator('.email-stage-marker').nth(1)).toHaveCSS('opacity', '0');
     const axis = width > 650 ? 'x' : 'y';
@@ -179,7 +187,7 @@ test('offscreen and hidden-document pauses retain phase, and the finite journey 
     Object.defineProperty(document, 'visibilityState', { configurable: true, value: 'visible' });
     document.dispatchEvent(new Event('visibilitychange'));
   });
-  await expect(root).toHaveAttribute('data-email-state', 'complete', { timeout: 8000 });
+  await expect(root).toHaveAttribute('data-email-state', 'complete', { timeout: 22000 });
   await expect(
     root.getByRole('button', { name: 'Pause email animation', exact: true }),
   ).toBeDisabled();
@@ -253,12 +261,14 @@ test('delivery choices and readable diagram remain usable without JavaScript or 
       await page.goto('http://127.0.0.1:4321/');
       const root = page.locator('.workflow-example');
       await root.getByRole('radio', { name: 'Automatic send', exact: true }).tap();
-      await expect(root.locator('[data-delivery="automatic"]')).toBeVisible();
+      await expect(root.locator('.email-chain [data-delivery="automatic"]')).toBeVisible();
       await expect(root.locator('.email-preview')).toContainText(workflowExample.email);
       await expect(root.locator('.email-carrier')).toBeHidden();
       for (const marker of await root.locator('.email-stage-marker').all())
         await expect(marker).toHaveCSS('opacity', '1');
-      await expect(root.getByRole('button')).toHaveCount(0);
+      await expect(root.locator('.email-animation-controls')).toBeHidden();
+      for (const step of await root.locator('[data-email-step]').all())
+        await expect(step).toBeDisabled();
     } finally {
       await context.close();
     }
@@ -296,4 +306,79 @@ test('diagram stays readable, stationary, and inside phone, tablet, and desktop 
     for (const label of await root.locator('label').all())
       expect((await label.boundingBox())?.height).toBeGreaterThanOrEqual(44);
   }
+});
+
+test('paused steps seek the carrier and description together, including keyboard and delivery choices', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 1100 });
+  await page.goto('/');
+  const root = page.locator('.workflow-example');
+  await root.scrollIntoViewIfNeeded();
+  await expect(root.locator('[data-email-step="3"]')).toBeDisabled();
+  await root.getByRole('button', { name: 'Pause email animation', exact: true }).click();
+  const preview = root.locator('.email-preview');
+  const measure = () =>
+    preview.evaluate((node) => {
+      const rect = node.getBoundingClientRect();
+      return { top: rect.top + window.scrollY, height: rect.height };
+    });
+  const before = await measure();
+  for (const index of [3, 0, 4, 1, 2]) {
+    const button = root.locator(`[data-email-step="${index}"]`);
+    await expect(button).toBeEnabled();
+    if (index === 2) {
+      await button.focus();
+      await page.keyboard.press('Enter');
+    } else await button.click();
+    await expect(root).toHaveAttribute('data-email-current', String(index));
+    await expect(root).toHaveAttribute('data-email-state', 'paused');
+    const timing = workflowTiming[index];
+    const stage = workflowStages[index];
+    if (!timing || !stage) throw new Error('Missing workflow stage');
+    expect(await currentTime(root)).toBeCloseTo(timing.arrival * workflowDuration, 0);
+    await expect(root.locator(`[data-email-detail="${index}"]`)).toBeVisible();
+    await expect(root.locator(`[data-email-detail="${index}"]`)).toContainText(
+      stage.descriptionTitle,
+    );
+    for (const [step, panel] of (await root.locator('[data-email-detail]').all()).entries()) {
+      if (step !== index) await expect(panel).toBeHidden();
+    }
+    expect(await measure()).toEqual(before);
+  }
+  await root.locator('[data-email-step="4"]').click();
+  await expect(root.locator('[data-email-detail="4"] [data-detail-mode="approval"]')).toBeVisible();
+  await expect(root.locator('[data-email-detail="4"] [data-detail-mode="automatic"]')).toBeHidden();
+  await root.getByRole('radio', { name: 'Automatic send', exact: true }).check();
+  await expect(
+    root.locator('[data-email-detail="4"] [data-detail-mode="automatic"]'),
+  ).toBeVisible();
+  await expect(root.locator('[data-email-detail="4"] [data-detail-mode="approval"]')).toBeHidden();
+  await expect(root).toHaveAttribute('data-email-state', 'paused');
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await expect(root).toHaveAttribute('data-email-current', '4');
+  expect(await currentTime(root)).toBeCloseTo(workflowDuration * 0.8, 0);
+  await root.locator('[data-email-step="2"]').click();
+  await root.getByRole('button', { name: 'Resume email animation', exact: true }).click();
+  await expect(root).toHaveAttribute('data-email-state', 'playing');
+  await expect(root.locator('[data-email-step="2"]')).toBeDisabled();
+  await expect.poll(() => currentTime(root)).toBeGreaterThan(workflowDuration * 0.4 + 200);
+});
+
+test('automatic playback describes the active step and holds long enough to read', async ({
+  page,
+}) => {
+  await page.goto('/');
+  const root = page.locator('.workflow-example');
+  await root.scrollIntoViewIfNeeded();
+  await root.getByRole('button', { name: 'Replay email animation', exact: true }).click();
+  expect(workflowDuration).toBeGreaterThanOrEqual(15000);
+  for (const timing of workflowTiming)
+    expect((timing.holdUntil - timing.arrival) * workflowDuration).toBeGreaterThanOrEqual(2500);
+  await expect(root).toHaveAttribute('data-email-current', '0');
+  await expect(root.locator('[data-email-detail="0"]')).toBeVisible();
+  await expect(root).toHaveAttribute('data-email-current', '1', { timeout: 6000 });
+  await expect(root.locator('[data-email-detail="1"]')).toContainText('Friday updates');
+  await expect(root).toHaveAttribute('data-email-current', '2', { timeout: 6000 });
+  await expect(root.locator('[data-email-detail="2"]')).toBeVisible();
 });

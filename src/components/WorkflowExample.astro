@@ -26,8 +26,16 @@ const glyphs = ['request', 'thinking', 'document', 'email'] as const;
       <path />
     </svg>
     <ol>
-      {workflowStages.map((stage) => (
+      {workflowStages.map((stage, index) => (
         <li class="email-stage" data-email-stage={stage.id}>
+          <button
+            type="button"
+            class="email-step-hit"
+            data-email-step={index}
+            aria-label={`Go to ${stage.title}`}
+            aria-controls="email-step-description"
+            disabled
+          ></button>
           <span class="email-stage-marker" aria-hidden="true">
             {stage.shape === 'thinking' ? (
               <svg class="section-icon" viewBox="0 0 24 24" fill="none">
@@ -89,11 +97,29 @@ const glyphs = ['request', 'thinking', 'document', 'email'] as const;
       ))}
     </div>
   </div>
-  <div class="email-preview">
-    <p class="email-preview-title">
-      <SectionIcon name="mail" /> {workflowExample.emailTitle}
-    </p>
-    <p>{workflowExample.email}</p>
+  <div class="email-preview" id="email-step-description">
+    <div class="email-preview-fallback">
+      <p class="email-preview-title">
+        <SectionIcon name="mail" /> {workflowExample.emailTitle}
+      </p>
+      <p>{workflowExample.email}</p>
+    </div>
+    {workflowStages.map((stage, index) => (
+      <div class="email-detail" data-email-detail={index} aria-hidden="true">
+        <p class="email-preview-title">{stage.descriptionTitle}</p>
+        {stage.id === 'delivery' ? (
+          <div class="email-endpoints">
+            {deliveryModes.map((mode) => (
+              <div data-detail-mode={mode.id}>
+                <p>{mode.description}</p>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p>{stage.description}</p>
+        )}
+      </div>
+    ))}
   </div>
   <div class="email-animation-controls" hidden>
     <button
@@ -207,6 +233,7 @@ const glyphs = ['request', 'thinking', 'document', 'email'] as const;
     list-style: none;
   }
   .email-stage {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -214,6 +241,35 @@ const glyphs = ['request', 'thinking', 'document', 'email'] as const;
     padding: 0 12px;
     text-align: center;
     min-width: 0;
+  }
+  .email-step-hit {
+    display: none;
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    width: 100%;
+    min-height: 44px;
+    padding: 0;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+  }
+  .workflow-example[data-email-interactive] .email-step-hit {
+    display: block;
+  }
+  .email-step-hit:disabled {
+    opacity: 1;
+    pointer-events: none;
+  }
+  .email-step-hit:hover:not(:disabled) {
+    background: #247e780a;
+  }
+  .email-step-hit:focus-visible {
+    outline: 3px solid var(--teal-dark);
+    outline-offset: 3px;
+  }
+  .email-step-hit[aria-current='step']:not(:disabled) {
+    box-shadow: inset 0 0 0 1px var(--teal-dark);
   }
   .email-stage-marker {
     display: grid;
@@ -256,6 +312,10 @@ const glyphs = ['request', 'thinking', 'document', 'email'] as const;
     }
     .email-endpoints > div + div {
       margin-top: 0;
+    }
+    .workflow-example:has(input[value='approval']:checked) [data-detail-mode='approval'],
+    .workflow-example:has(input[value='automatic']:checked) [data-detail-mode='automatic'] {
+      visibility: inherit;
     }
     .workflow-example:has(input[value='approval']:checked) [data-delivery='approval'],
     .workflow-example:has(input[value='automatic']:checked) [data-delivery='automatic'] {
@@ -313,6 +373,7 @@ const glyphs = ['request', 'thinking', 'document', 'email'] as const;
     display: none;
   }
   .email-preview {
+    display: grid;
     max-width: 780px;
     margin: 0 auto;
     padding: 20px;
@@ -328,7 +389,23 @@ const glyphs = ['request', 'thinking', 'document', 'email'] as const;
     color: var(--teal-dark);
     font-size: 15px;
   }
-  .email-preview > p:last-child {
+  .email-preview-fallback,
+  .email-detail {
+    grid-area: 1 / 1;
+    min-width: 0;
+  }
+  .email-detail {
+    visibility: hidden;
+  }
+  .workflow-example[data-email-details] .email-preview-fallback {
+    visibility: hidden;
+  }
+  .workflow-example[data-email-details] .email-detail[data-current] {
+    visibility: visible;
+  }
+  .email-preview-fallback > p:last-child,
+  .email-detail > p:last-child,
+  .email-detail .email-endpoints p {
     margin: 0;
     font-size: 17px;
     line-height: 1.7;
