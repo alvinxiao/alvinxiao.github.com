@@ -54,7 +54,11 @@ for (const route of routes) {
       Promise.all(
         document
           .getAnimations()
-          .filter((animation) => animation.effect?.getTiming().iterations !== Infinity)
+          .filter(
+            (animation) =>
+              animation.playState === 'running' &&
+              animation.effect?.getTiming().iterations !== Infinity,
+          )
           .map((animation) => animation.finished.catch(() => undefined)),
       ),
     );

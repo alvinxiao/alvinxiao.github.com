@@ -1,0 +1,352 @@
+[
+  {
+    "side": "before",
+    "width": 320,
+    "height": 640,
+    "originalExamples": [
+      "01The same questions. Again.AI-assisted drafting, an FAQ, or reusable email templates may be appropriate.Make room for the human part",
+      "02Less copying. More doing.Formulas, scripts, or basic automation may work without AI.Sometimes simpler is better",
+      "03Find the useful bits.AI-assisted summaries, templates, or a better process may help.Start with what you need"
+    ],
+    "words": 72
+  },
+  {
+    "side": "after",
+    "width": 320,
+    "height": 640,
+    "originalExamples": [
+      "01The same questions. Again.AI-assisted drafting, an FAQ, or reusable email templates may be appropriate.Make room for the human part",
+      "02Less copying. More doing.Formulas, scripts, or basic automation may work without AI.Sometimes simpler is better",
+      "03Find the useful bits.AI-assisted summaries, templates, or a better process may help.Start with what you need"
+    ],
+    "words": 73
+  },
+  {
+    "side": "before",
+    "width": 390,
+    "height": 844,
+    "originalExamples": [
+      "01The same questions. Again.AI-assisted drafting, an FAQ, or reusable email templates may be appropriate.Make room for the human part",
+      "02Less copying. More doing.Formulas, scripts, or basic automation may work without AI.Sometimes simpler is better",
+      "03Find the useful bits.AI-assisted summaries, templates, or a better process may help.Start with what you need"
+    ],
+    "words": 72
+  },
+  {
+    "side": "after",
+    "width": 390,
+    "height": 844,
+    "originalExamples": [
+      "01The same questions. Again.AI-assisted drafting, an FAQ, or reusable email templates may be appropriate.Make room for the human part",
+      "02Less copying. More doing.Formulas, scripts, or basic automation may work without AI.Sometimes simpler is better",
+      "03Find the useful bits.AI-assisted summaries, templates, or a better process may help.Start with what you need"
+    ],
+    "words": 73
+  },
+  {
+    "side": "before",
+    "width": 651,
+    "height": 1000,
+    "originalExamples": [
+      "01The same questions. Again.AI-assisted drafting, an FAQ, or reusable email templates may be appropriate.Make room for the human part",
+      "02Less copying. More doing.Formulas, scripts, or basic automation may work without AI.Sometimes simpler is better",
+      "03Find the useful bits.AI-assisted summaries, templates, or a better process may help.Start with what you need"
+    ],
+    "words": 72
+  },
+  {
+    "side": "after",
+    "width": 651,
+    "height": 1000,
+    "originalExamples": [
+      "01The same questions. Again.AI-assisted drafting, an FAQ, or reusable email templates may be appropriate.Make room for the human part",
+      "02Less copying. More doing.Formulas, scripts, or basic automation may work without AI.Sometimes simpler is better",
+      "03Find the useful bits.AI-assisted summaries, templates, or a better process may help.Start with what you need"
+    ],
+    "words": 73
+  },
+  {
+    "side": "before",
+    "width": 768,
+    "height": 1000,
+    "originalExamples": [
+      "01The same questions. Again.AI-assisted drafting, an FAQ, or reusable email templates may be appropriate.Make room for the human part",
+      "02Less copying. More doing.Formulas, scripts, or basic automation may work without AI.Sometimes simpler is better",
+      "03Find the useful bits.AI-assisted summaries, templates, or a better process may help.Start with what you need"
+    ],
+    "words": 72
+  },
+  {
+    "side": "after",
+    "width": 768,
+    "height": 1000,
+    "originalExamples": [
+      "01The same questions. Again.AI-assisted drafting, an FAQ, or reusable email templates may be appropriate.Make room for the human part",
+      "02Less copying. More doing.Formulas, scripts, or basic automation may work without AI.Sometimes simpler is better",
+      "03Find the useful bits.AI-assisted summaries, templates, or a better process may help.Start with what you need"
+    ],
+    "words": 73
+  },
+  {
+    "side": "before",
+    "width": 1440,
+    "height": 900,
+    "originalExamples": [
+      "01The same questions. Again.AI-assisted drafting, an FAQ, or reusable email templates may be appropriate.Make room for the human part",
+      "02Less copying. More doing.Formulas, scripts, or basic automation may work without AI.Sometimes simpler is better",
+      "03Find the useful bits.AI-assisted summaries, templates, or a better process may help.Start with what you need"
+    ],
+    "words": 72
+  },
+  {
+    "side": "after",
+    "width": 1440,
+    "height": 900,
+    "originalExamples": [
+      "01The same questions. Again.AI-assisted drafting, an FAQ, or reusable email templates may be appropriate.Make room for the human part",
+      "02Less copying. More doing.Formulas, scripts, or basic automation may work without AI.Sometimes simpler is better",
+      "03Find the useful bits.AI-assisted summaries, templates, or a better process may help.Start with what you need"
+    ],
+    "words": 73
+  },
+  {
+    "width": 390,
+    "phase": "request",
+    "time": 400,
+    "sample": {
+      "current": "0",
+      "description": "A customer asks for a changeSam emails to ask for a matte finish instead of the original finish.",
+      "x": 39,
+      "y": 319.9375,
+      "markers": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "shapes": {
+        "request": "1",
+        "thinking": "0",
+        "document": "0",
+        "email": "0"
+      }
+    }
+  },
+  {
+    "width": 390,
+    "phase": "history",
+    "time": 3600,
+    "sample": {
+      "current": "1",
+      "description": "Find the relevant historyEarlier emails provide the order details and Sam’s preference for Friday updates.",
+      "x": 39,
+      "y": 399.734375,
+      "markers": [
+        "1",
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      "shapes": {
+        "request": "0",
+        "thinking": "1",
+        "document": "0",
+        "email": "0"
+      }
+    }
+  },
+  {
+    "width": 390,
+    "phase": "voice",
+    "time": 7200,
+    "sample": {
+      "current": "2",
+      "description": "Keep the reply sounding like youYour previous emails guide a friendly, brief reply that feels familiar to Sam.",
+      "x": 39,
+      "y": 479.53125,
+      "markers": [
+        "1",
+        "1",
+        "1",
+        "0",
+        "0"
+      ],
+      "shapes": {
+        "request": "0",
+        "thinking": "1",
+        "document": "0",
+        "email": "0"
+      }
+    }
+  },
+  {
+    "width": 390,
+    "phase": "document",
+    "time": 10800,
+    "sample": {
+      "current": "3",
+      "description": "Example email to SamHi Sam, I've updated your order to a matte finish. I'll send your next update on Friday.",
+      "x": 39,
+      "y": 559.328125,
+      "markers": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "0"
+      ],
+      "shapes": {
+        "request": "0",
+        "thinking": "0",
+        "document": "1",
+        "email": "0"
+      }
+    }
+  },
+  {
+    "width": 390,
+    "phase": "email",
+    "time": 14400,
+    "sample": {
+      "current": "4",
+      "description": "Ready to sendYou check the order change and Friday update, then approve the email before it is sent.The email is sent automatically using the delivery rules you agreed.",
+      "x": 39,
+      "y": 639.125,
+      "markers": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "shapes": {
+        "request": "0",
+        "thinking": "0",
+        "document": "0",
+        "email": "1"
+      }
+    }
+  },
+  {
+    "width": 1440,
+    "phase": "request",
+    "time": 400,
+    "sample": {
+      "current": "0",
+      "description": "A customer asks for a changeSam emails to ask for a matte finish instead of the original finish.",
+      "x": 249.59375,
+      "y": 431.109375,
+      "markers": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "shapes": {
+        "request": "1",
+        "thinking": "0",
+        "document": "0",
+        "email": "0"
+      }
+    }
+  },
+  {
+    "width": 1440,
+    "phase": "history",
+    "time": 3600,
+    "sample": {
+      "current": "1",
+      "description": "Find the relevant historyEarlier emails provide the order details and Sam’s preference for Friday updates.",
+      "x": 474.78125,
+      "y": 431.109375,
+      "markers": [
+        "1",
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      "shapes": {
+        "request": "0",
+        "thinking": "1",
+        "document": "0",
+        "email": "0"
+      }
+    }
+  },
+  {
+    "width": 1440,
+    "phase": "voice",
+    "time": 7200,
+    "sample": {
+      "current": "2",
+      "description": "Keep the reply sounding like youYour previous emails guide a friendly, brief reply that feels familiar to Sam.",
+      "x": 699.984375,
+      "y": 431.109375,
+      "markers": [
+        "1",
+        "1",
+        "1",
+        "0",
+        "0"
+      ],
+      "shapes": {
+        "request": "0",
+        "thinking": "1",
+        "document": "0",
+        "email": "0"
+      }
+    }
+  },
+  {
+    "width": 1440,
+    "phase": "document",
+    "time": 10800,
+    "sample": {
+      "current": "3",
+      "description": "Example email to SamHi Sam, I've updated your order to a matte finish. I'll send your next update on Friday.",
+      "x": 925.1875,
+      "y": 431.109375,
+      "markers": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "0"
+      ],
+      "shapes": {
+        "request": "0",
+        "thinking": "0",
+        "document": "1",
+        "email": "0"
+      }
+    }
+  },
+  {
+    "width": 1440,
+    "phase": "email",
+    "time": 14400,
+    "sample": {
+      "current": "4",
+      "description": "Ready to sendYou check the order change and Friday update, then approve the email before it is sent.The email is sent automatically using the delivery rules you agreed.",
+      "x": 1150.390625,
+      "y": 431.109375,
+      "markers": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "shapes": {
+        "request": "0",
+        "thinking": "0",
+        "document": "0",
+        "email": "1"
+      }
+    }
+  }
+]

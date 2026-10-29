@@ -4,6 +4,7 @@ import Arrow from '../components/Arrow.astro';
 import SectionIcon from '../components/SectionIcon.astro';
 import ResourceArtwork from '../components/ResourceArtwork.astro';
 import HeroIllustration from '../components/HeroIllustration.astro';
+import WorkflowExample from '../components/WorkflowExample.astro';
 import ClosingCTA from '../components/ClosingCTA.astro';
 import { hero, paths, examples, processSteps, site } from '../content/site';
 import { services } from '../content/services';
@@ -128,17 +129,20 @@ import { services } from '../content/services';
     <p class="small-text">Illustrative scenarios, not client case studies.</p>
     <div class="examples" data-reveal-group>
       {examples.map((example, i) => (
-        <div class="example-row" data-reveal>
-          <span class="example-visual">
-            <span class="number">0{i + 1}</span>
-            <SectionIcon name={i === 0 ? 'chat' : i === 1 ? 'layers' : 'document'} />
-          </span>
-          <h3>{example.title}</h3>
-          <div>
-            <p>{example.solution}</p>
-            <span class="example-label">{example.label}</span>
+        <Fragment>
+          <div class="example-row" data-reveal>
+            <span class="example-visual">
+              <span class="number">0{i + 1}</span>
+              <SectionIcon name={i === 0 ? 'chat' : i === 1 ? 'layers' : 'document'} />
+            </span>
+            <h3>{example.title}</h3>
+            <div>
+              <p>{example.solution}</p>
+              <span class="example-label">{example.label}</span>
+            </div>
           </div>
-        </div>
+          {i === 0 && <WorkflowExample />}
+        </Fragment>
       ))}
     </div>
   </section>

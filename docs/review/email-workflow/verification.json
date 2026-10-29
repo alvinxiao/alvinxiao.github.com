@@ -1,0 +1,147 @@
+{
+  "previousVersion": "498304c",
+  "targetedBrowserRun": {
+    "startTime": "2026-10-28T11:02:56.341Z",
+    "duration": 44126.579,
+    "expected": 15,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "heroSectionPixelIdenticalAt": [
+    320,
+    390,
+    768,
+    1440
+  ],
+  "builds": {
+    "previous": {
+      "externalCssBytes": 39716,
+      "homeHtmlBytes": 33395,
+      "homeInlineCssBytes": 0,
+      "externalJavaScript": {
+        "model.DfGLSz-I.js": {
+          "bytes": 1275,
+          "sha256": "9fbfd826933a945dc44b0bd33a47ae035037c80fb4c3dc84696e0e7a36a5ea0b"
+        },
+        "thank-you.astro_astro_type_script_index_0_lang.CQibBX_G.js": {
+          "bytes": 481,
+          "sha256": "59766c9c851aab0027d46bcfc124a7f38cbe35e7bdf75dfb745eddffc4d948ec"
+        },
+        "contact.astro_astro_type_script_index_0_lang.BatgoHET.js": {
+          "bytes": 6769,
+          "sha256": "ea8946fc732de0033af5c6bfa1ea4304c5c39871bc750679e0d7b5f133ca795d"
+        }
+      },
+      "homeInlineScripts": [
+        {
+          "bytes": 1208,
+          "sha256": "82082a594448434f46e3d9c99cf53c4bcbb18aa56bbd794e893d2d1f23da9749"
+        },
+        {
+          "bytes": 4048,
+          "sha256": "9127bf7f614da81f1b7f209091a818d47a016726e3fb28f03dafc98617eef5de"
+        }
+      ]
+    },
+    "revised": {
+      "externalCssBytes": 38872,
+      "homeHtmlBytes": 28231,
+      "homeInlineCssBytes": 0,
+      "externalJavaScript": {
+        "model.DfGLSz-I.js": {
+          "bytes": 1275,
+          "sha256": "9fbfd826933a945dc44b0bd33a47ae035037c80fb4c3dc84696e0e7a36a5ea0b"
+        },
+        "thank-you.astro_astro_type_script_index_0_lang.CQibBX_G.js": {
+          "bytes": 481,
+          "sha256": "59766c9c851aab0027d46bcfc124a7f38cbe35e7bdf75dfb745eddffc4d948ec"
+        },
+        "WorkflowExample.astro_astro_type_script_index_0_lang.Cbp_2XP1.js": {
+          "bytes": 4346,
+          "sha256": "87179b2b9179a042bfa0c2a01c71fa7700c2b45b8872a91d5154d9ae03366561"
+        },
+        "contact.astro_astro_type_script_index_0_lang.BatgoHET.js": {
+          "bytes": 6769,
+          "sha256": "ea8946fc732de0033af5c6bfa1ea4304c5c39871bc750679e0d7b5f133ca795d"
+        }
+      },
+      "homeInlineScripts": [
+        {
+          "bytes": 1208,
+          "sha256": "82082a594448434f46e3d9c99cf53c4bcbb18aa56bbd794e893d2d1f23da9749"
+        },
+        {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 4048,
+          "sha256": "9127bf7f614da81f1b7f209091a818d47a016726e3fb28f03dafc98617eef5de"
+        }
+      ]
+    }
+  },
+  "videos": {
+    "desktop-diff.mp4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 2068,
+          "height": 1020
+        }
+      ],
+      "format": {
+        "duration": "14.160000"
+      }
+    },
+    "no-javascript-diff.mp4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 800,
+          "height": 1220
+        }
+      ],
+      "format": {
+        "duration": "5.080000"
+      }
+    },
+    "phone-diff.mp4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 800,
+          "height": 1220
+        }
+      ],
+      "format": {
+        "duration": "14.120000"
+      }
+    },
+    "reduced-motion-diff.mp4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 800,
+          "height": 1220
+        }
+      ],
+      "format": {
+        "duration": "6.000000"
+      }
+    }
+  },
+  "accessibilityRoutesRun": {
+    "startTime": "2026-10-28T11:17:37.491Z",
+    "duration": 43437.159999999996,
+    "expected": 11,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

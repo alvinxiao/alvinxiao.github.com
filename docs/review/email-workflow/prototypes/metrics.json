@@ -1,0 +1,38 @@
+[
+  {
+    "kind": "a",
+    "width": 320,
+    "height": 1017,
+    "overflow": false
+  },
+  {
+    "kind": "a",
+    "width": 390,
+    "height": 846,
+    "overflow": false
+  },
+  {
+    "kind": "a",
+    "width": 1440,
+    "height": 654,
+    "overflow": false
+  },
+  {
+    "kind": "b",
+    "width": 320,
+    "height": 1130,
+    "overflow": false
+  },
+  {
+    "kind": "b",
+    "width": 390,
+    "height": 960,
+    "overflow": false
+  },
+  {
+    "kind": "b",
+    "width": 1440,
+    "height": 843,
+    "overflow": false
+  }
+]
