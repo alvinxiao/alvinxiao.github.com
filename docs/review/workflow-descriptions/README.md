@@ -14,9 +14,15 @@ Reduced-motion visitors can choose steps without movement. With JavaScript unava
 
 Baseline is `4bab333`, the previous PR revision, not the published site.
 
+[Uninterrupted human-approval video](videos/approval-uninterrupted.mp4).
+
 [Phone comparison video](videos/phone-diff.mp4), [desktop video](videos/desktop-diff.mp4), [reduced-motion video](videos/reduced-motion-diff.mp4), [JavaScript-disabled video](videos/no-javascript-diff.mp4).
 
-Normal-motion recordings demonstrate automatic descriptions, Pause, backward and forward step selection, Resume, and the automatic-delivery option.
+Normal-motion comparisons show a complete uninterrupted human-approval run first, then explicitly labelled paused navigation, Resume, and a complete automatic-delivery run. The captions distinguish the previous 6.8-second animation from the revised 18-second one.
+
+The earlier recording mixed unlabelled manual step jumps into the initial approval run. It made intentional seeking hard to distinguish from playback trouble. The standalone approval clip now records the current site without any pauses, step selections, or delivery-mode changes. Its captions mark the final reading hold and completion. [Playback samples](approval-playback.json) verify ordered stages, nondecreasing elapsed animation time, and final completion.
+
+This recording revision changes the capture helper and review evidence. No website source changes were made, and a playback fault has not been reproduced in the current site.
 
 | Phase | Previous fixed box | Revised description |
 | --- | --- | --- |
@@ -41,6 +47,6 @@ Independent review caught and resolved delivery-description visibility: only the
 
 Prove It Works shapes verification: exercise actual native step buttons and read the displayed state while real playback runs.
 
-Reproduce using prelaunch builds of `4bab333` and the revision on ports 4351 and 4340, then run `PLAYWRIGHT_BROWSERS_PATH=/tmp/playwright-media PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium node scripts/capture-email-workflow-review.mjs`.
+To regenerate only the recordings, set `ONLY_VIDEOS=1`. Reproduce using prelaunch builds of `4bab333` and the revision on ports 4351 and 4340, then run `PLAYWRIGHT_BROWSERS_PATH=/tmp/playwright-media PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium node scripts/capture-email-workflow-review.mjs`.
 
 Keep PR #31 unmerged with auto-merge off until owner approval.
