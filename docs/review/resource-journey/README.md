@@ -23,6 +23,7 @@ PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium node scripts/capture-resou
 - Typecheck, ESLint, formatting, unit tests, and prelaunch output checks.
 - Three new browser tests cover authored index order, first/middle/last endings, native keyboard/Back/touch navigation, no JavaScript, reduced motion, mobile reflow, 15px minimum descendant text, and 44px minimum link height.
 - Existing five resource motion tests passed.
+- The first CI run caught an accessibility scan during the existing header fade-in. The test now waits for finite entrance animations to finish and asserts full header-link opacity before scanning, matching the existing site test protocol. No product animation or contrast rule changed.
 - Axe scans within each article's main landmark passed. The initial unrestricted scan also found two existing shared-page issues, reproduced on master: the wordmark's accessible name omits its visible descriptor, and the preview banner is outside landmarks. They remain outside this PR's scope; no full-page accessibility or WCAG conformance claim is made.
 - Chromium 154 on Linux only. Other engines, real devices, screen readers, and native browser zoom remain unverified.
 

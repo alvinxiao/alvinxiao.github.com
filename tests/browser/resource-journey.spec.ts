@@ -22,6 +22,19 @@ test('index and first, middle, last endings follow the authored path', async ({ 
       'href',
       '/resources/',
     );
+    await page.evaluate(() =>
+      Promise.all(
+        document
+          .getAnimations()
+          .filter(
+            (animation) =>
+              animation.playState === 'running' &&
+              animation.effect?.getTiming().iterations !== Infinity,
+          )
+          .map((animation) => animation.finished.catch(() => undefined)),
+      ),
+    );
+    await expect(page.locator('.article-header > a')).toHaveCSS('opacity', '1');
     expect((await new AxeBuilder({ page }).include('main').analyze()).violations).toEqual([]);
   }
 });
