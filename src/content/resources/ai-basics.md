@@ -32,7 +32,11 @@ For medical, legal, financial, or other consequential decisions, get the relevan
 
 A useful instruction describes the job, the audience, the information to use, and the desired format. For example:
 
+<div class="practice-prompt" data-copy-prompt="Basics">
+
 > Write two friendly versions of a reminder email for a fictional pottery class. The class starts at 10am on Sunday. Ask attendees to arrive ten minutes early. Keep each version under 80 words. Use only these details and do not add a cancellation policy.
+
+</div>
 
 Compare the drafts with the supplied facts. Did the time change? Did the tool invent a location? Does the message sound like something you would send? Edit it before using it.
 

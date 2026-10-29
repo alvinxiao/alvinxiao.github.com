@@ -23,7 +23,11 @@ The target is a usable reminder with all the supplied details and no invented po
 
 Copy this instruction into the tool:
 
+<div class="practice-prompt" data-copy-prompt="First draft">
+
 > Draft a reminder email from the fictional business Cedar Street Pottery for a beginner pottery class on Sunday at 10am. Ask attendees to arrive ten minutes early and bring an apron. Use a friendly, straightforward tone and fewer than 80 words. Use only the facts in this instruction. Do not invent an address, booking link, price, or cancellation policy.
+
+</div>
 
 You should receive a short email draft. The wording will vary between tools and attempts. A different answer is not necessarily a better answer.
 
@@ -43,7 +47,11 @@ Check the word count yourself if the limit matters. If the draft is incorrect, f
 
 Try this follow-up instruction:
 
+<div class="practice-prompt" data-copy-prompt="Revision">
+
 > Make the wording more conversational. Keep all the class details unchanged. Remove promotional language and keep the email under 80 words.
+
+</div>
 
 Compare the new version with the first one. Recheck the facts as well as the tone. A request to improve the wording can change details you wanted to keep.
 

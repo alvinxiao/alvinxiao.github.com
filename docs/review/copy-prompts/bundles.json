@@ -1,0 +1,72 @@
+{
+  "baseline": {
+    "model.DfGLSz-I.js": 1275,
+    "thank-you.astro_astro_type_script_index_0_lang.CQibBX_G.js": 481,
+    "contact.astro_astro_type_script_index_0_lang.BatgoHET.js": 6769,
+    "WorkflowExample.astro_astro_type_script_index_0_lang.BlMpPFMh.js": 6544
+  },
+  "revised": {
+    "model.DfGLSz-I.js": 1275,
+    "WorkflowExample.astro_astro_type_script_index_0_lang.BlMpPFMh.js": 6544,
+    "thank-you.astro_astro_type_script_index_0_lang.CQibBX_G.js": 481,
+    "contact.astro_astro_type_script_index_0_lang.BatgoHET.js": 6769
+  },
+  "added": {},
+  "note": "Built asset sizes, not performance measurements.",
+  "articleScripts": {
+    "ai-basics": {
+      "baseline": [
+        {
+          "src": null,
+          "inlineBytes": 4048
+        }
+      ],
+      "revised": [
+        {
+          "src": null,
+          "inlineBytes": 1301
+        },
+        {
+          "src": null,
+          "inlineBytes": 4048
+        }
+      ]
+    },
+    "getting-started": {
+      "baseline": [
+        {
+          "src": null,
+          "inlineBytes": 4048
+        }
+      ],
+      "revised": [
+        {
+          "src": null,
+          "inlineBytes": 1301
+        },
+        {
+          "src": null,
+          "inlineBytes": 4048
+        }
+      ]
+    },
+    "workflow": {
+      "baseline": [
+        {
+          "src": null,
+          "inlineBytes": 4048
+        }
+      ],
+      "revised": [
+        {
+          "src": null,
+          "inlineBytes": 1301
+        },
+        {
+          "src": null,
+          "inlineBytes": 4048
+        }
+      ]
+    }
+  }
+}

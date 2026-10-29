@@ -1,0 +1,506 @@
+[
+  {
+    "side": "before",
+    "guide": "ai-basics",
+    "width": 320,
+    "text": "A customer email needs a reply. You know what to say, but finding the words takes longer than you would like. A generative AI tool can help produce a first draft. You still need to check what it says. That distinction is a useful starting point. Generative AI creates text, images, code, and other content using patterns learned during training and the context supplied to it. It can produce a convincing answer without knowing whether that answer is true. What it can help with For a small business, useful experiments often involve work you already understand: Turn your rough notes into an outline for a newsletter. Suggest alternative wording for a product description. Organize a list of ideas into themes. Draft questions to ask before starting a project. These tasks give you something to react to. You can spot missing details, choose a better phrase, or reject the result. Start where you can judge the output yourself. Why a fluent answer can be wrong An AI tool can invent a fact, quotation, source, or policy. This is often called a hallucination. Asking it to be accurate does not remove that risk. A second answer from the same tool is not an independent fact check. If a draft mentions your opening hours, compare them with your actual schedule. If it cites a source, open the source and check that it supports the claim. Verify calculations with a calculator or spreadsheet. For medical, legal, financial, or other consequential decisions, get the relevant qualified advice. A polished explanation does not establish expertise. Give it a task you can inspect A useful instruction describes the job, the audience, the information to use, and the desired format. For example: Write two friendly versions of a reminder email for a fictional pottery class. The class starts at 10am on Sunday. Ask attendees to arrive ten minutes early. Keep each version under 80 words. Use only these details and do not add a cancellation policy. Compare the drafts with the supplied facts. Did the time change? Did the tool invent a location? Does the message sound like something you would send? Edit it before using it. Choose what information to share Use fictional examples for your first attempts. Do not paste customer records, passwords, payment information, or confidential documents into a tool just to test it. Data handling depends on the provider, product, plan, and settings. Check the current terms before using business information. A paid subscription alone does not establish that a tool is suitable for sensitive work. AI is one option A reusable template might solve the email problem without generating a new answer each time. A spreadsheet formula might be more reliable for a calculation. Choose the approach that produces a result you can trust and maintain. Ready to try a small task? Follow a first experiment with fictional information.",
+    "headings": [
+      {
+        "id": "what-it-can-help-with",
+        "text": "What it can help with"
+      },
+      {
+        "id": "why-a-fluent-answer-can-be-wrong",
+        "text": "Why a fluent answer can be wrong"
+      },
+      {
+        "id": "give-it-a-task-you-can-inspect",
+        "text": "Give it a task you can inspect"
+      },
+      {
+        "id": "choose-what-information-to-share",
+        "text": "Choose what information to share"
+      },
+      {
+        "id": "ai-is-one-option",
+        "text": "AI is one option"
+      }
+    ],
+    "quotes": [
+      "Write two friendly versions of a reminder email for a fictional pottery class. The class starts at 10am on Sunday. Ask attendees to arrive ten minutes early. Keep each version under 80 words. Use only these details and do not add a cancellation policy."
+    ]
+  },
+  {
+    "side": "after",
+    "guide": "ai-basics",
+    "width": 320,
+    "text": "A customer email needs a reply. You know what to say, but finding the words takes longer than you would like. A generative AI tool can help produce a first draft. You still need to check what it says. That distinction is a useful starting point. Generative AI creates text, images, code, and other content using patterns learned during training and the context supplied to it. It can produce a convincing answer without knowing whether that answer is true. What it can help with For a small business, useful experiments often involve work you already understand: Turn your rough notes into an outline for a newsletter. Suggest alternative wording for a product description. Organize a list of ideas into themes. Draft questions to ask before starting a project. These tasks give you something to react to. You can spot missing details, choose a better phrase, or reject the result. Start where you can judge the output yourself. Why a fluent answer can be wrong An AI tool can invent a fact, quotation, source, or policy. This is often called a hallucination. Asking it to be accurate does not remove that risk. A second answer from the same tool is not an independent fact check. If a draft mentions your opening hours, compare them with your actual schedule. If it cites a source, open the source and check that it supports the claim. Verify calculations with a calculator or spreadsheet. For medical, legal, financial, or other consequential decisions, get the relevant qualified advice. A polished explanation does not establish expertise. Give it a task you can inspect A useful instruction describes the job, the audience, the information to use, and the desired format. For example: Write two friendly versions of a reminder email for a fictional pottery class. The class starts at 10am on Sunday. Ask attendees to arrive ten minutes early. Keep each version under 80 words. Use only these details and do not add a cancellation policy. Compare the drafts with the supplied facts. Did the time change? Did the tool invent a location? Does the message sound like something you would send? Edit it before using it. Choose what information to share Use fictional examples for your first attempts. Do not paste customer records, passwords, payment information, or confidential documents into a tool just to test it. Data handling depends on the provider, product, plan, and settings. Check the current terms before using business information. A paid subscription alone does not establish that a tool is suitable for sensitive work. AI is one option A reusable template might solve the email problem without generating a new answer each time. A spreadsheet formula might be more reliable for a calculation. Choose the approach that produces a result you can trust and maintain. Ready to try a small task? Follow a first experiment with fictional information.",
+    "headings": [
+      {
+        "id": "what-it-can-help-with",
+        "text": "What it can help with"
+      },
+      {
+        "id": "why-a-fluent-answer-can-be-wrong",
+        "text": "Why a fluent answer can be wrong"
+      },
+      {
+        "id": "give-it-a-task-you-can-inspect",
+        "text": "Give it a task you can inspect"
+      },
+      {
+        "id": "choose-what-information-to-share",
+        "text": "Choose what information to share"
+      },
+      {
+        "id": "ai-is-one-option",
+        "text": "AI is one option"
+      }
+    ],
+    "quotes": [
+      "Write two friendly versions of a reminder email for a fictional pottery class. The class starts at 10am on Sunday. Ask attendees to arrive ten minutes early. Keep each version under 80 words. Use only these details and do not add a cancellation policy."
+    ]
+  },
+  {
+    "side": "before",
+    "guide": "ai-basics",
+    "width": 390,
+    "text": "A customer email needs a reply. You know what to say, but finding the words takes longer than you would like. A generative AI tool can help produce a first draft. You still need to check what it says. That distinction is a useful starting point. Generative AI creates text, images, code, and other content using patterns learned during training and the context supplied to it. It can produce a convincing answer without knowing whether that answer is true. What it can help with For a small business, useful experiments often involve work you already understand: Turn your rough notes into an outline for a newsletter. Suggest alternative wording for a product description. Organize a list of ideas into themes. Draft questions to ask before starting a project. These tasks give you something to react to. You can spot missing details, choose a better phrase, or reject the result. Start where you can judge the output yourself. Why a fluent answer can be wrong An AI tool can invent a fact, quotation, source, or policy. This is often called a hallucination. Asking it to be accurate does not remove that risk. A second answer from the same tool is not an independent fact check. If a draft mentions your opening hours, compare them with your actual schedule. If it cites a source, open the source and check that it supports the claim. Verify calculations with a calculator or spreadsheet. For medical, legal, financial, or other consequential decisions, get the relevant qualified advice. A polished explanation does not establish expertise. Give it a task you can inspect A useful instruction describes the job, the audience, the information to use, and the desired format. For example: Write two friendly versions of a reminder email for a fictional pottery class. The class starts at 10am on Sunday. Ask attendees to arrive ten minutes early. Keep each version under 80 words. Use only these details and do not add a cancellation policy. Compare the drafts with the supplied facts. Did the time change? Did the tool invent a location? Does the message sound like something you would send? Edit it before using it. Choose what information to share Use fictional examples for your first attempts. Do not paste customer records, passwords, payment information, or confidential documents into a tool just to test it. Data handling depends on the provider, product, plan, and settings. Check the current terms before using business information. A paid subscription alone does not establish that a tool is suitable for sensitive work. AI is one option A reusable template might solve the email problem without generating a new answer each time. A spreadsheet formula might be more reliable for a calculation. Choose the approach that produces a result you can trust and maintain. Ready to try a small task? Follow a first experiment with fictional information.",
+    "headings": [
+      {
+        "id": "what-it-can-help-with",
+        "text": "What it can help with"
+      },
+      {
+        "id": "why-a-fluent-answer-can-be-wrong",
+        "text": "Why a fluent answer can be wrong"
+      },
+      {
+        "id": "give-it-a-task-you-can-inspect",
+        "text": "Give it a task you can inspect"
+      },
+      {
+        "id": "choose-what-information-to-share",
+        "text": "Choose what information to share"
+      },
+      {
+        "id": "ai-is-one-option",
+        "text": "AI is one option"
+      }
+    ],
+    "quotes": [
+      "Write two friendly versions of a reminder email for a fictional pottery class. The class starts at 10am on Sunday. Ask attendees to arrive ten minutes early. Keep each version under 80 words. Use only these details and do not add a cancellation policy."
+    ]
+  },
+  {
+    "side": "after",
+    "guide": "ai-basics",
+    "width": 390,
+    "text": "A customer email needs a reply. You know what to say, but finding the words takes longer than you would like. A generative AI tool can help produce a first draft. You still need to check what it says. That distinction is a useful starting point. Generative AI creates text, images, code, and other content using patterns learned during training and the context supplied to it. It can produce a convincing answer without knowing whether that answer is true. What it can help with For a small business, useful experiments often involve work you already understand: Turn your rough notes into an outline for a newsletter. Suggest alternative wording for a product description. Organize a list of ideas into themes. Draft questions to ask before starting a project. These tasks give you something to react to. You can spot missing details, choose a better phrase, or reject the result. Start where you can judge the output yourself. Why a fluent answer can be wrong An AI tool can invent a fact, quotation, source, or policy. This is often called a hallucination. Asking it to be accurate does not remove that risk. A second answer from the same tool is not an independent fact check. If a draft mentions your opening hours, compare them with your actual schedule. If it cites a source, open the source and check that it supports the claim. Verify calculations with a calculator or spreadsheet. For medical, legal, financial, or other consequential decisions, get the relevant qualified advice. A polished explanation does not establish expertise. Give it a task you can inspect A useful instruction describes the job, the audience, the information to use, and the desired format. For example: Write two friendly versions of a reminder email for a fictional pottery class. The class starts at 10am on Sunday. Ask attendees to arrive ten minutes early. Keep each version under 80 words. Use only these details and do not add a cancellation policy. Compare the drafts with the supplied facts. Did the time change? Did the tool invent a location? Does the message sound like something you would send? Edit it before using it. Choose what information to share Use fictional examples for your first attempts. Do not paste customer records, passwords, payment information, or confidential documents into a tool just to test it. Data handling depends on the provider, product, plan, and settings. Check the current terms before using business information. A paid subscription alone does not establish that a tool is suitable for sensitive work. AI is one option A reusable template might solve the email problem without generating a new answer each time. A spreadsheet formula might be more reliable for a calculation. Choose the approach that produces a result you can trust and maintain. Ready to try a small task? Follow a first experiment with fictional information.",
+    "headings": [
+      {
+        "id": "what-it-can-help-with",
+        "text": "What it can help with"
+      },
+      {
+        "id": "why-a-fluent-answer-can-be-wrong",
+        "text": "Why a fluent answer can be wrong"
+      },
+      {
+        "id": "give-it-a-task-you-can-inspect",
+        "text": "Give it a task you can inspect"
+      },
+      {
+        "id": "choose-what-information-to-share",
+        "text": "Choose what information to share"
+      },
+      {
+        "id": "ai-is-one-option",
+        "text": "AI is one option"
+      }
+    ],
+    "quotes": [
+      "Write two friendly versions of a reminder email for a fictional pottery class. The class starts at 10am on Sunday. Ask attendees to arrive ten minutes early. Keep each version under 80 words. Use only these details and do not add a cancellation policy."
+    ]
+  },
+  {
+    "side": "before",
+    "guide": "ai-basics",
+    "width": 768,
+    "text": "A customer email needs a reply. You know what to say, but finding the words takes longer than you would like. A generative AI tool can help produce a first draft. You still need to check what it says. That distinction is a useful starting point. Generative AI creates text, images, code, and other content using patterns learned during training and the context supplied to it. It can produce a convincing answer without knowing whether that answer is true. What it can help with For a small business, useful experiments often involve work you already understand: Turn your rough notes into an outline for a newsletter. Suggest alternative wording for a product description. Organize a list of ideas into themes. Draft questions to ask before starting a project. These tasks give you something to react to. You can spot missing details, choose a better phrase, or reject the result. Start where you can judge the output yourself. Why a fluent answer can be wrong An AI tool can invent a fact, quotation, source, or policy. This is often called a hallucination. Asking it to be accurate does not remove that risk. A second answer from the same tool is not an independent fact check. If a draft mentions your opening hours, compare them with your actual schedule. If it cites a source, open the source and check that it supports the claim. Verify calculations with a calculator or spreadsheet. For medical, legal, financial, or other consequential decisions, get the relevant qualified advice. A polished explanation does not establish expertise. Give it a task you can inspect A useful instruction describes the job, the audience, the information to use, and the desired format. For example: Write two friendly versions of a reminder email for a fictional pottery class. The class starts at 10am on Sunday. Ask attendees to arrive ten minutes early. Keep each version under 80 words. Use only these details and do not add a cancellation policy. Compare the drafts with the supplied facts. Did the time change? Did the tool invent a location? Does the message sound like something you would send? Edit it before using it. Choose what information to share Use fictional examples for your first attempts. Do not paste customer records, passwords, payment information, or confidential documents into a tool just to test it. Data handling depends on the provider, product, plan, and settings. Check the current terms before using business information. A paid subscription alone does not establish that a tool is suitable for sensitive work. AI is one option A reusable template might solve the email problem without generating a new answer each time. A spreadsheet formula might be more reliable for a calculation. Choose the approach that produces a result you can trust and maintain. Ready to try a small task? Follow a first experiment with fictional information.",
+    "headings": [
+      {
+        "id": "what-it-can-help-with",
+        "text": "What it can help with"
+      },
+      {
+        "id": "why-a-fluent-answer-can-be-wrong",
+        "text": "Why a fluent answer can be wrong"
+      },
+      {
+        "id": "give-it-a-task-you-can-inspect",
+        "text": "Give it a task you can inspect"
+      },
+      {
+        "id": "choose-what-information-to-share",
+        "text": "Choose what information to share"
+      },
+      {
+        "id": "ai-is-one-option",
+        "text": "AI is one option"
+      }
+    ],
+    "quotes": [
+      "Write two friendly versions of a reminder email for a fictional pottery class. The class starts at 10am on Sunday. Ask attendees to arrive ten minutes early. Keep each version under 80 words. Use only these details and do not add a cancellation policy."
+    ]
+  },
+  {
+    "side": "after",
+    "guide": "ai-basics",
+    "width": 768,
+    "text": "A customer email needs a reply. You know what to say, but finding the words takes longer than you would like. A generative AI tool can help produce a first draft. You still need to check what it says. That distinction is a useful starting point. Generative AI creates text, images, code, and other content using patterns learned during training and the context supplied to it. It can produce a convincing answer without knowing whether that answer is true. What it can help with For a small business, useful experiments often involve work you already understand: Turn your rough notes into an outline for a newsletter. Suggest alternative wording for a product description. Organize a list of ideas into themes. Draft questions to ask before starting a project. These tasks give you something to react to. You can spot missing details, choose a better phrase, or reject the result. Start where you can judge the output yourself. Why a fluent answer can be wrong An AI tool can invent a fact, quotation, source, or policy. This is often called a hallucination. Asking it to be accurate does not remove that risk. A second answer from the same tool is not an independent fact check. If a draft mentions your opening hours, compare them with your actual schedule. If it cites a source, open the source and check that it supports the claim. Verify calculations with a calculator or spreadsheet. For medical, legal, financial, or other consequential decisions, get the relevant qualified advice. A polished explanation does not establish expertise. Give it a task you can inspect A useful instruction describes the job, the audience, the information to use, and the desired format. For example: Write two friendly versions of a reminder email for a fictional pottery class. The class starts at 10am on Sunday. Ask attendees to arrive ten minutes early. Keep each version under 80 words. Use only these details and do not add a cancellation policy. Compare the drafts with the supplied facts. Did the time change? Did the tool invent a location? Does the message sound like something you would send? Edit it before using it. Choose what information to share Use fictional examples for your first attempts. Do not paste customer records, passwords, payment information, or confidential documents into a tool just to test it. Data handling depends on the provider, product, plan, and settings. Check the current terms before using business information. A paid subscription alone does not establish that a tool is suitable for sensitive work. AI is one option A reusable template might solve the email problem without generating a new answer each time. A spreadsheet formula might be more reliable for a calculation. Choose the approach that produces a result you can trust and maintain. Ready to try a small task? Follow a first experiment with fictional information.",
+    "headings": [
+      {
+        "id": "what-it-can-help-with",
+        "text": "What it can help with"
+      },
+      {
+        "id": "why-a-fluent-answer-can-be-wrong",
+        "text": "Why a fluent answer can be wrong"
+      },
+      {
+        "id": "give-it-a-task-you-can-inspect",
+        "text": "Give it a task you can inspect"
+      },
+      {
+        "id": "choose-what-information-to-share",
+        "text": "Choose what information to share"
+      },
+      {
+        "id": "ai-is-one-option",
+        "text": "AI is one option"
+      }
+    ],
+    "quotes": [
+      "Write two friendly versions of a reminder email for a fictional pottery class. The class starts at 10am on Sunday. Ask attendees to arrive ten minutes early. Keep each version under 80 words. Use only these details and do not add a cancellation policy."
+    ]
+  },
+  {
+    "side": "before",
+    "guide": "ai-basics",
+    "width": 1440,
+    "text": "A customer email needs a reply. You know what to say, but finding the words takes longer than you would like. A generative AI tool can help produce a first draft. You still need to check what it says. That distinction is a useful starting point. Generative AI creates text, images, code, and other content using patterns learned during training and the context supplied to it. It can produce a convincing answer without knowing whether that answer is true. What it can help with For a small business, useful experiments often involve work you already understand: Turn your rough notes into an outline for a newsletter. Suggest alternative wording for a product description. Organize a list of ideas into themes. Draft questions to ask before starting a project. These tasks give you something to react to. You can spot missing details, choose a better phrase, or reject the result. Start where you can judge the output yourself. Why a fluent answer can be wrong An AI tool can invent a fact, quotation, source, or policy. This is often called a hallucination. Asking it to be accurate does not remove that risk. A second answer from the same tool is not an independent fact check. If a draft mentions your opening hours, compare them with your actual schedule. If it cites a source, open the source and check that it supports the claim. Verify calculations with a calculator or spreadsheet. For medical, legal, financial, or other consequential decisions, get the relevant qualified advice. A polished explanation does not establish expertise. Give it a task you can inspect A useful instruction describes the job, the audience, the information to use, and the desired format. For example: Write two friendly versions of a reminder email for a fictional pottery class. The class starts at 10am on Sunday. Ask attendees to arrive ten minutes early. Keep each version under 80 words. Use only these details and do not add a cancellation policy. Compare the drafts with the supplied facts. Did the time change? Did the tool invent a location? Does the message sound like something you would send? Edit it before using it. Choose what information to share Use fictional examples for your first attempts. Do not paste customer records, passwords, payment information, or confidential documents into a tool just to test it. Data handling depends on the provider, product, plan, and settings. Check the current terms before using business information. A paid subscription alone does not establish that a tool is suitable for sensitive work. AI is one option A reusable template might solve the email problem without generating a new answer each time. A spreadsheet formula might be more reliable for a calculation. Choose the approach that produces a result you can trust and maintain. Ready to try a small task? Follow a first experiment with fictional information.",
+    "headings": [
+      {
+        "id": "what-it-can-help-with",
+        "text": "What it can help with"
+      },
+      {
+        "id": "why-a-fluent-answer-can-be-wrong",
+        "text": "Why a fluent answer can be wrong"
+      },
+      {
+        "id": "give-it-a-task-you-can-inspect",
+        "text": "Give it a task you can inspect"
+      },
+      {
+        "id": "choose-what-information-to-share",
+        "text": "Choose what information to share"
+      },
+      {
+        "id": "ai-is-one-option",
+        "text": "AI is one option"
+      }
+    ],
+    "quotes": [
+      "Write two friendly versions of a reminder email for a fictional pottery class. The class starts at 10am on Sunday. Ask attendees to arrive ten minutes early. Keep each version under 80 words. Use only these details and do not add a cancellation policy."
+    ]
+  },
+  {
+    "side": "after",
+    "guide": "ai-basics",
+    "width": 1440,
+    "text": "A customer email needs a reply. You know what to say, but finding the words takes longer than you would like. A generative AI tool can help produce a first draft. You still need to check what it says. That distinction is a useful starting point. Generative AI creates text, images, code, and other content using patterns learned during training and the context supplied to it. It can produce a convincing answer without knowing whether that answer is true. What it can help with For a small business, useful experiments often involve work you already understand: Turn your rough notes into an outline for a newsletter. Suggest alternative wording for a product description. Organize a list of ideas into themes. Draft questions to ask before starting a project. These tasks give you something to react to. You can spot missing details, choose a better phrase, or reject the result. Start where you can judge the output yourself. Why a fluent answer can be wrong An AI tool can invent a fact, quotation, source, or policy. This is often called a hallucination. Asking it to be accurate does not remove that risk. A second answer from the same tool is not an independent fact check. If a draft mentions your opening hours, compare them with your actual schedule. If it cites a source, open the source and check that it supports the claim. Verify calculations with a calculator or spreadsheet. For medical, legal, financial, or other consequential decisions, get the relevant qualified advice. A polished explanation does not establish expertise. Give it a task you can inspect A useful instruction describes the job, the audience, the information to use, and the desired format. For example: Write two friendly versions of a reminder email for a fictional pottery class. The class starts at 10am on Sunday. Ask attendees to arrive ten minutes early. Keep each version under 80 words. Use only these details and do not add a cancellation policy. Compare the drafts with the supplied facts. Did the time change? Did the tool invent a location? Does the message sound like something you would send? Edit it before using it. Choose what information to share Use fictional examples for your first attempts. Do not paste customer records, passwords, payment information, or confidential documents into a tool just to test it. Data handling depends on the provider, product, plan, and settings. Check the current terms before using business information. A paid subscription alone does not establish that a tool is suitable for sensitive work. AI is one option A reusable template might solve the email problem without generating a new answer each time. A spreadsheet formula might be more reliable for a calculation. Choose the approach that produces a result you can trust and maintain. Ready to try a small task? Follow a first experiment with fictional information.",
+    "headings": [
+      {
+        "id": "what-it-can-help-with",
+        "text": "What it can help with"
+      },
+      {
+        "id": "why-a-fluent-answer-can-be-wrong",
+        "text": "Why a fluent answer can be wrong"
+      },
+      {
+        "id": "give-it-a-task-you-can-inspect",
+        "text": "Give it a task you can inspect"
+      },
+      {
+        "id": "choose-what-information-to-share",
+        "text": "Choose what information to share"
+      },
+      {
+        "id": "ai-is-one-option",
+        "text": "AI is one option"
+      }
+    ],
+    "quotes": [
+      "Write two friendly versions of a reminder email for a fictional pottery class. The class starts at 10am on Sunday. Ask attendees to arrive ten minutes early. Keep each version under 80 words. Use only these details and do not add a cancellation policy."
+    ]
+  },
+  {
+    "side": "before",
+    "guide": "getting-started",
+    "width": 320,
+    "text": "In this exercise, you will create and check a short reminder email for a fictional class. You need access to a conversational AI tool. No business records or customer details are needed. 1. Set a clear target Use this fictional brief: Business: Cedar Street Pottery. Event: a beginner pottery class on Sunday at 10am. Request: attendees arrive ten minutes early and bring an apron. Tone: friendly and straightforward. Length: fewer than 80 words. The target is a usable reminder with all the supplied details and no invented policies. Keep the brief beside the draft so you can compare them. 2. Ask for a first draft Copy this instruction into the tool: Draft a reminder email from the fictional business Cedar Street Pottery for a beginner pottery class on Sunday at 10am. Ask attendees to arrive ten minutes early and bring an apron. Use a friendly, straightforward tone and fewer than 80 words. Use only the facts in this instruction. Do not invent an address, booking link, price, or cancellation policy. You should receive a short email draft. The wording will vary between tools and attempts. A different answer is not necessarily a better answer. 3. Check against the brief Read the draft before asking for revisions: Does it say Sunday at 10am? Does it include arriving ten minutes early and bringing an apron? Has it invented any details? Is it under 80 words? Would you be comfortable sending that wording? Check the word count yourself if the limit matters. If the draft is incorrect, fix the facts directly or ask for a revision and check again. 4. Make one focused revision Try this follow-up instruction: Make the wording more conversational. Keep all the class details unchanged. Remove promotional language and keep the email under 80 words. Compare the new version with the first one. Recheck the facts as well as the tone. A request to improve the wording can change details you wanted to keep. 5. Compare the whole effort Consider the time spent writing the instruction, checking the answer, and editing it. Compare that with writing the message yourself or adapting an existing template. Keep the method if it helps. If it creates more work, reduce the task or use a template. You do not need to make the experiment succeed to learn something useful. Before using a similar process with real inquiries, review the tool’s data policies and decide what information it is appropriate to share. Keep a person responsible for the final message. For a recurring task, read how to choose between a template, automation, and AI.",
+    "headings": [
+      {
+        "id": "1-set-a-clear-target",
+        "text": "1. Set a clear target"
+      },
+      {
+        "id": "2-ask-for-a-first-draft",
+        "text": "2. Ask for a first draft"
+      },
+      {
+        "id": "3-check-against-the-brief",
+        "text": "3. Check against the brief"
+      },
+      {
+        "id": "4-make-one-focused-revision",
+        "text": "4. Make one focused revision"
+      },
+      {
+        "id": "5-compare-the-whole-effort",
+        "text": "5. Compare the whole effort"
+      }
+    ],
+    "quotes": [
+      "Draft a reminder email from the fictional business Cedar Street Pottery for a beginner pottery class on Sunday at 10am. Ask attendees to arrive ten minutes early and bring an apron. Use a friendly, straightforward tone and fewer than 80 words. Use only the facts in this instruction. Do not invent an address, booking link, price, or cancellation policy.",
+      "Make the wording more conversational. Keep all the class details unchanged. Remove promotional language and keep the email under 80 words."
+    ]
+  },
+  {
+    "side": "after",
+    "guide": "getting-started",
+    "width": 320,
+    "text": "In this exercise, you will create and check a short reminder email for a fictional class. You need access to a conversational AI tool. No business records or customer details are needed. 1. Set a clear target Use this fictional brief: Business: Cedar Street Pottery. Event: a beginner pottery class on Sunday at 10am. Request: attendees arrive ten minutes early and bring an apron. Tone: friendly and straightforward. Length: fewer than 80 words. The target is a usable reminder with all the supplied details and no invented policies. Keep the brief beside the draft so you can compare them. 2. Ask for a first draft Copy this instruction into the tool: Draft a reminder email from the fictional business Cedar Street Pottery for a beginner pottery class on Sunday at 10am. Ask attendees to arrive ten minutes early and bring an apron. Use a friendly, straightforward tone and fewer than 80 words. Use only the facts in this instruction. Do not invent an address, booking link, price, or cancellation policy. You should receive a short email draft. The wording will vary between tools and attempts. A different answer is not necessarily a better answer. 3. Check against the brief Read the draft before asking for revisions: Does it say Sunday at 10am? Does it include arriving ten minutes early and bringing an apron? Has it invented any details? Is it under 80 words? Would you be comfortable sending that wording? Check the word count yourself if the limit matters. If the draft is incorrect, fix the facts directly or ask for a revision and check again. 4. Make one focused revision Try this follow-up instruction: Make the wording more conversational. Keep all the class details unchanged. Remove promotional language and keep the email under 80 words. Compare the new version with the first one. Recheck the facts as well as the tone. A request to improve the wording can change details you wanted to keep. 5. Compare the whole effort Consider the time spent writing the instruction, checking the answer, and editing it. Compare that with writing the message yourself or adapting an existing template. Keep the method if it helps. If it creates more work, reduce the task or use a template. You do not need to make the experiment succeed to learn something useful. Before using a similar process with real inquiries, review the tool’s data policies and decide what information it is appropriate to share. Keep a person responsible for the final message. For a recurring task, read how to choose between a template, automation, and AI.",
+    "headings": [
+      {
+        "id": "1-set-a-clear-target",
+        "text": "1. Set a clear target"
+      },
+      {
+        "id": "2-ask-for-a-first-draft",
+        "text": "2. Ask for a first draft"
+      },
+      {
+        "id": "3-check-against-the-brief",
+        "text": "3. Check against the brief"
+      },
+      {
+        "id": "4-make-one-focused-revision",
+        "text": "4. Make one focused revision"
+      },
+      {
+        "id": "5-compare-the-whole-effort",
+        "text": "5. Compare the whole effort"
+      }
+    ],
+    "quotes": [
+      "Draft a reminder email from the fictional business Cedar Street Pottery for a beginner pottery class on Sunday at 10am. Ask attendees to arrive ten minutes early and bring an apron. Use a friendly, straightforward tone and fewer than 80 words. Use only the facts in this instruction. Do not invent an address, booking link, price, or cancellation policy.",
+      "Make the wording more conversational. Keep all the class details unchanged. Remove promotional language and keep the email under 80 words."
+    ]
+  },
+  {
+    "side": "before",
+    "guide": "getting-started",
+    "width": 390,
+    "text": "In this exercise, you will create and check a short reminder email for a fictional class. You need access to a conversational AI tool. No business records or customer details are needed. 1. Set a clear target Use this fictional brief: Business: Cedar Street Pottery. Event: a beginner pottery class on Sunday at 10am. Request: attendees arrive ten minutes early and bring an apron. Tone: friendly and straightforward. Length: fewer than 80 words. The target is a usable reminder with all the supplied details and no invented policies. Keep the brief beside the draft so you can compare them. 2. Ask for a first draft Copy this instruction into the tool: Draft a reminder email from the fictional business Cedar Street Pottery for a beginner pottery class on Sunday at 10am. Ask attendees to arrive ten minutes early and bring an apron. Use a friendly, straightforward tone and fewer than 80 words. Use only the facts in this instruction. Do not invent an address, booking link, price, or cancellation policy. You should receive a short email draft. The wording will vary between tools and attempts. A different answer is not necessarily a better answer. 3. Check against the brief Read the draft before asking for revisions: Does it say Sunday at 10am? Does it include arriving ten minutes early and bringing an apron? Has it invented any details? Is it under 80 words? Would you be comfortable sending that wording? Check the word count yourself if the limit matters. If the draft is incorrect, fix the facts directly or ask for a revision and check again. 4. Make one focused revision Try this follow-up instruction: Make the wording more conversational. Keep all the class details unchanged. Remove promotional language and keep the email under 80 words. Compare the new version with the first one. Recheck the facts as well as the tone. A request to improve the wording can change details you wanted to keep. 5. Compare the whole effort Consider the time spent writing the instruction, checking the answer, and editing it. Compare that with writing the message yourself or adapting an existing template. Keep the method if it helps. If it creates more work, reduce the task or use a template. You do not need to make the experiment succeed to learn something useful. Before using a similar process with real inquiries, review the tool’s data policies and decide what information it is appropriate to share. Keep a person responsible for the final message. For a recurring task, read how to choose between a template, automation, and AI.",
+    "headings": [
+      {
+        "id": "1-set-a-clear-target",
+        "text": "1. Set a clear target"
+      },
+      {
+        "id": "2-ask-for-a-first-draft",
+        "text": "2. Ask for a first draft"
+      },
+      {
+        "id": "3-check-against-the-brief",
+        "text": "3. Check against the brief"
+      },
+      {
+        "id": "4-make-one-focused-revision",
+        "text": "4. Make one focused revision"
+      },
+      {
+        "id": "5-compare-the-whole-effort",
+        "text": "5. Compare the whole effort"
+      }
+    ],
+    "quotes": [
+      "Draft a reminder email from the fictional business Cedar Street Pottery for a beginner pottery class on Sunday at 10am. Ask attendees to arrive ten minutes early and bring an apron. Use a friendly, straightforward tone and fewer than 80 words. Use only the facts in this instruction. Do not invent an address, booking link, price, or cancellation policy.",
+      "Make the wording more conversational. Keep all the class details unchanged. Remove promotional language and keep the email under 80 words."
+    ]
+  },
+  {
+    "side": "after",
+    "guide": "getting-started",
+    "width": 390,
+    "text": "In this exercise, you will create and check a short reminder email for a fictional class. You need access to a conversational AI tool. No business records or customer details are needed. 1. Set a clear target Use this fictional brief: Business: Cedar Street Pottery. Event: a beginner pottery class on Sunday at 10am. Request: attendees arrive ten minutes early and bring an apron. Tone: friendly and straightforward. Length: fewer than 80 words. The target is a usable reminder with all the supplied details and no invented policies. Keep the brief beside the draft so you can compare them. 2. Ask for a first draft Copy this instruction into the tool: Draft a reminder email from the fictional business Cedar Street Pottery for a beginner pottery class on Sunday at 10am. Ask attendees to arrive ten minutes early and bring an apron. Use a friendly, straightforward tone and fewer than 80 words. Use only the facts in this instruction. Do not invent an address, booking link, price, or cancellation policy. You should receive a short email draft. The wording will vary between tools and attempts. A different answer is not necessarily a better answer. 3. Check against the brief Read the draft before asking for revisions: Does it say Sunday at 10am? Does it include arriving ten minutes early and bringing an apron? Has it invented any details? Is it under 80 words? Would you be comfortable sending that wording? Check the word count yourself if the limit matters. If the draft is incorrect, fix the facts directly or ask for a revision and check again. 4. Make one focused revision Try this follow-up instruction: Make the wording more conversational. Keep all the class details unchanged. Remove promotional language and keep the email under 80 words. Compare the new version with the first one. Recheck the facts as well as the tone. A request to improve the wording can change details you wanted to keep. 5. Compare the whole effort Consider the time spent writing the instruction, checking the answer, and editing it. Compare that with writing the message yourself or adapting an existing template. Keep the method if it helps. If it creates more work, reduce the task or use a template. You do not need to make the experiment succeed to learn something useful. Before using a similar process with real inquiries, review the tool’s data policies and decide what information it is appropriate to share. Keep a person responsible for the final message. For a recurring task, read how to choose between a template, automation, and AI.",
+    "headings": [
+      {
+        "id": "1-set-a-clear-target",
+        "text": "1. Set a clear target"
+      },
+      {
+        "id": "2-ask-for-a-first-draft",
+        "text": "2. Ask for a first draft"
+      },
+      {
+        "id": "3-check-against-the-brief",
+        "text": "3. Check against the brief"
+      },
+      {
+        "id": "4-make-one-focused-revision",
+        "text": "4. Make one focused revision"
+      },
+      {
+        "id": "5-compare-the-whole-effort",
+        "text": "5. Compare the whole effort"
+      }
+    ],
+    "quotes": [
+      "Draft a reminder email from the fictional business Cedar Street Pottery for a beginner pottery class on Sunday at 10am. Ask attendees to arrive ten minutes early and bring an apron. Use a friendly, straightforward tone and fewer than 80 words. Use only the facts in this instruction. Do not invent an address, booking link, price, or cancellation policy.",
+      "Make the wording more conversational. Keep all the class details unchanged. Remove promotional language and keep the email under 80 words."
+    ]
+  },
+  {
+    "side": "before",
+    "guide": "getting-started",
+    "width": 768,
+    "text": "In this exercise, you will create and check a short reminder email for a fictional class. You need access to a conversational AI tool. No business records or customer details are needed. 1. Set a clear target Use this fictional brief: Business: Cedar Street Pottery. Event: a beginner pottery class on Sunday at 10am. Request: attendees arrive ten minutes early and bring an apron. Tone: friendly and straightforward. Length: fewer than 80 words. The target is a usable reminder with all the supplied details and no invented policies. Keep the brief beside the draft so you can compare them. 2. Ask for a first draft Copy this instruction into the tool: Draft a reminder email from the fictional business Cedar Street Pottery for a beginner pottery class on Sunday at 10am. Ask attendees to arrive ten minutes early and bring an apron. Use a friendly, straightforward tone and fewer than 80 words. Use only the facts in this instruction. Do not invent an address, booking link, price, or cancellation policy. You should receive a short email draft. The wording will vary between tools and attempts. A different answer is not necessarily a better answer. 3. Check against the brief Read the draft before asking for revisions: Does it say Sunday at 10am? Does it include arriving ten minutes early and bringing an apron? Has it invented any details? Is it under 80 words? Would you be comfortable sending that wording? Check the word count yourself if the limit matters. If the draft is incorrect, fix the facts directly or ask for a revision and check again. 4. Make one focused revision Try this follow-up instruction: Make the wording more conversational. Keep all the class details unchanged. Remove promotional language and keep the email under 80 words. Compare the new version with the first one. Recheck the facts as well as the tone. A request to improve the wording can change details you wanted to keep. 5. Compare the whole effort Consider the time spent writing the instruction, checking the answer, and editing it. Compare that with writing the message yourself or adapting an existing template. Keep the method if it helps. If it creates more work, reduce the task or use a template. You do not need to make the experiment succeed to learn something useful. Before using a similar process with real inquiries, review the tool’s data policies and decide what information it is appropriate to share. Keep a person responsible for the final message. For a recurring task, read how to choose between a template, automation, and AI.",
+    "headings": [
+      {
+        "id": "1-set-a-clear-target",
+        "text": "1. Set a clear target"
+      },
+      {
+        "id": "2-ask-for-a-first-draft",
+        "text": "2. Ask for a first draft"
+      },
+      {
+        "id": "3-check-against-the-brief",
+        "text": "3. Check against the brief"
+      },
+      {
+        "id": "4-make-one-focused-revision",
+        "text": "4. Make one focused revision"
+      },
+      {
+        "id": "5-compare-the-whole-effort",
+        "text": "5. Compare the whole effort"
+      }
+    ],
+    "quotes": [
+      "Draft a reminder email from the fictional business Cedar Street Pottery for a beginner pottery class on Sunday at 10am. Ask attendees to arrive ten minutes early and bring an apron. Use a friendly, straightforward tone and fewer than 80 words. Use only the facts in this instruction. Do not invent an address, booking link, price, or cancellation policy.",
+      "Make the wording more conversational. Keep all the class details unchanged. Remove promotional language and keep the email under 80 words."
+    ]
+  },
+  {
+    "side": "after",
+    "guide": "getting-started",
+    "width": 768,
+    "text": "In this exercise, you will create and check a short reminder email for a fictional class. You need access to a conversational AI tool. No business records or customer details are needed. 1. Set a clear target Use this fictional brief: Business: Cedar Street Pottery. Event: a beginner pottery class on Sunday at 10am. Request: attendees arrive ten minutes early and bring an apron. Tone: friendly and straightforward. Length: fewer than 80 words. The target is a usable reminder with all the supplied details and no invented policies. Keep the brief beside the draft so you can compare them. 2. Ask for a first draft Copy this instruction into the tool: Draft a reminder email from the fictional business Cedar Street Pottery for a beginner pottery class on Sunday at 10am. Ask attendees to arrive ten minutes early and bring an apron. Use a friendly, straightforward tone and fewer than 80 words. Use only the facts in this instruction. Do not invent an address, booking link, price, or cancellation policy. You should receive a short email draft. The wording will vary between tools and attempts. A different answer is not necessarily a better answer. 3. Check against the brief Read the draft before asking for revisions: Does it say Sunday at 10am? Does it include arriving ten minutes early and bringing an apron? Has it invented any details? Is it under 80 words? Would you be comfortable sending that wording? Check the word count yourself if the limit matters. If the draft is incorrect, fix the facts directly or ask for a revision and check again. 4. Make one focused revision Try this follow-up instruction: Make the wording more conversational. Keep all the class details unchanged. Remove promotional language and keep the email under 80 words. Compare the new version with the first one. Recheck the facts as well as the tone. A request to improve the wording can change details you wanted to keep. 5. Compare the whole effort Consider the time spent writing the instruction, checking the answer, and editing it. Compare that with writing the message yourself or adapting an existing template. Keep the method if it helps. If it creates more work, reduce the task or use a template. You do not need to make the experiment succeed to learn something useful. Before using a similar process with real inquiries, review the tool’s data policies and decide what information it is appropriate to share. Keep a person responsible for the final message. For a recurring task, read how to choose between a template, automation, and AI.",
+    "headings": [
+      {
+        "id": "1-set-a-clear-target",
+        "text": "1. Set a clear target"
+      },
+      {
+        "id": "2-ask-for-a-first-draft",
+        "text": "2. Ask for a first draft"
+      },
+      {
+        "id": "3-check-against-the-brief",
+        "text": "3. Check against the brief"
+      },
+      {
+        "id": "4-make-one-focused-revision",
+        "text": "4. Make one focused revision"
+      },
+      {
+        "id": "5-compare-the-whole-effort",
+        "text": "5. Compare the whole effort"
+      }
+    ],
+    "quotes": [
+      "Draft a reminder email from the fictional business Cedar Street Pottery for a beginner pottery class on Sunday at 10am. Ask attendees to arrive ten minutes early and bring an apron. Use a friendly, straightforward tone and fewer than 80 words. Use only the facts in this instruction. Do not invent an address, booking link, price, or cancellation policy.",
+      "Make the wording more conversational. Keep all the class details unchanged. Remove promotional language and keep the email under 80 words."
+    ]
+  },
+  {
+    "side": "before",
+    "guide": "getting-started",
+    "width": 1440,
+    "text": "In this exercise, you will create and check a short reminder email for a fictional class. You need access to a conversational AI tool. No business records or customer details are needed. 1. Set a clear target Use this fictional brief: Business: Cedar Street Pottery. Event: a beginner pottery class on Sunday at 10am. Request: attendees arrive ten minutes early and bring an apron. Tone: friendly and straightforward. Length: fewer than 80 words. The target is a usable reminder with all the supplied details and no invented policies. Keep the brief beside the draft so you can compare them. 2. Ask for a first draft Copy this instruction into the tool: Draft a reminder email from the fictional business Cedar Street Pottery for a beginner pottery class on Sunday at 10am. Ask attendees to arrive ten minutes early and bring an apron. Use a friendly, straightforward tone and fewer than 80 words. Use only the facts in this instruction. Do not invent an address, booking link, price, or cancellation policy. You should receive a short email draft. The wording will vary between tools and attempts. A different answer is not necessarily a better answer. 3. Check against the brief Read the draft before asking for revisions: Does it say Sunday at 10am? Does it include arriving ten minutes early and bringing an apron? Has it invented any details? Is it under 80 words? Would you be comfortable sending that wording? Check the word count yourself if the limit matters. If the draft is incorrect, fix the facts directly or ask for a revision and check again. 4. Make one focused revision Try this follow-up instruction: Make the wording more conversational. Keep all the class details unchanged. Remove promotional language and keep the email under 80 words. Compare the new version with the first one. Recheck the facts as well as the tone. A request to improve the wording can change details you wanted to keep. 5. Compare the whole effort Consider the time spent writing the instruction, checking the answer, and editing it. Compare that with writing the message yourself or adapting an existing template. Keep the method if it helps. If it creates more work, reduce the task or use a template. You do not need to make the experiment succeed to learn something useful. Before using a similar process with real inquiries, review the tool’s data policies and decide what information it is appropriate to share. Keep a person responsible for the final message. For a recurring task, read how to choose between a template, automation, and AI.",
+    "headings": [
+      {
+        "id": "1-set-a-clear-target",
+        "text": "1. Set a clear target"
+      },
+      {
+        "id": "2-ask-for-a-first-draft",
+        "text": "2. Ask for a first draft"
+      },
+      {
+        "id": "3-check-against-the-brief",
+        "text": "3. Check against the brief"
+      },
+      {
+        "id": "4-make-one-focused-revision",
+        "text": "4. Make one focused revision"
+      },
+      {
+        "id": "5-compare-the-whole-effort",
+        "text": "5. Compare the whole effort"
+      }
+    ],
+    "quotes": [
+      "Draft a reminder email from the fictional business Cedar Street Pottery for a beginner pottery class on Sunday at 10am. Ask attendees to arrive ten minutes early and bring an apron. Use a friendly, straightforward tone and fewer than 80 words. Use only the facts in this instruction. Do not invent an address, booking link, price, or cancellation policy.",
+      "Make the wording more conversational. Keep all the class details unchanged. Remove promotional language and keep the email under 80 words."
+    ]
+  },
+  {
+    "side": "after",
+    "guide": "getting-started",
+    "width": 1440,
+    "text": "In this exercise, you will create and check a short reminder email for a fictional class. You need access to a conversational AI tool. No business records or customer details are needed. 1. Set a clear target Use this fictional brief: Business: Cedar Street Pottery. Event: a beginner pottery class on Sunday at 10am. Request: attendees arrive ten minutes early and bring an apron. Tone: friendly and straightforward. Length: fewer than 80 words. The target is a usable reminder with all the supplied details and no invented policies. Keep the brief beside the draft so you can compare them. 2. Ask for a first draft Copy this instruction into the tool: Draft a reminder email from the fictional business Cedar Street Pottery for a beginner pottery class on Sunday at 10am. Ask attendees to arrive ten minutes early and bring an apron. Use a friendly, straightforward tone and fewer than 80 words. Use only the facts in this instruction. Do not invent an address, booking link, price, or cancellation policy. You should receive a short email draft. The wording will vary between tools and attempts. A different answer is not necessarily a better answer. 3. Check against the brief Read the draft before asking for revisions: Does it say Sunday at 10am? Does it include arriving ten minutes early and bringing an apron? Has it invented any details? Is it under 80 words? Would you be comfortable sending that wording? Check the word count yourself if the limit matters. If the draft is incorrect, fix the facts directly or ask for a revision and check again. 4. Make one focused revision Try this follow-up instruction: Make the wording more conversational. Keep all the class details unchanged. Remove promotional language and keep the email under 80 words. Compare the new version with the first one. Recheck the facts as well as the tone. A request to improve the wording can change details you wanted to keep. 5. Compare the whole effort Consider the time spent writing the instruction, checking the answer, and editing it. Compare that with writing the message yourself or adapting an existing template. Keep the method if it helps. If it creates more work, reduce the task or use a template. You do not need to make the experiment succeed to learn something useful. Before using a similar process with real inquiries, review the tool’s data policies and decide what information it is appropriate to share. Keep a person responsible for the final message. For a recurring task, read how to choose between a template, automation, and AI.",
+    "headings": [
+      {
+        "id": "1-set-a-clear-target",
+        "text": "1. Set a clear target"
+      },
+      {
+        "id": "2-ask-for-a-first-draft",
+        "text": "2. Ask for a first draft"
+      },
+      {
+        "id": "3-check-against-the-brief",
+        "text": "3. Check against the brief"
+      },
+      {
+        "id": "4-make-one-focused-revision",
+        "text": "4. Make one focused revision"
+      },
+      {
+        "id": "5-compare-the-whole-effort",
+        "text": "5. Compare the whole effort"
+      }
+    ],
+    "quotes": [
+      "Draft a reminder email from the fictional business Cedar Street Pottery for a beginner pottery class on Sunday at 10am. Ask attendees to arrive ten minutes early and bring an apron. Use a friendly, straightforward tone and fewer than 80 words. Use only the facts in this instruction. Do not invent an address, booking link, price, or cancellation policy.",
+      "Make the wording more conversational. Keep all the class details unchanged. Remove promotional language and keep the email under 80 words."
+    ]
+  }
+]
