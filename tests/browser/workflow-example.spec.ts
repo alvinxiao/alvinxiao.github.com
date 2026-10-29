@@ -8,8 +8,9 @@ import {
 } from '../../src/content/workflow-example';
 
 async function currentTime(root: Locator) {
-  return root.locator('.email-carrier').evaluate((carrier) => {
+  return root.locator('.email-carrier').evaluate(async (carrier) => {
     const animation = carrier.getAnimations()[0];
+    if (animation) await animation.ready;
     return animation && typeof animation.currentTime === 'number' ? animation.currentTime : 0;
   });
 }

@@ -22,7 +22,7 @@ Normal-motion comparisons show a complete uninterrupted human-approval run first
 
 The earlier recording mixed unlabelled manual step jumps into the initial approval run. It made intentional seeking hard to distinguish from playback trouble. The standalone approval clip now records the current site without any pauses, step selections, or delivery-mode changes. Its captions mark the final reading hold and completion. [Playback samples](approval-playback.json) verify ordered stages, nondecreasing elapsed animation time, and final completion.
 
-This recording revision changes the capture helper and review evidence. No website source changes were made, and a playback fault has not been reproduced in the current site.
+This recording revision changes the capture helper and review evidence. No website source changes were made, and a playback fault has not been reproduced in the current site. A CI test also read the animation time before the browser completed its pending Pause operation. The test now waits for native animation readiness before reading that time, while retaining the strict resize-preservation assertion. Five repeated regression checks pass with the original strict resize-preservation assertion.
 
 | Phase | Previous fixed box | Revised description |
 | --- | --- | --- |
