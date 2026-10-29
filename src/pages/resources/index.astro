@@ -4,7 +4,8 @@ import ResourceArtwork from '../../components/ResourceArtwork.astro';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import Arrow from '../../components/Arrow.astro';
 import { site } from '../../content/site';
-const articles = await getCollection('resources');
+import { resolveResourceJourney } from '../../content/resource-journey';
+const articles = resolveResourceJourney(await getCollection('resources'));
 ---
 
 <SiteLayout
