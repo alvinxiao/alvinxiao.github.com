@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import ResourceArtwork from '../../components/ResourceArtwork.astro';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import { site } from '../../content/site';
+import '../../styles/copy-prompts.css';
 export async function getStaticPaths() {
   return (await getCollection('resources')).map((article) => ({
     params: { id: article.id },
@@ -35,4 +36,7 @@ const { Content } = await render(article);
       <Content />
     </article>
   </div>
+  <script>
+    import '../../scripts/copy-prompts';
+  </script>
 </SiteLayout>
