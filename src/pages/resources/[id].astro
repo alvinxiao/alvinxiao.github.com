@@ -10,7 +10,8 @@ export async function getStaticPaths() {
   }));
 }
 const { article } = Astro.props;
-const { Content } = await render(article);
+const { Content, headings } = await render(article);
+const sections = headings.filter((heading) => heading.depth === 2);
 ---
 
 <SiteLayout title={article.data.title} description={article.data.description}>
@@ -30,9 +31,70 @@ const { Content } = await render(article);
         <p>Prelaunch guide. Final editorial review remains pending.</p>
       </aside>
     )}
+    {sections.length > 0 && (
+      <nav class="article-contents" aria-labelledby="article-contents-heading">
+        <h2 id="article-contents-heading">On this page</h2>
+        <ul role="list">
+          {sections.map((section) => (
+            <li>
+              <a href={`#${section.slug}`}>{section.text}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    )}
     <article class="prose article-body">
       <ResourceArtwork position={article.data.imagePosition} />
       <Content />
     </article>
   </div>
 </SiteLayout>
+
+<style>
+  .article-contents {
+    max-width: 760px;
+    margin-bottom: 36px;
+    padding-block: 20px 16px;
+    border-block: 1px solid var(--line);
+  }
+  .article-contents h2 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    line-height: 1.4;
+    letter-spacing: -0.025em;
+  }
+  .article-contents ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 28px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .article-contents li {
+    min-width: 0;
+  }
+  .article-contents a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding-block: 10px;
+    color: var(--teal-dark);
+    font-size: 16px;
+    line-height: 1.5;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 4px;
+  }
+  .article-contents a:is(:hover, :focus-visible) {
+    text-decoration-color: currentColor;
+  }
+  .article-body :global(h2[id]) {
+    scroll-margin-top: 32px;
+  }
+  @media (max-width: 650px) {
+    .article-contents ul {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
