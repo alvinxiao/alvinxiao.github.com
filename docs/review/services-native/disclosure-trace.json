@@ -1,0 +1,2641 @@
+{
+  "trials": 25,
+  "closed": 25,
+  "results": [
+    {
+      "trial": 0,
+      "open": false,
+      "events": [
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 19.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include custom implementation or access to your production systems.",
+          "t": 27.099999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A focused advisory conversation</li><li>Possible tools and approaches</li><li>A brief recap</li></ul>",
+          "t": 27.099999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include building a solution, guaranteed outcomes, or ongoing suppor",
+          "t": 27.099999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>One defined workflow</li><li>Limited discovery</li><li>Concise written findings</li></ul></details>",
+          "t": 27.099999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include compliance audits, production access, or implementation.</p",
+          "t": 27.099999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A separately defined implementation scope</li><li>Tools chosen for the actual need</li><li>Agreed del",
+          "t": 27.099999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">No integrations, timelines, or project outcomes are promised before scoping.",
+          "t": 27.099999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "pointerdown",
+          "target": "<summary>What's included</summary>",
+          "t": 109.59999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "focusin",
+          "target": "<summary>What's included</summary>",
+          "t": 110.09999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerup",
+          "target": "<summary>What's included</summary>",
+          "t": 111,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "click",
+          "target": "<summary>What's included</summary>",
+          "t": 111,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 117.89999997615814,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li></ul></d",
+          "t": 118.5,
+          "y": 757,
+          "hash": ""
+        }
+      ]
+    },
+    {
+      "trial": 1,
+      "open": false,
+      "events": [
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 16.099999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include custom implementation or access to your production systems.",
+          "t": 20.900000005960464,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A focused advisory conversation</li><li>Possible tools and approaches</li><li>A brief recap</li></ul>",
+          "t": 20.900000005960464,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include building a solution, guaranteed outcomes, or ongoing suppor",
+          "t": 20.900000005960464,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>One defined workflow</li><li>Limited discovery</li><li>Concise written findings</li></ul></details>",
+          "t": 21,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include compliance audits, production access, or implementation.</p",
+          "t": 21,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A separately defined implementation scope</li><li>Tools chosen for the actual need</li><li>Agreed del",
+          "t": 21,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">No integrations, timelines, or project outcomes are promised before scoping.",
+          "t": 21,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "pointerdown",
+          "target": "<summary>What's included</summary>",
+          "t": 92.59999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "focusin",
+          "target": "<summary>What's included</summary>",
+          "t": 92.90000000596046,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerup",
+          "target": "<summary>What's included</summary>",
+          "t": 93.5,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "click",
+          "target": "<summary>What's included</summary>",
+          "t": 93.5,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 103.59999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li></ul></d",
+          "t": 104.90000000596046,
+          "y": 757,
+          "hash": ""
+        }
+      ]
+    },
+    {
+      "trial": 2,
+      "open": false,
+      "events": [
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 14.400000005960464,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include custom implementation or access to your production systems.",
+          "t": 25.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A focused advisory conversation</li><li>Possible tools and approaches</li><li>A brief recap</li></ul>",
+          "t": 25.600000023841858,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include building a solution, guaranteed outcomes, or ongoing suppor",
+          "t": 25.600000023841858,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>One defined workflow</li><li>Limited discovery</li><li>Concise written findings</li></ul></details>",
+          "t": 25.600000023841858,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include compliance audits, production access, or implementation.</p",
+          "t": 25.600000023841858,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A separately defined implementation scope</li><li>Tools chosen for the actual need</li><li>Agreed del",
+          "t": 25.600000023841858,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">No integrations, timelines, or project outcomes are promised before scoping.",
+          "t": 25.600000023841858,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 230.2000000178814,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerdown",
+          "target": "<summary>What's included</summary>",
+          "t": 1236.2000000178814,
+          "y": 410,
+          "hash": ""
+        },
+        {
+          "type": "focusin",
+          "target": "<summary>What's included</summary>",
+          "t": 1236.6000000238419,
+          "y": 410,
+          "hash": ""
+        },
+        {
+          "type": "pointerup",
+          "target": "<summary>What's included</summary>",
+          "t": 1237.6000000238419,
+          "y": 410,
+          "hash": ""
+        },
+        {
+          "type": "click",
+          "target": "<summary>What's included</summary>",
+          "t": 1237.7000000178814,
+          "y": 410,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 1242.6000000238419,
+          "y": 410,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li></ul></d",
+          "t": 1245.7000000178814,
+          "y": 410,
+          "hash": ""
+        }
+      ]
+    },
+    {
+      "trial": 3,
+      "open": false,
+      "events": [
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 19.099999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include custom implementation or access to your production systems.",
+          "t": 26.69999998807907,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A focused advisory conversation</li><li>Possible tools and approaches</li><li>A brief recap</li></ul>",
+          "t": 26.799999982118607,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include building a solution, guaranteed outcomes, or ongoing suppor",
+          "t": 26.799999982118607,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>One defined workflow</li><li>Limited discovery</li><li>Concise written findings</li></ul></details>",
+          "t": 26.799999982118607,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include compliance audits, production access, or implementation.</p",
+          "t": 26.900000005960464,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A separately defined implementation scope</li><li>Tools chosen for the actual need</li><li>Agreed del",
+          "t": 26.900000005960464,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">No integrations, timelines, or project outcomes are promised before scoping.",
+          "t": 26.900000005960464,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "pointerdown",
+          "target": "<summary>What's included</summary>",
+          "t": 97.90000000596046,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "focusin",
+          "target": "<summary>What's included</summary>",
+          "t": 98.19999998807907,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerup",
+          "target": "<summary>What's included</summary>",
+          "t": 98.90000000596046,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "click",
+          "target": "<summary>What's included</summary>",
+          "t": 98.90000000596046,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 108.5,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li></ul></d",
+          "t": 109.59999999403954,
+          "y": 757,
+          "hash": ""
+        }
+      ]
+    },
+    {
+      "trial": 4,
+      "open": false,
+      "events": [
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 14.400000005960464,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include custom implementation or access to your production systems.",
+          "t": 20,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A focused advisory conversation</li><li>Possible tools and approaches</li><li>A brief recap</li></ul>",
+          "t": 20,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include building a solution, guaranteed outcomes, or ongoing suppor",
+          "t": 20,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>One defined workflow</li><li>Limited discovery</li><li>Concise written findings</li></ul></details>",
+          "t": 20,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include compliance audits, production access, or implementation.</p",
+          "t": 20,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A separately defined implementation scope</li><li>Tools chosen for the actual need</li><li>Agreed del",
+          "t": 20,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">No integrations, timelines, or project outcomes are promised before scoping.",
+          "t": 20,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "pointerdown",
+          "target": "<summary>What's included</summary>",
+          "t": 88.90000000596046,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "focusin",
+          "target": "<summary>What's included</summary>",
+          "t": 89.09999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerup",
+          "target": "<summary>What's included</summary>",
+          "t": 89.7999999821186,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "click",
+          "target": "<summary>What's included</summary>",
+          "t": 89.7999999821186,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 101.7999999821186,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li></ul></d",
+          "t": 103.40000000596046,
+          "y": 757,
+          "hash": ""
+        }
+      ]
+    },
+    {
+      "trial": 5,
+      "open": false,
+      "events": [
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 19.099999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include custom implementation or access to your production systems.",
+          "t": 25.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A focused advisory conversation</li><li>Possible tools and approaches</li><li>A brief recap</li></ul>",
+          "t": 25.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include building a solution, guaranteed outcomes, or ongoing suppor",
+          "t": 25.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>One defined workflow</li><li>Limited discovery</li><li>Concise written findings</li></ul></details>",
+          "t": 25.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include compliance audits, production access, or implementation.</p",
+          "t": 25.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A separately defined implementation scope</li><li>Tools chosen for the actual need</li><li>Agreed del",
+          "t": 25.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">No integrations, timelines, or project outcomes are promised before scoping.",
+          "t": 25.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "pointerdown",
+          "target": "<summary>What's included</summary>",
+          "t": 89.90000000596046,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "focusin",
+          "target": "<summary>What's included</summary>",
+          "t": 90.09999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerup",
+          "target": "<summary>What's included</summary>",
+          "t": 91.09999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "click",
+          "target": "<summary>What's included</summary>",
+          "t": 91.2000000178814,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 99.59999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li></ul></d",
+          "t": 100.80000001192093,
+          "y": 757,
+          "hash": ""
+        }
+      ]
+    },
+    {
+      "trial": 6,
+      "open": false,
+      "events": [
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 15.599999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include custom implementation or access to your production systems.",
+          "t": 23.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A focused advisory conversation</li><li>Possible tools and approaches</li><li>A brief recap</li></ul>",
+          "t": 23.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include building a solution, guaranteed outcomes, or ongoing suppor",
+          "t": 23.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>One defined workflow</li><li>Limited discovery</li><li>Concise written findings</li></ul></details>",
+          "t": 23.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include compliance audits, production access, or implementation.</p",
+          "t": 23.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A separately defined implementation scope</li><li>Tools chosen for the actual need</li><li>Agreed del",
+          "t": 23.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">No integrations, timelines, or project outcomes are promised before scoping.",
+          "t": 23.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "pointerdown",
+          "target": "<summary>What's included</summary>",
+          "t": 88.5,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "focusin",
+          "target": "<summary>What's included</summary>",
+          "t": 88.80000001192093,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerup",
+          "target": "<summary>What's included</summary>",
+          "t": 89.59999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "click",
+          "target": "<summary>What's included</summary>",
+          "t": 89.59999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 93.80000001192093,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li></ul></d",
+          "t": 94.90000000596046,
+          "y": 757,
+          "hash": ""
+        }
+      ]
+    },
+    {
+      "trial": 7,
+      "open": false,
+      "events": [
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 15.199999988079071,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include custom implementation or access to your production systems.",
+          "t": 20,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A focused advisory conversation</li><li>Possible tools and approaches</li><li>A brief recap</li></ul>",
+          "t": 20,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include building a solution, guaranteed outcomes, or ongoing suppor",
+          "t": 20,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>One defined workflow</li><li>Limited discovery</li><li>Concise written findings</li></ul></details>",
+          "t": 20,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include compliance audits, production access, or implementation.</p",
+          "t": 20,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A separately defined implementation scope</li><li>Tools chosen for the actual need</li><li>Agreed del",
+          "t": 20,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">No integrations, timelines, or project outcomes are promised before scoping.",
+          "t": 20,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "pointerdown",
+          "target": "<summary>What's included</summary>",
+          "t": 84.59999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "focusin",
+          "target": "<summary>What's included</summary>",
+          "t": 84.90000000596046,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerup",
+          "target": "<summary>What's included</summary>",
+          "t": 85.59999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "click",
+          "target": "<summary>What's included</summary>",
+          "t": 85.59999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 95.09999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li></ul></d",
+          "t": 96.59999999403954,
+          "y": 757,
+          "hash": ""
+        }
+      ]
+    },
+    {
+      "trial": 8,
+      "open": false,
+      "events": [
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 11.899999976158142,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include custom implementation or access to your production systems.",
+          "t": 15.899999976158142,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A focused advisory conversation</li><li>Possible tools and approaches</li><li>A brief recap</li></ul>",
+          "t": 15.899999976158142,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include building a solution, guaranteed outcomes, or ongoing suppor",
+          "t": 15.899999976158142,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>One defined workflow</li><li>Limited discovery</li><li>Concise written findings</li></ul></details>",
+          "t": 16,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include compliance audits, production access, or implementation.</p",
+          "t": 16,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A separately defined implementation scope</li><li>Tools chosen for the actual need</li><li>Agreed del",
+          "t": 16,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">No integrations, timelines, or project outcomes are promised before scoping.",
+          "t": 16,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "pointerdown",
+          "target": "<summary>What's included</summary>",
+          "t": 73.09999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "focusin",
+          "target": "<summary>What's included</summary>",
+          "t": 73.39999997615814,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerup",
+          "target": "<summary>What's included</summary>",
+          "t": 74.09999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "click",
+          "target": "<summary>What's included</summary>",
+          "t": 74.19999998807907,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 84.5,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li></ul></d",
+          "t": 85.69999998807907,
+          "y": 757,
+          "hash": ""
+        }
+      ]
+    },
+    {
+      "trial": 9,
+      "open": false,
+      "events": [
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 18.100000023841858,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include custom implementation or access to your production systems.",
+          "t": 23.200000017881393,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A focused advisory conversation</li><li>Possible tools and approaches</li><li>A brief recap</li></ul>",
+          "t": 23.200000017881393,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include building a solution, guaranteed outcomes, or ongoing suppor",
+          "t": 23.200000017881393,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>One defined workflow</li><li>Limited discovery</li><li>Concise written findings</li></ul></details>",
+          "t": 23.200000017881393,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include compliance audits, production access, or implementation.</p",
+          "t": 23.200000017881393,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A separately defined implementation scope</li><li>Tools chosen for the actual need</li><li>Agreed del",
+          "t": 23.200000017881393,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">No integrations, timelines, or project outcomes are promised before scoping.",
+          "t": 23.200000017881393,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "pointerdown",
+          "target": "<summary>What's included</summary>",
+          "t": 88.30000001192093,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "focusin",
+          "target": "<summary>What's included</summary>",
+          "t": 88.60000002384186,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerup",
+          "target": "<summary>What's included</summary>",
+          "t": 89.2000000178814,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "click",
+          "target": "<summary>What's included</summary>",
+          "t": 89.2000000178814,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 99.80000001192093,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li></ul></d",
+          "t": 100.5,
+          "y": 757,
+          "hash": ""
+        }
+      ]
+    },
+    {
+      "trial": 10,
+      "open": false,
+      "events": [
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 19.400000005960464,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include custom implementation or access to your production systems.",
+          "t": 26.30000001192093,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A focused advisory conversation</li><li>Possible tools and approaches</li><li>A brief recap</li></ul>",
+          "t": 26.30000001192093,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include building a solution, guaranteed outcomes, or ongoing suppor",
+          "t": 26.30000001192093,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>One defined workflow</li><li>Limited discovery</li><li>Concise written findings</li></ul></details>",
+          "t": 26.400000005960464,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include compliance audits, production access, or implementation.</p",
+          "t": 26.400000005960464,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A separately defined implementation scope</li><li>Tools chosen for the actual need</li><li>Agreed del",
+          "t": 26.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">No integrations, timelines, or project outcomes are promised before scoping.",
+          "t": 26.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "pointerdown",
+          "target": "<summary>What's included</summary>",
+          "t": 97.19999998807907,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "focusin",
+          "target": "<summary>What's included</summary>",
+          "t": 97.69999998807907,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerup",
+          "target": "<summary>What's included</summary>",
+          "t": 99.59999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "click",
+          "target": "<summary>What's included</summary>",
+          "t": 99.69999998807907,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 105.19999998807907,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li></ul></d",
+          "t": 106.80000001192093,
+          "y": 757,
+          "hash": ""
+        }
+      ]
+    },
+    {
+      "trial": 11,
+      "open": false,
+      "events": [
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 16,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include custom implementation or access to your production systems.",
+          "t": 24,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A focused advisory conversation</li><li>Possible tools and approaches</li><li>A brief recap</li></ul>",
+          "t": 24,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include building a solution, guaranteed outcomes, or ongoing suppor",
+          "t": 24,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>One defined workflow</li><li>Limited discovery</li><li>Concise written findings</li></ul></details>",
+          "t": 24,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include compliance audits, production access, or implementation.</p",
+          "t": 24.099999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A separately defined implementation scope</li><li>Tools chosen for the actual need</li><li>Agreed del",
+          "t": 24.099999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">No integrations, timelines, or project outcomes are promised before scoping.",
+          "t": 25.099999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "pointerdown",
+          "target": "<summary>What's included</summary>",
+          "t": 90.09999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "focusin",
+          "target": "<summary>What's included</summary>",
+          "t": 91.09999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerup",
+          "target": "<summary>What's included</summary>",
+          "t": 91.69999998807907,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "click",
+          "target": "<summary>What's included</summary>",
+          "t": 91.7999999821186,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 99.2999999821186,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li></ul></d",
+          "t": 100.09999999403954,
+          "y": 757,
+          "hash": ""
+        }
+      ]
+    },
+    {
+      "trial": 12,
+      "open": false,
+      "events": [
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 18.700000017881393,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include custom implementation or access to your production systems.",
+          "t": 22.700000017881393,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A focused advisory conversation</li><li>Possible tools and approaches</li><li>A brief recap</li></ul>",
+          "t": 22.80000001192093,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include building a solution, guaranteed outcomes, or ongoing suppor",
+          "t": 22.80000001192093,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>One defined workflow</li><li>Limited discovery</li><li>Concise written findings</li></ul></details>",
+          "t": 22.80000001192093,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include compliance audits, production access, or implementation.</p",
+          "t": 22.80000001192093,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A separately defined implementation scope</li><li>Tools chosen for the actual need</li><li>Agreed del",
+          "t": 22.80000001192093,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">No integrations, timelines, or project outcomes are promised before scoping.",
+          "t": 22.80000001192093,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "pointerdown",
+          "target": "<summary>What's included</summary>",
+          "t": 87.40000000596046,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "focusin",
+          "target": "<summary>What's included</summary>",
+          "t": 87.90000000596046,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerup",
+          "target": "<summary>What's included</summary>",
+          "t": 88.90000000596046,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "click",
+          "target": "<summary>What's included</summary>",
+          "t": 89.09999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 99,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li></ul></d",
+          "t": 99.7000000178814,
+          "y": 757,
+          "hash": ""
+        }
+      ]
+    },
+    {
+      "trial": 13,
+      "open": false,
+      "events": [
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 18.099999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include custom implementation or access to your production systems.",
+          "t": 25,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A focused advisory conversation</li><li>Possible tools and approaches</li><li>A brief recap</li></ul>",
+          "t": 25.099999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include building a solution, guaranteed outcomes, or ongoing suppor",
+          "t": 25.099999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>One defined workflow</li><li>Limited discovery</li><li>Concise written findings</li></ul></details>",
+          "t": 25.099999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include compliance audits, production access, or implementation.</p",
+          "t": 25.099999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A separately defined implementation scope</li><li>Tools chosen for the actual need</li><li>Agreed del",
+          "t": 25.099999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">No integrations, timelines, or project outcomes are promised before scoping.",
+          "t": 25.099999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "pointerdown",
+          "target": "<summary>What's included</summary>",
+          "t": 88.09999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "focusin",
+          "target": "<summary>What's included</summary>",
+          "t": 88.40000000596046,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerup",
+          "target": "<summary>What's included</summary>",
+          "t": 88.80000001192093,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "click",
+          "target": "<summary>What's included</summary>",
+          "t": 88.90000000596046,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 98.5,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li></ul></d",
+          "t": 99.40000000596046,
+          "y": 757,
+          "hash": ""
+        }
+      ]
+    },
+    {
+      "trial": 14,
+      "open": false,
+      "events": [
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 18.599999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include custom implementation or access to your production systems.",
+          "t": 27.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A focused advisory conversation</li><li>Possible tools and approaches</li><li>A brief recap</li></ul>",
+          "t": 27.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include building a solution, guaranteed outcomes, or ongoing suppor",
+          "t": 27.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>One defined workflow</li><li>Limited discovery</li><li>Concise written findings</li></ul></details>",
+          "t": 27.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include compliance audits, production access, or implementation.</p",
+          "t": 27.599999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A separately defined implementation scope</li><li>Tools chosen for the actual need</li><li>Agreed del",
+          "t": 27.599999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">No integrations, timelines, or project outcomes are promised before scoping.",
+          "t": 27.599999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "pointerdown",
+          "target": "<summary>What's included</summary>",
+          "t": 88.19999998807907,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "focusin",
+          "target": "<summary>What's included</summary>",
+          "t": 88.5,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerup",
+          "target": "<summary>What's included</summary>",
+          "t": 89,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "click",
+          "target": "<summary>What's included</summary>",
+          "t": 89,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 98.5,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li></ul></d",
+          "t": 99.2999999821186,
+          "y": 757,
+          "hash": ""
+        }
+      ]
+    },
+    {
+      "trial": 15,
+      "open": false,
+      "events": [
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 21.299999982118607,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include custom implementation or access to your production systems.",
+          "t": 27.599999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A focused advisory conversation</li><li>Possible tools and approaches</li><li>A brief recap</li></ul>",
+          "t": 27.599999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include building a solution, guaranteed outcomes, or ongoing suppor",
+          "t": 27.599999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>One defined workflow</li><li>Limited discovery</li><li>Concise written findings</li></ul></details>",
+          "t": 27.599999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include compliance audits, production access, or implementation.</p",
+          "t": 27.599999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A separately defined implementation scope</li><li>Tools chosen for the actual need</li><li>Agreed del",
+          "t": 27.599999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">No integrations, timelines, or project outcomes are promised before scoping.",
+          "t": 27.69999998807907,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "pointerdown",
+          "target": "<summary>What's included</summary>",
+          "t": 87.09999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "focusin",
+          "target": "<summary>What's included</summary>",
+          "t": 87.40000000596046,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerup",
+          "target": "<summary>What's included</summary>",
+          "t": 88.59999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "click",
+          "target": "<summary>What's included</summary>",
+          "t": 88.59999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 97.2999999821186,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li></ul></d",
+          "t": 98.19999998807907,
+          "y": 757,
+          "hash": ""
+        }
+      ]
+    },
+    {
+      "trial": 16,
+      "open": false,
+      "events": [
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 12.799999982118607,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include custom implementation or access to your production systems.",
+          "t": 17.599999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A focused advisory conversation</li><li>Possible tools and approaches</li><li>A brief recap</li></ul>",
+          "t": 17.69999998807907,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include building a solution, guaranteed outcomes, or ongoing suppor",
+          "t": 17.69999998807907,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>One defined workflow</li><li>Limited discovery</li><li>Concise written findings</li></ul></details>",
+          "t": 17.799999982118607,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include compliance audits, production access, or implementation.</p",
+          "t": 17.799999982118607,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A separately defined implementation scope</li><li>Tools chosen for the actual need</li><li>Agreed del",
+          "t": 17.799999982118607,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">No integrations, timelines, or project outcomes are promised before scoping.",
+          "t": 17.799999982118607,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "pointerdown",
+          "target": "<summary>What's included</summary>",
+          "t": 90,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "focusin",
+          "target": "<summary>What's included</summary>",
+          "t": 90.09999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerup",
+          "target": "<summary>What's included</summary>",
+          "t": 90.69999998807907,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "click",
+          "target": "<summary>What's included</summary>",
+          "t": 90.69999998807907,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 96.7999999821186,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li></ul></d",
+          "t": 97.40000000596046,
+          "y": 757,
+          "hash": ""
+        }
+      ]
+    },
+    {
+      "trial": 17,
+      "open": false,
+      "events": [
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 26.799999982118607,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include custom implementation or access to your production systems.",
+          "t": 57,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A focused advisory conversation</li><li>Possible tools and approaches</li><li>A brief recap</li></ul>",
+          "t": 57,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include building a solution, guaranteed outcomes, or ongoing suppor",
+          "t": 57,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>One defined workflow</li><li>Limited discovery</li><li>Concise written findings</li></ul></details>",
+          "t": 57,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include compliance audits, production access, or implementation.</p",
+          "t": 57,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A separately defined implementation scope</li><li>Tools chosen for the actual need</li><li>Agreed del",
+          "t": 57,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">No integrations, timelines, or project outcomes are promised before scoping.",
+          "t": 57,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 179.19999998807907,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerdown",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 186,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerup",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 186.59999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "click",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 186.59999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerdown",
+          "target": "<summary>What's included</summary>",
+          "t": 1067.5,
+          "y": 410,
+          "hash": ""
+        },
+        {
+          "type": "focusin",
+          "target": "<summary>What's included</summary>",
+          "t": 1068,
+          "y": 410,
+          "hash": ""
+        },
+        {
+          "type": "pointerup",
+          "target": "<summary>What's included</summary>",
+          "t": 1068.7999999821186,
+          "y": 410,
+          "hash": ""
+        },
+        {
+          "type": "click",
+          "target": "<summary>What's included</summary>",
+          "t": 1068.7999999821186,
+          "y": 410,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 1078,
+          "y": 410,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li></ul></d",
+          "t": 1078.8999999761581,
+          "y": 410,
+          "hash": ""
+        }
+      ]
+    },
+    {
+      "trial": 18,
+      "open": false,
+      "events": [
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 20.099999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include custom implementation or access to your production systems.",
+          "t": 26.099999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A focused advisory conversation</li><li>Possible tools and approaches</li><li>A brief recap</li></ul>",
+          "t": 26.19999998807907,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include building a solution, guaranteed outcomes, or ongoing suppor",
+          "t": 26.19999998807907,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>One defined workflow</li><li>Limited discovery</li><li>Concise written findings</li></ul></details>",
+          "t": 26.19999998807907,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include compliance audits, production access, or implementation.</p",
+          "t": 26.19999998807907,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A separately defined implementation scope</li><li>Tools chosen for the actual need</li><li>Agreed del",
+          "t": 26.599999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">No integrations, timelines, or project outcomes are promised before scoping.",
+          "t": 26.599999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "pointerdown",
+          "target": "<summary>What's included</summary>",
+          "t": 87.19999998807907,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "focusin",
+          "target": "<summary>What's included</summary>",
+          "t": 87.69999998807907,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerup",
+          "target": "<summary>What's included</summary>",
+          "t": 88.5,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "click",
+          "target": "<summary>What's included</summary>",
+          "t": 88.5,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 96.7999999821186,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li></ul></d",
+          "t": 99,
+          "y": 757,
+          "hash": ""
+        }
+      ]
+    },
+    {
+      "trial": 19,
+      "open": false,
+      "events": [
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 26.69999998807907,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include custom implementation or access to your production systems.",
+          "t": 32.400000005960464,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A focused advisory conversation</li><li>Possible tools and approaches</li><li>A brief recap</li></ul>",
+          "t": 32.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include building a solution, guaranteed outcomes, or ongoing suppor",
+          "t": 32.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>One defined workflow</li><li>Limited discovery</li><li>Concise written findings</li></ul></details>",
+          "t": 32.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include compliance audits, production access, or implementation.</p",
+          "t": 32.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A separately defined implementation scope</li><li>Tools chosen for the actual need</li><li>Agreed del",
+          "t": 32.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">No integrations, timelines, or project outcomes are promised before scoping.",
+          "t": 32.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "pointerdown",
+          "target": "<summary>What's included</summary>",
+          "t": 106.90000000596046,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "focusin",
+          "target": "<summary>What's included</summary>",
+          "t": 107.19999998807907,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerup",
+          "target": "<summary>What's included</summary>",
+          "t": 108,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "click",
+          "target": "<summary>What's included</summary>",
+          "t": 108.09999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 118,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li></ul></d",
+          "t": 120.30000001192093,
+          "y": 757,
+          "hash": ""
+        }
+      ]
+    },
+    {
+      "trial": 20,
+      "open": false,
+      "events": [
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 20.80000001192093,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include custom implementation or access to your production systems.",
+          "t": 26.700000017881393,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A focused advisory conversation</li><li>Possible tools and approaches</li><li>A brief recap</li></ul>",
+          "t": 26.900000005960464,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include building a solution, guaranteed outcomes, or ongoing suppor",
+          "t": 26.900000005960464,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>One defined workflow</li><li>Limited discovery</li><li>Concise written findings</li></ul></details>",
+          "t": 26.900000005960464,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include compliance audits, production access, or implementation.</p",
+          "t": 26.900000005960464,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A separately defined implementation scope</li><li>Tools chosen for the actual need</li><li>Agreed del",
+          "t": 26.900000005960464,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">No integrations, timelines, or project outcomes are promised before scoping.",
+          "t": 26.900000005960464,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "pointerdown",
+          "target": "<summary>What's included</summary>",
+          "t": 100.60000002384186,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "focusin",
+          "target": "<summary>What's included</summary>",
+          "t": 100.80000001192093,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerup",
+          "target": "<summary>What's included</summary>",
+          "t": 101.60000002384186,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "click",
+          "target": "<summary>What's included</summary>",
+          "t": 101.7000000178814,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 103.10000002384186,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li></ul></d",
+          "t": 104.2000000178814,
+          "y": 757,
+          "hash": ""
+        }
+      ]
+    },
+    {
+      "trial": 21,
+      "open": false,
+      "events": [
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 66.30000001192093,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include custom implementation or access to your production systems.",
+          "t": 96.19999998807907,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A focused advisory conversation</li><li>Possible tools and approaches</li><li>A brief recap</li></ul>",
+          "t": 96.30000001192093,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include building a solution, guaranteed outcomes, or ongoing suppor",
+          "t": 96.30000001192093,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>One defined workflow</li><li>Limited discovery</li><li>Concise written findings</li></ul></details>",
+          "t": 96.30000001192093,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include compliance audits, production access, or implementation.</p",
+          "t": 96.30000001192093,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A separately defined implementation scope</li><li>Tools chosen for the actual need</li><li>Agreed del",
+          "t": 96.30000001192093,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">No integrations, timelines, or project outcomes are promised before scoping.",
+          "t": 96.40000000596046,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "pointerdown",
+          "target": "<summary>What's included</summary>",
+          "t": 218.40000000596046,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "focusin",
+          "target": "<summary>What's included</summary>",
+          "t": 220.19999998807907,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerup",
+          "target": "<summary>What's included</summary>",
+          "t": 221.90000000596046,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "click",
+          "target": "<summary>What's included</summary>",
+          "t": 222,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 224.5,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li></ul></d",
+          "t": 225.69999998807907,
+          "y": 757,
+          "hash": ""
+        }
+      ]
+    },
+    {
+      "trial": 22,
+      "open": false,
+      "events": [
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 16.399999976158142,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include custom implementation or access to your production systems.",
+          "t": 22.099999994039536,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A focused advisory conversation</li><li>Possible tools and approaches</li><li>A brief recap</li></ul>",
+          "t": 22.19999998807907,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include building a solution, guaranteed outcomes, or ongoing suppor",
+          "t": 22.19999998807907,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>One defined workflow</li><li>Limited discovery</li><li>Concise written findings</li></ul></details>",
+          "t": 22.19999998807907,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include compliance audits, production access, or implementation.</p",
+          "t": 22.19999998807907,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A separately defined implementation scope</li><li>Tools chosen for the actual need</li><li>Agreed del",
+          "t": 22.19999998807907,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">No integrations, timelines, or project outcomes are promised before scoping.",
+          "t": 22.19999998807907,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "pointerdown",
+          "target": "<summary>What's included</summary>",
+          "t": 91.5,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "focusin",
+          "target": "<summary>What's included</summary>",
+          "t": 91.7999999821186,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerup",
+          "target": "<summary>What's included</summary>",
+          "t": 92.59999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "click",
+          "target": "<summary>What's included</summary>",
+          "t": 92.69999998807907,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 99.5,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li></ul></d",
+          "t": 101.2999999821186,
+          "y": 757,
+          "hash": ""
+        }
+      ]
+    },
+    {
+      "trial": 23,
+      "open": false,
+      "events": [
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 18.30000001192093,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include custom implementation or access to your production systems.",
+          "t": 23.400000005960464,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A focused advisory conversation</li><li>Possible tools and approaches</li><li>A brief recap</li></ul>",
+          "t": 23.400000005960464,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include building a solution, guaranteed outcomes, or ongoing suppor",
+          "t": 23.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>One defined workflow</li><li>Limited discovery</li><li>Concise written findings</li></ul></details>",
+          "t": 23.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include compliance audits, production access, or implementation.</p",
+          "t": 23.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A separately defined implementation scope</li><li>Tools chosen for the actual need</li><li>Agreed del",
+          "t": 23.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">No integrations, timelines, or project outcomes are promised before scoping.",
+          "t": 23.5,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "pointerdown",
+          "target": "<summary>What's included</summary>",
+          "t": 89.60000002384186,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "focusin",
+          "target": "<summary>What's included</summary>",
+          "t": 89.80000001192093,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerup",
+          "target": "<summary>What's included</summary>",
+          "t": 90.5,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "click",
+          "target": "<summary>What's included</summary>",
+          "t": 90.5,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 96.90000000596046,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li></ul></d",
+          "t": 98.90000000596046,
+          "y": 757,
+          "hash": ""
+        }
+      ]
+    },
+    {
+      "trial": 24,
+      "open": false,
+      "events": [
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li>",
+          "t": 63.900000005960464,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include custom implementation or access to your production systems.",
+          "t": 71.90000000596046,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A focused advisory conversation</li><li>Possible tools and approaches</li><li>A brief recap</li></ul>",
+          "t": 72,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include building a solution, guaranteed outcomes, or ongoing suppor",
+          "t": 72,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>One defined workflow</li><li>Limited discovery</li><li>Concise written findings</li></ul></details>",
+          "t": 72,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">Does not include compliance audits, production access, or implementation.</p",
+          "t": 72,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>What's included</summary><ul><li>A separately defined implementation scope</li><li>Tools chosen for the actual need</li><li>Agreed del",
+          "t": 72,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details open=\"\"><summary>Where the scope stops</summary><p style=\"margin-top:15px\">No integrations, timelines, or project outcomes are promised before scoping.",
+          "t": 72,
+          "y": 0,
+          "hash": ""
+        },
+        {
+          "type": "pointerdown",
+          "target": "<summary>What's included</summary>",
+          "t": 147.09999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "focusin",
+          "target": "<summary>What's included</summary>",
+          "t": 147.59999999403954,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "pointerup",
+          "target": "<summary>What's included</summary>",
+          "t": 148.19999998807907,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "click",
+          "target": "<summary>What's included</summary>",
+          "t": 148.19999998807907,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "scrollend",
+          "target": "",
+          "t": 156.40000000596046,
+          "y": 757,
+          "hash": ""
+        },
+        {
+          "type": "toggle",
+          "target": "<details><summary>What's included</summary><ul><li>Personalized education</li><li>Practical examples relevant to your work</li><li>A one-page guide</li></ul></d",
+          "t": 157.09999999403954,
+          "y": 757,
+          "hash": ""
+        }
+      ]
+    }
+  ]
+}
