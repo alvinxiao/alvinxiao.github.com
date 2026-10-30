@@ -1,4 +1,4 @@
-import { expect, test, type Locator } from '@playwright/test';
+import { expect, test, type Locator, type Page } from '@playwright/test';
 
 async function accent(heading: Locator) {
   return heading.evaluate((element) => {
@@ -10,6 +10,24 @@ async function accent(heading: Locator) {
       animation: style.animationName,
     };
   });
+}
+
+async function waitForScrollToSettle(page: Page) {
+  await page.evaluate(
+    () =>
+      new Promise<void>((resolve) => {
+        let previous = window.scrollY;
+        let stableFrames = 0;
+        const sample = () => {
+          const current = window.scrollY;
+          stableFrames = Math.abs(current - previous) < 0.1 ? stableFrames + 1 : 0;
+          previous = current;
+          if (stableFrames >= 8) resolve();
+          else requestAnimationFrame(sample);
+        };
+        requestAnimationFrame(sample);
+      }),
+  );
 }
 
 async function expectSelected(heading: Locator) {
@@ -41,18 +59,26 @@ test('native mouse, keyboard, Back, and repeated same-target navigation retain p
   await page.goto('/services/');
   const firstLink = page.locator('.service-jumps a[href="#getting-started"]');
   const firstHeading = page.locator('#getting-started h2');
+  await firstLink.scrollIntoViewIfNeeded();
+  await waitForScrollToSettle(page);
   await firstLink.click();
   await expect(page).toHaveURL(/#getting-started$/);
   await expectSelected(firstHeading);
+  await waitForScrollToSettle(page);
   await expect(firstHeading).toHaveAttribute('data-anchor-starts', '1');
+  await firstLink.scrollIntoViewIfNeeded();
+  await waitForScrollToSettle(page);
   await firstLink.click();
   await expectSelected(firstHeading);
+  await waitForScrollToSettle(page);
   await expect(firstHeading).toHaveAttribute('data-anchor-starts', '1');
   const secondLink = page.locator('.service-jumps a[href="#problem-solving"]');
   await secondLink.focus();
+  await waitForScrollToSettle(page);
   await page.keyboard.press('Enter');
   await expect(page).toHaveURL(/#problem-solving$/);
   await expectSelected(page.locator('#problem-solving h2'));
+  await waitForScrollToSettle(page);
   expect((await accent(firstHeading)).content).toBe('none');
   await page.goBack();
   await expect(page).toHaveURL(/#getting-started$/);

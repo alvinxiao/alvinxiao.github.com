@@ -1,0 +1,307 @@
+{
+  "origin": "http://127.0.0.1:4340",
+  "browser": "154.0.8037.57",
+  "trials": 10,
+  "results": [
+    {
+      "settled": false,
+      "trial": 0,
+      "before": {
+        "y": 900,
+        "target": 551.9375
+      },
+      "after": {
+        "y": 487,
+        "target": 964.9375,
+        "heading": 1058.578125,
+        "hash": "#problem-solving"
+      },
+      "disclosureClosed": true
+    },
+    {
+      "settled": false,
+      "trial": 1,
+      "before": {
+        "y": 898,
+        "target": 553.9375
+      },
+      "after": {
+        "y": 1422,
+        "target": 29.9375,
+        "heading": 123.578125,
+        "hash": "#problem-solving"
+      },
+      "disclosureClosed": true
+    },
+    {
+      "settled": false,
+      "trial": 2,
+      "before": {
+        "y": 900,
+        "target": 551.9375
+      },
+      "after": {
+        "y": 487,
+        "target": 964.9375,
+        "heading": 1058.578125,
+        "hash": "#problem-solving"
+      },
+      "disclosureClosed": true
+    },
+    {
+      "settled": false,
+      "trial": 3,
+      "before": {
+        "y": 914,
+        "target": 537.9375
+      },
+      "after": {
+        "y": 487,
+        "target": 964.9375,
+        "heading": 1058.578125,
+        "hash": "#problem-solving"
+      },
+      "disclosureClosed": true
+    },
+    {
+      "settled": false,
+      "trial": 4,
+      "before": {
+        "y": 900,
+        "target": 551.9375
+      },
+      "after": {
+        "y": 487,
+        "target": 964.9375,
+        "heading": 1058.578125,
+        "hash": "#problem-solving"
+      },
+      "disclosureClosed": true
+    },
+    {
+      "settled": false,
+      "trial": 5,
+      "before": {
+        "y": 900,
+        "target": 551.9375
+      },
+      "after": {
+        "y": 487,
+        "target": 964.9375,
+        "heading": 1058.578125,
+        "hash": "#problem-solving"
+      },
+      "disclosureClosed": true
+    },
+    {
+      "settled": false,
+      "trial": 6,
+      "before": {
+        "y": 898,
+        "target": 553.9375
+      },
+      "after": {
+        "y": 487,
+        "target": 964.9375,
+        "heading": 1058.578125,
+        "hash": "#problem-solving"
+      },
+      "disclosureClosed": true
+    },
+    {
+      "settled": false,
+      "trial": 7,
+      "before": {
+        "y": 900,
+        "target": 551.9375
+      },
+      "after": {
+        "y": 1422,
+        "target": 29.9375,
+        "heading": 123.578125,
+        "hash": "#problem-solving"
+      },
+      "disclosureClosed": true
+    },
+    {
+      "settled": false,
+      "trial": 8,
+      "before": {
+        "y": 900,
+        "target": 551.9375
+      },
+      "after": {
+        "y": 487,
+        "target": 964.9375,
+        "heading": 1058.578125,
+        "hash": "#problem-solving"
+      },
+      "disclosureClosed": true
+    },
+    {
+      "settled": false,
+      "trial": 9,
+      "before": {
+        "y": 900,
+        "target": 551.9375
+      },
+      "after": {
+        "y": 1422,
+        "target": 29.9375,
+        "heading": 123.578125,
+        "hash": "#problem-solving"
+      },
+      "disclosureClosed": true
+    },
+    {
+      "settled": true,
+      "trial": 0,
+      "before": {
+        "y": 916,
+        "target": 535.9375
+      },
+      "after": {
+        "y": 1422,
+        "target": 29.9375,
+        "heading": 123.578125,
+        "hash": "#problem-solving"
+      },
+      "disclosureClosed": true
+    },
+    {
+      "settled": true,
+      "trial": 1,
+      "before": {
+        "y": 916,
+        "target": 535.9375
+      },
+      "after": {
+        "y": 1422,
+        "target": 29.9375,
+        "heading": 123.578125,
+        "hash": "#problem-solving"
+      },
+      "disclosureClosed": true
+    },
+    {
+      "settled": true,
+      "trial": 2,
+      "before": {
+        "y": 900,
+        "target": 551.9375
+      },
+      "after": {
+        "y": 1422,
+        "target": 29.9375,
+        "heading": 123.578125,
+        "hash": "#problem-solving"
+      },
+      "disclosureClosed": true
+    },
+    {
+      "settled": true,
+      "trial": 3,
+      "before": {
+        "y": 900,
+        "target": 551.9375
+      },
+      "after": {
+        "y": 1422,
+        "target": 29.9375,
+        "heading": 123.578125,
+        "hash": "#problem-solving"
+      },
+      "disclosureClosed": true
+    },
+    {
+      "settled": true,
+      "trial": 4,
+      "before": {
+        "y": 898,
+        "target": 553.9375
+      },
+      "after": {
+        "y": 1422,
+        "target": 29.9375,
+        "heading": 123.578125,
+        "hash": "#problem-solving"
+      },
+      "disclosureClosed": true
+    },
+    {
+      "settled": true,
+      "trial": 5,
+      "before": {
+        "y": 900,
+        "target": 551.9375
+      },
+      "after": {
+        "y": 1422,
+        "target": 29.9375,
+        "heading": 123.578125,
+        "hash": "#problem-solving"
+      },
+      "disclosureClosed": true
+    },
+    {
+      "settled": true,
+      "trial": 6,
+      "before": {
+        "y": 900,
+        "target": 551.9375
+      },
+      "after": {
+        "y": 1422,
+        "target": 29.9375,
+        "heading": 123.578125,
+        "hash": "#problem-solving"
+      },
+      "disclosureClosed": true
+    },
+    {
+      "settled": true,
+      "trial": 7,
+      "before": {
+        "y": 900,
+        "target": 551.9375
+      },
+      "after": {
+        "y": 1422,
+        "target": 29.9375,
+        "heading": 123.578125,
+        "hash": "#problem-solving"
+      },
+      "disclosureClosed": true
+    },
+    {
+      "settled": true,
+      "trial": 8,
+      "before": {
+        "y": 900,
+        "target": 551.9375
+      },
+      "after": {
+        "y": 1422,
+        "target": 29.9375,
+        "heading": 123.578125,
+        "hash": "#problem-solving"
+      },
+      "disclosureClosed": true
+    },
+    {
+      "settled": true,
+      "trial": 9,
+      "before": {
+        "y": 900,
+        "target": 551.9375
+      },
+      "after": {
+        "y": 1422,
+        "target": 29.9375,
+        "heading": 123.578125,
+        "hash": "#problem-solving"
+      },
+      "disclosureClosed": true
+    }
+  ]
+}
