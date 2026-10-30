@@ -88,7 +88,14 @@ function initialiseReveals() {
   }
   settleFragment();
   document.addEventListener('focusin', (event) => {
+    if (event.target instanceof Element && event.target.matches(':active')) return;
     if (event.target instanceof window.Node) settleRelated(event.target);
+  });
+  document.addEventListener('click', (event) => {
+    if (!(event.target instanceof window.Node)) return;
+    for (const element of new Set([...pending, ...active.keys()])) {
+      if (element.contains(event.target)) settle(element);
+    }
   });
   window.addEventListener('hashchange', settleFragment);
   window.addEventListener('beforeprint', settleAll);
